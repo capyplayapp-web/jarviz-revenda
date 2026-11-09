@@ -2849,33 +2849,6 @@
  ],
  "regras_ativas": [
   {
-   "regra": "Quando a pessoa disser que já fez a etapa, confirme uma vez e avance. Não pergunte de novo.",
-   "desde": "2026-11-09T18:35:06.738Z"
-  },
-  {
-   "regra": "Não diga que é robô sem ser perguntado. Chame sempre de mestre e recuse assuntos fora da CapyPlay em uma frase.",
-   "desde": "2026-11-09T18:35:06.738Z"
-  },
-  {
-   "regra": "Ao pedirem para explicar de novo, responda em 2 frases curtas. Não repita o bloco inteiro.",
-   "desde": "2026-11-09T18:35:06.738Z"
-  },
-  {
-   "regra": "Use só os endereços e códigos que estão na base; nunca invente ou copie servidor de outra fonte.",
-   "desde": "2026-11-09T18:35:54.865Z",
-   "origem": "jogadas"
-  },
-  {
-   "regra": "Se a pessoa já criou o painel, mande só o link de entrar, nunca o de criar de novo.",
-   "desde": "2026-11-09T18:35:54.865Z",
-   "origem": "jogadas"
-  },
-  {
-   "regra": "Se a pessoa já disse que trabalha com revenda, não pergunte de novo: vá direto ao básico e ao link de criar.",
-   "desde": "2026-11-09T18:35:54.865Z",
-   "origem": "jogadas"
-  },
-  {
    "regra": "[lacuna 5] Se perguntarem \"Qual servidor usar no painel?\", responda: Usamos servidor próprio, no painel Sigma.",
    "desde": "2026-11-09T13:41:21.115Z",
    "origem": "lacuna",
@@ -2916,6 +2889,33 @@
    "desde": "2026-11-09T00:00:45.942Z",
    "origem": "lacuna",
    "lacuna": "L8"
+  },
+  {
+   "regra": "Quando a pessoa disser que já fez a etapa, confirme uma vez e avance. Não pergunte de novo.",
+   "desde": "2026-11-09T18:35:06.738Z"
+  },
+  {
+   "regra": "Não diga que é robô sem ser perguntado. Chame sempre de mestre e recuse assuntos fora da CapyPlay em uma frase.",
+   "desde": "2026-11-09T18:35:06.738Z"
+  },
+  {
+   "regra": "Ao pedirem para explicar de novo, responda em 2 frases curtas. Não repita o bloco inteiro.",
+   "desde": "2026-11-09T18:35:06.738Z"
+  },
+  {
+   "regra": "Use só os endereços e códigos que estão na base; nunca invente ou copie servidor de outra fonte.",
+   "desde": "2026-11-09T18:35:54.865Z",
+   "origem": "jogadas"
+  },
+  {
+   "regra": "Se a pessoa já criou o painel, mande só o link de entrar, nunca o de criar de novo.",
+   "desde": "2026-11-09T18:35:54.865Z",
+   "origem": "jogadas"
+  },
+  {
+   "regra": "Se a pessoa já disse que trabalha com revenda, não pergunte de novo: vá direto ao básico e ao link de criar.",
+   "desde": "2026-11-09T18:35:54.865Z",
+   "origem": "jogadas"
   },
   {
    "regra": "Se a frase do cliente não estiver clara, peça para repetir antes de confirmar.",

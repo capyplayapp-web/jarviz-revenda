@@ -1,0 +1,7 @@
+SENHA.txt
+secrets.json
+.dev.vars
+public/
+node_modules/
+.wrangler/
+*.log

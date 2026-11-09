@@ -1,0 +1,38 @@
+﻿# Relatórios do robô da revenda (versão celular). Worker + assets + KV, em subdomínio escondido de copythief.men.
+# Publicar: .\publicar.ps1   (copia a pasta web\ do robô para public\ e roda wrangler deploy)
+name = "robo-relatorios"
+main = "worker.mjs"
+compatibility_date = "2026-10-01"
+workers_dev = false
+preview_urls = false
+routes = [{ pattern = "jarviz.copythief.men", custom_domain = true }]
+
+[assets]
+directory = "public"
+binding = "ASSETS"
+run_worker_first = true
+html_handling = "auto-trailing-slash"
+not_found_handling = "404-page"
+
+[[kv_namespaces]]
+binding = "RELATORIOS"
+id = "510e99edc8ba468088f9286578750cf0"
+
+# Segredos (wrangler secret): SENHA, SESSAO_SEGREDO, SYNC_TOKEN. Nunca neste arquivo.
+
+# Barreira barata contra tentativa em massa (não grava no KV).
+[[ratelimits]]
+name = "RL"
+namespace_id = "1001"
+[ratelimits.simple]
+limit = 8
+period = 60
+
+
+# Limite próprio do PC (sync): fila a cada 12 s + snapshot + resultados cabem folgados.
+[[ratelimits]]
+name = "RL_SYNC"
+namespace_id = "1002"
+[ratelimits.simple]
+limit = 40
+period = 60
