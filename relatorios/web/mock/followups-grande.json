@@ -1,0 +1,4126 @@
+{
+ "gerado_em": "2026-11-08T19:49:58.524Z",
+ "resumo": {
+  "em_fila": 7,
+  "enviados": 40,
+  "respondidos": 14,
+  "taxa": 0.35,
+  "paineis_depois": 3,
+  "backlog_total": 214,
+  "backlog_mapeados": 214,
+  "backlog_renomeados": 171,
+  "backlog_na_fila": 92,
+  "backlog_enviados": 58,
+  "backlog_respondeu": 14,
+  "backlog_fechou_painel": 4,
+  "backlog_descartados": 31,
+  "pausado": false,
+  "proximo_envio_em": "2026-11-08T19:53:58.524Z",
+  "enviados_hoje": 37,
+  "teto_dia": 120
+ },
+ "degraus": [
+  {
+   "n": 1,
+   "minutos": 7,
+   "enviados": 18,
+   "respondidos": 7,
+   "taxa": 0.39,
+   "paineis_depois": 2
+  },
+  {
+   "n": 2,
+   "minutos": 20,
+   "enviados": 11,
+   "respondidos": 4,
+   "taxa": 0.36,
+   "paineis_depois": 1
+  },
+  {
+   "n": 3,
+   "minutos": 60,
+   "enviados": 7,
+   "respondidos": 2,
+   "taxa": 0.29,
+   "paineis_depois": 0
+  },
+  {
+   "n": 4,
+   "minutos": 180,
+   "enviados": 4,
+   "respondidos": 1,
+   "taxa": 0.25,
+   "paineis_depois": 0
+  }
+ ],
+ "clientes": [
+  {
+   "nome": "Rafael Menezes",
+   "telefone_mascarado": "+55 ** *****-8606",
+   "origem": "ao_vivo",
+   "categoria": "interessado_sem_painel",
+   "etapa": "Sem retorno",
+   "ultimo_contato": "2026-11-08T13:23:45.141Z",
+   "followups": [
+    {
+     "n": 1,
+     "quando": "2026-11-08T12:03:45.141Z",
+     "texto": "Oi! Conseguiu testar a lista? Se quiser, eu libero outro teste agora.",
+     "respondeu": false,
+     "minutos_ate_resposta": null
+    },
+    {
+     "n": 2,
+     "quando": "2026-11-08T12:23:45.141Z",
+     "texto": "Passando para ver se deu tudo certo no teste. Qualquer dúvida é só falar.",
+     "respondeu": false,
+     "minutos_ate_resposta": null
+    },
+    {
+     "n": 3,
+     "quando": "2026-11-08T13:23:45.141Z",
+     "texto": "Ainda faz sentido pra você montar o painel? Posso explicar o passo a passo.",
+     "respondeu": false,
+     "minutos_ate_resposta": null
+    }
+   ],
+   "proximo": {
+    "n": 4,
+    "em": "2026-11-08T23:25:15.369Z"
+   },
+   "status": "aguardando"
+  },
+  {
+   "nome": "Camila Duarte",
+   "telefone_mascarado": "(11) *****-8943",
+   "origem": "ao_vivo",
+   "categoria": "testando",
+   "etapa": "Dúvida",
+   "ultimo_contato": "2026-11-08T17:20:04.911Z",
+   "followups": [
+    {
+     "n": 1,
+     "quando": "2026-11-08T13:00:04.911Z",
+     "texto": "Oi! Conseguiu testar a lista? Se quiser, eu libero outro teste agora.",
+     "respondeu": false,
+     "minutos_ate_resposta": null
+    },
+    {
+     "n": 2,
+     "quando": "2026-11-08T13:20:04.911Z",
+     "texto": "Passando para ver se deu tudo certo no teste. Qualquer dúvida é só falar.",
+     "respondeu": false,
+     "minutos_ate_resposta": null
+    },
+    {
+     "n": 3,
+     "quando": "2026-11-08T14:20:04.911Z",
+     "texto": "Ainda faz sentido pra você montar o painel? Posso explicar o passo a passo.",
+     "respondeu": true,
+     "minutos_ate_resposta": 23
+    },
+    {
+     "n": 4,
+     "quando": "2026-11-08T17:20:04.911Z",
+     "texto": "Última mensagem por aqui: se precisar, o teste continua liberado.",
+     "respondeu": false,
+     "minutos_ate_resposta": null
+    }
+   ],
+   "proximo": null,
+   "status": "aguardando"
+  },
+  {
+   "nome": "Bruno Tavares",
+   "telefone_mascarado": "(11) *****-1937",
+   "origem": "ao_vivo",
+   "categoria": "duvida_aberta",
+   "etapa": "Sem retorno",
+   "ultimo_contato": "2026-11-08T15:27:43.866Z",
+   "followups": [
+    {
+     "n": 1,
+     "quando": "2026-11-08T11:07:43.866Z",
+     "texto": "Oi! Conseguiu testar a lista? Se quiser, eu libero outro teste agora.",
+     "respondeu": false,
+     "minutos_ate_resposta": null
+    },
+    {
+     "n": 2,
+     "quando": "2026-11-08T11:27:43.866Z",
+     "texto": "Passando para ver se deu tudo certo no teste. Qualquer dúvida é só falar.",
+     "respondeu": false,
+     "minutos_ate_resposta": null
+    },
+    {
+     "n": 3,
+     "quando": "2026-11-08T12:27:43.866Z",
+     "texto": "Ainda faz sentido pra você montar o painel? Posso explicar o passo a passo.",
+     "respondeu": false,
+     "minutos_ate_resposta": null
+    },
+    {
+     "n": 4,
+     "quando": "2026-11-08T15:27:43.866Z",
+     "texto": "Última mensagem por aqui: se precisar, o teste continua liberado.",
+     "respondeu": false,
+     "minutos_ate_resposta": null
+    }
+   ],
+   "proximo": null,
+   "status": "aguardando"
+  },
+  {
+   "nome": "Letícia Moraes",
+   "telefone_mascarado": "+55 ** *****-6070",
+   "origem": "ao_vivo",
+   "categoria": "duvida_aberta",
+   "etapa": "Sem retorno",
+   "ultimo_contato": "2026-11-08T13:44:31.725Z",
+   "followups": [
+    {
+     "n": 1,
+     "quando": "2026-11-08T12:24:31.725Z",
+     "texto": "Oi! Conseguiu testar a lista? Se quiser, eu libero outro teste agora.",
+     "respondeu": false,
+     "minutos_ate_resposta": null
+    },
+    {
+     "n": 2,
+     "quando": "2026-11-08T12:44:31.725Z",
+     "texto": "Passando para ver se deu tudo certo no teste. Qualquer dúvida é só falar.",
+     "respondeu": false,
+     "minutos_ate_resposta": null
+    },
+    {
+     "n": 3,
+     "quando": "2026-11-08T13:44:31.725Z",
+     "texto": "Ainda faz sentido pra você montar o painel? Posso explicar o passo a passo.",
+     "respondeu": true,
+     "minutos_ate_resposta": 54
+    }
+   ],
+   "proximo": null,
+   "status": "respondeu"
+  },
+  {
+   "nome": "Diego Albuquerque",
+   "telefone_mascarado": "(11) *****-6301",
+   "origem": "ao_vivo",
+   "categoria": "testando",
+   "etapa": "Teste gerado",
+   "ultimo_contato": "2026-11-08T12:32:10.843Z",
+   "followups": [
+    {
+     "n": 1,
+     "quando": "2026-11-08T12:12:10.843Z",
+     "texto": "Oi! Conseguiu testar a lista? Se quiser, eu libero outro teste agora.",
+     "respondeu": false,
+     "minutos_ate_resposta": null
+    },
+    {
+     "n": 2,
+     "quando": "2026-11-08T12:32:10.843Z",
+     "texto": "Passando para ver se deu tudo certo no teste. Qualquer dúvida é só falar.",
+     "respondeu": true,
+     "minutos_ate_resposta": 13
+    }
+   ],
+   "proximo": null,
+   "status": "respondeu"
+  },
+  {
+   "nome": "Fernanda Siqueira",
+   "telefone_mascarado": "(11) *****-2043",
+   "origem": "ao_vivo",
+   "categoria": "esfriou",
+   "etapa": "Teste gerado",
+   "ultimo_contato": "2026-11-08T11:59:40.880Z",
+   "followups": [
+    {
+     "n": 1,
+     "quando": "2026-11-08T11:39:40.880Z",
+     "texto": "Oi! Conseguiu testar a lista? Se quiser, eu libero outro teste agora.",
+     "respondeu": false,
+     "minutos_ate_resposta": null
+    },
+    {
+     "n": 2,
+     "quando": "2026-11-08T11:59:40.880Z",
+     "texto": "Passando para ver se deu tudo certo no teste. Qualquer dúvida é só falar.",
+     "respondeu": true,
+     "minutos_ate_resposta": 55
+    }
+   ],
+   "proximo": null,
+   "status": "fechou_painel"
+  },
+  {
+   "nome": "Thiago Barreto",
+   "telefone_mascarado": "+55 ** *****-4575",
+   "origem": "ao_vivo",
+   "categoria": "esfriou",
+   "etapa": "Conversa nova",
+   "ultimo_contato": "2026-11-08T14:56:39.561Z",
+   "followups": [
+    {
+     "n": 1,
+     "quando": "2026-11-08T14:56:39.561Z",
+     "texto": "Oi! Conseguiu testar a lista? Se quiser, eu libero outro teste agora.",
+     "respondeu": false,
+     "minutos_ate_resposta": null
+    }
+   ],
+   "proximo": null,
+   "status": "sem_resposta"
+  },
+  {
+   "nome": "Juliana Prado",
+   "telefone_mascarado": "(11) *****-9525",
+   "origem": "ao_vivo",
+   "categoria": "duvida_aberta",
+   "etapa": "Dúvida",
+   "ultimo_contato": "2026-11-08T11:14:29.477Z",
+   "followups": [],
+   "proximo": null,
+   "status": "nao_incomodar"
+  },
+  {
+   "nome": "Marcelo Queiroz",
+   "telefone_mascarado": "(11) *****-2152",
+   "origem": "ao_vivo",
+   "categoria": "testando",
+   "etapa": "Teste gerado",
+   "ultimo_contato": "2026-11-08T15:48:56.116Z",
+   "followups": [
+    {
+     "n": 1,
+     "quando": "2026-11-08T14:28:56.116Z",
+     "texto": "Oi! Conseguiu testar a lista? Se quiser, eu libero outro teste agora.",
+     "respondeu": true,
+     "minutos_ate_resposta": 51
+    },
+    {
+     "n": 2,
+     "quando": "2026-11-08T14:48:56.116Z",
+     "texto": "Passando para ver se deu tudo certo no teste. Qualquer dúvida é só falar.",
+     "respondeu": false,
+     "minutos_ate_resposta": null
+    },
+    {
+     "n": 3,
+     "quando": "2026-11-08T15:48:56.116Z",
+     "texto": "Ainda faz sentido pra você montar o painel? Posso explicar o passo a passo.",
+     "respondeu": false,
+     "minutos_ate_resposta": null
+    }
+   ],
+   "proximo": {
+    "n": 4,
+    "em": "2026-11-08T22:53:14.698Z"
+   },
+   "status": "aguardando"
+  },
+  {
+   "nome": "Aline Ferraz",
+   "telefone_mascarado": "+55 ** *****-7602",
+   "origem": "ao_vivo",
+   "categoria": "duvida_aberta",
+   "etapa": "Painel criado",
+   "ultimo_contato": "2026-11-08T12:27:45.784Z",
+   "followups": [
+    {
+     "n": 1,
+     "quando": "2026-11-08T11:07:45.784Z",
+     "texto": "Oi! Conseguiu testar a lista? Se quiser, eu libero outro teste agora.",
+     "respondeu": false,
+     "minutos_ate_resposta": null
+    },
+    {
+     "n": 2,
+     "quando": "2026-11-08T11:27:45.784Z",
+     "texto": "Passando para ver se deu tudo certo no teste. Qualquer dúvida é só falar.",
+     "respondeu": false,
+     "minutos_ate_resposta": null
+    },
+    {
+     "n": 3,
+     "quando": "2026-11-08T12:27:45.784Z",
+     "texto": "Ainda faz sentido pra você montar o painel? Posso explicar o passo a passo.",
+     "respondeu": false,
+     "minutos_ate_resposta": null
+    }
+   ],
+   "proximo": {
+    "n": 4,
+    "em": "2026-11-08T22:41:34.366Z"
+   },
+   "status": "aguardando"
+  },
+  {
+   "nome": "Gustavo Nogueira",
+   "telefone_mascarado": "(11) *****-3007",
+   "origem": "ao_vivo",
+   "categoria": "painel_criado",
+   "etapa": "Dúvida",
+   "ultimo_contato": "2026-11-08T16:06:05.127Z",
+   "followups": [
+    {
+     "n": 1,
+     "quando": "2026-11-08T14:46:05.127Z",
+     "texto": "Oi! Conseguiu testar a lista? Se quiser, eu libero outro teste agora.",
+     "respondeu": false,
+     "minutos_ate_resposta": null
+    },
+    {
+     "n": 2,
+     "quando": "2026-11-08T15:06:05.127Z",
+     "texto": "Passando para ver se deu tudo certo no teste. Qualquer dúvida é só falar.",
+     "respondeu": false,
+     "minutos_ate_resposta": null
+    },
+    {
+     "n": 3,
+     "quando": "2026-11-08T16:06:05.127Z",
+     "texto": "Ainda faz sentido pra você montar o painel? Posso explicar o passo a passo.",
+     "respondeu": false,
+     "minutos_ate_resposta": null
+    }
+   ],
+   "proximo": {
+    "n": 4,
+    "em": "2026-11-08T20:53:11.781Z"
+   },
+   "status": "aguardando"
+  },
+  {
+   "nome": "Patrícia Lobo",
+   "telefone_mascarado": "(11) *****-1474",
+   "origem": "ao_vivo",
+   "categoria": "interessado_sem_painel",
+   "etapa": "Dúvida",
+   "ultimo_contato": "2026-11-08T11:41:53.767Z",
+   "followups": [
+    {
+     "n": 1,
+     "quando": "2026-11-08T11:41:53.767Z",
+     "texto": "Oi! Conseguiu testar a lista? Se quiser, eu libero outro teste agora.",
+     "respondeu": true,
+     "minutos_ate_resposta": 56
+    }
+   ],
+   "proximo": null,
+   "status": "respondeu"
+  },
+  {
+   "nome": "André Cavalcanti",
+   "telefone_mascarado": "+55 ** *****-5507",
+   "origem": "ao_vivo",
+   "categoria": "testando",
+   "etapa": "Sem retorno",
+   "ultimo_contato": "2026-11-08T13:06:54.138Z",
+   "followups": [
+    {
+     "n": 1,
+     "quando": "2026-11-08T11:46:54.138Z",
+     "texto": "Oi! Conseguiu testar a lista? Se quiser, eu libero outro teste agora.",
+     "respondeu": false,
+     "minutos_ate_resposta": null
+    },
+    {
+     "n": 2,
+     "quando": "2026-11-08T12:06:54.138Z",
+     "texto": "Passando para ver se deu tudo certo no teste. Qualquer dúvida é só falar.",
+     "respondeu": false,
+     "minutos_ate_resposta": null
+    },
+    {
+     "n": 3,
+     "quando": "2026-11-08T13:06:54.138Z",
+     "texto": "Ainda faz sentido pra você montar o painel? Posso explicar o passo a passo.",
+     "respondeu": true,
+     "minutos_ate_resposta": 57
+    }
+   ],
+   "proximo": null,
+   "status": "respondeu"
+  },
+  {
+   "nome": "Vanessa Rezende",
+   "telefone_mascarado": "(11) *****-7477",
+   "origem": "ao_vivo",
+   "categoria": "testando",
+   "etapa": "Conversa nova",
+   "ultimo_contato": "2026-11-08T15:49:03.901Z",
+   "followups": [
+    {
+     "n": 1,
+     "quando": "2026-11-08T11:29:03.901Z",
+     "texto": "Oi! Conseguiu testar a lista? Se quiser, eu libero outro teste agora.",
+     "respondeu": false,
+     "minutos_ate_resposta": null
+    },
+    {
+     "n": 2,
+     "quando": "2026-11-08T11:49:03.901Z",
+     "texto": "Passando para ver se deu tudo certo no teste. Qualquer dúvida é só falar.",
+     "respondeu": false,
+     "minutos_ate_resposta": null
+    },
+    {
+     "n": 3,
+     "quando": "2026-11-08T12:49:03.901Z",
+     "texto": "Ainda faz sentido pra você montar o painel? Posso explicar o passo a passo.",
+     "respondeu": false,
+     "minutos_ate_resposta": null
+    },
+    {
+     "n": 4,
+     "quando": "2026-11-08T15:49:03.901Z",
+     "texto": "Última mensagem por aqui: se precisar, o teste continua liberado.",
+     "respondeu": true,
+     "minutos_ate_resposta": 13
+    }
+   ],
+   "proximo": null,
+   "status": "fechou_painel"
+  },
+  {
+   "nome": "Lucas Peixoto",
+   "telefone_mascarado": "(11) *****-8827",
+   "origem": "ao_vivo",
+   "categoria": "painel_criado",
+   "etapa": "Sem retorno",
+   "ultimo_contato": "2026-11-08T15:29:17.968Z",
+   "followups": [
+    {
+     "n": 1,
+     "quando": "2026-11-08T11:09:17.968Z",
+     "texto": "Oi! Conseguiu testar a lista? Se quiser, eu libero outro teste agora.",
+     "respondeu": true,
+     "minutos_ate_resposta": 7
+    },
+    {
+     "n": 2,
+     "quando": "2026-11-08T11:29:17.968Z",
+     "texto": "Passando para ver se deu tudo certo no teste. Qualquer dúvida é só falar.",
+     "respondeu": false,
+     "minutos_ate_resposta": null
+    },
+    {
+     "n": 3,
+     "quando": "2026-11-08T12:29:17.968Z",
+     "texto": "Ainda faz sentido pra você montar o painel? Posso explicar o passo a passo.",
+     "respondeu": false,
+     "minutos_ate_resposta": null
+    },
+    {
+     "n": 4,
+     "quando": "2026-11-08T15:29:17.968Z",
+     "texto": "Última mensagem por aqui: se precisar, o teste continua liberado.",
+     "respondeu": false,
+     "minutos_ate_resposta": null
+    }
+   ],
+   "proximo": null,
+   "status": "sem_resposta"
+  },
+  {
+   "nome": "Renata Valadares",
+   "telefone_mascarado": "+55 ** *****-6034",
+   "origem": "ao_vivo",
+   "categoria": "testando",
+   "etapa": "Conversa nova",
+   "ultimo_contato": "2026-11-08T14:02:23.687Z",
+   "followups": [],
+   "proximo": null,
+   "status": "nao_incomodar"
+  },
+  {
+   "nome": "Eduardo Brandão",
+   "telefone_mascarado": "(11) *****-1399",
+   "origem": "ao_vivo",
+   "categoria": "testando",
+   "etapa": "Conversa nova",
+   "ultimo_contato": "2026-11-08T13:01:32.929Z",
+   "followups": [
+    {
+     "n": 1,
+     "quando": "2026-11-08T13:01:32.929Z",
+     "texto": "Oi! Conseguiu testar a lista? Se quiser, eu libero outro teste agora.",
+     "respondeu": false,
+     "minutos_ate_resposta": null
+    }
+   ],
+   "proximo": {
+    "n": 2,
+    "em": "2026-11-08T20:06:10.232Z"
+   },
+   "status": "aguardando"
+  },
+  {
+   "nome": "Carolina Esteves",
+   "telefone_mascarado": "(11) *****-4492",
+   "origem": "ao_vivo",
+   "categoria": "interessado_sem_painel",
+   "etapa": "Dúvida",
+   "ultimo_contato": "2026-11-08T17:24:40.067Z",
+   "followups": [
+    {
+     "n": 1,
+     "quando": "2026-11-08T13:04:40.067Z",
+     "texto": "Oi! Conseguiu testar a lista? Se quiser, eu libero outro teste agora.",
+     "respondeu": false,
+     "minutos_ate_resposta": null
+    },
+    {
+     "n": 2,
+     "quando": "2026-11-08T13:24:40.067Z",
+     "texto": "Passando para ver se deu tudo certo no teste. Qualquer dúvida é só falar.",
+     "respondeu": false,
+     "minutos_ate_resposta": null
+    },
+    {
+     "n": 3,
+     "quando": "2026-11-08T14:24:40.067Z",
+     "texto": "Ainda faz sentido pra você montar o painel? Posso explicar o passo a passo.",
+     "respondeu": false,
+     "minutos_ate_resposta": null
+    },
+    {
+     "n": 4,
+     "quando": "2026-11-08T17:24:40.067Z",
+     "texto": "Última mensagem por aqui: se precisar, o teste continua liberado.",
+     "respondeu": false,
+     "minutos_ate_resposta": null
+    }
+   ],
+   "proximo": null,
+   "status": "aguardando"
+  },
+  {
+   "nome": "Felipe Sampaio",
+   "telefone_mascarado": "+55 ** *****-2540",
+   "origem": "ao_vivo",
+   "categoria": "esfriou",
+   "etapa": "Conversa nova",
+   "ultimo_contato": "2026-11-08T16:12:01.466Z",
+   "followups": [
+    {
+     "n": 1,
+     "quando": "2026-11-08T11:52:01.466Z",
+     "texto": "Oi! Conseguiu testar a lista? Se quiser, eu libero outro teste agora.",
+     "respondeu": false,
+     "minutos_ate_resposta": null
+    },
+    {
+     "n": 2,
+     "quando": "2026-11-08T12:12:01.466Z",
+     "texto": "Passando para ver se deu tudo certo no teste. Qualquer dúvida é só falar.",
+     "respondeu": false,
+     "minutos_ate_resposta": null
+    },
+    {
+     "n": 3,
+     "quando": "2026-11-08T13:12:01.466Z",
+     "texto": "Ainda faz sentido pra você montar o painel? Posso explicar o passo a passo.",
+     "respondeu": false,
+     "minutos_ate_resposta": null
+    },
+    {
+     "n": 4,
+     "quando": "2026-11-08T16:12:01.466Z",
+     "texto": "Última mensagem por aqui: se precisar, o teste continua liberado.",
+     "respondeu": false,
+     "minutos_ate_resposta": null
+    }
+   ],
+   "proximo": null,
+   "status": "aguardando"
+  },
+  {
+   "nome": "Larissa Coutinho",
+   "telefone_mascarado": "(11) *****-5449",
+   "origem": "ao_vivo",
+   "categoria": "duvida_aberta",
+   "etapa": "Conversa nova",
+   "ultimo_contato": "2026-11-08T12:41:45.749Z",
+   "followups": [
+    {
+     "n": 1,
+     "quando": "2026-11-08T12:21:45.749Z",
+     "texto": "Oi! Conseguiu testar a lista? Se quiser, eu libero outro teste agora.",
+     "respondeu": false,
+     "minutos_ate_resposta": null
+    },
+    {
+     "n": 2,
+     "quando": "2026-11-08T12:41:45.749Z",
+     "texto": "Passando para ver se deu tudo certo no teste. Qualquer dúvida é só falar.",
+     "respondeu": true,
+     "minutos_ate_resposta": 25
+    }
+   ],
+   "proximo": null,
+   "status": "respondeu"
+  },
+  {
+   "nome": "Rodrigo Azevedo",
+   "telefone_mascarado": "(11) *****-6759",
+   "origem": "ao_vivo",
+   "categoria": "painel_criado",
+   "etapa": "Conversa nova",
+   "ultimo_contato": "2026-11-08T14:57:58.695Z",
+   "followups": [
+    {
+     "n": 1,
+     "quando": "2026-11-08T14:37:58.695Z",
+     "texto": "Oi! Conseguiu testar a lista? Se quiser, eu libero outro teste agora.",
+     "respondeu": false,
+     "minutos_ate_resposta": null
+    },
+    {
+     "n": 2,
+     "quando": "2026-11-08T14:57:58.695Z",
+     "texto": "Passando para ver se deu tudo certo no teste. Qualquer dúvida é só falar.",
+     "respondeu": true,
+     "minutos_ate_resposta": 14
+    }
+   ],
+   "proximo": null,
+   "status": "respondeu"
+  },
+  {
+   "nome": "Priscila Machado",
+   "telefone_mascarado": "+55 ** *****-9173",
+   "origem": "ao_vivo",
+   "categoria": "painel_criado",
+   "etapa": "Dúvida",
+   "ultimo_contato": "2026-11-08T19:16:35.531Z",
+   "followups": [
+    {
+     "n": 1,
+     "quando": "2026-11-08T14:56:35.531Z",
+     "texto": "Oi! Conseguiu testar a lista? Se quiser, eu libero outro teste agora.",
+     "respondeu": false,
+     "minutos_ate_resposta": null
+    },
+    {
+     "n": 2,
+     "quando": "2026-11-08T15:16:35.531Z",
+     "texto": "Passando para ver se deu tudo certo no teste. Qualquer dúvida é só falar.",
+     "respondeu": true,
+     "minutos_ate_resposta": 48
+    },
+    {
+     "n": 3,
+     "quando": "2026-11-08T16:16:35.531Z",
+     "texto": "Ainda faz sentido pra você montar o painel? Posso explicar o passo a passo.",
+     "respondeu": false,
+     "minutos_ate_resposta": null
+    },
+    {
+     "n": 4,
+     "quando": "2026-11-08T19:16:35.531Z",
+     "texto": "Última mensagem por aqui: se precisar, o teste continua liberado.",
+     "respondeu": true,
+     "minutos_ate_resposta": 26
+    }
+   ],
+   "proximo": null,
+   "status": "fechou_painel"
+  },
+  {
+   "nome": "Henrique Seixas",
+   "telefone_mascarado": "(11) *****-6785",
+   "origem": "ao_vivo",
+   "categoria": "painel_criado",
+   "etapa": "Painel criado",
+   "ultimo_contato": "2026-11-08T10:58:34.307Z",
+   "followups": [
+    {
+     "n": 1,
+     "quando": "2026-11-08T10:58:34.307Z",
+     "texto": "Oi! Conseguiu testar a lista? Se quiser, eu libero outro teste agora.",
+     "respondeu": false,
+     "minutos_ate_resposta": null
+    }
+   ],
+   "proximo": null,
+   "status": "sem_resposta"
+  },
+  {
+   "nome": "Bianca Torres",
+   "telefone_mascarado": "(11) *****-3242",
+   "origem": "ao_vivo",
+   "categoria": "painel_criado",
+   "etapa": "Sem retorno",
+   "ultimo_contato": "2026-11-08T14:15:31.484Z",
+   "followups": [
+    {
+     "n": 1,
+     "quando": "2026-11-08T14:15:31.484Z",
+     "texto": "Oi! Conseguiu testar a lista? Se quiser, eu libero outro teste agora.",
+     "respondeu": false,
+     "minutos_ate_resposta": null
+    }
+   ],
+   "proximo": null,
+   "status": "nao_incomodar"
+  },
+  {
+   "nome": "Leandro Fontes",
+   "telefone_mascarado": "+55 ** *****-8933",
+   "origem": "ao_vivo",
+   "categoria": "duvida_aberta",
+   "etapa": "Sem retorno",
+   "ultimo_contato": "2026-11-08T14:00:40.323Z",
+   "followups": [
+    {
+     "n": 1,
+     "quando": "2026-11-08T13:40:40.323Z",
+     "texto": "Oi! Conseguiu testar a lista? Se quiser, eu libero outro teste agora.",
+     "respondeu": false,
+     "minutos_ate_resposta": null
+    },
+    {
+     "n": 2,
+     "quando": "2026-11-08T14:00:40.323Z",
+     "texto": "Passando para ver se deu tudo certo no teste. Qualquer dúvida é só falar.",
+     "respondeu": false,
+     "minutos_ate_resposta": null
+    }
+   ],
+   "proximo": {
+    "n": 3,
+    "em": "2026-11-08T20:53:45.759Z"
+   },
+   "status": "aguardando"
+  },
+  {
+   "nome": "Daniela Veloso",
+   "telefone_mascarado": "(11) *****-9733",
+   "origem": "ao_vivo",
+   "categoria": "duvida_aberta",
+   "etapa": "Dúvida",
+   "ultimo_contato": "2026-11-08T17:17:20.486Z",
+   "followups": [
+    {
+     "n": 1,
+     "quando": "2026-11-08T12:57:20.486Z",
+     "texto": "Oi! Conseguiu testar a lista? Se quiser, eu libero outro teste agora.",
+     "respondeu": false,
+     "minutos_ate_resposta": null
+    },
+    {
+     "n": 2,
+     "quando": "2026-11-08T13:17:20.486Z",
+     "texto": "Passando para ver se deu tudo certo no teste. Qualquer dúvida é só falar.",
+     "respondeu": false,
+     "minutos_ate_resposta": null
+    },
+    {
+     "n": 3,
+     "quando": "2026-11-08T14:17:20.486Z",
+     "texto": "Ainda faz sentido pra você montar o painel? Posso explicar o passo a passo.",
+     "respondeu": false,
+     "minutos_ate_resposta": null
+    },
+    {
+     "n": 4,
+     "quando": "2026-11-08T17:17:20.486Z",
+     "texto": "Última mensagem por aqui: se precisar, o teste continua liberado.",
+     "respondeu": false,
+     "minutos_ate_resposta": null
+    }
+   ],
+   "proximo": null,
+   "status": "aguardando"
+  },
+  {
+   "nome": "Vinícius Lacerda",
+   "telefone_mascarado": "(11) *****-8608",
+   "origem": "ao_vivo",
+   "categoria": "testando",
+   "etapa": "Dúvida",
+   "ultimo_contato": "2026-11-08T12:26:04.232Z",
+   "followups": [
+    {
+     "n": 1,
+     "quando": "2026-11-08T12:06:04.232Z",
+     "texto": "Oi! Conseguiu testar a lista? Se quiser, eu libero outro teste agora.",
+     "respondeu": false,
+     "minutos_ate_resposta": null
+    },
+    {
+     "n": 2,
+     "quando": "2026-11-08T12:26:04.232Z",
+     "texto": "Passando para ver se deu tudo certo no teste. Qualquer dúvida é só falar.",
+     "respondeu": false,
+     "minutos_ate_resposta": null
+    }
+   ],
+   "proximo": {
+    "n": 3,
+    "em": "2026-11-08T20:32:05.127Z"
+   },
+   "status": "aguardando"
+  },
+  {
+   "nome": "Tatiane Guedes",
+   "telefone_mascarado": "+55 ** *****-6197",
+   "origem": "ao_vivo",
+   "categoria": "duvida_aberta",
+   "etapa": "Sem retorno",
+   "ultimo_contato": "2026-11-08T17:24:54.643Z",
+   "followups": [
+    {
+     "n": 1,
+     "quando": "2026-11-08T13:04:54.643Z",
+     "texto": "Oi! Conseguiu testar a lista? Se quiser, eu libero outro teste agora.",
+     "respondeu": false,
+     "minutos_ate_resposta": null
+    },
+    {
+     "n": 2,
+     "quando": "2026-11-08T13:24:54.643Z",
+     "texto": "Passando para ver se deu tudo certo no teste. Qualquer dúvida é só falar.",
+     "respondeu": true,
+     "minutos_ate_resposta": 16
+    },
+    {
+     "n": 3,
+     "quando": "2026-11-08T14:24:54.643Z",
+     "texto": "Ainda faz sentido pra você montar o painel? Posso explicar o passo a passo.",
+     "respondeu": false,
+     "minutos_ate_resposta": null
+    },
+    {
+     "n": 4,
+     "quando": "2026-11-08T17:24:54.643Z",
+     "texto": "Última mensagem por aqui: se precisar, o teste continua liberado.",
+     "respondeu": true,
+     "minutos_ate_resposta": 3
+    }
+   ],
+   "proximo": null,
+   "status": "respondeu"
+  },
+  {
+   "nome": "Márcio Pimentel",
+   "telefone_mascarado": "(11) *****-8320",
+   "origem": "backlog",
+   "categoria": "sem_interesse",
+   "etapa": "Teste gerado",
+   "ultimo_contato": "2026-11-02T13:25:09.889Z",
+   "followups": [],
+   "proximo": {
+    "n": 1,
+    "em": "2026-11-08T23:20:41.171Z"
+   },
+   "status": "na_fila"
+  },
+  {
+   "nome": "Sabrina Rangel",
+   "telefone_mascarado": "(11) *****-5843",
+   "origem": "backlog",
+   "categoria": "esfriou",
+   "etapa": "Dúvida",
+   "ultimo_contato": "2026-11-04T12:40:02.773Z",
+   "followups": [],
+   "proximo": {
+    "n": 1,
+    "em": "2026-11-08T21:25:37.811Z"
+   },
+   "status": "na_fila"
+  },
+  {
+   "nome": "Ricardo Matos",
+   "telefone_mascarado": "+55 ** *****-3202",
+   "origem": "backlog",
+   "categoria": "esfriou",
+   "etapa": "Dúvida",
+   "ultimo_contato": "2026-11-04T21:46:37.615Z",
+   "followups": [],
+   "proximo": {
+    "n": 1,
+    "em": "2026-11-08T21:52:54.021Z"
+   },
+   "status": "na_fila"
+  },
+  {
+   "nome": "Natália Bastos",
+   "telefone_mascarado": "(11) *****-5965",
+   "origem": "backlog",
+   "categoria": "suporte",
+   "etapa": "Sem retorno",
+   "ultimo_contato": "2026-11-05T13:08:45.508Z",
+   "followups": [
+    {
+     "n": 1,
+     "quando": "2026-11-05T13:08:45.508Z",
+     "texto": "Oi! Conseguiu testar a lista? Se quiser, eu libero outro teste agora.",
+     "respondeu": false,
+     "minutos_ate_resposta": null
+    }
+   ],
+   "proximo": {
+    "n": 2,
+    "em": "2026-11-08T22:20:20.169Z"
+   },
+   "status": "aguardando"
+  },
+  {
+   "nome": "Caio Montenegro",
+   "telefone_mascarado": "(11) *****-6139",
+   "origem": "backlog",
+   "categoria": "esfriou",
+   "etapa": "Conversa nova",
+   "ultimo_contato": "2026-11-05T15:52:48.589Z",
+   "followups": [
+    {
+     "n": 1,
+     "quando": "2026-11-05T10:52:48.589Z",
+     "texto": "Oi! Conseguiu testar a lista? Se quiser, eu libero outro teste agora.",
+     "respondeu": false,
+     "minutos_ate_resposta": null
+    },
+    {
+     "n": 2,
+     "quando": "2026-11-05T15:52:48.589Z",
+     "texto": "Passando para ver se deu tudo certo no teste. Qualquer dúvida é só falar.",
+     "respondeu": true,
+     "minutos_ate_resposta": 40
+    }
+   ],
+   "proximo": null,
+   "status": "respondeu"
+  },
+  {
+   "nome": "Mônica Teixeira",
+   "telefone_mascarado": "+55 ** *****-6705",
+   "origem": "backlog",
+   "categoria": "interessado_sem_painel",
+   "etapa": "Sem retorno",
+   "ultimo_contato": "2026-11-06T10:38:11.243Z",
+   "followups": [
+    {
+     "n": 1,
+     "quando": "2026-11-06T10:38:11.243Z",
+     "texto": "Oi! Conseguiu testar a lista? Se quiser, eu libero outro teste agora.",
+     "respondeu": false,
+     "minutos_ate_resposta": null
+    }
+   ],
+   "proximo": null,
+   "status": "sem_resposta"
+  },
+  {
+   "nome": "Otávio Vasconcelos",
+   "telefone_mascarado": "(11) *****-2130",
+   "origem": "backlog",
+   "categoria": "sem_interesse",
+   "etapa": "Conversa nova",
+   "ultimo_contato": "2026-11-04T21:07:16.803Z",
+   "followups": [],
+   "proximo": null,
+   "status": "nao_incomodar"
+  },
+  {
+   "nome": "Isabela Cordeiro",
+   "telefone_mascarado": "(11) *****-6708",
+   "origem": "backlog",
+   "categoria": "painel_criado",
+   "etapa": "Painel criado",
+   "ultimo_contato": "2026-11-04T15:42:14.552Z",
+   "followups": [
+    {
+     "n": 1,
+     "quando": "2026-11-04T15:42:14.552Z",
+     "texto": "Oi! Conseguiu testar a lista? Se quiser, eu libero outro teste agora.",
+     "respondeu": true,
+     "minutos_ate_resposta": 7
+    }
+   ],
+   "proximo": null,
+   "status": "fechou_painel"
+  },
+  {
+   "nome": "Sérgio Amaral",
+   "telefone_mascarado": "+55 ** *****-3467",
+   "origem": "backlog",
+   "categoria": "sem_resposta_nossa",
+   "etapa": "Teste gerado",
+   "ultimo_contato": "2026-11-06T07:53:20.547Z",
+   "followups": [],
+   "proximo": {
+    "n": 1,
+    "em": "2026-11-08T23:14:38.288Z"
+   },
+   "status": "na_fila"
+  },
+  {
+   "nome": "Paula Drummond",
+   "telefone_mascarado": "(11) *****-6468",
+   "origem": "backlog",
+   "categoria": "testando",
+   "etapa": "Painel criado",
+   "ultimo_contato": "2026-11-06T00:28:58.087Z",
+   "followups": [
+    {
+     "n": 1,
+     "quando": "2026-11-06T00:28:58.087Z",
+     "texto": "Oi! Conseguiu testar a lista? Se quiser, eu libero outro teste agora.",
+     "respondeu": true,
+     "minutos_ate_resposta": 14
+    }
+   ],
+   "proximo": null,
+   "status": "respondeu"
+  },
+  {
+   "nome": "Wesley Furtado",
+   "telefone_mascarado": "(11) *****-8802",
+   "origem": "backlog",
+   "categoria": "suporte",
+   "etapa": "Dúvida",
+   "ultimo_contato": "2026-11-03T02:40:07.110Z",
+   "followups": [
+    {
+     "n": 1,
+     "quando": "2026-11-03T02:40:07.110Z",
+     "texto": "Oi! Conseguiu testar a lista? Se quiser, eu libero outro teste agora.",
+     "respondeu": false,
+     "minutos_ate_resposta": null
+    }
+   ],
+   "proximo": null,
+   "status": "sem_resposta"
+  },
+  {
+   "nome": "Elaine Magalhães",
+   "telefone_mascarado": "+55 ** *****-9705",
+   "origem": "backlog",
+   "categoria": "testando",
+   "etapa": "Teste gerado",
+   "ultimo_contato": "2026-11-04T02:57:31.901Z",
+   "followups": [
+    {
+     "n": 1,
+     "quando": "2026-11-03T21:57:31.901Z",
+     "texto": "Oi! Conseguiu testar a lista? Se quiser, eu libero outro teste agora.",
+     "respondeu": false,
+     "minutos_ate_resposta": null
+    },
+    {
+     "n": 2,
+     "quando": "2026-11-04T02:57:31.901Z",
+     "texto": "Passando para ver se deu tudo certo no teste. Qualquer dúvida é só falar.",
+     "respondeu": false,
+     "minutos_ate_resposta": null
+    }
+   ],
+   "proximo": {
+    "n": 3,
+    "em": "2026-11-08T22:12:09.587Z"
+   },
+   "status": "aguardando"
+  },
+  {
+   "nome": "Carolina Esteves",
+   "telefone_mascarado": "(11) *****-3769",
+   "origem": "backlog",
+   "categoria": "irrelevante",
+   "etapa": "Sem retorno",
+   "ultimo_contato": "2026-11-06T15:20:28.322Z",
+   "followups": [],
+   "proximo": {
+    "n": 1,
+    "em": "2026-11-08T20:17:44.454Z"
+   },
+   "status": "na_fila"
+  },
+  {
+   "nome": "Felipe Sampaio",
+   "telefone_mascarado": "+55 ** *****-3152",
+   "origem": "backlog",
+   "categoria": "equipe_ou_parceiro",
+   "etapa": "Painel criado",
+   "ultimo_contato": "2026-11-03T05:01:20.396Z",
+   "followups": [],
+   "proximo": {
+    "n": 1,
+    "em": "2026-11-08T22:04:10.877Z"
+   },
+   "status": "na_fila"
+  },
+  {
+   "nome": "Larissa Coutinho",
+   "telefone_mascarado": "(11) *****-9559",
+   "origem": "backlog",
+   "categoria": "suporte",
+   "etapa": "Teste gerado",
+   "ultimo_contato": "2026-11-06T07:34:19.610Z",
+   "followups": [
+    {
+     "n": 1,
+     "quando": "2026-11-06T02:34:19.610Z",
+     "texto": "Oi! Conseguiu testar a lista? Se quiser, eu libero outro teste agora.",
+     "respondeu": false,
+     "minutos_ate_resposta": null
+    },
+    {
+     "n": 2,
+     "quando": "2026-11-06T07:34:19.610Z",
+     "texto": "Passando para ver se deu tudo certo no teste. Qualquer dúvida é só falar.",
+     "respondeu": false,
+     "minutos_ate_resposta": null
+    }
+   ],
+   "proximo": {
+    "n": 3,
+    "em": "2026-11-08T22:12:33.563Z"
+   },
+   "status": "aguardando"
+  },
+  {
+   "nome": "Rodrigo Azevedo",
+   "telefone_mascarado": "(11) *****-7135",
+   "origem": "backlog",
+   "categoria": "painel_criado",
+   "etapa": "Conversa nova",
+   "ultimo_contato": "2026-11-03T13:39:31.835Z",
+   "followups": [
+    {
+     "n": 1,
+     "quando": "2026-11-03T08:39:31.835Z",
+     "texto": "Oi! Conseguiu testar a lista? Se quiser, eu libero outro teste agora.",
+     "respondeu": false,
+     "minutos_ate_resposta": null
+    },
+    {
+     "n": 2,
+     "quando": "2026-11-03T13:39:31.835Z",
+     "texto": "Passando para ver se deu tudo certo no teste. Qualquer dúvida é só falar.",
+     "respondeu": true,
+     "minutos_ate_resposta": 44
+    }
+   ],
+   "proximo": null,
+   "status": "respondeu"
+  },
+  {
+   "nome": "Priscila Machado",
+   "telefone_mascarado": "+55 ** *****-6103",
+   "origem": "backlog",
+   "categoria": "suporte",
+   "etapa": "Teste gerado",
+   "ultimo_contato": "2026-11-02T08:07:07.635Z",
+   "followups": [
+    {
+     "n": 1,
+     "quando": "2026-11-02T03:07:07.635Z",
+     "texto": "Oi! Conseguiu testar a lista? Se quiser, eu libero outro teste agora.",
+     "respondeu": false,
+     "minutos_ate_resposta": null
+    },
+    {
+     "n": 2,
+     "quando": "2026-11-02T08:07:07.635Z",
+     "texto": "Passando para ver se deu tudo certo no teste. Qualquer dúvida é só falar.",
+     "respondeu": false,
+     "minutos_ate_resposta": null
+    }
+   ],
+   "proximo": null,
+   "status": "sem_resposta"
+  },
+  {
+   "nome": "Henrique Seixas",
+   "telefone_mascarado": "(11) *****-1203",
+   "origem": "backlog",
+   "categoria": "sem_interesse",
+   "etapa": "Sem retorno",
+   "ultimo_contato": "2026-11-03T23:44:12.226Z",
+   "followups": [],
+   "proximo": {
+    "n": 1,
+    "em": "2026-11-08T21:38:25.906Z"
+   },
+   "status": "na_fila"
+  },
+  {
+   "nome": "Bianca Torres",
+   "telefone_mascarado": "(11) *****-9444",
+   "origem": "backlog",
+   "categoria": "sem_interesse",
+   "etapa": "Painel criado",
+   "ultimo_contato": "2026-11-02T03:40:20.636Z",
+   "followups": [
+    {
+     "n": 1,
+     "quando": "2026-11-02T03:40:20.636Z",
+     "texto": "Oi! Conseguiu testar a lista? Se quiser, eu libero outro teste agora.",
+     "respondeu": false,
+     "minutos_ate_resposta": null
+    }
+   ],
+   "proximo": null,
+   "status": "nao_incomodar"
+  },
+  {
+   "nome": "Leandro Fontes",
+   "telefone_mascarado": "+55 ** *****-5019",
+   "origem": "backlog",
+   "categoria": "sem_interesse",
+   "etapa": "Painel criado",
+   "ultimo_contato": "2026-11-05T20:03:45.099Z",
+   "followups": [],
+   "proximo": {
+    "n": 1,
+    "em": "2026-11-08T20:51:03.454Z"
+   },
+   "status": "na_fila"
+  },
+  {
+   "nome": "Daniela Veloso",
+   "telefone_mascarado": "(11) *****-8563",
+   "origem": "backlog",
+   "categoria": "painel_criado",
+   "etapa": "Conversa nova",
+   "ultimo_contato": "2026-11-03T23:43:12.042Z",
+   "followups": [],
+   "proximo": {
+    "n": 1,
+    "em": "2026-11-08T23:00:22.844Z"
+   },
+   "status": "na_fila"
+  },
+  {
+   "nome": "Vinícius Lacerda",
+   "telefone_mascarado": "(11) *****-3609",
+   "origem": "backlog",
+   "categoria": "duvida_aberta",
+   "etapa": "Conversa nova",
+   "ultimo_contato": "2026-11-03T23:04:55.432Z",
+   "followups": [
+    {
+     "n": 1,
+     "quando": "2026-11-03T23:04:55.432Z",
+     "texto": "Oi! Conseguiu testar a lista? Se quiser, eu libero outro teste agora.",
+     "respondeu": false,
+     "minutos_ate_resposta": null
+    }
+   ],
+   "proximo": {
+    "n": 2,
+    "em": "2026-11-08T21:09:08.868Z"
+   },
+   "status": "aguardando"
+  },
+  {
+   "nome": "Tatiane Guedes",
+   "telefone_mascarado": "+55 ** *****-4887",
+   "origem": "backlog",
+   "categoria": "duvida_aberta",
+   "etapa": "Dúvida",
+   "ultimo_contato": "2026-11-05T01:58:42.830Z",
+   "followups": [
+    {
+     "n": 1,
+     "quando": "2026-11-04T20:58:42.830Z",
+     "texto": "Oi! Conseguiu testar a lista? Se quiser, eu libero outro teste agora.",
+     "respondeu": false,
+     "minutos_ate_resposta": null
+    },
+    {
+     "n": 2,
+     "quando": "2026-11-05T01:58:42.830Z",
+     "texto": "Passando para ver se deu tudo certo no teste. Qualquer dúvida é só falar.",
+     "respondeu": true,
+     "minutos_ate_resposta": 35
+    }
+   ],
+   "proximo": null,
+   "status": "respondeu"
+  },
+  {
+   "nome": "Márcio Pimentel",
+   "telefone_mascarado": "(11) *****-8492",
+   "origem": "backlog",
+   "categoria": "equipe_ou_parceiro",
+   "etapa": "Sem retorno",
+   "ultimo_contato": "2026-11-02T07:24:19.631Z",
+   "followups": [
+    {
+     "n": 1,
+     "quando": "2026-11-02T07:24:19.631Z",
+     "texto": "Oi! Conseguiu testar a lista? Se quiser, eu libero outro teste agora.",
+     "respondeu": false,
+     "minutos_ate_resposta": null
+    }
+   ],
+   "proximo": null,
+   "status": "sem_resposta"
+  },
+  {
+   "nome": "Sabrina Rangel",
+   "telefone_mascarado": "(11) *****-1474",
+   "origem": "backlog",
+   "categoria": "sem_interesse",
+   "etapa": "Teste gerado",
+   "ultimo_contato": "2026-11-04T19:17:29.466Z",
+   "followups": [],
+   "proximo": {
+    "n": 1,
+    "em": "2026-11-08T22:23:45.371Z"
+   },
+   "status": "na_fila"
+  },
+  {
+   "nome": "Ricardo Matos",
+   "telefone_mascarado": "+55 ** *****-6997",
+   "origem": "backlog",
+   "categoria": "painel_criado",
+   "etapa": "Teste gerado",
+   "ultimo_contato": "2026-11-02T14:57:09.830Z",
+   "followups": [],
+   "proximo": null,
+   "status": "nao_incomodar"
+  },
+  {
+   "nome": "Natália Bastos",
+   "telefone_mascarado": "(11) *****-3763",
+   "origem": "backlog",
+   "categoria": "interessado_sem_painel",
+   "etapa": "Dúvida",
+   "ultimo_contato": "2026-11-06T02:53:55.804Z",
+   "followups": [],
+   "proximo": {
+    "n": 1,
+    "em": "2026-11-08T22:55:25.940Z"
+   },
+   "status": "na_fila"
+  },
+  {
+   "nome": "Caio Montenegro",
+   "telefone_mascarado": "(11) *****-9201",
+   "origem": "backlog",
+   "categoria": "suporte",
+   "etapa": "Dúvida",
+   "ultimo_contato": "2026-11-06T18:06:48.458Z",
+   "followups": [],
+   "proximo": {
+    "n": 1,
+    "em": "2026-11-08T23:10:59.497Z"
+   },
+   "status": "na_fila"
+  },
+  {
+   "nome": "Mônica Teixeira",
+   "telefone_mascarado": "+55 ** *****-9848",
+   "origem": "backlog",
+   "categoria": "irrelevante",
+   "etapa": "Painel criado",
+   "ultimo_contato": "2026-11-06T16:07:15.502Z",
+   "followups": [
+    {
+     "n": 1,
+     "quando": "2026-11-06T16:07:15.502Z",
+     "texto": "Oi! Conseguiu testar a lista? Se quiser, eu libero outro teste agora.",
+     "respondeu": false,
+     "minutos_ate_resposta": null
+    }
+   ],
+   "proximo": {
+    "n": 2,
+    "em": "2026-11-08T20:02:16.277Z"
+   },
+   "status": "aguardando"
+  },
+  {
+   "nome": "Otávio Vasconcelos",
+   "telefone_mascarado": "(11) *****-1086",
+   "origem": "backlog",
+   "categoria": "interessado_sem_painel",
+   "etapa": "Conversa nova",
+   "ultimo_contato": "2026-11-04T15:01:28.397Z",
+   "followups": [
+    {
+     "n": 1,
+     "quando": "2026-11-04T10:01:28.397Z",
+     "texto": "Oi! Conseguiu testar a lista? Se quiser, eu libero outro teste agora.",
+     "respondeu": false,
+     "minutos_ate_resposta": null
+    },
+    {
+     "n": 2,
+     "quando": "2026-11-04T15:01:28.397Z",
+     "texto": "Passando para ver se deu tudo certo no teste. Qualquer dúvida é só falar.",
+     "respondeu": true,
+     "minutos_ate_resposta": 49
+    }
+   ],
+   "proximo": null,
+   "status": "respondeu"
+  },
+  {
+   "nome": "Isabela Cordeiro",
+   "telefone_mascarado": "(11) *****-3587",
+   "origem": "backlog",
+   "categoria": "sem_interesse",
+   "etapa": "Painel criado",
+   "ultimo_contato": "2026-11-03T06:54:45.429Z",
+   "followups": [
+    {
+     "n": 1,
+     "quando": "2026-11-03T06:54:45.429Z",
+     "texto": "Oi! Conseguiu testar a lista? Se quiser, eu libero outro teste agora.",
+     "respondeu": false,
+     "minutos_ate_resposta": null
+    }
+   ],
+   "proximo": null,
+   "status": "sem_resposta"
+  },
+  {
+   "nome": "Sérgio Amaral",
+   "telefone_mascarado": "+55 ** *****-2411",
+   "origem": "backlog",
+   "categoria": "suporte",
+   "etapa": "Sem retorno",
+   "ultimo_contato": "2026-11-03T10:44:26.783Z",
+   "followups": [],
+   "proximo": {
+    "n": 1,
+    "em": "2026-11-08T22:24:30.869Z"
+   },
+   "status": "na_fila"
+  },
+  {
+   "nome": "Paula Drummond",
+   "telefone_mascarado": "(11) *****-9003",
+   "origem": "backlog",
+   "categoria": "irrelevante",
+   "etapa": "Conversa nova",
+   "ultimo_contato": "2026-11-03T17:37:48.413Z",
+   "followups": [],
+   "proximo": null,
+   "status": "nao_incomodar"
+  },
+  {
+   "nome": "Wesley Furtado",
+   "telefone_mascarado": "(11) *****-5176",
+   "origem": "backlog",
+   "categoria": "duvida_aberta",
+   "etapa": "Sem retorno",
+   "ultimo_contato": "2026-11-03T08:12:01.715Z",
+   "followups": [],
+   "proximo": {
+    "n": 1,
+    "em": "2026-11-08T21:34:02.395Z"
+   },
+   "status": "na_fila"
+  },
+  {
+   "nome": "Elaine Magalhães",
+   "telefone_mascarado": "+55 ** *****-1918",
+   "origem": "backlog",
+   "categoria": "sem_resposta_nossa",
+   "etapa": "Conversa nova",
+   "ultimo_contato": "2026-11-04T01:38:29.390Z",
+   "followups": [],
+   "proximo": {
+    "n": 1,
+    "em": "2026-11-08T22:31:34.075Z"
+   },
+   "status": "na_fila"
+  },
+  {
+   "nome": "Rafael Menezes",
+   "telefone_mascarado": "(11) *****-5871",
+   "origem": "backlog",
+   "categoria": "testando",
+   "etapa": "Conversa nova",
+   "ultimo_contato": "2026-11-02T20:17:12.121Z",
+   "followups": [
+    {
+     "n": 1,
+     "quando": "2026-11-02T20:17:12.121Z",
+     "texto": "Oi! Conseguiu testar a lista? Se quiser, eu libero outro teste agora.",
+     "respondeu": false,
+     "minutos_ate_resposta": null
+    }
+   ],
+   "proximo": {
+    "n": 2,
+    "em": "2026-11-08T23:51:59.012Z"
+   },
+   "status": "aguardando"
+  },
+  {
+   "nome": "Camila Duarte",
+   "telefone_mascarado": "(11) *****-8369",
+   "origem": "backlog",
+   "categoria": "sem_resposta_nossa",
+   "etapa": "Painel criado",
+   "ultimo_contato": "2026-11-04T11:53:12.462Z",
+   "followups": [
+    {
+     "n": 1,
+     "quando": "2026-11-04T11:53:12.462Z",
+     "texto": "Oi! Conseguiu testar a lista? Se quiser, eu libero outro teste agora.",
+     "respondeu": true,
+     "minutos_ate_resposta": 35
+    }
+   ],
+   "proximo": null,
+   "status": "respondeu"
+  },
+  {
+   "nome": "Bruno Tavares",
+   "telefone_mascarado": "+55 ** *****-2169",
+   "origem": "backlog",
+   "categoria": "interessado_sem_painel",
+   "etapa": "Sem retorno",
+   "ultimo_contato": "2026-11-06T21:48:37.077Z",
+   "followups": [
+    {
+     "n": 1,
+     "quando": "2026-11-06T16:48:37.077Z",
+     "texto": "Oi! Conseguiu testar a lista? Se quiser, eu libero outro teste agora.",
+     "respondeu": false,
+     "minutos_ate_resposta": null
+    },
+    {
+     "n": 2,
+     "quando": "2026-11-06T21:48:37.077Z",
+     "texto": "Passando para ver se deu tudo certo no teste. Qualquer dúvida é só falar.",
+     "respondeu": false,
+     "minutos_ate_resposta": null
+    }
+   ],
+   "proximo": null,
+   "status": "sem_resposta"
+  },
+  {
+   "nome": "Letícia Moraes",
+   "telefone_mascarado": "(11) *****-9009",
+   "origem": "backlog",
+   "categoria": "painel_criado",
+   "etapa": "Dúvida",
+   "ultimo_contato": "2026-11-02T06:18:07.163Z",
+   "followups": [],
+   "proximo": {
+    "n": 1,
+    "em": "2026-11-08T22:45:46.395Z"
+   },
+   "status": "na_fila"
+  },
+  {
+   "nome": "Diego Albuquerque",
+   "telefone_mascarado": "(11) *****-5192",
+   "origem": "backlog",
+   "categoria": "sem_interesse",
+   "etapa": "Conversa nova",
+   "ultimo_contato": "2026-11-02T19:53:39.998Z",
+   "followups": [
+    {
+     "n": 1,
+     "quando": "2026-11-02T19:53:39.998Z",
+     "texto": "Oi! Conseguiu testar a lista? Se quiser, eu libero outro teste agora.",
+     "respondeu": false,
+     "minutos_ate_resposta": null
+    }
+   ],
+   "proximo": null,
+   "status": "nao_incomodar"
+  },
+  {
+   "nome": "Fernanda Siqueira",
+   "telefone_mascarado": "+55 ** *****-5643",
+   "origem": "backlog",
+   "categoria": "testando",
+   "etapa": "Conversa nova",
+   "ultimo_contato": "2026-11-06T09:07:47.359Z",
+   "followups": [],
+   "proximo": {
+    "n": 1,
+    "em": "2026-11-08T20:07:01.186Z"
+   },
+   "status": "na_fila"
+  },
+  {
+   "nome": "Thiago Barreto",
+   "telefone_mascarado": "(11) *****-3200",
+   "origem": "backlog",
+   "categoria": "interessado_sem_painel",
+   "etapa": "Teste gerado",
+   "ultimo_contato": "2026-11-05T00:28:29.589Z",
+   "followups": [],
+   "proximo": {
+    "n": 1,
+    "em": "2026-11-08T22:30:02.521Z"
+   },
+   "status": "na_fila"
+  },
+  {
+   "nome": "Juliana Prado",
+   "telefone_mascarado": "(11) *****-3499",
+   "origem": "backlog",
+   "categoria": "suporte",
+   "etapa": "Painel criado",
+   "ultimo_contato": "2026-11-03T11:48:04.637Z",
+   "followups": [
+    {
+     "n": 1,
+     "quando": "2026-11-03T06:48:04.637Z",
+     "texto": "Oi! Conseguiu testar a lista? Se quiser, eu libero outro teste agora.",
+     "respondeu": false,
+     "minutos_ate_resposta": null
+    },
+    {
+     "n": 2,
+     "quando": "2026-11-03T11:48:04.637Z",
+     "texto": "Passando para ver se deu tudo certo no teste. Qualquer dúvida é só falar.",
+     "respondeu": false,
+     "minutos_ate_resposta": null
+    }
+   ],
+   "proximo": {
+    "n": 3,
+    "em": "2026-11-08T20:36:13.109Z"
+   },
+   "status": "aguardando"
+  },
+  {
+   "nome": "Marcelo Queiroz",
+   "telefone_mascarado": "+55 ** *****-8910",
+   "origem": "backlog",
+   "categoria": "sem_resposta_nossa",
+   "etapa": "Sem retorno",
+   "ultimo_contato": "2026-11-04T01:47:17.488Z",
+   "followups": [
+    {
+     "n": 1,
+     "quando": "2026-11-04T01:47:17.488Z",
+     "texto": "Oi! Conseguiu testar a lista? Se quiser, eu libero outro teste agora.",
+     "respondeu": true,
+     "minutos_ate_resposta": 35
+    }
+   ],
+   "proximo": null,
+   "status": "respondeu"
+  },
+  {
+   "nome": "Aline Ferraz",
+   "telefone_mascarado": "(11) *****-9428",
+   "origem": "backlog",
+   "categoria": "sem_resposta_nossa",
+   "etapa": "Teste gerado",
+   "ultimo_contato": "2026-11-05T10:48:55.169Z",
+   "followups": [
+    {
+     "n": 1,
+     "quando": "2026-11-05T05:48:55.169Z",
+     "texto": "Oi! Conseguiu testar a lista? Se quiser, eu libero outro teste agora.",
+     "respondeu": false,
+     "minutos_ate_resposta": null
+    },
+    {
+     "n": 2,
+     "quando": "2026-11-05T10:48:55.169Z",
+     "texto": "Passando para ver se deu tudo certo no teste. Qualquer dúvida é só falar.",
+     "respondeu": false,
+     "minutos_ate_resposta": null
+    }
+   ],
+   "proximo": null,
+   "status": "sem_resposta"
+  },
+  {
+   "nome": "Gustavo Nogueira",
+   "telefone_mascarado": "(11) *****-6110",
+   "origem": "backlog",
+   "categoria": "irrelevante",
+   "etapa": "Dúvida",
+   "ultimo_contato": "2026-11-02T05:00:09.281Z",
+   "followups": [],
+   "proximo": {
+    "n": 1,
+    "em": "2026-11-08T22:44:11.872Z"
+   },
+   "status": "na_fila"
+  },
+  {
+   "nome": "Patrícia Lobo",
+   "telefone_mascarado": "+55 ** *****-7933",
+   "origem": "backlog",
+   "categoria": "equipe_ou_parceiro",
+   "etapa": "Dúvida",
+   "ultimo_contato": "2026-11-05T21:57:10.403Z",
+   "followups": [],
+   "proximo": null,
+   "status": "nao_incomodar"
+  },
+  {
+   "nome": "André Cavalcanti",
+   "telefone_mascarado": "(11) *****-3669",
+   "origem": "backlog",
+   "categoria": "sem_interesse",
+   "etapa": "Dúvida",
+   "ultimo_contato": "2026-11-03T18:24:22.800Z",
+   "followups": [],
+   "proximo": {
+    "n": 1,
+    "em": "2026-11-08T19:54:21.886Z"
+   },
+   "status": "na_fila"
+  },
+  {
+   "nome": "Vanessa Rezende",
+   "telefone_mascarado": "(11) *****-9347",
+   "origem": "backlog",
+   "categoria": "esfriou",
+   "etapa": "Conversa nova",
+   "ultimo_contato": "2026-11-06T15:47:16.123Z",
+   "followups": [],
+   "proximo": {
+    "n": 1,
+    "em": "2026-11-08T22:05:20.866Z"
+   },
+   "status": "na_fila"
+  },
+  {
+   "nome": "Lucas Peixoto",
+   "telefone_mascarado": "+55 ** *****-9255",
+   "origem": "backlog",
+   "categoria": "irrelevante",
+   "etapa": "Conversa nova",
+   "ultimo_contato": "2026-11-03T21:47:27.359Z",
+   "followups": [
+    {
+     "n": 1,
+     "quando": "2026-11-03T16:47:27.359Z",
+     "texto": "Oi! Conseguiu testar a lista? Se quiser, eu libero outro teste agora.",
+     "respondeu": false,
+     "minutos_ate_resposta": null
+    },
+    {
+     "n": 2,
+     "quando": "2026-11-03T21:47:27.359Z",
+     "texto": "Passando para ver se deu tudo certo no teste. Qualquer dúvida é só falar.",
+     "respondeu": false,
+     "minutos_ate_resposta": null
+    }
+   ],
+   "proximo": {
+    "n": 3,
+    "em": "2026-11-08T23:32:39.246Z"
+   },
+   "status": "aguardando"
+  },
+  {
+   "nome": "Renata Valadares",
+   "telefone_mascarado": "(11) *****-3730",
+   "origem": "backlog",
+   "categoria": "suporte",
+   "etapa": "Teste gerado",
+   "ultimo_contato": "2026-11-05T10:14:45.928Z",
+   "followups": [
+    {
+     "n": 1,
+     "quando": "2026-11-05T05:14:45.928Z",
+     "texto": "Oi! Conseguiu testar a lista? Se quiser, eu libero outro teste agora.",
+     "respondeu": true,
+     "minutos_ate_resposta": 27
+    },
+    {
+     "n": 2,
+     "quando": "2026-11-05T10:14:45.928Z",
+     "texto": "Passando para ver se deu tudo certo no teste. Qualquer dúvida é só falar.",
+     "respondeu": true,
+     "minutos_ate_resposta": 7
+    }
+   ],
+   "proximo": null,
+   "status": "respondeu"
+  },
+  {
+   "nome": "Eduardo Brandão",
+   "telefone_mascarado": "(11) *****-4573",
+   "origem": "backlog",
+   "categoria": "duvida_aberta",
+   "etapa": "Painel criado",
+   "ultimo_contato": "2026-11-05T02:07:25.414Z",
+   "followups": [
+    {
+     "n": 1,
+     "quando": "2026-11-05T02:07:25.414Z",
+     "texto": "Oi! Conseguiu testar a lista? Se quiser, eu libero outro teste agora.",
+     "respondeu": false,
+     "minutos_ate_resposta": null
+    }
+   ],
+   "proximo": null,
+   "status": "sem_resposta"
+  },
+  {
+   "nome": "Carolina Esteves",
+   "telefone_mascarado": "+55 ** *****-4985",
+   "origem": "backlog",
+   "categoria": "equipe_ou_parceiro",
+   "etapa": "Painel criado",
+   "ultimo_contato": "2026-11-02T17:22:50.572Z",
+   "followups": [],
+   "proximo": {
+    "n": 1,
+    "em": "2026-11-08T20:05:31.161Z"
+   },
+   "status": "na_fila"
+  },
+  {
+   "nome": "Felipe Sampaio",
+   "telefone_mascarado": "(11) *****-1402",
+   "origem": "backlog",
+   "categoria": "sem_interesse",
+   "etapa": "Teste gerado",
+   "ultimo_contato": "2026-11-06T03:34:54.176Z",
+   "followups": [],
+   "proximo": null,
+   "status": "nao_incomodar"
+  },
+  {
+   "nome": "Larissa Coutinho",
+   "telefone_mascarado": "(11) *****-8971",
+   "origem": "backlog",
+   "categoria": "sem_interesse",
+   "etapa": "Painel criado",
+   "ultimo_contato": "2026-11-05T21:31:15.647Z",
+   "followups": [],
+   "proximo": {
+    "n": 1,
+    "em": "2026-11-08T23:45:31.183Z"
+   },
+   "status": "na_fila"
+  },
+  {
+   "nome": "Rodrigo Azevedo",
+   "telefone_mascarado": "+55 ** *****-3552",
+   "origem": "backlog",
+   "categoria": "testando",
+   "etapa": "Painel criado",
+   "ultimo_contato": "2026-11-04T17:18:47.708Z",
+   "followups": [],
+   "proximo": {
+    "n": 1,
+    "em": "2026-11-08T22:41:11.704Z"
+   },
+   "status": "na_fila"
+  },
+  {
+   "nome": "Priscila Machado",
+   "telefone_mascarado": "(11) *****-2978",
+   "origem": "backlog",
+   "categoria": "duvida_aberta",
+   "etapa": "Dúvida",
+   "ultimo_contato": "2026-11-05T01:59:38.039Z",
+   "followups": [
+    {
+     "n": 1,
+     "quando": "2026-11-05T01:59:38.039Z",
+     "texto": "Oi! Conseguiu testar a lista? Se quiser, eu libero outro teste agora.",
+     "respondeu": false,
+     "minutos_ate_resposta": null
+    }
+   ],
+   "proximo": {
+    "n": 2,
+    "em": "2026-11-08T19:54:40.669Z"
+   },
+   "status": "aguardando"
+  },
+  {
+   "nome": "Henrique Seixas",
+   "telefone_mascarado": "(11) *****-7149",
+   "origem": "backlog",
+   "categoria": "sem_interesse",
+   "etapa": "Dúvida",
+   "ultimo_contato": "2026-11-07T02:04:14.271Z",
+   "followups": [
+    {
+     "n": 1,
+     "quando": "2026-11-06T21:04:14.271Z",
+     "texto": "Oi! Conseguiu testar a lista? Se quiser, eu libero outro teste agora.",
+     "respondeu": true,
+     "minutos_ate_resposta": 8
+    },
+    {
+     "n": 2,
+     "quando": "2026-11-07T02:04:14.271Z",
+     "texto": "Passando para ver se deu tudo certo no teste. Qualquer dúvida é só falar.",
+     "respondeu": true,
+     "minutos_ate_resposta": 45
+    }
+   ],
+   "proximo": null,
+   "status": "respondeu"
+  },
+  {
+   "nome": "Bianca Torres",
+   "telefone_mascarado": "+55 ** *****-3196",
+   "origem": "backlog",
+   "categoria": "esfriou",
+   "etapa": "Conversa nova",
+   "ultimo_contato": "2026-11-02T08:00:03.396Z",
+   "followups": [
+    {
+     "n": 1,
+     "quando": "2026-11-02T08:00:03.396Z",
+     "texto": "Oi! Conseguiu testar a lista? Se quiser, eu libero outro teste agora.",
+     "respondeu": false,
+     "minutos_ate_resposta": null
+    }
+   ],
+   "proximo": null,
+   "status": "sem_resposta"
+  },
+  {
+   "nome": "Leandro Fontes",
+   "telefone_mascarado": "(11) *****-1291",
+   "origem": "backlog",
+   "categoria": "duvida_aberta",
+   "etapa": "Conversa nova",
+   "ultimo_contato": "2026-11-05T04:36:43.592Z",
+   "followups": [],
+   "proximo": {
+    "n": 1,
+    "em": "2026-11-08T20:41:25.626Z"
+   },
+   "status": "na_fila"
+  },
+  {
+   "nome": "Daniela Veloso",
+   "telefone_mascarado": "(11) *****-6660",
+   "origem": "backlog",
+   "categoria": "esfriou",
+   "etapa": "Conversa nova",
+   "ultimo_contato": "2026-11-02T04:20:15.036Z",
+   "followups": [
+    {
+     "n": 1,
+     "quando": "2026-11-02T04:20:15.036Z",
+     "texto": "Oi! Conseguiu testar a lista? Se quiser, eu libero outro teste agora.",
+     "respondeu": false,
+     "minutos_ate_resposta": null
+    }
+   ],
+   "proximo": null,
+   "status": "nao_incomodar"
+  },
+  {
+   "nome": "Vinícius Lacerda",
+   "telefone_mascarado": "+55 ** *****-9444",
+   "origem": "backlog",
+   "categoria": "irrelevante",
+   "etapa": "Dúvida",
+   "ultimo_contato": "2026-11-03T10:49:58.579Z",
+   "followups": [],
+   "proximo": {
+    "n": 1,
+    "em": "2026-11-08T22:46:27.562Z"
+   },
+   "status": "na_fila"
+  },
+  {
+   "nome": "Tatiane Guedes",
+   "telefone_mascarado": "(11) *****-3481",
+   "origem": "backlog",
+   "categoria": "testando",
+   "etapa": "Conversa nova",
+   "ultimo_contato": "2026-11-04T21:34:13.580Z",
+   "followups": [],
+   "proximo": {
+    "n": 1,
+    "em": "2026-11-08T21:40:07.224Z"
+   },
+   "status": "na_fila"
+  },
+  {
+   "nome": "Márcio Pimentel",
+   "telefone_mascarado": "(11) *****-8669",
+   "origem": "backlog",
+   "categoria": "sem_resposta_nossa",
+   "etapa": "Painel criado",
+   "ultimo_contato": "2026-11-03T06:51:13.045Z",
+   "followups": [
+    {
+     "n": 1,
+     "quando": "2026-11-03T01:51:13.045Z",
+     "texto": "Oi! Conseguiu testar a lista? Se quiser, eu libero outro teste agora.",
+     "respondeu": false,
+     "minutos_ate_resposta": null
+    },
+    {
+     "n": 2,
+     "quando": "2026-11-03T06:51:13.045Z",
+     "texto": "Passando para ver se deu tudo certo no teste. Qualquer dúvida é só falar.",
+     "respondeu": false,
+     "minutos_ate_resposta": null
+    }
+   ],
+   "proximo": {
+    "n": 3,
+    "em": "2026-11-08T23:08:06.376Z"
+   },
+   "status": "aguardando"
+  },
+  {
+   "nome": "Sabrina Rangel",
+   "telefone_mascarado": "+55 ** *****-8480",
+   "origem": "backlog",
+   "categoria": "painel_criado",
+   "etapa": "Painel criado",
+   "ultimo_contato": "2026-11-05T12:36:52.805Z",
+   "followups": [
+    {
+     "n": 1,
+     "quando": "2026-11-05T07:36:52.805Z",
+     "texto": "Oi! Conseguiu testar a lista? Se quiser, eu libero outro teste agora.",
+     "respondeu": false,
+     "minutos_ate_resposta": null
+    },
+    {
+     "n": 2,
+     "quando": "2026-11-05T12:36:52.805Z",
+     "texto": "Passando para ver se deu tudo certo no teste. Qualquer dúvida é só falar.",
+     "respondeu": true,
+     "minutos_ate_resposta": 46
+    }
+   ],
+   "proximo": null,
+   "status": "respondeu"
+  },
+  {
+   "nome": "Ricardo Matos",
+   "telefone_mascarado": "(11) *****-1019",
+   "origem": "backlog",
+   "categoria": "suporte",
+   "etapa": "Painel criado",
+   "ultimo_contato": "2026-11-05T10:31:58.242Z",
+   "followups": [
+    {
+     "n": 1,
+     "quando": "2026-11-05T05:31:58.242Z",
+     "texto": "Oi! Conseguiu testar a lista? Se quiser, eu libero outro teste agora.",
+     "respondeu": true,
+     "minutos_ate_resposta": 36
+    },
+    {
+     "n": 2,
+     "quando": "2026-11-05T10:31:58.242Z",
+     "texto": "Passando para ver se deu tudo certo no teste. Qualquer dúvida é só falar.",
+     "respondeu": false,
+     "minutos_ate_resposta": null
+    }
+   ],
+   "proximo": null,
+   "status": "sem_resposta"
+  },
+  {
+   "nome": "Natália Bastos",
+   "telefone_mascarado": "(11) *****-5478",
+   "origem": "backlog",
+   "categoria": "sem_resposta_nossa",
+   "etapa": "Conversa nova",
+   "ultimo_contato": "2026-11-04T21:22:47.071Z",
+   "followups": [],
+   "proximo": {
+    "n": 1,
+    "em": "2026-11-08T20:30:12.591Z"
+   },
+   "status": "na_fila"
+  },
+  {
+   "nome": "Caio Montenegro",
+   "telefone_mascarado": "+55 ** *****-6060",
+   "origem": "backlog",
+   "categoria": "esfriou",
+   "etapa": "Sem retorno",
+   "ultimo_contato": "2026-11-06T12:43:50.362Z",
+   "followups": [
+    {
+     "n": 1,
+     "quando": "2026-11-06T12:43:50.362Z",
+     "texto": "Oi! Conseguiu testar a lista? Se quiser, eu libero outro teste agora.",
+     "respondeu": false,
+     "minutos_ate_resposta": null
+    }
+   ],
+   "proximo": null,
+   "status": "nao_incomodar"
+  },
+  {
+   "nome": "Mônica Teixeira",
+   "telefone_mascarado": "(11) *****-8508",
+   "origem": "backlog",
+   "categoria": "equipe_ou_parceiro",
+   "etapa": "Teste gerado",
+   "ultimo_contato": "2026-11-03T11:34:05.552Z",
+   "followups": [],
+   "proximo": {
+    "n": 1,
+    "em": "2026-11-08T22:51:05.072Z"
+   },
+   "status": "na_fila"
+  },
+  {
+   "nome": "Otávio Vasconcelos",
+   "telefone_mascarado": "(11) *****-1267",
+   "origem": "backlog",
+   "categoria": "irrelevante",
+   "etapa": "Conversa nova",
+   "ultimo_contato": "2026-11-04T22:56:04.829Z",
+   "followups": [],
+   "proximo": {
+    "n": 1,
+    "em": "2026-11-08T21:22:41.735Z"
+   },
+   "status": "na_fila"
+  },
+  {
+   "nome": "Isabela Cordeiro",
+   "telefone_mascarado": "+55 ** *****-1056",
+   "origem": "backlog",
+   "categoria": "painel_criado",
+   "etapa": "Conversa nova",
+   "ultimo_contato": "2026-11-07T02:12:57.672Z",
+   "followups": [
+    {
+     "n": 1,
+     "quando": "2026-11-06T21:12:57.672Z",
+     "texto": "Oi! Conseguiu testar a lista? Se quiser, eu libero outro teste agora.",
+     "respondeu": false,
+     "minutos_ate_resposta": null
+    },
+    {
+     "n": 2,
+     "quando": "2026-11-07T02:12:57.672Z",
+     "texto": "Passando para ver se deu tudo certo no teste. Qualquer dúvida é só falar.",
+     "respondeu": false,
+     "minutos_ate_resposta": null
+    }
+   ],
+   "proximo": {
+    "n": 3,
+    "em": "2026-11-08T20:41:11.895Z"
+   },
+   "status": "aguardando"
+  },
+  {
+   "nome": "Sérgio Amaral",
+   "telefone_mascarado": "(11) *****-7630",
+   "origem": "backlog",
+   "categoria": "sem_interesse",
+   "etapa": "Painel criado",
+   "ultimo_contato": "2026-11-02T09:41:47.076Z",
+   "followups": [
+    {
+     "n": 1,
+     "quando": "2026-11-02T04:41:47.076Z",
+     "texto": "Oi! Conseguiu testar a lista? Se quiser, eu libero outro teste agora.",
+     "respondeu": false,
+     "minutos_ate_resposta": null
+    },
+    {
+     "n": 2,
+     "quando": "2026-11-02T09:41:47.076Z",
+     "texto": "Passando para ver se deu tudo certo no teste. Qualquer dúvida é só falar.",
+     "respondeu": true,
+     "minutos_ate_resposta": 59
+    }
+   ],
+   "proximo": null,
+   "status": "respondeu"
+  },
+  {
+   "nome": "Paula Drummond",
+   "telefone_mascarado": "(11) *****-5260",
+   "origem": "backlog",
+   "categoria": "sem_interesse",
+   "etapa": "Painel criado",
+   "ultimo_contato": "2026-11-06T16:45:44.269Z",
+   "followups": [
+    {
+     "n": 1,
+     "quando": "2026-11-06T16:45:44.269Z",
+     "texto": "Oi! Conseguiu testar a lista? Se quiser, eu libero outro teste agora.",
+     "respondeu": false,
+     "minutos_ate_resposta": null
+    }
+   ],
+   "proximo": null,
+   "status": "sem_resposta"
+  },
+  {
+   "nome": "Wesley Furtado",
+   "telefone_mascarado": "+55 ** *****-5533",
+   "origem": "backlog",
+   "categoria": "esfriou",
+   "etapa": "Dúvida",
+   "ultimo_contato": "2026-11-03T20:38:37.382Z",
+   "followups": [],
+   "proximo": {
+    "n": 1,
+    "em": "2026-11-08T22:26:56.820Z"
+   },
+   "status": "na_fila"
+  },
+  {
+   "nome": "Elaine Magalhães",
+   "telefone_mascarado": "(11) *****-7011",
+   "origem": "backlog",
+   "categoria": "duvida_aberta",
+   "etapa": "Sem retorno",
+   "ultimo_contato": "2026-11-02T13:13:06.364Z",
+   "followups": [],
+   "proximo": null,
+   "status": "nao_incomodar"
+  },
+  {
+   "nome": "Rafael Menezes",
+   "telefone_mascarado": "(11) *****-1352",
+   "origem": "backlog",
+   "categoria": "interessado_sem_painel",
+   "etapa": "Painel criado",
+   "ultimo_contato": "2026-11-06T18:45:11.738Z",
+   "followups": [],
+   "proximo": {
+    "n": 1,
+    "em": "2026-11-08T20:44:45.263Z"
+   },
+   "status": "na_fila"
+  },
+  {
+   "nome": "Camila Duarte",
+   "telefone_mascarado": "+55 ** *****-8640",
+   "origem": "backlog",
+   "categoria": "sem_interesse",
+   "etapa": "Conversa nova",
+   "ultimo_contato": "2026-11-03T17:56:47.351Z",
+   "followups": [],
+   "proximo": {
+    "n": 1,
+    "em": "2026-11-08T21:31:39.641Z"
+   },
+   "status": "na_fila"
+  },
+  {
+   "nome": "Bruno Tavares",
+   "telefone_mascarado": "(11) *****-2856",
+   "origem": "backlog",
+   "categoria": "equipe_ou_parceiro",
+   "etapa": "Dúvida",
+   "ultimo_contato": "2026-11-02T16:20:41.024Z",
+   "followups": [
+    {
+     "n": 1,
+     "quando": "2026-11-02T16:20:41.024Z",
+     "texto": "Oi! Conseguiu testar a lista? Se quiser, eu libero outro teste agora.",
+     "respondeu": false,
+     "minutos_ate_resposta": null
+    }
+   ],
+   "proximo": {
+    "n": 2,
+    "em": "2026-11-08T21:14:47.226Z"
+   },
+   "status": "aguardando"
+  },
+  {
+   "nome": "Letícia Moraes",
+   "telefone_mascarado": "(11) *****-1185",
+   "origem": "backlog",
+   "categoria": "painel_criado",
+   "etapa": "Sem retorno",
+   "ultimo_contato": "2026-11-05T18:54:51.026Z",
+   "followups": [
+    {
+     "n": 1,
+     "quando": "2026-11-05T13:54:51.026Z",
+     "texto": "Oi! Conseguiu testar a lista? Se quiser, eu libero outro teste agora.",
+     "respondeu": true,
+     "minutos_ate_resposta": 36
+    },
+    {
+     "n": 2,
+     "quando": "2026-11-05T18:54:51.026Z",
+     "texto": "Passando para ver se deu tudo certo no teste. Qualquer dúvida é só falar.",
+     "respondeu": true,
+     "minutos_ate_resposta": 58
+    }
+   ],
+   "proximo": null,
+   "status": "respondeu"
+  },
+  {
+   "nome": "Diego Albuquerque",
+   "telefone_mascarado": "+55 ** *****-9048",
+   "origem": "backlog",
+   "categoria": "interessado_sem_painel",
+   "etapa": "Dúvida",
+   "ultimo_contato": "2026-11-04T00:34:37.459Z",
+   "followups": [
+    {
+     "n": 1,
+     "quando": "2026-11-04T00:34:37.459Z",
+     "texto": "Oi! Conseguiu testar a lista? Se quiser, eu libero outro teste agora.",
+     "respondeu": false,
+     "minutos_ate_resposta": null
+    }
+   ],
+   "proximo": null,
+   "status": "sem_resposta"
+  },
+  {
+   "nome": "Fernanda Siqueira",
+   "telefone_mascarado": "(11) *****-5652",
+   "origem": "backlog",
+   "categoria": "interessado_sem_painel",
+   "etapa": "Painel criado",
+   "ultimo_contato": "2026-11-03T18:12:39.948Z",
+   "followups": [],
+   "proximo": {
+    "n": 1,
+    "em": "2026-11-08T21:17:02.865Z"
+   },
+   "status": "na_fila"
+  },
+  {
+   "nome": "Thiago Barreto",
+   "telefone_mascarado": "(11) *****-1461",
+   "origem": "backlog",
+   "categoria": "irrelevante",
+   "etapa": "Teste gerado",
+   "ultimo_contato": "2026-11-02T22:21:10.184Z",
+   "followups": [
+    {
+     "n": 1,
+     "quando": "2026-11-02T22:21:10.184Z",
+     "texto": "Oi! Conseguiu testar a lista? Se quiser, eu libero outro teste agora.",
+     "respondeu": false,
+     "minutos_ate_resposta": null
+    }
+   ],
+   "proximo": null,
+   "status": "nao_incomodar"
+  },
+  {
+   "nome": "Juliana Prado",
+   "telefone_mascarado": "+55 ** *****-6249",
+   "origem": "backlog",
+   "categoria": "esfriou",
+   "etapa": "Teste gerado",
+   "ultimo_contato": "2026-11-04T03:10:49.407Z",
+   "followups": [],
+   "proximo": {
+    "n": 1,
+    "em": "2026-11-08T20:23:11.982Z"
+   },
+   "status": "na_fila"
+  },
+  {
+   "nome": "Marcelo Queiroz",
+   "telefone_mascarado": "(11) *****-4180",
+   "origem": "backlog",
+   "categoria": "duvida_aberta",
+   "etapa": "Conversa nova",
+   "ultimo_contato": "2026-11-03T18:29:35.492Z",
+   "followups": [],
+   "proximo": {
+    "n": 1,
+    "em": "2026-11-08T23:14:41.783Z"
+   },
+   "status": "na_fila"
+  },
+  {
+   "nome": "Aline Ferraz",
+   "telefone_mascarado": "(11) *****-7588",
+   "origem": "backlog",
+   "categoria": "testando",
+   "etapa": "Dúvida",
+   "ultimo_contato": "2026-11-05T20:15:05.845Z",
+   "followups": [
+    {
+     "n": 1,
+     "quando": "2026-11-05T20:15:05.845Z",
+     "texto": "Oi! Conseguiu testar a lista? Se quiser, eu libero outro teste agora.",
+     "respondeu": false,
+     "minutos_ate_resposta": null
+    }
+   ],
+   "proximo": {
+    "n": 2,
+    "em": "2026-11-08T23:33:05.648Z"
+   },
+   "status": "aguardando"
+  },
+  {
+   "nome": "Gustavo Nogueira",
+   "telefone_mascarado": "+55 ** *****-5052",
+   "origem": "backlog",
+   "categoria": "equipe_ou_parceiro",
+   "etapa": "Teste gerado",
+   "ultimo_contato": "2026-11-06T21:33:12.396Z",
+   "followups": [
+    {
+     "n": 1,
+     "quando": "2026-11-06T16:33:12.396Z",
+     "texto": "Oi! Conseguiu testar a lista? Se quiser, eu libero outro teste agora.",
+     "respondeu": false,
+     "minutos_ate_resposta": null
+    },
+    {
+     "n": 2,
+     "quando": "2026-11-06T21:33:12.396Z",
+     "texto": "Passando para ver se deu tudo certo no teste. Qualquer dúvida é só falar.",
+     "respondeu": true,
+     "minutos_ate_resposta": 10
+    }
+   ],
+   "proximo": null,
+   "status": "respondeu"
+  },
+  {
+   "nome": "Patrícia Lobo",
+   "telefone_mascarado": "(11) *****-8736",
+   "origem": "backlog",
+   "categoria": "suporte",
+   "etapa": "Sem retorno",
+   "ultimo_contato": "2026-11-03T22:27:07.412Z",
+   "followups": [
+    {
+     "n": 1,
+     "quando": "2026-11-03T17:27:07.412Z",
+     "texto": "Oi! Conseguiu testar a lista? Se quiser, eu libero outro teste agora.",
+     "respondeu": true,
+     "minutos_ate_resposta": 10
+    },
+    {
+     "n": 2,
+     "quando": "2026-11-03T22:27:07.412Z",
+     "texto": "Passando para ver se deu tudo certo no teste. Qualquer dúvida é só falar.",
+     "respondeu": false,
+     "minutos_ate_resposta": null
+    }
+   ],
+   "proximo": null,
+   "status": "sem_resposta"
+  },
+  {
+   "nome": "André Cavalcanti",
+   "telefone_mascarado": "(11) *****-5020",
+   "origem": "backlog",
+   "categoria": "sem_interesse",
+   "etapa": "Dúvida",
+   "ultimo_contato": "2026-11-06T06:15:23.143Z",
+   "followups": [],
+   "proximo": {
+    "n": 1,
+    "em": "2026-11-08T21:53:15.614Z"
+   },
+   "status": "na_fila"
+  },
+  {
+   "nome": "Vanessa Rezende",
+   "telefone_mascarado": "+55 ** *****-4831",
+   "origem": "backlog",
+   "categoria": "sem_interesse",
+   "etapa": "Sem retorno",
+   "ultimo_contato": "2026-11-05T12:09:09.590Z",
+   "followups": [],
+   "proximo": null,
+   "status": "nao_incomodar"
+  },
+  {
+   "nome": "Lucas Peixoto",
+   "telefone_mascarado": "(11) *****-8691",
+   "origem": "backlog",
+   "categoria": "sem_interesse",
+   "etapa": "Dúvida",
+   "ultimo_contato": "2026-11-02T17:21:11.362Z",
+   "followups": [],
+   "proximo": {
+    "n": 1,
+    "em": "2026-11-08T23:31:52.069Z"
+   },
+   "status": "na_fila"
+  },
+  {
+   "nome": "Renata Valadares",
+   "telefone_mascarado": "(11) *****-7540",
+   "origem": "backlog",
+   "categoria": "duvida_aberta",
+   "etapa": "Painel criado",
+   "ultimo_contato": "2026-11-03T09:50:25.040Z",
+   "followups": [],
+   "proximo": {
+    "n": 1,
+    "em": "2026-11-08T22:53:22.922Z"
+   },
+   "status": "na_fila"
+  },
+  {
+   "nome": "Eduardo Brandão",
+   "telefone_mascarado": "+55 ** *****-7559",
+   "origem": "backlog",
+   "categoria": "sem_interesse",
+   "etapa": "Teste gerado",
+   "ultimo_contato": "2026-11-03T17:31:15.534Z",
+   "followups": [
+    {
+     "n": 1,
+     "quando": "2026-11-03T12:31:15.534Z",
+     "texto": "Oi! Conseguiu testar a lista? Se quiser, eu libero outro teste agora.",
+     "respondeu": false,
+     "minutos_ate_resposta": null
+    },
+    {
+     "n": 2,
+     "quando": "2026-11-03T17:31:15.534Z",
+     "texto": "Passando para ver se deu tudo certo no teste. Qualquer dúvida é só falar.",
+     "respondeu": false,
+     "minutos_ate_resposta": null
+    }
+   ],
+   "proximo": {
+    "n": 3,
+    "em": "2026-11-08T23:24:42.712Z"
+   },
+   "status": "aguardando"
+  },
+  {
+   "nome": "Carolina Esteves",
+   "telefone_mascarado": "(11) *****-8836",
+   "origem": "backlog",
+   "categoria": "duvida_aberta",
+   "etapa": "Dúvida",
+   "ultimo_contato": "2026-11-06T12:56:53.371Z",
+   "followups": [
+    {
+     "n": 1,
+     "quando": "2026-11-06T07:56:53.371Z",
+     "texto": "Oi! Conseguiu testar a lista? Se quiser, eu libero outro teste agora.",
+     "respondeu": false,
+     "minutos_ate_resposta": null
+    },
+    {
+     "n": 2,
+     "quando": "2026-11-06T12:56:53.371Z",
+     "texto": "Passando para ver se deu tudo certo no teste. Qualquer dúvida é só falar.",
+     "respondeu": true,
+     "minutos_ate_resposta": 24
+    }
+   ],
+   "proximo": null,
+   "status": "respondeu"
+  },
+  {
+   "nome": "Felipe Sampaio",
+   "telefone_mascarado": "(11) *****-1002",
+   "origem": "backlog",
+   "categoria": "suporte",
+   "etapa": "Dúvida",
+   "ultimo_contato": "2026-11-06T17:57:16.219Z",
+   "followups": [
+    {
+     "n": 1,
+     "quando": "2026-11-06T12:57:16.219Z",
+     "texto": "Oi! Conseguiu testar a lista? Se quiser, eu libero outro teste agora.",
+     "respondeu": false,
+     "minutos_ate_resposta": null
+    },
+    {
+     "n": 2,
+     "quando": "2026-11-06T17:57:16.219Z",
+     "texto": "Passando para ver se deu tudo certo no teste. Qualquer dúvida é só falar.",
+     "respondeu": false,
+     "minutos_ate_resposta": null
+    }
+   ],
+   "proximo": null,
+   "status": "sem_resposta"
+  },
+  {
+   "nome": "Larissa Coutinho",
+   "telefone_mascarado": "+55 ** *****-3032",
+   "origem": "backlog",
+   "categoria": "sem_resposta_nossa",
+   "etapa": "Painel criado",
+   "ultimo_contato": "2026-11-05T22:00:47.871Z",
+   "followups": [],
+   "proximo": {
+    "n": 1,
+    "em": "2026-11-08T19:57:52.595Z"
+   },
+   "status": "na_fila"
+  },
+  {
+   "nome": "Rodrigo Azevedo",
+   "telefone_mascarado": "(11) *****-4777",
+   "origem": "backlog",
+   "categoria": "irrelevante",
+   "etapa": "Teste gerado",
+   "ultimo_contato": "2026-11-03T20:19:46.722Z",
+   "followups": [],
+   "proximo": null,
+   "status": "nao_incomodar"
+  },
+  {
+   "nome": "Priscila Machado",
+   "telefone_mascarado": "(11) *****-6783",
+   "origem": "backlog",
+   "categoria": "irrelevante",
+   "etapa": "Teste gerado",
+   "ultimo_contato": "2026-11-06T08:01:44.474Z",
+   "followups": [],
+   "proximo": {
+    "n": 1,
+    "em": "2026-11-08T20:49:21.665Z"
+   },
+   "status": "na_fila"
+  },
+  {
+   "nome": "Henrique Seixas",
+   "telefone_mascarado": "+55 ** *****-8528",
+   "origem": "backlog",
+   "categoria": "irrelevante",
+   "etapa": "Painel criado",
+   "ultimo_contato": "2026-11-06T00:44:21.223Z",
+   "followups": [],
+   "proximo": {
+    "n": 1,
+    "em": "2026-11-08T20:48:25.283Z"
+   },
+   "status": "na_fila"
+  },
+  {
+   "nome": "Bianca Torres",
+   "telefone_mascarado": "(11) *****-4798",
+   "origem": "backlog",
+   "categoria": "irrelevante",
+   "etapa": "Teste gerado",
+   "ultimo_contato": "2026-11-05T16:25:28.925Z",
+   "followups": [
+    {
+     "n": 1,
+     "quando": "2026-11-05T16:25:28.925Z",
+     "texto": "Oi! Conseguiu testar a lista? Se quiser, eu libero outro teste agora.",
+     "respondeu": false,
+     "minutos_ate_resposta": null
+    }
+   ],
+   "proximo": {
+    "n": 2,
+    "em": "2026-11-08T23:09:48.821Z"
+   },
+   "status": "aguardando"
+  },
+  {
+   "nome": "Leandro Fontes",
+   "telefone_mascarado": "(11) *****-9006",
+   "origem": "backlog",
+   "categoria": "irrelevante",
+   "etapa": "Dúvida",
+   "ultimo_contato": "2026-11-04T02:15:07.921Z",
+   "followups": [
+    {
+     "n": 1,
+     "quando": "2026-11-03T21:15:07.921Z",
+     "texto": "Oi! Conseguiu testar a lista? Se quiser, eu libero outro teste agora.",
+     "respondeu": false,
+     "minutos_ate_resposta": null
+    },
+    {
+     "n": 2,
+     "quando": "2026-11-04T02:15:07.921Z",
+     "texto": "Passando para ver se deu tudo certo no teste. Qualquer dúvida é só falar.",
+     "respondeu": true,
+     "minutos_ate_resposta": 22
+    }
+   ],
+   "proximo": null,
+   "status": "respondeu"
+  },
+  {
+   "nome": "Daniela Veloso",
+   "telefone_mascarado": "+55 ** *****-5295",
+   "origem": "backlog",
+   "categoria": "painel_criado",
+   "etapa": "Teste gerado",
+   "ultimo_contato": "2026-11-04T10:12:31.198Z",
+   "followups": [
+    {
+     "n": 1,
+     "quando": "2026-11-04T10:12:31.198Z",
+     "texto": "Oi! Conseguiu testar a lista? Se quiser, eu libero outro teste agora.",
+     "respondeu": false,
+     "minutos_ate_resposta": null
+    }
+   ],
+   "proximo": null,
+   "status": "sem_resposta"
+  },
+  {
+   "nome": "Vinícius Lacerda",
+   "telefone_mascarado": "(11) *****-9636",
+   "origem": "backlog",
+   "categoria": "suporte",
+   "etapa": "Sem retorno",
+   "ultimo_contato": "2026-11-04T09:04:43.443Z",
+   "followups": [],
+   "proximo": {
+    "n": 1,
+    "em": "2026-11-08T19:56:17.263Z"
+   },
+   "status": "na_fila"
+  },
+  {
+   "nome": "Tatiane Guedes",
+   "telefone_mascarado": "(11) *****-7166",
+   "origem": "backlog",
+   "categoria": "suporte",
+   "etapa": "Sem retorno",
+   "ultimo_contato": "2026-11-04T11:16:32.799Z",
+   "followups": [
+    {
+     "n": 1,
+     "quando": "2026-11-04T11:16:32.799Z",
+     "texto": "Oi! Conseguiu testar a lista? Se quiser, eu libero outro teste agora.",
+     "respondeu": false,
+     "minutos_ate_resposta": null
+    }
+   ],
+   "proximo": null,
+   "status": "nao_incomodar"
+  },
+  {
+   "nome": "Márcio Pimentel",
+   "telefone_mascarado": "+55 ** *****-7362",
+   "origem": "backlog",
+   "categoria": "duvida_aberta",
+   "etapa": "Dúvida",
+   "ultimo_contato": "2026-11-03T09:57:11.378Z",
+   "followups": [],
+   "proximo": {
+    "n": 1,
+    "em": "2026-11-08T23:39:19.185Z"
+   },
+   "status": "na_fila"
+  },
+  {
+   "nome": "Sabrina Rangel",
+   "telefone_mascarado": "(11) *****-1883",
+   "origem": "backlog",
+   "categoria": "equipe_ou_parceiro",
+   "etapa": "Painel criado",
+   "ultimo_contato": "2026-11-03T07:42:42.485Z",
+   "followups": [],
+   "proximo": {
+    "n": 1,
+    "em": "2026-11-08T23:20:21.709Z"
+   },
+   "status": "na_fila"
+  },
+  {
+   "nome": "Ricardo Matos",
+   "telefone_mascarado": "(11) *****-3842",
+   "origem": "backlog",
+   "categoria": "sem_resposta_nossa",
+   "etapa": "Painel criado",
+   "ultimo_contato": "2026-11-02T07:55:43.819Z",
+   "followups": [
+    {
+     "n": 1,
+     "quando": "2026-11-02T07:55:43.819Z",
+     "texto": "Oi! Conseguiu testar a lista? Se quiser, eu libero outro teste agora.",
+     "respondeu": false,
+     "minutos_ate_resposta": null
+    }
+   ],
+   "proximo": {
+    "n": 2,
+    "em": "2026-11-08T22:50:19.218Z"
+   },
+   "status": "aguardando"
+  },
+  {
+   "nome": "Natália Bastos",
+   "telefone_mascarado": "+55 ** *****-1401",
+   "origem": "backlog",
+   "categoria": "sem_resposta_nossa",
+   "etapa": "Conversa nova",
+   "ultimo_contato": "2026-11-07T01:42:04.775Z",
+   "followups": [
+    {
+     "n": 1,
+     "quando": "2026-11-06T20:42:04.775Z",
+     "texto": "Oi! Conseguiu testar a lista? Se quiser, eu libero outro teste agora.",
+     "respondeu": true,
+     "minutos_ate_resposta": 29
+    },
+    {
+     "n": 2,
+     "quando": "2026-11-07T01:42:04.775Z",
+     "texto": "Passando para ver se deu tudo certo no teste. Qualquer dúvida é só falar.",
+     "respondeu": true,
+     "minutos_ate_resposta": 8
+    }
+   ],
+   "proximo": null,
+   "status": "respondeu"
+  },
+  {
+   "nome": "Caio Montenegro",
+   "telefone_mascarado": "(11) *****-1499",
+   "origem": "backlog",
+   "categoria": "esfriou",
+   "etapa": "Teste gerado",
+   "ultimo_contato": "2026-11-03T17:53:51.569Z",
+   "followups": [
+    {
+     "n": 1,
+     "quando": "2026-11-03T12:53:51.569Z",
+     "texto": "Oi! Conseguiu testar a lista? Se quiser, eu libero outro teste agora.",
+     "respondeu": false,
+     "minutos_ate_resposta": null
+    },
+    {
+     "n": 2,
+     "quando": "2026-11-03T17:53:51.569Z",
+     "texto": "Passando para ver se deu tudo certo no teste. Qualquer dúvida é só falar.",
+     "respondeu": false,
+     "minutos_ate_resposta": null
+    }
+   ],
+   "proximo": null,
+   "status": "sem_resposta"
+  },
+  {
+   "nome": "Mônica Teixeira",
+   "telefone_mascarado": "(11) *****-5894",
+   "origem": "backlog",
+   "categoria": "painel_criado",
+   "etapa": "Sem retorno",
+   "ultimo_contato": "2026-11-02T08:08:09.898Z",
+   "followups": [],
+   "proximo": {
+    "n": 1,
+    "em": "2026-11-08T23:14:34.236Z"
+   },
+   "status": "na_fila"
+  },
+  {
+   "nome": "Otávio Vasconcelos",
+   "telefone_mascarado": "+55 ** *****-5610",
+   "origem": "backlog",
+   "categoria": "irrelevante",
+   "etapa": "Sem retorno",
+   "ultimo_contato": "2026-11-02T18:31:01.404Z",
+   "followups": [
+    {
+     "n": 1,
+     "quando": "2026-11-02T18:31:01.404Z",
+     "texto": "Oi! Conseguiu testar a lista? Se quiser, eu libero outro teste agora.",
+     "respondeu": false,
+     "minutos_ate_resposta": null
+    }
+   ],
+   "proximo": null,
+   "status": "nao_incomodar"
+  },
+  {
+   "nome": "Isabela Cordeiro",
+   "telefone_mascarado": "(11) *****-9781",
+   "origem": "backlog",
+   "categoria": "interessado_sem_painel",
+   "etapa": "Painel criado",
+   "ultimo_contato": "2026-11-02T13:10:02.894Z",
+   "followups": [],
+   "proximo": {
+    "n": 1,
+    "em": "2026-11-08T20:29:30.161Z"
+   },
+   "status": "na_fila"
+  },
+  {
+   "nome": "Sérgio Amaral",
+   "telefone_mascarado": "(11) *****-5547",
+   "origem": "backlog",
+   "categoria": "sem_resposta_nossa",
+   "etapa": "Dúvida",
+   "ultimo_contato": "2026-11-06T15:19:59.319Z",
+   "followups": [],
+   "proximo": {
+    "n": 1,
+    "em": "2026-11-08T20:48:32.710Z"
+   },
+   "status": "na_fila"
+  },
+  {
+   "nome": "Paula Drummond",
+   "telefone_mascarado": "+55 ** *****-9795",
+   "origem": "backlog",
+   "categoria": "equipe_ou_parceiro",
+   "etapa": "Dúvida",
+   "ultimo_contato": "2026-11-05T08:54:43.204Z",
+   "followups": [
+    {
+     "n": 1,
+     "quando": "2026-11-05T03:54:43.204Z",
+     "texto": "Oi! Conseguiu testar a lista? Se quiser, eu libero outro teste agora.",
+     "respondeu": false,
+     "minutos_ate_resposta": null
+    },
+    {
+     "n": 2,
+     "quando": "2026-11-05T08:54:43.204Z",
+     "texto": "Passando para ver se deu tudo certo no teste. Qualquer dúvida é só falar.",
+     "respondeu": false,
+     "minutos_ate_resposta": null
+    }
+   ],
+   "proximo": {
+    "n": 3,
+    "em": "2026-11-08T21:52:21.234Z"
+   },
+   "status": "aguardando"
+  },
+  {
+   "nome": "Wesley Furtado",
+   "telefone_mascarado": "(11) *****-1278",
+   "origem": "backlog",
+   "categoria": "sem_resposta_nossa",
+   "etapa": "Painel criado",
+   "ultimo_contato": "2026-11-04T12:52:10.937Z",
+   "followups": [
+    {
+     "n": 1,
+     "quando": "2026-11-04T12:52:10.937Z",
+     "texto": "Oi! Conseguiu testar a lista? Se quiser, eu libero outro teste agora.",
+     "respondeu": true,
+     "minutos_ate_resposta": 21
+    }
+   ],
+   "proximo": null,
+   "status": "respondeu"
+  },
+  {
+   "nome": "Elaine Magalhães",
+   "telefone_mascarado": "(11) *****-8984",
+   "origem": "backlog",
+   "categoria": "duvida_aberta",
+   "etapa": "Conversa nova",
+   "ultimo_contato": "2026-11-05T07:35:47.339Z",
+   "followups": [
+    {
+     "n": 1,
+     "quando": "2026-11-05T02:35:47.339Z",
+     "texto": "Oi! Conseguiu testar a lista? Se quiser, eu libero outro teste agora.",
+     "respondeu": false,
+     "minutos_ate_resposta": null
+    },
+    {
+     "n": 2,
+     "quando": "2026-11-05T07:35:47.339Z",
+     "texto": "Passando para ver se deu tudo certo no teste. Qualquer dúvida é só falar.",
+     "respondeu": false,
+     "minutos_ate_resposta": null
+    }
+   ],
+   "proximo": null,
+   "status": "sem_resposta"
+  },
+  {
+   "nome": "Rafael Menezes",
+   "telefone_mascarado": "+55 ** *****-6241",
+   "origem": "backlog",
+   "categoria": "interessado_sem_painel",
+   "etapa": "Painel criado",
+   "ultimo_contato": "2026-11-02T19:37:41.737Z",
+   "followups": [],
+   "proximo": {
+    "n": 1,
+    "em": "2026-11-08T20:56:30.863Z"
+   },
+   "status": "na_fila"
+  },
+  {
+   "nome": "Camila Duarte",
+   "telefone_mascarado": "(11) *****-4605",
+   "origem": "backlog",
+   "categoria": "sem_interesse",
+   "etapa": "Painel criado",
+   "ultimo_contato": "2026-11-04T07:11:29.853Z",
+   "followups": [],
+   "proximo": null,
+   "status": "nao_incomodar"
+  },
+  {
+   "nome": "Bruno Tavares",
+   "telefone_mascarado": "(11) *****-2301",
+   "origem": "backlog",
+   "categoria": "suporte",
+   "etapa": "Sem retorno",
+   "ultimo_contato": "2026-11-06T06:38:48.623Z",
+   "followups": [],
+   "proximo": {
+    "n": 1,
+    "em": "2026-11-08T23:09:58.865Z"
+   },
+   "status": "na_fila"
+  },
+  {
+   "nome": "Letícia Moraes",
+   "telefone_mascarado": "+55 ** *****-5179",
+   "origem": "backlog",
+   "categoria": "sem_resposta_nossa",
+   "etapa": "Painel criado",
+   "ultimo_contato": "2026-11-03T20:29:40.337Z",
+   "followups": [],
+   "proximo": {
+    "n": 1,
+    "em": "2026-11-08T22:01:27.424Z"
+   },
+   "status": "na_fila"
+  },
+  {
+   "nome": "Diego Albuquerque",
+   "telefone_mascarado": "(11) *****-5492",
+   "origem": "backlog",
+   "categoria": "painel_criado",
+   "etapa": "Conversa nova",
+   "ultimo_contato": "2026-11-05T01:39:44.823Z",
+   "followups": [
+    {
+     "n": 1,
+     "quando": "2026-11-04T20:39:44.823Z",
+     "texto": "Oi! Conseguiu testar a lista? Se quiser, eu libero outro teste agora.",
+     "respondeu": false,
+     "minutos_ate_resposta": null
+    },
+    {
+     "n": 2,
+     "quando": "2026-11-05T01:39:44.823Z",
+     "texto": "Passando para ver se deu tudo certo no teste. Qualquer dúvida é só falar.",
+     "respondeu": false,
+     "minutos_ate_resposta": null
+    }
+   ],
+   "proximo": {
+    "n": 3,
+    "em": "2026-11-08T22:46:04.053Z"
+   },
+   "status": "aguardando"
+  },
+  {
+   "nome": "Fernanda Siqueira",
+   "telefone_mascarado": "(11) *****-2908",
+   "origem": "backlog",
+   "categoria": "sem_resposta_nossa",
+   "etapa": "Conversa nova",
+   "ultimo_contato": "2026-11-05T00:32:27.783Z",
+   "followups": [
+    {
+     "n": 1,
+     "quando": "2026-11-04T19:32:27.783Z",
+     "texto": "Oi! Conseguiu testar a lista? Se quiser, eu libero outro teste agora.",
+     "respondeu": false,
+     "minutos_ate_resposta": null
+    },
+    {
+     "n": 2,
+     "quando": "2026-11-05T00:32:27.783Z",
+     "texto": "Passando para ver se deu tudo certo no teste. Qualquer dúvida é só falar.",
+     "respondeu": true,
+     "minutos_ate_resposta": 25
+    }
+   ],
+   "proximo": null,
+   "status": "respondeu"
+  },
+  {
+   "nome": "Thiago Barreto",
+   "telefone_mascarado": "+55 ** *****-9839",
+   "origem": "backlog",
+   "categoria": "sem_resposta_nossa",
+   "etapa": "Teste gerado",
+   "ultimo_contato": "2026-11-03T05:11:25.817Z",
+   "followups": [
+    {
+     "n": 1,
+     "quando": "2026-11-03T05:11:25.817Z",
+     "texto": "Oi! Conseguiu testar a lista? Se quiser, eu libero outro teste agora.",
+     "respondeu": false,
+     "minutos_ate_resposta": null
+    }
+   ],
+   "proximo": null,
+   "status": "sem_resposta"
+  },
+  {
+   "nome": "Juliana Prado",
+   "telefone_mascarado": "(11) *****-9397",
+   "origem": "backlog",
+   "categoria": "interessado_sem_painel",
+   "etapa": "Sem retorno",
+   "ultimo_contato": "2026-11-02T10:03:29.926Z",
+   "followups": [],
+   "proximo": {
+    "n": 1,
+    "em": "2026-11-08T22:20:43.629Z"
+   },
+   "status": "na_fila"
+  },
+  {
+   "nome": "Marcelo Queiroz",
+   "telefone_mascarado": "(11) *****-2911",
+   "origem": "backlog",
+   "categoria": "equipe_ou_parceiro",
+   "etapa": "Dúvida",
+   "ultimo_contato": "2026-11-04T17:27:58.979Z",
+   "followups": [],
+   "proximo": null,
+   "status": "nao_incomodar"
+  },
+  {
+   "nome": "Aline Ferraz",
+   "telefone_mascarado": "+55 ** *****-6123",
+   "origem": "backlog",
+   "categoria": "sem_interesse",
+   "etapa": "Sem retorno",
+   "ultimo_contato": "2026-11-04T21:55:04.286Z",
+   "followups": [],
+   "proximo": {
+    "n": 1,
+    "em": "2026-11-08T23:02:00.286Z"
+   },
+   "status": "na_fila"
+  },
+  {
+   "nome": "Gustavo Nogueira",
+   "telefone_mascarado": "(11) *****-6484",
+   "origem": "backlog",
+   "categoria": "painel_criado",
+   "etapa": "Teste gerado",
+   "ultimo_contato": "2026-11-02T14:53:04.304Z",
+   "followups": [],
+   "proximo": {
+    "n": 1,
+    "em": "2026-11-08T22:32:18.205Z"
+   },
+   "status": "na_fila"
+  },
+  {
+   "nome": "Patrícia Lobo",
+   "telefone_mascarado": "(11) *****-8150",
+   "origem": "backlog",
+   "categoria": "sem_resposta_nossa",
+   "etapa": "Conversa nova",
+   "ultimo_contato": "2026-11-03T04:51:58.561Z",
+   "followups": [
+    {
+     "n": 1,
+     "quando": "2026-11-02T23:51:58.561Z",
+     "texto": "Oi! Conseguiu testar a lista? Se quiser, eu libero outro teste agora.",
+     "respondeu": false,
+     "minutos_ate_resposta": null
+    },
+    {
+     "n": 2,
+     "quando": "2026-11-03T04:51:58.561Z",
+     "texto": "Passando para ver se deu tudo certo no teste. Qualquer dúvida é só falar.",
+     "respondeu": false,
+     "minutos_ate_resposta": null
+    }
+   ],
+   "proximo": {
+    "n": 3,
+    "em": "2026-11-08T22:15:09.364Z"
+   },
+   "status": "aguardando"
+  },
+  {
+   "nome": "André Cavalcanti",
+   "telefone_mascarado": "+55 ** *****-3005",
+   "origem": "backlog",
+   "categoria": "esfriou",
+   "etapa": "Dúvida",
+   "ultimo_contato": "2026-11-05T08:42:08.674Z",
+   "followups": [
+    {
+     "n": 1,
+     "quando": "2026-11-05T03:42:08.674Z",
+     "texto": "Oi! Conseguiu testar a lista? Se quiser, eu libero outro teste agora.",
+     "respondeu": false,
+     "minutos_ate_resposta": null
+    },
+    {
+     "n": 2,
+     "quando": "2026-11-05T08:42:08.674Z",
+     "texto": "Passando para ver se deu tudo certo no teste. Qualquer dúvida é só falar.",
+     "respondeu": true,
+     "minutos_ate_resposta": 56
+    }
+   ],
+   "proximo": null,
+   "status": "respondeu"
+  },
+  {
+   "nome": "Vanessa Rezende",
+   "telefone_mascarado": "(11) *****-7007",
+   "origem": "backlog",
+   "categoria": "equipe_ou_parceiro",
+   "etapa": "Conversa nova",
+   "ultimo_contato": "2026-11-06T21:27:10.299Z",
+   "followups": [
+    {
+     "n": 1,
+     "quando": "2026-11-06T16:27:10.299Z",
+     "texto": "Oi! Conseguiu testar a lista? Se quiser, eu libero outro teste agora.",
+     "respondeu": false,
+     "minutos_ate_resposta": null
+    },
+    {
+     "n": 2,
+     "quando": "2026-11-06T21:27:10.299Z",
+     "texto": "Passando para ver se deu tudo certo no teste. Qualquer dúvida é só falar.",
+     "respondeu": false,
+     "minutos_ate_resposta": null
+    }
+   ],
+   "proximo": null,
+   "status": "sem_resposta"
+  },
+  {
+   "nome": "Lucas Peixoto",
+   "telefone_mascarado": "(11) *****-1099",
+   "origem": "backlog",
+   "categoria": "testando",
+   "etapa": "Conversa nova",
+   "ultimo_contato": "2026-11-04T00:53:57.927Z",
+   "followups": [],
+   "proximo": {
+    "n": 1,
+    "em": "2026-11-08T22:15:36.967Z"
+   },
+   "status": "na_fila"
+  },
+  {
+   "nome": "Renata Valadares",
+   "telefone_mascarado": "+55 ** *****-6719",
+   "origem": "backlog",
+   "categoria": "equipe_ou_parceiro",
+   "etapa": "Conversa nova",
+   "ultimo_contato": "2026-11-04T09:06:30.067Z",
+   "followups": [
+    {
+     "n": 1,
+     "quando": "2026-11-04T09:06:30.067Z",
+     "texto": "Oi! Conseguiu testar a lista? Se quiser, eu libero outro teste agora.",
+     "respondeu": false,
+     "minutos_ate_resposta": null
+    }
+   ],
+   "proximo": null,
+   "status": "nao_incomodar"
+  },
+  {
+   "nome": "Eduardo Brandão",
+   "telefone_mascarado": "(11) *****-4312",
+   "origem": "backlog",
+   "categoria": "esfriou",
+   "etapa": "Painel criado",
+   "ultimo_contato": "2026-11-05T11:52:46.729Z",
+   "followups": [],
+   "proximo": {
+    "n": 1,
+    "em": "2026-11-08T21:10:24.332Z"
+   },
+   "status": "na_fila"
+  },
+  {
+   "nome": "Carolina Esteves",
+   "telefone_mascarado": "(11) *****-9183",
+   "origem": "backlog",
+   "categoria": "esfriou",
+   "etapa": "Painel criado",
+   "ultimo_contato": "2026-11-02T18:10:20.334Z",
+   "followups": [],
+   "proximo": {
+    "n": 1,
+    "em": "2026-11-08T20:36:39.354Z"
+   },
+   "status": "na_fila"
+  },
+  {
+   "nome": "Felipe Sampaio",
+   "telefone_mascarado": "+55 ** *****-9676",
+   "origem": "backlog",
+   "categoria": "sem_resposta_nossa",
+   "etapa": "Conversa nova",
+   "ultimo_contato": "2026-11-02T15:09:36.685Z",
+   "followups": [
+    {
+     "n": 1,
+     "quando": "2026-11-02T10:09:36.685Z",
+     "texto": "Oi! Conseguiu testar a lista? Se quiser, eu libero outro teste agora.",
+     "respondeu": false,
+     "minutos_ate_resposta": null
+    },
+    {
+     "n": 2,
+     "quando": "2026-11-02T15:09:36.685Z",
+     "texto": "Passando para ver se deu tudo certo no teste. Qualquer dúvida é só falar.",
+     "respondeu": false,
+     "minutos_ate_resposta": null
+    }
+   ],
+   "proximo": {
+    "n": 3,
+    "em": "2026-11-08T20:27:28.487Z"
+   },
+   "status": "aguardando"
+  },
+  {
+   "nome": "Larissa Coutinho",
+   "telefone_mascarado": "(11) *****-5843",
+   "origem": "backlog",
+   "categoria": "suporte",
+   "etapa": "Dúvida",
+   "ultimo_contato": "2026-11-05T02:36:28.273Z",
+   "followups": [
+    {
+     "n": 1,
+     "quando": "2026-11-05T02:36:28.273Z",
+     "texto": "Oi! Conseguiu testar a lista? Se quiser, eu libero outro teste agora.",
+     "respondeu": true,
+     "minutos_ate_resposta": 36
+    }
+   ],
+   "proximo": null,
+   "status": "respondeu"
+  },
+  {
+   "nome": "Rodrigo Azevedo",
+   "telefone_mascarado": "(11) *****-8159",
+   "origem": "backlog",
+   "categoria": "painel_criado",
+   "etapa": "Dúvida",
+   "ultimo_contato": "2026-11-02T13:49:54.685Z",
+   "followups": [
+    {
+     "n": 1,
+     "quando": "2026-11-02T13:49:54.685Z",
+     "texto": "Oi! Conseguiu testar a lista? Se quiser, eu libero outro teste agora.",
+     "respondeu": false,
+     "minutos_ate_resposta": null
+    }
+   ],
+   "proximo": null,
+   "status": "sem_resposta"
+  },
+  {
+   "nome": "Priscila Machado",
+   "telefone_mascarado": "+55 ** *****-2269",
+   "origem": "backlog",
+   "categoria": "sem_interesse",
+   "etapa": "Painel criado",
+   "ultimo_contato": "2026-11-03T21:37:12.679Z",
+   "followups": [],
+   "proximo": {
+    "n": 1,
+    "em": "2026-11-08T23:23:49.944Z"
+   },
+   "status": "na_fila"
+  },
+  {
+   "nome": "Henrique Seixas",
+   "telefone_mascarado": "(11) *****-8297",
+   "origem": "backlog",
+   "categoria": "equipe_ou_parceiro",
+   "etapa": "Painel criado",
+   "ultimo_contato": "2026-11-03T06:35:42.103Z",
+   "followups": [],
+   "proximo": null,
+   "status": "nao_incomodar"
+  },
+  {
+   "nome": "Bianca Torres",
+   "telefone_mascarado": "(11) *****-6348",
+   "origem": "backlog",
+   "categoria": "interessado_sem_painel",
+   "etapa": "Teste gerado",
+   "ultimo_contato": "2026-11-03T13:56:22.196Z",
+   "followups": [],
+   "proximo": {
+    "n": 1,
+    "em": "2026-11-08T22:22:32.151Z"
+   },
+   "status": "na_fila"
+  },
+  {
+   "nome": "Leandro Fontes",
+   "telefone_mascarado": "+55 ** *****-8415",
+   "origem": "backlog",
+   "categoria": "irrelevante",
+   "etapa": "Sem retorno",
+   "ultimo_contato": "2026-11-02T00:45:28.609Z",
+   "followups": [],
+   "proximo": {
+    "n": 1,
+    "em": "2026-11-08T20:43:13.402Z"
+   },
+   "status": "na_fila"
+  },
+  {
+   "nome": "Daniela Veloso",
+   "telefone_mascarado": "(11) *****-4136",
+   "origem": "backlog",
+   "categoria": "equipe_ou_parceiro",
+   "etapa": "Dúvida",
+   "ultimo_contato": "2026-11-06T03:17:25.211Z",
+   "followups": [
+    {
+     "n": 1,
+     "quando": "2026-11-06T03:17:25.211Z",
+     "texto": "Oi! Conseguiu testar a lista? Se quiser, eu libero outro teste agora.",
+     "respondeu": false,
+     "minutos_ate_resposta": null
+    }
+   ],
+   "proximo": {
+    "n": 2,
+    "em": "2026-11-08T20:23:34.914Z"
+   },
+   "status": "aguardando"
+  },
+  {
+   "nome": "Vinícius Lacerda",
+   "telefone_mascarado": "(11) *****-1354",
+   "origem": "backlog",
+   "categoria": "irrelevante",
+   "etapa": "Painel criado",
+   "ultimo_contato": "2026-11-07T02:54:49.350Z",
+   "followups": [
+    {
+     "n": 1,
+     "quando": "2026-11-06T21:54:49.350Z",
+     "texto": "Oi! Conseguiu testar a lista? Se quiser, eu libero outro teste agora.",
+     "respondeu": false,
+     "minutos_ate_resposta": null
+    },
+    {
+     "n": 2,
+     "quando": "2026-11-07T02:54:49.350Z",
+     "texto": "Passando para ver se deu tudo certo no teste. Qualquer dúvida é só falar.",
+     "respondeu": true,
+     "minutos_ate_resposta": 5
+    }
+   ],
+   "proximo": null,
+   "status": "respondeu"
+  },
+  {
+   "nome": "Tatiane Guedes",
+   "telefone_mascarado": "+55 ** *****-4825",
+   "origem": "backlog",
+   "categoria": "esfriou",
+   "etapa": "Teste gerado",
+   "ultimo_contato": "2026-11-07T00:36:05.867Z",
+   "followups": [
+    {
+     "n": 1,
+     "quando": "2026-11-07T00:36:05.867Z",
+     "texto": "Oi! Conseguiu testar a lista? Se quiser, eu libero outro teste agora.",
+     "respondeu": false,
+     "minutos_ate_resposta": null
+    }
+   ],
+   "proximo": null,
+   "status": "sem_resposta"
+  },
+  {
+   "nome": "Márcio Pimentel",
+   "telefone_mascarado": "(11) *****-1049",
+   "origem": "backlog",
+   "categoria": "sem_resposta_nossa",
+   "etapa": "Sem retorno",
+   "ultimo_contato": "2026-11-03T06:57:08.505Z",
+   "followups": [],
+   "proximo": {
+    "n": 1,
+    "em": "2026-11-08T20:48:08.292Z"
+   },
+   "status": "na_fila"
+  },
+  {
+   "nome": "Sabrina Rangel",
+   "telefone_mascarado": "(11) *****-2783",
+   "origem": "backlog",
+   "categoria": "suporte",
+   "etapa": "Teste gerado",
+   "ultimo_contato": "2026-11-03T06:49:33.675Z",
+   "followups": [],
+   "proximo": null,
+   "status": "nao_incomodar"
+  },
+  {
+   "nome": "Ricardo Matos",
+   "telefone_mascarado": "+55 ** *****-9942",
+   "origem": "backlog",
+   "categoria": "painel_criado",
+   "etapa": "Conversa nova",
+   "ultimo_contato": "2026-11-03T03:49:10.544Z",
+   "followups": [],
+   "proximo": {
+    "n": 1,
+    "em": "2026-11-08T23:52:58.518Z"
+   },
+   "status": "na_fila"
+  },
+  {
+   "nome": "Natália Bastos",
+   "telefone_mascarado": "(11) *****-2846",
+   "origem": "backlog",
+   "categoria": "sem_resposta_nossa",
+   "etapa": "Dúvida",
+   "ultimo_contato": "2026-11-03T22:42:06.400Z",
+   "followups": [],
+   "proximo": {
+    "n": 1,
+    "em": "2026-11-08T21:27:17.770Z"
+   },
+   "status": "na_fila"
+  },
+  {
+   "nome": "Caio Montenegro",
+   "telefone_mascarado": "(11) *****-3105",
+   "origem": "backlog",
+   "categoria": "suporte",
+   "etapa": "Teste gerado",
+   "ultimo_contato": "2026-11-04T23:28:28.948Z",
+   "followups": [
+    {
+     "n": 1,
+     "quando": "2026-11-04T23:28:28.948Z",
+     "texto": "Oi! Conseguiu testar a lista? Se quiser, eu libero outro teste agora.",
+     "respondeu": false,
+     "minutos_ate_resposta": null
+    }
+   ],
+   "proximo": {
+    "n": 2,
+    "em": "2026-11-08T22:16:05.432Z"
+   },
+   "status": "aguardando"
+  },
+  {
+   "nome": "Mônica Teixeira",
+   "telefone_mascarado": "+55 ** *****-7516",
+   "origem": "backlog",
+   "categoria": "irrelevante",
+   "etapa": "Conversa nova",
+   "ultimo_contato": "2026-11-04T07:08:04.711Z",
+   "followups": [
+    {
+     "n": 1,
+     "quando": "2026-11-04T02:08:04.711Z",
+     "texto": "Oi! Conseguiu testar a lista? Se quiser, eu libero outro teste agora.",
+     "respondeu": true,
+     "minutos_ate_resposta": 47
+    },
+    {
+     "n": 2,
+     "quando": "2026-11-04T07:08:04.711Z",
+     "texto": "Passando para ver se deu tudo certo no teste. Qualquer dúvida é só falar.",
+     "respondeu": true,
+     "minutos_ate_resposta": 42
+    }
+   ],
+   "proximo": null,
+   "status": "respondeu"
+  },
+  {
+   "nome": "Otávio Vasconcelos",
+   "telefone_mascarado": "(11) *****-9212",
+   "origem": "backlog",
+   "categoria": "duvida_aberta",
+   "etapa": "Conversa nova",
+   "ultimo_contato": "2026-11-03T06:43:01.211Z",
+   "followups": [
+    {
+     "n": 1,
+     "quando": "2026-11-03T06:43:01.211Z",
+     "texto": "Oi! Conseguiu testar a lista? Se quiser, eu libero outro teste agora.",
+     "respondeu": false,
+     "minutos_ate_resposta": null
+    }
+   ],
+   "proximo": null,
+   "status": "sem_resposta"
+  },
+  {
+   "nome": "Isabela Cordeiro",
+   "telefone_mascarado": "(11) *****-6699",
+   "origem": "backlog",
+   "categoria": "duvida_aberta",
+   "etapa": "Sem retorno",
+   "ultimo_contato": "2026-11-06T17:41:47.795Z",
+   "followups": [],
+   "proximo": {
+    "n": 1,
+    "em": "2026-11-08T20:43:01.244Z"
+   },
+   "status": "na_fila"
+  },
+  {
+   "nome": "Sérgio Amaral",
+   "telefone_mascarado": "+55 ** *****-5264",
+   "origem": "backlog",
+   "categoria": "painel_criado",
+   "etapa": "Teste gerado",
+   "ultimo_contato": "2026-11-02T09:15:09.453Z",
+   "followups": [],
+   "proximo": null,
+   "status": "nao_incomodar"
+  },
+  {
+   "nome": "Paula Drummond",
+   "telefone_mascarado": "(11) *****-4639",
+   "origem": "backlog",
+   "categoria": "suporte",
+   "etapa": "Conversa nova",
+   "ultimo_contato": "2026-11-05T10:30:56.771Z",
+   "followups": [],
+   "proximo": {
+    "n": 1,
+    "em": "2026-11-08T21:15:46.514Z"
+   },
+   "status": "na_fila"
+  },
+  {
+   "nome": "Wesley Furtado",
+   "telefone_mascarado": "(11) *****-9811",
+   "origem": "backlog",
+   "categoria": "testando",
+   "etapa": "Conversa nova",
+   "ultimo_contato": "2026-11-05T10:49:31.742Z",
+   "followups": [],
+   "proximo": {
+    "n": 1,
+    "em": "2026-11-08T23:45:02.133Z"
+   },
+   "status": "na_fila"
+  },
+  {
+   "nome": "Elaine Magalhães",
+   "telefone_mascarado": "+55 ** *****-9344",
+   "origem": "backlog",
+   "categoria": "sem_interesse",
+   "etapa": "Dúvida",
+   "ultimo_contato": "2026-11-04T10:41:31.505Z",
+   "followups": [
+    {
+     "n": 1,
+     "quando": "2026-11-04T05:41:31.505Z",
+     "texto": "Oi! Conseguiu testar a lista? Se quiser, eu libero outro teste agora.",
+     "respondeu": false,
+     "minutos_ate_resposta": null
+    },
+    {
+     "n": 2,
+     "quando": "2026-11-04T10:41:31.505Z",
+     "texto": "Passando para ver se deu tudo certo no teste. Qualquer dúvida é só falar.",
+     "respondeu": false,
+     "minutos_ate_resposta": null
+    }
+   ],
+   "proximo": {
+    "n": 3,
+    "em": "2026-11-08T20:12:36.542Z"
+   },
+   "status": "aguardando"
+  },
+  {
+   "nome": "Rafael Menezes",
+   "telefone_mascarado": "(11) *****-8395",
+   "origem": "backlog",
+   "categoria": "interessado_sem_painel",
+   "etapa": "Painel criado",
+   "ultimo_contato": "2026-11-03T06:17:40.314Z",
+   "followups": [
+    {
+     "n": 1,
+     "quando": "2026-11-03T01:17:40.314Z",
+     "texto": "Oi! Conseguiu testar a lista? Se quiser, eu libero outro teste agora.",
+     "respondeu": false,
+     "minutos_ate_resposta": null
+    },
+    {
+     "n": 2,
+     "quando": "2026-11-03T06:17:40.314Z",
+     "texto": "Passando para ver se deu tudo certo no teste. Qualquer dúvida é só falar.",
+     "respondeu": true,
+     "minutos_ate_resposta": 45
+    }
+   ],
+   "proximo": null,
+   "status": "respondeu"
+  },
+  {
+   "nome": "Camila Duarte",
+   "telefone_mascarado": "(11) *****-9018",
+   "origem": "backlog",
+   "categoria": "duvida_aberta",
+   "etapa": "Sem retorno",
+   "ultimo_contato": "2026-11-03T09:19:18.698Z",
+   "followups": [
+    {
+     "n": 1,
+     "quando": "2026-11-03T04:19:18.698Z",
+     "texto": "Oi! Conseguiu testar a lista? Se quiser, eu libero outro teste agora.",
+     "respondeu": false,
+     "minutos_ate_resposta": null
+    },
+    {
+     "n": 2,
+     "quando": "2026-11-03T09:19:18.698Z",
+     "texto": "Passando para ver se deu tudo certo no teste. Qualquer dúvida é só falar.",
+     "respondeu": false,
+     "minutos_ate_resposta": null
+    }
+   ],
+   "proximo": null,
+   "status": "sem_resposta"
+  },
+  {
+   "nome": "Bruno Tavares",
+   "telefone_mascarado": "+55 ** *****-4832",
+   "origem": "backlog",
+   "categoria": "duvida_aberta",
+   "etapa": "Conversa nova",
+   "ultimo_contato": "2026-11-04T17:58:53.181Z",
+   "followups": [],
+   "proximo": {
+    "n": 1,
+    "em": "2026-11-08T20:20:45.337Z"
+   },
+   "status": "na_fila"
+  },
+  {
+   "nome": "Letícia Moraes",
+   "telefone_mascarado": "(11) *****-9318",
+   "origem": "backlog",
+   "categoria": "painel_criado",
+   "etapa": "Teste gerado",
+   "ultimo_contato": "2026-11-02T03:12:16.092Z",
+   "followups": [
+    {
+     "n": 1,
+     "quando": "2026-11-02T03:12:16.092Z",
+     "texto": "Oi! Conseguiu testar a lista? Se quiser, eu libero outro teste agora.",
+     "respondeu": false,
+     "minutos_ate_resposta": null
+    }
+   ],
+   "proximo": null,
+   "status": "nao_incomodar"
+  },
+  {
+   "nome": "Diego Albuquerque",
+   "telefone_mascarado": "(11) *****-2829",
+   "origem": "backlog",
+   "categoria": "sem_interesse",
+   "etapa": "Conversa nova",
+   "ultimo_contato": "2026-11-03T20:33:50.252Z",
+   "followups": [],
+   "proximo": {
+    "n": 1,
+    "em": "2026-11-08T23:07:56.395Z"
+   },
+   "status": "na_fila"
+  },
+  {
+   "nome": "Fernanda Siqueira",
+   "telefone_mascarado": "+55 ** *****-2671",
+   "origem": "backlog",
+   "categoria": "irrelevante",
+   "etapa": "Sem retorno",
+   "ultimo_contato": "2026-11-01T21:50:00.389Z",
+   "followups": [],
+   "proximo": {
+    "n": 1,
+    "em": "2026-11-08T23:07:33.247Z"
+   },
+   "status": "na_fila"
+  },
+  {
+   "nome": "Thiago Barreto",
+   "telefone_mascarado": "(11) *****-2995",
+   "origem": "backlog",
+   "categoria": "sem_resposta_nossa",
+   "etapa": "Conversa nova",
+   "ultimo_contato": "2026-11-04T20:18:33.918Z",
+   "followups": [
+    {
+     "n": 1,
+     "quando": "2026-11-04T15:18:33.918Z",
+     "texto": "Oi! Conseguiu testar a lista? Se quiser, eu libero outro teste agora.",
+     "respondeu": false,
+     "minutos_ate_resposta": null
+    },
+    {
+     "n": 2,
+     "quando": "2026-11-04T20:18:33.918Z",
+     "texto": "Passando para ver se deu tudo certo no teste. Qualquer dúvida é só falar.",
+     "respondeu": false,
+     "minutos_ate_resposta": null
+    }
+   ],
+   "proximo": {
+    "n": 3,
+    "em": "2026-11-08T23:47:07.431Z"
+   },
+   "status": "aguardando"
+  },
+  {
+   "nome": "Juliana Prado",
+   "telefone_mascarado": "(11) *****-7382",
+   "origem": "backlog",
+   "categoria": "painel_criado",
+   "etapa": "Conversa nova",
+   "ultimo_contato": "2026-11-05T06:58:59.540Z",
+   "followups": [
+    {
+     "n": 1,
+     "quando": "2026-11-05T01:58:59.540Z",
+     "texto": "Oi! Conseguiu testar a lista? Se quiser, eu libero outro teste agora.",
+     "respondeu": false,
+     "minutos_ate_resposta": null
+    },
+    {
+     "n": 2,
+     "quando": "2026-11-05T06:58:59.540Z",
+     "texto": "Passando para ver se deu tudo certo no teste. Qualquer dúvida é só falar.",
+     "respondeu": true,
+     "minutos_ate_resposta": 44
+    }
+   ],
+   "proximo": null,
+   "status": "respondeu"
+  },
+  {
+   "nome": "Marcelo Queiroz",
+   "telefone_mascarado": "+55 ** *****-8346",
+   "origem": "backlog",
+   "categoria": "suporte",
+   "etapa": "Painel criado",
+   "ultimo_contato": "2026-11-06T01:05:03.819Z",
+   "followups": [
+    {
+     "n": 1,
+     "quando": "2026-11-06T01:05:03.819Z",
+     "texto": "Oi! Conseguiu testar a lista? Se quiser, eu libero outro teste agora.",
+     "respondeu": false,
+     "minutos_ate_resposta": null
+    }
+   ],
+   "proximo": null,
+   "status": "sem_resposta"
+  },
+  {
+   "nome": "Aline Ferraz",
+   "telefone_mascarado": "(11) *****-3223",
+   "origem": "backlog",
+   "categoria": "testando",
+   "etapa": "Teste gerado",
+   "ultimo_contato": "2026-11-06T16:37:31.600Z",
+   "followups": [],
+   "proximo": {
+    "n": 1,
+    "em": "2026-11-08T20:49:10.188Z"
+   },
+   "status": "na_fila"
+  },
+  {
+   "nome": "Gustavo Nogueira",
+   "telefone_mascarado": "(11) *****-3418",
+   "origem": "backlog",
+   "categoria": "sem_interesse",
+   "etapa": "Teste gerado",
+   "ultimo_contato": "2026-11-03T05:17:35.186Z",
+   "followups": [],
+   "proximo": null,
+   "status": "nao_incomodar"
+  },
+  {
+   "nome": "Patrícia Lobo",
+   "telefone_mascarado": "+55 ** *****-1309",
+   "origem": "backlog",
+   "categoria": "sem_interesse",
+   "etapa": "Painel criado",
+   "ultimo_contato": "2026-11-06T08:39:55.153Z",
+   "followups": [],
+   "proximo": {
+    "n": 1,
+    "em": "2026-11-08T20:20:46.715Z"
+   },
+   "status": "na_fila"
+  },
+  {
+   "nome": "André Cavalcanti",
+   "telefone_mascarado": "(11) *****-4846",
+   "origem": "backlog",
+   "categoria": "esfriou",
+   "etapa": "Conversa nova",
+   "ultimo_contato": "2026-11-05T22:39:31.318Z",
+   "followups": [],
+   "proximo": {
+    "n": 1,
+    "em": "2026-11-08T22:23:19.988Z"
+   },
+   "status": "na_fila"
+  },
+  {
+   "nome": "Vanessa Rezende",
+   "telefone_mascarado": "(11) *****-7721",
+   "origem": "backlog",
+   "categoria": "testando",
+   "etapa": "Dúvida",
+   "ultimo_contato": "2026-11-06T10:53:07.310Z",
+   "followups": [
+    {
+     "n": 1,
+     "quando": "2026-11-06T05:53:07.310Z",
+     "texto": "Oi! Conseguiu testar a lista? Se quiser, eu libero outro teste agora.",
+     "respondeu": false,
+     "minutos_ate_resposta": null
+    },
+    {
+     "n": 2,
+     "quando": "2026-11-06T10:53:07.310Z",
+     "texto": "Passando para ver se deu tudo certo no teste. Qualquer dúvida é só falar.",
+     "respondeu": false,
+     "minutos_ate_resposta": null
+    }
+   ],
+   "proximo": {
+    "n": 3,
+    "em": "2026-11-08T23:35:40.739Z"
+   },
+   "status": "aguardando"
+  },
+  {
+   "nome": "Lucas Peixoto",
+   "telefone_mascarado": "+55 ** *****-4533",
+   "origem": "backlog",
+   "categoria": "testando",
+   "etapa": "Sem retorno",
+   "ultimo_contato": "2026-11-05T23:35:56.863Z",
+   "followups": [
+    {
+     "n": 1,
+     "quando": "2026-11-05T23:35:56.863Z",
+     "texto": "Oi! Conseguiu testar a lista? Se quiser, eu libero outro teste agora.",
+     "respondeu": true,
+     "minutos_ate_resposta": 14
+    }
+   ],
+   "proximo": null,
+   "status": "respondeu"
+  },
+  {
+   "nome": "Renata Valadares",
+   "telefone_mascarado": "(11) *****-1733",
+   "origem": "backlog",
+   "categoria": "interessado_sem_painel",
+   "etapa": "Sem retorno",
+   "ultimo_contato": "2026-11-05T04:42:45.608Z",
+   "followups": [
+    {
+     "n": 1,
+     "quando": "2026-11-04T23:42:45.608Z",
+     "texto": "Oi! Conseguiu testar a lista? Se quiser, eu libero outro teste agora.",
+     "respondeu": false,
+     "minutos_ate_resposta": null
+    },
+    {
+     "n": 2,
+     "quando": "2026-11-05T04:42:45.608Z",
+     "texto": "Passando para ver se deu tudo certo no teste. Qualquer dúvida é só falar.",
+     "respondeu": false,
+     "minutos_ate_resposta": null
+    }
+   ],
+   "proximo": null,
+   "status": "sem_resposta"
+  },
+  {
+   "nome": "Eduardo Brandão",
+   "telefone_mascarado": "(11) *****-2864",
+   "origem": "backlog",
+   "categoria": "duvida_aberta",
+   "etapa": "Painel criado",
+   "ultimo_contato": "2026-11-05T11:01:47.912Z",
+   "followups": [],
+   "proximo": {
+    "n": 1,
+    "em": "2026-11-08T21:11:15.601Z"
+   },
+   "status": "na_fila"
+  }
+ ],
+ "por_categoria": [
+  {
+   "categoria": "painel_criado",
+   "qtd": 9
+  },
+  {
+   "categoria": "testando",
+   "qtd": 22
+  },
+  {
+   "categoria": "interessado_sem_painel",
+   "qtd": 38
+  },
+  {
+   "categoria": "duvida_aberta",
+   "qtd": 17
+  },
+  {
+   "categoria": "sem_resposta_nossa",
+   "qtd": 44
+  },
+  {
+   "categoria": "esfriou",
+   "qtd": 36
+  },
+  {
+   "categoria": "sem_interesse",
+   "qtd": 19
+  },
+  {
+   "categoria": "suporte",
+   "qtd": 8
+  },
+  {
+   "categoria": "equipe_ou_parceiro",
+   "qtd": 6
+  },
+  {
+   "categoria": "irrelevante",
+   "qtd": 15
+  }
+ ]
+}

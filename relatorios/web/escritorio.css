@@ -1,0 +1,99 @@
+/* Escritório do Jarvis (tela inicial no PC, 08/11/2026). Pixel art 32 bits: a sala é um canvas pequeno ampliado
+   em pixel inteiro (--px = tamanho de um pixel do mundo em px da tela); placas, fala, dica e HUD são DOM por cima. */
+@font-face { font-family: "Pixelify Sans"; font-style: normal; font-weight: 400 700; font-display: swap; src: url("fontes/pixelify-sans.woff2") format("woff2"); }
+@font-face { font-family: "Jersey 10"; font-style: normal; font-weight: 400; font-display: swap; src: url("fontes/jersey-10.woff2") format("woff2"); }
+:root { --px-f: "Pixelify Sans", var(--font-ui); --px-n: "Jersey 10", "Pixelify Sans", var(--font-ui); --hud: rgba(13, 14, 28, .88); --hud-borda: #2e3560; --hud-luz: #4a5590; }
+
+/* Seletor do topo com seis opções (Escritório, Painel, Follow-ups, Mapa, Funil, Jornada) */
+.seletor.seis { grid-template-columns: repeat(6, minmax(0, 1fr)); }
+.seletor.seis button { min-width: 0; padding: 0 .85rem; white-space: nowrap; }
+.seletor.seis .pilula { width: calc((100% - 4px) / 6); }
+.seletor.seis[data-pos="1"] .pilula { transform: translateX(100%); }
+.seletor.seis[data-pos="2"] .pilula { transform: translateX(200%); }
+.seletor.seis[data-pos="3"] .pilula { transform: translateX(300%); }
+.seletor.seis[data-pos="4"] .pilula { transform: translateX(400%); }
+.seletor.seis[data-pos="5"] .pilula { transform: translateX(500%); }
+
+.esc { display: none; }
+.app[data-vista="escritorio"] .quadro > :not(.esc), .app[data-vista="escritorio"] > .numeros, .app[data-vista="escritorio"] .pe { display: none; }
+.app[data-vista="escritorio"] .esc { display: flex; flex-direction: column; align-items: center; gap: 6px; grid-column: 1 / -1; grid-row: 1 / -1; min-height: 0; min-width: 0; animation: esc-entra .32s var(--ease) both; }
+.app[data-vista="escritorio"] .acoes-topo .btn { white-space: nowrap; }
+@keyframes esc-entra { from { opacity: 0; transform: scale(.992); } }
+
+.esc { --px: 4px; }
+.esc-mundo { position: relative; flex: none; overflow: hidden; background: #0d0c14; box-shadow: 0 0 0 2px #07070c, 0 0 0 4px var(--hud-borda), 0 18px 50px rgba(0, 0, 0, .45); }
+.esc-cv { display: block; width: 100%; height: 100%; image-rendering: pixelated; image-rendering: crisp-edges; touch-action: manipulation; }
+
+/* ---------- Placas das áreas ---------- */
+.esc-rotulos { position: absolute; inset: 0; pointer-events: none; }
+.esc-placa { position: absolute; display: flex; align-items: center; gap: .4rem; padding: .18rem .5rem .2rem .4rem; background: rgba(10, 10, 20, .82); color: #fff; font: 500 max(12px, calc(var(--px) * 3))/1.1 var(--px-f); letter-spacing: .02em; white-space: nowrap; transform: translateY(-100%); border: 0; cursor: pointer; pointer-events: auto;
+  clip-path: polygon(3px 0, calc(100% - 3px) 0, 100% 3px, 100% calc(100% - 3px), calc(100% - 3px) 100%, 3px 100%, 0 calc(100% - 3px), 0 3px); box-shadow: inset 0 -2px 0 color-mix(in srgb, var(--cor) 55%, transparent); }
+.esc-placa i { width: .5rem; height: .5rem; background: var(--cor); flex: none; }
+.esc-placa:hover { background: rgba(24, 24, 40, .92); }
+.esc-placa:focus-visible { outline: none; box-shadow: inset 0 -2px 0 var(--cor), 0 0 0 3px color-mix(in srgb, #5be7ff 45%, transparent); }
+.esc-placa b { font: 400 max(17px, calc(var(--px) * 4.6))/1 var(--px-n); color: var(--cor); font-variant-numeric: tabular-nums; }
+/* números secundários na Jersey 10 (na Pixelify pequena o 2 e o 5 viravam 8) */
+.esc-placa em { font: 400 max(15px, calc(var(--px) * 3.6))/1 var(--px-n); font-style: normal; letter-spacing: .03em; color: rgba(235, 235, 245, .78); }
+.esc-placa small { font: 400 max(15px, 1rem)/1 var(--px-n); letter-spacing: .03em; color: rgba(235, 235, 245, .6); }
+.esc-placa.alerta { animation: esc-alerta 1.2s steps(2, jump-none) 3; box-shadow: inset 0 -2px 0 var(--cor), 0 0 0 2px color-mix(in srgb, var(--cor) 60%, transparent); }
+@keyframes esc-alerta { 50% { box-shadow: inset 0 -2px 0 var(--cor), 0 0 0 2px color-mix(in srgb, var(--cor) 60%, transparent); } }
+.esc-placa.jarvis { cursor: default; pointer-events: none; transform: translate(-50%, -50%); background: #0b2a33; color: #5be7ff; padding: .1rem .45rem; font-size: max(11px, .72rem); letter-spacing: .12em; box-shadow: inset 0 0 0 1px rgba(91, 231, 255, .5); }
+
+/* ---------- Fala do Jarvis ---------- */
+.esc-fala { position: absolute; padding: .3rem .6rem; background: #fff; color: #15121c; font: 600 max(13px, calc(var(--px) * 2.8))/1.1 var(--px-f); white-space: nowrap; pointer-events: none; transform: translate(0, -100%) scale(.6); transform-origin: 0 100%; opacity: 0;
+  clip-path: polygon(3px 0, calc(100% - 3px) 0, 100% 3px, 100% calc(100% - 3px), calc(100% - 3px) 100%, 3px 100%, 0 calc(100% - 3px), 0 3px); transition: opacity .12s, transform .12s var(--ease); }
+.esc-fala.mostra { opacity: 1; transform: translate(0, -100%) scale(1); transition: opacity .16s, transform .24s var(--mola); }
+
+/* ---------- Dica ao passar o mouse num cliente ---------- */
+.esc-dica { position: absolute; z-index: 3; display: grid; gap: .15rem; min-width: 11rem; max-width: 17rem; padding: .55rem .7rem .6rem; background: rgba(12, 12, 24, .95); color: rgba(235, 235, 245, .82); font: 400 max(13px, calc(var(--px) * 2.6))/1.3 var(--px-f); pointer-events: none;
+  clip-path: polygon(4px 0, calc(100% - 4px) 0, 100% 4px, 100% calc(100% - 4px), calc(100% - 4px) 100%, 4px 100%, 0 calc(100% - 4px), 0 4px); box-shadow: inset 0 0 0 2px var(--hud-borda), inset 0 2px 0 2px var(--hud-luz); animation: esc-dica .14s var(--ease) both; }
+.esc-dica.esq { transform: translateX(-100%); }
+.esc-dica b { color: #fff; font-size: 1rem; font-weight: 600; }
+.esc-dica-z { color: var(--cor); }
+@keyframes esc-dica { from { opacity: 0; } }
+
+/* ---------- HUD: os números do topo por cima da parede ---------- */
+.esc-hud { position: absolute; left: calc(var(--px) * 3); right: calc(var(--px) * 3); top: calc(var(--px) * 2); pointer-events: none; }
+.esc-hud .numeros { display: grid; grid-template-columns: 1.25fr repeat(6, minmax(0, 1fr)); gap: calc(var(--px) * 2); pointer-events: auto; }
+.esc-hud .num { display: grid; grid-template-columns: auto minmax(0, 1fr); grid-template-rows: auto auto; column-gap: .6rem; align-items: center; min-width: 0; padding: .35rem .7rem .4rem; border-radius: 0; background: var(--hud);
+  clip-path: polygon(4px 0, calc(100% - 4px) 0, 100% 4px, 100% calc(100% - 4px), calc(100% - 4px) 100%, 4px 100%, 0 calc(100% - 4px), 0 4px);
+  box-shadow: inset 0 0 0 2px var(--hud-borda), inset 0 2px 0 2px var(--hud-luz); backdrop-filter: none; }
+.esc-hud .num::before, .esc-hud .num::after { display: none; }
+.esc-hud .esc-ic { grid-row: 1 / span 2; width: calc(var(--px) * 8); height: calc(var(--px) * 8); }
+.esc-hud .num h2 { grid-column: 2; margin: 0; font: 400 max(15px, calc(var(--px) * 3.2))/1.05 var(--px-n); letter-spacing: .07em; text-transform: uppercase; color: rgba(235, 235, 245, .62); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.esc-hud .num .valor { grid-column: 2; margin: 0; font: 400 max(30px, calc(var(--px) * 6.4))/.95 var(--px-n); letter-spacing: .01em; color: #fff; }
+.esc-hud .num .valor small { font: inherit; font-size: 1.2rem; color: rgba(235, 235, 245, .66); }
+.esc-hud .num .rodape, .esc-hud .num .origens { display: none !important; }
+.esc-hud .num.heroi { grid-column: auto; background: linear-gradient(180deg, rgba(64, 48, 8, .92), rgba(28, 22, 6, .92)); box-shadow: inset 0 0 0 2px #8a6d1f, inset 0 2px 0 2px #c9a227; }
+.esc-hud .num.heroi h2 { color: #ffd84a; }
+.esc-hud .num.heroi .valor { font-size: max(36px, calc(var(--px) * 7.6)); color: #ffd84a; text-shadow: 0 2px 0 #6b5310; }
+.esc-hud .num.heroi .esc-ic { width: calc(var(--px) * 8); height: calc(var(--px) * 8); }
+.esc-hud .num.alerta { box-shadow: inset 0 0 0 2px #a3303f, inset 0 2px 0 2px #ff5d6c; animation: esc-pisca 1.2s steps(2, jump-none) 3; }
+.esc-hud .num.alerta .valor { color: #ff8a95; }
+@keyframes esc-pisca { 50% { background: rgba(70, 14, 22, .92); } }
+.esc-xp { grid-column: 2; height: 5px; margin-top: .25rem; background: #1b2140; box-shadow: inset 0 0 0 1px #2e3560; }
+.esc-xp i { display: block; height: 100%; width: 0; background: repeating-linear-gradient(90deg, #30d158 0 4px, #5ee27f 4px 6px); transition: width .6s steps(12, end); }
+.esc-hud .num.ganhou { animation: esc-ganhou .5s steps(5, end); }
+@keyframes esc-ganhou { 0% { transform: translateY(0); } 30% { transform: translateY(-4px) scale(1.04); filter: brightness(1.5); } 100% { transform: none; } }
+
+/* ---------- Barra de baixo: Jarvis + últimos acontecimentos ---------- */
+.esc-barra { display: flex; align-items: center; gap: 1.2rem; width: 100%; max-width: 100%; min-height: 2.3rem; padding: .35rem .8rem; background: var(--hud); color: rgba(235, 235, 245, .78); font: 400 max(13px, calc(var(--px) * 2.6))/1.2 var(--px-f);
+  clip-path: polygon(4px 0, calc(100% - 4px) 0, 100% 4px, 100% calc(100% - 4px), calc(100% - 4px) 100%, 4px 100%, 0 calc(100% - 4px), 0 4px); box-shadow: inset 0 0 0 2px var(--hud-borda); }
+.esc-jarvis { display: flex; align-items: center; gap: .5rem; flex: none; white-space: nowrap; }
+.esc-jarvis b { color: #5be7ff; letter-spacing: .12em; font-weight: 600; }
+.esc-led { width: .55rem; height: .55rem; background: #30d158; box-shadow: 0 0 0 2px rgba(48, 209, 88, .25); }
+.esc-led.digitando { background: #5be7ff; animation: esc-led .36s steps(2, jump-none) infinite; }
+@keyframes esc-led { 50% { opacity: .35; } }
+.esc-log { display: flex; gap: 1.4rem; min-width: 0; flex: 1; overflow: hidden; padding: 0; margin: 0; list-style: none; mask-image: linear-gradient(90deg, #000 85%, transparent); }
+.esc-log li { display: flex; gap: .45rem; white-space: nowrap; color: rgba(235, 235, 245, .6); }
+.esc-log li.novo { color: #fff; animation: esc-novo .3s var(--ease) both; }
+.esc-log time { color: rgba(235, 235, 245, .58); font-variant-numeric: tabular-nums; }
+.esc-log li.tipo-painel_fechado span { color: #ffd84a; }
+.esc-log li.tipo-passou_ao_senhor span { color: #ff8a95; }
+.esc-log li.tipo-teste_gerado span { color: #c39bff; }
+@keyframes esc-novo { from { opacity: 0; transform: translateX(-8px); } }
+
+@media (prefers-reduced-motion: reduce) {
+  .app[data-vista="escritorio"] .esc, .esc-placa.alerta, .esc-hud .num.alerta, .esc-led.digitando, .esc-log li.novo, .esc-hud .num.ganhou { animation: none; }
+  .esc-fala, .esc-fala.mostra { transition: none; }
+}

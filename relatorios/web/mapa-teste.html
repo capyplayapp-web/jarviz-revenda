@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="dark">
+<meta name="theme-color" content="#121214">
+<title>Mapa do conhecimento</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23121214'/%3E%3Cpath d='M9 21 16 11l7 8' stroke='%235be7ff' stroke-width='2' fill='none'/%3E%3Ccircle cx='9' cy='21' r='3' fill='%235be7ff'/%3E%3Ccircle cx='16' cy='11' r='3.5' fill='%237aa2ff'/%3E%3Ccircle cx='23' cy='19' r='2.5' fill='%235ee6b5'/%3E%3C/svg%3E">
+<!-- Página de teste do mapa. ?mock=1 usa web/mock/grafo.json; ?vazio=1 mostra o estado vazio; ?erro=1 o de erro; sem nada, chama /api/grafo. -->
+<link rel="preload" href="fontes/inter.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="mapa.css">
+<style>
+  @font-face { font-family: "Inter"; font-style: normal; font-weight: 100 900; font-display: swap; src: url("fontes/inter.woff2") format("woff2"); }
+  html, body { margin: 0; height: 100%; background: #121214; }
+  body { font: 400 13px/1.4 "Inter", -apple-system, "Segoe UI", sans-serif; -webkit-font-smoothing: antialiased; color: #fff; }
+  @media (min-width: 2400px) and (min-height: 1200px) { html { font-size: 18px; } body { font-size: 18px; } }
+  #mapa { position: fixed; inset: 0; }
+</style>
+</head>
+<body>
+<div id="mapa"></div>
+<script src="mapa.js"></script>
+<script>
+  const q = new URLSearchParams(location.search);
+  const buscar = (caminho) => {
+    if (q.has('vazio')) return Promise.resolve({ gerado_em: new Date().toISOString(), nos: [], ligacoes: [], evolucao: [] });
+    if (q.has('erro')) return Promise.reject(new Error('HTTP 404'));
+    const url = q.has('mock') ? 'mock/grafo.json' : caminho;
+    return fetch(url, { cache: 'no-store' }).then((r) => { if (!r.ok) throw new Error('HTTP ' + r.status); return r.json(); });
+  };
+  window.mapa = window.montarMapa(document.getElementById('mapa'), { buscar, dias: q.get('dias') || null });
+</script>
+</body>
+</html>

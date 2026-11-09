@@ -1,0 +1,64 @@
+{
+  "gerado_em": "2026-11-08T21:30:00.000Z",
+  "resumo": { "novas": 1, "investigando": 1, "aprendidas": 2, "precisa_senhor": 2, "descartadas": 1, "ocorrencias_total": 14, "custo_usd_total": 0.1124 },
+  "itens": [
+    {
+      "id": "L7", "quando": "2026-11-08T18:12:00.000Z", "pergunta": "Existe plano pré-pago?", "ocorrencias": 3, "clientes_aguardando": 3,
+      "motivo": "sem_informacao_no_base", "status": "precisa_senhor",
+      "resposta_sugerida": "Mestre, aqui o painel é pós-pago: você usa e acerta no dia 5 do mês seguinte. Vou confirmar com o responsável se existe outro modelo.",
+      "fatos_do_painel": [
+        { "fato": "Compra de créditos avulsos: pacotes de 10 e 50 créditos a R$ 3,50; de 100 e 500 a R$ 3,00", "fonte": "/api/creditpackages/price" },
+        { "fato": "Link de cadastro de revendedor: R$ 3,50 por cliente ativo, 500 créditos iniciais", "fonte": "/api/referral-links" }
+      ],
+      "confianca": 0.6, "tipo": "precisa_senhor",
+      "regra_para_base": "Se perguntarem se existe pré-pago, diga que o modelo é pós-pago com acerto no dia 5 e que vai confirmar o resto com o responsável.",
+      "motivo_precisa_senhor": "O painel mostra compra de créditos avulsos e uma faixa de R$ 3,00 que não está no base.md. Só o senhor pode dizer se existe pré-pago.",
+      "resolvido_em": null
+    },
+    {
+      "id": "L9", "quando": "2026-11-08T20:40:00.000Z", "pergunta": "Posso testar o painel antes do acerto sem pagar nada?", "ocorrencias": 2, "clientes_aguardando": 2,
+      "motivo": "sem_informacao_no_base", "status": "precisa_senhor",
+      "resposta_sugerida": "Mestre, abrir o painel não tem taxa e o acerto só vem no dia 5. Para teste de linha, eu gero um teste de 6 horas para você.",
+      "fatos_do_painel": [
+        { "fato": "Existe pacote de teste sem crédito, com duração de 6 horas", "fonte": "/api/packages" }
+      ],
+      "confianca": 0.74, "tipo": "precisa_senhor",
+      "regra_para_base": "Se perguntarem se dá para testar antes do acerto, diga que abrir o painel não tem taxa e ofereça o teste de 6 horas.",
+      "motivo_precisa_senhor": "Confiança 0,74 abaixo de 0,80 e menciona prazo de teste.",
+      "resolvido_em": null
+    },
+    {
+      "id": "L10", "quando": "2026-11-08T21:05:00.000Z", "pergunta": "Qual o horário do suporte oficial?", "ocorrencias": 1, "clientes_aguardando": 1,
+      "motivo": "avisar_sem_motivo_claro", "status": "nova",
+      "resposta_sugerida": "", "fatos_do_painel": [], "confianca": null, "tipo": null, "regra_para_base": "", "resolvido_em": null
+    },
+    {
+      "id": "L8", "quando": "2026-11-08T19:20:00.000Z", "pergunta": "Cada crédito vale quantas telas?", "ocorrencias": 4, "clientes_aguardando": 0,
+      "motivo": "sem_informacao_no_base", "status": "aprendida",
+      "resposta_sugerida": "Cada crédito vale uma tela. Cliente com duas telas usa dois créditos.",
+      "fatos_do_painel": [{ "fato": "Pacote de 1 mês: 1 crédito e 1 conexão", "fonte": "/api/packages" }],
+      "confianca": 0.93, "tipo": "regra_segura",
+      "regra_para_base": "Se perguntarem quantas telas vale um crédito, diga que cada crédito vale uma tela.",
+      "motivo_precisa_senhor": "", "resolvido_em": "2026-11-08T19:21:10.000Z"
+    },
+    {
+      "id": "L5", "quando": "2026-11-08T14:02:00.000Z", "pergunta": "O painel aceita pagamento por Pix?", "ocorrencias": 2, "clientes_aguardando": 0,
+      "motivo": "nao_entendeu", "status": "aprendida",
+      "resposta_sugerida": "O pagamento sai por QR Code gerado dentro do painel, na opção de renovação.",
+      "fatos_do_painel": [{ "fato": "Forma de pagamento ativa: Mercado Pago", "fonte": "/api/integrations" }],
+      "confianca": 0.88, "tipo": "regra_segura",
+      "regra_para_base": "Se perguntarem do Pix, diga que o pagamento é por QR Code no painel, na renovação.",
+      "motivo_precisa_senhor": "", "resolvido_em": "2026-11-08T14:03:40.000Z"
+    },
+    {
+      "id": "L11", "quando": "2026-11-08T21:20:00.000Z", "pergunta": "Vocês têm canal de futebol feminino?", "ocorrencias": 1, "clientes_aguardando": 1,
+      "motivo": "sem_informacao_no_base", "status": "investigando",
+      "resposta_sugerida": "", "fatos_do_painel": [], "confianca": null, "tipo": null, "regra_para_base": "", "resolvido_em": null
+    },
+    {
+      "id": "L3", "quando": "2026-11-08T11:30:00.000Z", "pergunta": "Posso pagar com cartão de outra pessoa?", "ocorrencias": 1, "clientes_aguardando": 0,
+      "motivo": "fora_do_roteiro", "status": "descartada",
+      "resposta_sugerida": "", "fatos_do_painel": [], "confianca": null, "tipo": null, "regra_para_base": "", "resolvido_em": "2026-11-08T12:00:00.000Z"
+    }
+  ]
+}

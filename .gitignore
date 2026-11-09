@@ -1,0 +1,79 @@
+# Repositório privado do robô da revenda (Jarviz). Só código, regras, telas e documentos.
+# Nunca sobem: sessão do WhatsApp, tokens, senhas e dados de clientes (telefone, conversas), que ficam só no PC.
+
+# dependências e caches
+node_modules/
+.wwebjs_cache/
+.wwebjs_auth/
+.wrangler/
+*.log
+*.tmp
+*.tmp.md
+
+# sessão e navegadores (login do WhatsApp e do painel)
+sessao/
+perfil-painel/
+qr.png
+
+# segredos
+SENHA.txt
+secrets.json
+.dev.vars
+.env
+nuvem.local.json
+credencial*.json
+**/credencial*.json
+
+# dados de clientes e estado do robô (LGPD: ficam só no PC)
+conversas.log
+*.jsonl
+clientes.json
+revendedores.json
+pendentes.json
+saudados.json
+quieto.json
+desligados.json
+testes-gerados.json
+videos-enviados.json
+backlog.json
+backlog-fila.json
+backlog-estado.json
+reanalisar-resultado.json
+releitura-resultado.json
+anuncio-debug.json
+painel-sync.json
+analise/*
+!analise/*.md
+lacunas/*
+!lacunas/*.md
+audios/
+tmp-audio/
+funil/leads.json
+funil/estado.json
+funil/jornada.json
+funil/etiquetas.json
+funil/diagnostico.json
+funil/comando.json
+funil/*-estado.json
+funil/backlog-fila*.json
+relatorios/aprender-estado.json
+relatorios/backlog-comando.json
+
+# gerados (refazem sozinhos)
+catalogo/catalogo.json
+catalogo/capas/
+relatorios/web/prints/
+relatorios/print-*.png
+nuvem/public/
+nuvem/antes-trafego/
+
+# interruptores do dia a dia
+pausado
+voz.off
+backlog-pausado
+
+# cópias de segurança manuais (o histórico agora é o git)
+*.antes-*
+*.antes_*
+${nome}
+.aprendendo

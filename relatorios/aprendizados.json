@@ -1,0 +1,2969 @@
+{
+ "rodadas": [
+  {
+   "id": "2026-11-08T18:11:33.889Z",
+   "gerado_em": "2026-11-08T18:11:33.889Z",
+   "janela": {
+    "inicio": "2026-11-08T16:11:33.889Z",
+    "fim": "2026-11-08T18:11:33.889Z"
+   },
+   "metricas": {
+    "mensagens_cliente": 62,
+    "respostas_robo": 194,
+    "followups": 6,
+    "followups_respondidos": 2,
+    "testes": 1,
+    "paineis_fechados": 4,
+    "passados_ao_senhor": 6,
+    "repeticoes_bloqueadas": 2,
+    "erros": 2
+   },
+   "resumo": "Período 13:11 a 15:11: 23 conversas, 62 mensagens de clientes e 194 respostas do robô.\nPediram: 13 já revendem, 6 querem começar a revender e 1 pediu teste.\nPainéis fechados: 4 (Fabio, Máximo, Ivan e Mauricio). Teste gerado: 1 (Fox).\nTravou: respostas com mensagens demais, links e frases repetidas, e 6 conversas passadas ao responsável.\nPonto principal: o robô repete mensagens e fala de subrevenda cedo demais. Corrigir isso antes de mexer em preço.",
+   "funcionou": [
+    "Fox: teste gerado, depois celular Android com o app Ultramix, código e vídeo certos.",
+    "Digital Tv: perguntou sobre pré-pago, o robô não inventou e passou ao responsável.",
+    "Adriano: o robô perguntou o aparelho e depois a marca da Smart TV, na ordem certa.",
+    "Mauricio: após 'Sim já criei', o robô mandou Manual, suporte e link de pagamento corretos.",
+    "Felipe: pergunta sobre Fórmula 1 foi passada ao responsável, sem chute."
+   ],
+   "deu_errado": [
+    "Fabio: 5 mensagens na primeira resposta e link do manual errado ('manualdorevenda'; o certo é 'manual_do_revenda').",
+    "Durval: 'Opa blz' virou 'Recebi a confirmação do pagamento da sua mensalidade'. Essa informação não existia.",
+    "Máximo: 'Você cria o painel por este link:' saiu sem o link. O senhor teve que enviar às 14:17.",
+    "Fox: 'Ou tem pré pago tbm?' ficou sem resposta, e 'Quando criar o painel, me avisa' saiu 4 vezes.",
+    "Ivan: depois do painel, 9 mensagens em poucos minutos, com manual, suporte, pagamento e Escola repetidos.",
+    "Fernando: preço e link enviados 2 vezes cada, e depois ele parou de responder.",
+    "Conversa sem nome: às 14:42 o robô não conseguiu responder."
+   ],
+   "problemas": {
+    "respostas_repetidas": [
+     "Fernando: preço e link enviados 2 vezes (14:35 e 14:36).",
+     "Ivan: 9 mensagens em poucos minutos, com links repetidos.",
+     "Máximo: link de pagamento e Escola enviados 2 vezes (14:22 e 14:23).",
+     "Fox: 'Quando criar o painel, me avisa' enviado 4 vezes."
+    ],
+    "perguntas_ja_respondidas": [],
+    "cliente_sumiu": [
+     {
+      "nome": "Fernando",
+      "depois_de": "Assim que concluir, me avisa. Me conta também quantos clientes ativos você tem."
+     },
+     {
+      "nome": "⛪️",
+      "depois_de": "Em qual aparelho ele vai assistir: TV, TV Box, celular, Fire Stick, iPhone ou computador?"
+     },
+     {
+      "nome": "Paulo",
+      "depois_de": "Oi, Paulo. Conseguiu criar o painel pelo link?"
+     },
+     {
+      "nome": "rd promotora",
+      "depois_de": "Oi! Conseguiu abrir o painel pelo link?"
+     },
+     {
+      "nome": "L13 STREAM",
+      "depois_de": "Pode criar seu painel por aqui e me avisa quando concluir: [link]"
+     },
+     {
+      "nome": "biel telas",
+      "depois_de": "Pode criar seu painel por aqui e me avisa quando concluir: [link]"
+     },
+     {
+      "nome": "Jaime",
+      "depois_de": "Pode criar seu painel por aqui e me avisa quando concluir: [link]"
+     },
+     {
+      "nome": "-yagoo",
+      "depois_de": "Pode criar seu painel por aqui e me avisa: [link]"
+     },
+     {
+      "nome": "giuliano felix",
+      "depois_de": "Crie seu painel por aqui e me avisa quando concluir: [link]"
+     },
+     {
+      "nome": "Neilton",
+      "depois_de": "Oi, Neilton! Conseguiu dar uma olhada no painel?"
+     }
+    ],
+    "objecoes": [
+     "Digital Tv: 'com pós pago eu não trabalho' (ele trabalha com pré-pago).",
+     "anam96525: 'Ta abrindo não' (o link não abriu).",
+     "Fox: 'Ou tem pré pago tbm?' (pergunta sobre pré-pago sem resposta)."
+    ],
+    "duvidas_nao_cobertas": [
+     "Funciona com pré-pago? (Digital Tv, Fox)",
+     "Tem Fórmula 1 ou canal específico? (Felipe)",
+     "O que eu revendo? (anam96525)",
+     "Posso fazer testes no painel antes de vender? (Adriano)"
+    ]
+   },
+   "inconsistencias": [
+    {
+     "tipo": "fora_de_hora",
+     "titulo": "Subrevenda na primeira resposta",
+     "exemplo": "Digital Tv (14:07): 'Como você já revende, também pode criar subrevendas...' na primeira resposta. O base diz que só entra se perguntarem ou na resposta seguinte.",
+     "causa": "Roteiro não aplicado para quem já revende.",
+     "regra": "Só fale de subrevenda se a pessoa perguntar ou na resposta seguinte."
+    },
+    {
+     "tipo": "contradicao",
+     "titulo": "Link anunciado e não enviado",
+     "exemplo": "Máximo (14:16): 'Pode sim, Máximo! Você cria o painel por este link:' sem o link. O senhor enviou às 14:17.",
+     "causa": "Mensagem saiu cortada.",
+     "regra": "Se anunciar um link, mande o link na mesma resposta."
+    },
+    {
+     "tipo": "contradicao",
+     "titulo": "Link do manual errado",
+     "exemplo": "Fabio (13:34): 'https://t.me/manualdorevenda'. O base diz 'https://t.me/manual_do_revenda'.",
+     "causa": "Link digitado diferente do base.",
+     "regra": "Use o link do manual exatamente como está no base."
+    },
+    {
+     "tipo": "pergunta_mal_entendida",
+     "titulo": "Cumprimento virou pagamento",
+     "exemplo": "Durval (13:58): cliente 'Opa blz'. Robô: 'Recebi a confirmação do pagamento da sua mensalidade, Durval.'",
+     "causa": "Robô assumiu um contexto sem dado.",
+     "regra": "Não afirme pagamento sem dado. Pergunte o que a pessoa precisa."
+    },
+    {
+     "tipo": "pergunta_mal_entendida",
+     "titulo": "Pré-pago sem resposta",
+     "exemplo": "Fox (14:48): cliente 'Ou tem pré pago tbm?'. Robô: 'Qualquer dúvida é só me chamar, Fox.'",
+     "causa": "Robô não sabia a resposta e não passou ao responsável.",
+     "regra": "Se não souber, diga que vai verificar e passe ao responsável."
+    },
+    {
+     "tipo": "repeticao",
+     "titulo": "Frase de encerramento repetida",
+     "exemplo": "Fox (14:57, 14:58 e 15:06): 'Quando criar o painel, me avisa por aqui' saiu 4 vezes. O log mostra 'repetição bloqueada', mas o texto também foi enviado.",
+     "causa": "O bloqueio de repetição não impede o envio.",
+     "regra": "Não repita frase de encerramento na mesma conversa."
+    },
+    {
+     "tipo": "repeticao",
+     "titulo": "Pacote de links repetido",
+     "exemplo": "Ivan (14:36): manual, suporte, pagamento e Escola enviados 2 ou 3 vezes em 9 mensagens.",
+     "causa": "O passo 4 do roteiro foi enviado de novo em cada resposta.",
+     "regra": "Mande cada link do passo 4 uma vez só."
+    },
+    {
+     "tipo": "fora_de_hora",
+     "titulo": "Link do painel na primeira resposta",
+     "exemplo": "Paulo (13:57): link do painel já na primeira resposta. O base diz que deve sair na segunda ou terceira resposta.",
+     "causa": "Robô pulou a pergunta 'Você já trabalha com revenda?'.",
+     "regra": "Na primeira resposta, pergunte se a pessoa já revende. O link vem depois."
+    },
+    {
+     "tipo": "passou_sem_precisar",
+     "titulo": "Cumprimento passado ao responsável",
+     "exemplo": "Durval (13:58): 'Opa blz' foi passado ao responsável.",
+     "causa": "Mensagem curta tratada como pedido de ajuda.",
+     "regra": "Se a pessoa só cumprimentar, responda e pergunte o que precisa."
+    }
+   ],
+   "perguntas_nao_cobertas": [
+    {
+     "pergunta": "Funciona com pré-pago?",
+     "resposta_sugerida": "Por aqui eu só tenho as informações do modelo pós-pago. Vou passar para o responsável confirmar.",
+     "precisa_aprovacao": true
+    },
+    {
+     "pergunta": "Tem Fórmula 1 ou canal específico?",
+     "resposta_sugerida": "Não tenho a lista de canais e programas. Vou passar para o responsável confirmar.",
+     "precisa_aprovacao": false
+    },
+    {
+     "pergunta": "Mas e pra revender o quê?",
+     "resposta_sugerida": "Você revende o acesso aos canais, filmes e séries, com uma tela por conexão.",
+     "precisa_aprovacao": false
+    },
+    {
+     "pergunta": "Posso fazer testes no painel antes de vender?",
+     "resposta_sugerida": "Abrir o painel não tem custo. Sobre testes, vou confirmar com o responsável.",
+     "precisa_aprovacao": true
+    }
+   ],
+   "regras_novas": [
+    {
+     "regra": "Nunca repita link, pagamento, Escola ou frase de encerramento na mesma conversa. Se já foi enviado, não envie de novo.",
+     "status": "sugestao"
+    },
+    {
+     "regra": "Mande no máximo 4 mensagens por resposta, uma ideia em cada uma, e espere a pessoa responder antes de seguir.",
+     "status": "aprovada"
+    },
+    {
+     "regra": "Não fale de subrevenda na primeira resposta. Só fale se a pessoa perguntar ou na resposta seguinte.",
+     "status": "sugestao"
+    },
+    {
+     "regra": "Se não souber a resposta, diga que vai verificar e passe ao responsável. Nunca afirme pagamento ou dado que não recebeu.",
+     "status": "sugestao"
+    },
+    {
+     "regra": "Se a pessoa mandar senha ou dados do painel, não repita esses dados e diga para guardar em lugar seguro.",
+     "status": "aprovada"
+    },
+    {
+     "regra": "Só fale de subrevenda se a pessoa perguntar ou na resposta seguinte.",
+     "status": "sugestao"
+    },
+    {
+     "regra": "Se anunciar um link, mande o link na mesma resposta.",
+     "status": "aprovada"
+    },
+    {
+     "regra": "Use o link do manual exatamente como está no base.",
+     "status": "aprovada"
+    },
+    {
+     "regra": "Não afirme pagamento sem dado. Pergunte o que a pessoa precisa.",
+     "status": "sugestao"
+    },
+    {
+     "regra": "Se não souber, diga que vai verificar e passe ao responsável.",
+     "status": "aprovada"
+    },
+    {
+     "regra": "Não repita frase de encerramento na mesma conversa.",
+     "status": "descartada"
+    },
+    {
+     "regra": "Mande cada link do passo 4 uma vez só.",
+     "status": "descartada"
+    },
+    {
+     "regra": "Na primeira resposta, pergunte se a pessoa já revende. O link vem depois.",
+     "status": "descartada"
+    },
+    {
+     "regra": "Se a pessoa só cumprimentar, responda e pergunte o que precisa.",
+     "status": "descartada"
+    }
+   ],
+   "sugestoes_para_o_senhor": [
+    "Decidir se o robô atende pré-pago. Hoje ele só tem informação do pós-pago (Digital Tv, Fox).",
+    "Confirmar se o revendedor pode cobrar do cliente final o preço que quiser (anam96525).",
+    "Confirmar se testes no painel antes da venda são livres. O robô já disse que sim (Adriano).",
+    "Confirmar se Fórmula 1 e canais específicos estão no catálogo (Felipe).",
+    "Checar a conversa do Durval. O robô afirmou pagamento confirmado sem nenhum dado.",
+    "Decidir se o robô pode receber usuário e senha do painel no chat. Fabio, Máximo e Ivan enviaram.",
+    "Neilton pediu 'libera meu painel'. Pode ser liberação de painel já existente. Conferir.",
+    "Corrigir o bloqueio de repetição: o texto repetido ainda saiu (Fox).",
+    "Olhar a conversa sem nome (14:42), em que o robô não respondeu.",
+    "Pergunta sem resposta no base.md: \"Funciona com pré-pago?\" Sugestão (envolve preço, prazo ou política, só com a aprovação do senhor): Por aqui eu só tenho as informações do modelo pós-pago. Vou passar para o responsável confirmar.",
+    "Pergunta sem resposta no base.md: \"Tem Fórmula 1 ou canal específico?\" Sugestão: Não tenho a lista de canais e programas. Vou passar para o responsável confirmar.",
+    "Pergunta sem resposta no base.md: \"Mas e pra revender o quê?\" Sugestão: Você revende o acesso aos canais, filmes e séries, com uma tela por conexão.",
+    "Pergunta sem resposta no base.md: \"Posso fazer testes no painel antes de vender?\" Sugestão (envolve preço, prazo ou política, só com a aprovação do senhor): Abrir o painel não tem custo. Sobre testes, vou confirmar com o responsável.",
+    "Nunca repita link, pagamento, Escola ou frase de encerramento na mesma conversa. Se já foi enviado, não envie de novo.",
+    "Não fale de subrevenda na primeira resposta. Só fale se a pessoa perguntar ou na resposta seguinte.",
+    "Se não souber a resposta, diga que vai verificar e passe ao responsável. Nunca afirme pagamento ou dado que não recebeu.",
+    "Só fale de subrevenda se a pessoa perguntar ou na resposta seguinte.",
+    "Não afirme pagamento sem dado. Pergunte o que a pessoa precisa."
+   ]
+  },
+  {
+   "id": "2026-11-08T18:36:07.380Z",
+   "gerado_em": "2026-11-08T18:36:07.380Z",
+   "janela": {
+    "inicio": "2026-11-08T16:36:07.380Z",
+    "fim": "2026-11-08T18:36:07.380Z"
+   },
+   "metricas": {
+    "mensagens_cliente": 76,
+    "respostas_robo": 223,
+    "followups": 8,
+    "followups_respondidos": 2,
+    "testes": 1,
+    "paineis_fechados": 10,
+    "passados_ao_senhor": 8,
+    "repeticoes_bloqueadas": 2,
+    "erros": 2
+   },
+   "resumo": "Período 13:36 às 15:36: 76 mensagens de clientes e 223 respostas do robô.\nA maioria disse que já revende ou quer começar; 1 pediu teste.\nO contador diz 10 painéis fechados, mas só 4 aparecem como criados nas conversas.\n8 conversas foram para o responsável e muitos clientes sumiram logo depois do link do painel.\nPonto principal: mensagens repetidas, subrevenda dita cedo demais e uma dúvida técnica passada sem ajuda.",
+   "funcionou": [
+    "Aliequison: manual, suporte, pagamento e escola saíram em mensagens separadas, no passo 4.",
+    "Fox pediu teste, recebeu e conseguiu entrar no Ultramix.",
+    "Mauricio fez a conta certa: 5 clientes com 1 tela dá 5 créditos, e o mínimo de R$ 35 vale.",
+    "Digital Tv perguntou sobre pré-pago, que não está no base, e o robô passou ao responsável sem inventar."
+   ],
+   "deu_errado": [
+    "Durval: disse 'Opa blz' e o robô respondeu que recebeu a confirmação do pagamento, o que não está no base, e passou ao responsável.",
+    "anam96525: disse 'Ta abrindo não' e o robô passou ao responsável sem perguntar o que aparece na tela.",
+    "Ivan Silva: o Manual, a escola e o link de pagamento vieram 2 ou 3 vezes na mesma resposta.",
+    "Fernando: o preço e os links vieram repetidos na mesma resposta, e ele não respondeu mais.",
+    "Máximo: o link de pagamento e o da escola vieram duas vezes.",
+    "Adriano: o robô disse que dá para fazer testes à vontade no painel, o que não está no base.",
+    "Fox Streaming: 'Ou tem pré pago tbm?' ficou sem resposta.",
+    "Conversa sem nome: o robô não conseguiu responder."
+   ],
+   "problemas": {
+    "respostas_repetidas": [
+     "Ivan Silva: Manual, escola e pagamento repetidos.",
+     "Fernando: preço e link repetidos.",
+     "Máximo: pagamento e escola repetidos.",
+     "Fox: 'Quando criar o painel' repetido."
+    ],
+    "perguntas_ja_respondidas": [
+     "Fernando: 'Quanto sai?' foi respondido 3 vezes na mesma resposta."
+    ],
+    "cliente_sumiu": [
+     {
+      "nome": "Neilton",
+      "depois_de": "Pode criar seu painel por aqui e me avisa quando concluir: [link do painel]"
+     },
+     {
+      "nome": "Cezar Augusto",
+      "depois_de": "Me avisa quando criar o painel: [link do painel]"
+     },
+     {
+      "nome": "Jaime",
+      "depois_de": "Pode criar seu painel por aqui e me avisa quando concluir: [link do painel]"
+     },
+     {
+      "nome": "-yagoo",
+      "depois_de": "Pode criar seu painel por aqui e me avisa: [link do painel]"
+     },
+     {
+      "nome": "giuliano felix",
+      "depois_de": "Crie seu painel por aqui e me avisa quando concluir: [link do painel]"
+     },
+     {
+      "nome": "John Lopes",
+      "depois_de": "Pode criar seu painel por aqui e me avisa quando concluir: [link do painel]"
+     },
+     {
+      "nome": "Brenno",
+      "depois_de": "Pode criar seu painel por aqui e me avisa quando concluir: [link do painel]"
+     },
+     {
+      "nome": "conversa 25 (nome com emoji)",
+      "depois_de": "Crie seu painel e me avisa quando concluir: [link do painel]"
+     },
+     {
+      "nome": "Momoa",
+      "depois_de": "Pode criar seu painel por aqui e me avisa quando concluir: [link do painel]"
+     },
+     {
+      "nome": "daysefernanda723",
+      "depois_de": "Pode criar o painel e me avisa quando concluir: [link do painel]"
+     }
+    ],
+    "objecoes": [
+     "Mauricio: 'Tenho que ver se consigo vender'.",
+     "Mauricio: 'Teria que pagar quanto?'",
+     "Digital Tv: 'Com pós-pago eu não trabalho, só pré-pago'.",
+     "Fox: 'Ou tem pré-pago também?'"
+    ],
+    "duvidas_nao_cobertas": [
+     "Funciona com pré-pago?",
+     "O que se revende?",
+     "Posso testar o painel à vontade, sem custo?"
+    ]
+   },
+   "inconsistencias": [
+    {
+     "tipo": "contradicao",
+     "titulo": "Subrevenda dita logo na primeira resposta",
+     "exemplo": "Máximo disse 'Já faço revenda' e o robô falou de subrevenda no primeiro bloco de mensagens. Ivan e Fernando também.",
+     "causa": "O texto para quem já revende inclui subrevenda antes do passo 2.",
+     "regra": "Só fale de subrevenda se a pessoa perguntar ou na resposta seguinte ao passo 2."
+    },
+    {
+     "tipo": "pergunta_mal_entendida",
+     "titulo": "Painel não abre virou passagem",
+     "exemplo": "anam96525 disse 'Ta abrindo não' e o robô respondeu 'Certo, já vou passar para o responsável'.",
+     "causa": "Frase curta foi lida como pedido de atendimento, sem tentar ajudar.",
+     "regra": "Se disserem que o painel não abre, pergunte o que aparece na tela antes de passar."
+    },
+    {
+     "tipo": "passou_sem_precisar",
+     "titulo": "Cumprimento foi para o responsável",
+     "exemplo": "Durval disse 'Opa blz' e o robô falou em confirmação de pagamento e passou ao responsável.",
+     "causa": "Mensagem sem pedido foi tratada como problema.",
+     "regra": "Mensagem sem pergunta: responda com uma frase curta, sem passar ao responsável."
+    },
+    {
+     "tipo": "repeticao",
+     "titulo": "Manual, escola e pagamento repetidos",
+     "exemplo": "Ivan Silva recebeu o Manual do Revenda 3 vezes e a escola 3 vezes na mesma resposta.",
+     "causa": "Os blocos do passo 4 foram enviados em duplicata.",
+     "regra": "Mande cada link uma vez por conversa, em uma só mensagem."
+    },
+    {
+     "tipo": "repeticao",
+     "titulo": "Preço repetido na mesma resposta",
+     "exemplo": "Fernando: a frase do R$ 3,50 e do mínimo de R$ 35 veio 3 vezes, e o link do painel veio 2 vezes.",
+     "causa": "Vários blocos de explicação foram enviados juntos.",
+     "regra": "Explique o preço uma vez e não repita o link na mesma resposta."
+    },
+    {
+     "tipo": "repeticao",
+     "titulo": "Fox recebeu o mesmo pedido de novo",
+     "exemplo": "Fox disse 'Ok' e o robô repetiu 'Quando criar o painel, me avisa por aqui', e a repetição foi bloqueada.",
+     "causa": "Resposta curta do cliente acionou o mesmo texto de novo.",
+     "regra": "Para 'Ok', responda com uma frase nova ou só agradeça."
+    },
+    {
+     "tipo": "fora_de_hora",
+     "titulo": "App antes do painel",
+     "exemplo": "Adriano disse 'Posso abrir e fazer uns testes' e o robô já perguntou o aparelho e falou do servidor.",
+     "causa": "Orientação de app veio antes de confirmar que o painel foi criado.",
+     "regra": "Só explique o app depois que a pessoa disser que criou o painel."
+    }
+   ],
+   "perguntas_nao_cobertas": [
+    {
+     "pergunta": "Funciona com pré-pago? (Digital Tv e Fox)",
+     "resposta_sugerida": "Não tenho essa informação aqui. Vou passar para o responsável te responder.",
+     "precisa_aprovacao": true
+    },
+    {
+     "pergunta": "Mas e pra revender o quê? (anam96525)",
+     "resposta_sugerida": "Você revende conexões, que são as telas para seus clientes assistirem. Cada conexão vale uma tela.",
+     "precisa_aprovacao": false
+    },
+    {
+     "pergunta": "Posso abrir e fazer uns testes? (Adriano)",
+     "resposta_sugerida": "Pode abrir e testar o painel. Quando terminar, me avisa por aqui.",
+     "precisa_aprovacao": true
+    }
+   ],
+   "regras_novas": [
+    {
+     "regra": "Se disserem que o painel não abre, pergunte o que aparece na tela antes de passar ao responsável.",
+     "status": "aprovada"
+    },
+    {
+     "regra": "Não repita link, pagamento ou escola na mesma resposta; cada um uma vez por conversa.",
+     "status": "sugestao"
+    },
+    {
+     "regra": "Fale de subrevenda só se a pessoa perguntar, mesmo que já revenda; não cite no primeiro bloco.",
+     "status": "sugestao"
+    },
+    {
+     "regra": "Mensagem sem pergunta (ex.: 'Opa blz', 'Ok'): responda com uma frase curta, sem passar ao responsável.",
+     "status": "aprovada"
+    },
+    {
+     "regra": "Não diga que pagamento foi confirmado nem que o painel tem teste à vontade; isso não está no roteiro.",
+     "status": "sugestao"
+    },
+    {
+     "regra": "Só fale de subrevenda se a pessoa perguntar ou na resposta seguinte ao passo 2.",
+     "status": "sugestao"
+    },
+    {
+     "regra": "Se disserem que o painel não abre, pergunte o que aparece na tela antes de passar.",
+     "status": "aprovada"
+    },
+    {
+     "regra": "Mensagem sem pergunta: responda com uma frase curta, sem passar ao responsável.",
+     "status": "aprovada"
+    },
+    {
+     "regra": "Mande cada link uma vez por conversa, em uma só mensagem.",
+     "status": "aprovada"
+    },
+    {
+     "regra": "Explique o preço uma vez e não repita o link na mesma resposta.",
+     "status": "sugestao"
+    },
+    {
+     "regra": "Para 'Ok', responda com uma frase nova ou só agradeça.",
+     "status": "descartada"
+    },
+    {
+     "regra": "Só explique o app depois que a pessoa disser que criou o painel.",
+     "status": "descartada"
+    }
+   ],
+   "sugestoes_para_o_senhor": [
+    "Definir se existe pré-pago e em que condições (Digital Tv e Fox perguntaram).",
+    "Definir se o painel pode ser testado sem custo antes do acerto (Adriano perguntou).",
+    "Explicar o que se revende: só conexões ou também outras coisas.",
+    "Conferir o contador de painéis fechados: marcou 10, mas só 4 aparecem como criados nas conversas.",
+    "Confirmar se o sistema manda aviso de pagamento confirmado, porque o robô disse isso ao Durval sem base.",
+    "Pergunta sem resposta no base.md: \"Funciona com pré-pago? (Digital Tv e Fox)\" Sugestão (envolve preço, prazo ou política, só com a aprovação do senhor): Não tenho essa informação aqui. Vou passar para o responsável te responder.",
+    "Pergunta sem resposta no base.md: \"Mas e pra revender o quê? (anam96525)\" Sugestão: Você revende conexões, que são as telas para seus clientes assistirem. Cada conexão vale uma tela.",
+    "Pergunta sem resposta no base.md: \"Posso abrir e fazer uns testes? (Adriano)\" Sugestão (envolve preço, prazo ou política, só com a aprovação do senhor): Pode abrir e testar o painel. Quando terminar, me avisa por aqui.",
+    "Não repita link, pagamento ou escola na mesma resposta; cada um uma vez por conversa.",
+    "Fale de subrevenda só se a pessoa perguntar, mesmo que já revenda; não cite no primeiro bloco.",
+    "Não diga que pagamento foi confirmado nem que o painel tem teste à vontade; isso não está no roteiro.",
+    "Só fale de subrevenda se a pessoa perguntar ou na resposta seguinte ao passo 2.",
+    "Explique o preço uma vez e não repita o link na mesma resposta."
+   ]
+  },
+  {
+   "id": "2026-11-08T20:58:33.870Z",
+   "gerado_em": "2026-11-08T20:58:33.870Z",
+   "janela": {
+    "inicio": "2026-11-08T18:58:33.870Z",
+    "fim": "2026-11-08T20:58:33.870Z"
+   },
+   "metricas": {
+    "mensagens_cliente": 86,
+    "respostas_robo": 169,
+    "followups": 9,
+    "followups_respondidos": 6,
+    "testes": 1,
+    "paineis_fechados": 5,
+    "passados_ao_senhor": 15,
+    "repeticoes_bloqueadas": 0,
+    "erros": 1
+   },
+   "resumo": "23 conversas e 86 mensagens de clientes entre 15:58 e 17:58.\nPedidos: começar a revender, condições, banners, apps, teste e ajuda para criar o painel.\n5 painéis fechados e 1 teste enviado; 15 casos foram passados ao responsável.\nTravou: login no painel (Ncell), Lotus que não abriu (Marcos), playsim no servidor (Renato) e lista m3u (Walace).\nPonto principal: o link do painel saiu cedo demais, e o robô errou a conta de 20 clientes e o app do TV Box.",
+   "funcionou": [],
+   "deu_errado": [
+    "Rafael Pereira: falou de UNI e de um segundo app, e o robô mandou vídeo de travamento e passou ao responsável.",
+    "Adriano: 'Me expliquei como é o negócio dessa topeirinha, mas quando eu entendi não'. O robô só respondeu 'Qualquer dúvida é só chamar'.",
+    "Walace Rodrigo: o robô disse 'vou passar para o responsável gerar' e dois minutos depois 'vou gerar seu teste agora'.",
+    "Walace Rodrigo: o robô mandou o código do Downloader (8925314) para TV Box, mas o certo é o Ultramix (66745044).",
+    "Número sem nome: com 20 clientes, o robô disse 'você paga só o que usar, sem passar do mínimo de R$ 35'. A conta certa é R$ 70.",
+    "Número do canal informativo: o robô respondeu a um aviso automático e passou ao responsável sem necessidade."
+   ],
+   "problemas": {
+    "respostas_repetidas": [
+     "Rafael: explicação de créditos repetida entre 16:02 e 16:07.",
+     "Ncell: 'Guarde seu e-mail e sua senha' às 17:06 e de novo às 17:10.",
+     "Adriano: 'Qualquer coisa é só chamar' em várias mensagens.",
+     "Conversa sem nome: 'é só me chamar' às 17:18 e 17:19."
+    ],
+    "perguntas_ja_respondidas": [],
+    "cliente_sumiu": [
+     {
+      "nome": "Maicon Fuzaro",
+      "depois_de": "Oi Maicon, conseguiu seguir o passo a passo para criar o painel?"
+     },
+     {
+      "nome": "Gercino Araujo",
+      "depois_de": "Pode criar seu painel por aqui e me avisa quando concluir: https://painel.capyplay.site/#/rs/RvWGlK01e3/bQELo6e1gr"
+     },
+     {
+      "nome": "Paulo César",
+      "depois_de": "Mestre, conseguiu abrir o painel pelo link ou ficou alguma dúvida?"
+     },
+     {
+      "nome": "Walace Rodrigo",
+      "depois_de": "Vou verificar com o responsável se tem um acesso com m3u para você."
+     },
+     {
+      "nome": "Marcos",
+      "depois_de": "Já deixei o responsável ciente, ele vai te ajudar com isso."
+     }
+    ],
+    "objecoes": [
+     "Ncell: 'Ainda perde pra abrir conta' (não entra no painel).",
+     "Renato: 'Seu servidor nao passaria playsim' (servidor não passa o playsim).",
+     "Adriano: não entendeu como funciona o negócio.",
+     "Walace: 'Não dá para gerar o m3u' (não consegue gerar a lista)."
+    ],
+    "duvidas_nao_cobertas": [
+     "Os apps são gratuitos?",
+     "Banner de filme específico (Esso, toupeira, camundongo).",
+     "Lista m3u para teste.",
+     "Playsim não passa no servidor."
+    ]
+   },
+   "inconsistencias": [
+    {
+     "tipo": "contradicao",
+     "titulo": "Conta errada com 20 clientes",
+     "exemplo": "Cliente: 'Tenho uns 20 clientes'. Robô: 'Com uns 20 clientes, você paga só o que usar, sem passar do mínimo de R$ 35.'",
+     "causa": "O robô não fez a conta e misturou o mínimo com o uso.",
+     "regra": "Com 10 ou mais clientes, cobre R$ 3,50 por cliente. Faça a conta e diga o valor (20 clientes = R$ 70)."
+    },
+    {
+     "tipo": "contradicao",
+     "titulo": "Passar ao responsável e gerar teste",
+     "exemplo": "Robô (17:46): 'Vou passar para o responsável gerar um novo acesso'. Robô (17:49): 'Vou gerar seu teste agora'.",
+     "causa": "Duas regras misturadas na mesma conversa.",
+     "regra": "Se o teste anterior venceu, gere outro teste direto com teste true. Não passe ao responsável."
+    },
+    {
+     "tipo": "contradicao",
+     "titulo": "App errado para TV Box",
+     "exemplo": "Robô (17:51): 'No TV Box, use o Capy IboPlayer. Instale o app Downloader e digite o código 8925314.'",
+     "causa": "Código do Fire Stick usado para TV Box.",
+     "regra": "TV Box: app Ultramix na Google Play, código 66745044."
+    },
+    {
+     "tipo": "contradicao",
+     "titulo": "Usou o nome do cliente",
+     "exemplo": "Robô: 'Ah, entendi, Adriano.' / 'Boa, Rafael!' / 'Entendi, Ncell.'",
+     "causa": "A regra do dono de chamar sempre de mestre não foi seguida.",
+     "regra": "Nunca use o nome da pessoa. Chame sempre de mestre."
+    },
+    {
+     "tipo": "contradicao",
+     "titulo": "Galerias enviadas para quem pediu banner",
+     "exemplo": "Robô (Rafael, 16:07): 'Os banners prontos para divulgar estão aqui: .../criativos/revenda/'. Robô (Adriano): 'A galeria de banners é para você postar.'",
+     "causa": "Galeria de criativos foi dada como material de divulgação.",
+     "regra": "Banner e vídeo de divulgação vão só para o grupo capyplayoficial. Galeria só para tráfego pago."
+    },
+    {
+     "tipo": "contradicao",
+     "titulo": "Prometeu olhar imagem",
+     "exemplo": "Robô (Marcos, 16:59): 'Pode mandar a imagem, mestre. Assim que chegar eu olho e te digo o próximo passo.'",
+     "causa": "O robô não consegue ver imagem.",
+     "regra": "Não prometa olhar foto. Diga que o responsável vai ver."
+    },
+    {
+     "tipo": "contradicao",
+     "titulo": "Listou três apps antes de perguntar o aparelho",
+     "exemplo": "Cliente: 'quais aplicativos VCS trabalham'. Robô: 'Os principais são o Lotus, o Ultramix e o IBO Player Pro.'",
+     "causa": "A base manda perguntar o aparelho e responder só o dele.",
+     "regra": "Pergunte o aparelho antes de falar de app. Fale só do aparelho dele."
+    },
+    {
+     "tipo": "contradicao",
+     "titulo": "Respondeu a aviso automático de canal",
+     "exemplo": "Robô: 'Recebi sua mensagem, obrigado. Se precisar de ajuda com o painel, me chame por aqui.' Depois: 'Esse canal é só informativo, então não consigo responder aqui.'",
+     "causa": "O robô respondeu a uma mensagem automática e se contradisse.",
+     "regra": "Não responda a aviso automático de canal ou sistema. Ignore."
+    },
+    {
+     "tipo": "passou_sem_precisar",
+     "titulo": "Pedido de banner passado ao responsável",
+     "exemplo": "Cliente (Adriano): 'Queria banner de filmes irmão Esso ai e uma toupeira'. Robô: 'Já passei o seu pedido de banners para o responsável.'",
+     "causa": "Pedido de material cabia ao grupo do Telegram.",
+     "regra": "Pedido de banner: mande o grupo capyplayoficial. Se for filme específico, diga que o responsável confirma."
+    },
+    {
+     "tipo": "pergunta_mal_entendida",
+     "titulo": "UNI e segundo app viraram travamento",
+     "exemplo": "Cliente (Rafael, 16:28): 'vi que vocês têm o UNI de vocês e tem um segundo aplicativo'. Robô: 'Vou te mandar um vídeo rapidinho sobre travamento.'",
+     "causa": "O robô não reconheceu a pergunta sobre apps.",
+     "regra": "Se falarem de UNI ou outro app, cite o da lista (UniTV Capy 7028925 no Downloader) antes de passar."
+    },
+    {
+     "tipo": "pergunta_mal_entendida",
+     "titulo": "Não entendeu e recebeu só 'chame'",
+     "exemplo": "Cliente (Adriano): 'mas quando eu entendi não'. Robô: 'Qualquer dúvida é só chamar, mestre.'",
+     "causa": "O robô não tentou explicar de novo.",
+     "regra": "Se disser que não entendeu, explique de novo em frase curta e pergunte qual parte ficou confusa."
+    },
+    {
+     "tipo": "fora_de_hora",
+     "titulo": "Link do painel na primeira resposta",
+     "exemplo": "Cliente (Maicon): 'Quero começar a revender. Como funciona?'. Robô já mandou o link do painel na mesma resposta.",
+     "causa": "O link saiu antes da hora, sem a pergunta do passo 1.",
+     "regra": "Link do painel só na 2ª ou 3ª resposta, nunca na 1ª. Antes, explique e espere."
+    }
+   ],
+   "perguntas_nao_cobertas": [
+    {
+     "pergunta": "Os apps Lotus, Ultramix e IBO Player são gratuitos?",
+     "resposta_sugerida": "Não tenho essa informação aqui. Vou passar para o responsável confirmar.",
+     "precisa_aprovacao": true
+    },
+    {
+     "pergunta": "Tem banner de filme específico (Esso, toupeira, camundongo)?",
+     "resposta_sugerida": "Os banners e vídeos novos saem no grupo do Telegram. Para filme específico, o responsável confirma.",
+     "precisa_aprovacao": false
+    },
+    {
+     "pergunta": "Dá para testar com lista m3u?",
+     "resposta_sugerida": "Não tenho essa informação. Vou passar para o responsável ver o acesso.",
+     "precisa_aprovacao": false
+    },
+    {
+     "pergunta": "O servidor não passa o playsim, o que fazer?",
+     "resposta_sugerida": "Vou passar para o responsável ver isso. Me diz qual aparelho você usa.",
+     "precisa_aprovacao": false
+    }
+   ],
+   "regras_novas": [
+    {
+     "regra": "Se a pessoa disser que não entendeu, explique de novo em frase curta e pergunte qual parte ficou confusa.",
+     "status": "aprovada"
+    },
+    {
+     "regra": "Se a mensagem for aviso automático de canal ou sistema, não responda e não passe ao responsável.",
+     "status": "aprovada"
+    },
+    {
+     "regra": "Não prometa olhar foto ou áudio. Diga que vai passar para o responsável ver.",
+     "status": "aprovada"
+    },
+    {
+     "regra": "Antes de falar de app, pergunte o aparelho e fale só do aparelho dele, sem listar os outros.",
+     "status": "aprovada"
+    },
+    {
+     "regra": "Não repita explicação de crédito ou preço já dada na conversa. Responda só o que faltou.",
+     "status": "sugestao"
+    },
+    {
+     "regra": "Com 10 ou mais clientes, cobre R$ 3,50 por cliente. Faça a conta e diga o valor (20 clientes = R$ 70).",
+     "status": "sugestao"
+    },
+    {
+     "regra": "Se o teste anterior venceu, gere outro teste direto com teste true. Não passe ao responsável.",
+     "status": "sugestao"
+    },
+    {
+     "regra": "TV Box: app Ultramix na Google Play, código 66745044.",
+     "status": "aprovada"
+    },
+    {
+     "regra": "Nunca use o nome da pessoa. Chame sempre de mestre.",
+     "status": "descartada"
+    },
+    {
+     "regra": "Banner e vídeo de divulgação vão só para o grupo capyplayoficial. Galeria só para tráfego pago.",
+     "status": "descartada"
+    },
+    {
+     "regra": "Não prometa olhar foto. Diga que o responsável vai ver.",
+     "status": "descartada"
+    },
+    {
+     "regra": "Pergunte o aparelho antes de falar de app. Fale só do aparelho dele.",
+     "status": "descartada"
+    },
+    {
+     "regra": "Não responda a aviso automático de canal ou sistema. Ignore.",
+     "status": "descartada"
+    },
+    {
+     "regra": "Pedido de banner: mande o grupo capyplayoficial. Se for filme específico, diga que o responsável confirma.",
+     "status": "descartada"
+    },
+    {
+     "regra": "Se falarem de UNI ou outro app, cite o da lista (UniTV Capy 7028925 no Downloader) antes de passar.",
+     "status": "descartada"
+    },
+    {
+     "regra": "Se disser que não entendeu, explique de novo em frase curta e pergunte qual parte ficou confusa.",
+     "status": "descartada"
+    },
+    {
+     "regra": "Link do painel só na 2ª ou 3ª resposta, nunca na 1ª. Antes, explique e espere.",
+     "status": "descartada"
+    }
+   ],
+   "sugestoes_para_o_senhor": [
+    "Confirmar se Lotus, Ultramix e IBO Player são gratuitos e o que o robô pode dizer sobre isso.",
+    "Escolher o grupo oficial de banners: a conversa do Adriano recebeu t.me/+R0iQIg8r2mQyNmUx e depois t.me/capyplayoficial.",
+    "Decidir se o link do painel pode sair logo na primeira resposta para quem diz que já revende.",
+    "Decidir se o robô pode mandar lista m3u para teste ou se isso fica com o responsável.",
+    "Definir se o robô pode dar banner de filme específico ou só indicar o grupo.",
+    "Decidir se o robô deve ignorar o número do canal informativo (conversa 6).",
+    "Conferir as conversas 5 e 6: são avisos do sistema e de canal, não clientes.",
+    "Pergunta sem resposta no base.md: \"Os apps Lotus, Ultramix e IBO Player são gratuitos?\" Sugestão (envolve preço, prazo ou política, só com a aprovação do senhor): Não tenho essa informação aqui. Vou passar para o responsável confirmar.",
+    "Pergunta sem resposta no base.md: \"Tem banner de filme específico (Esso, toupeira, camundongo)?\" Sugestão: Os banners e vídeos novos saem no grupo do Telegram. Para filme específico, o responsável confirma.",
+    "Pergunta sem resposta no base.md: \"Dá para testar com lista m3u?\" Sugestão: Não tenho essa informação. Vou passar para o responsável ver o acesso.",
+    "Pergunta sem resposta no base.md: \"O servidor não passa o playsim, o que fazer?\" Sugestão: Vou passar para o responsável ver isso. Me diz qual aparelho você usa.",
+    "Não repita explicação de crédito ou preço já dada na conversa. Responda só o que faltou.",
+    "Com 10 ou mais clientes, cobre R$ 3,50 por cliente. Faça a conta e diga o valor (20 clientes = R$ 70).",
+    "Se o teste anterior venceu, gere outro teste direto com teste true. Não passe ao responsável."
+   ]
+  },
+  {
+   "id": "2026-11-08T21:14:07.194Z",
+   "gerado_em": "2026-11-08T21:14:07.194Z",
+   "janela": {
+    "inicio": "2026-11-08T19:14:07.194Z",
+    "fim": "2026-11-08T21:14:07.194Z"
+   },
+   "metricas": {
+    "mensagens_cliente": 79,
+    "respostas_robo": 139,
+    "followups": 8,
+    "followups_respondidos": 6,
+    "testes": 1,
+    "paineis_fechados": 4,
+    "passados_ao_senhor": 14,
+    "repeticoes_bloqueadas": 0,
+    "erros": 1
+   },
+   "resumo": "Foram 79 mensagens de clientes e 139 respostas do robô, entre 16:14 e 18:14.\nOs pedidos principais foram: começar a revender, criar o painel, testar em TV e tirar dúvidas sobre apps.\nPelo número do período, 4 painéis fecharam e 1 teste foi gerado.\n14 conversas foram passadas ao responsável, a maioria por problema na TV, no teste ou no painel.\nPonto principal: o robô deu valor errado para 20 clientes e indicou o app errado para TV Box.",
+   "funcionou": [
+    "Conversa 21 (Clessio): explicou o IBO Player Pro passo a passo, com o servidor certo.",
+    "Conversa 12: painel, pagamento e grupo foram enviados em mensagens separadas, e a pessoa concluiu o painel.",
+    "Conversa 18: respondeu a pergunta sobre apps com Lotus, Ultramix e IBO Player Pro.",
+    "Conversa 3: mandou o link do grupo de banners quando a pessoa pediu material de divulgação.",
+    "Conversa 8: para a TV Philco com Android, indicou o Lotus com o código e o vídeo certos."
+   ],
+   "deu_errado": [
+    "Conversa 18 (Tenho uns 20 clientes): o robô disse que fica no mínimo de R$ 35. Com 20 clientes são 20 x R$ 3,50 = R$ 70.",
+    "Conversa 20 (Walace): o robô indicou o Capy IboPlayer (código 8925314) para TV Box. O base manda o Ultramix, código 66745044.",
+    "Conversa 20 (Walace): o teste tinha vencido e o robô passou ao responsável, quando devia gerar outro teste.",
+    "Conversa 8 (Marcos): o robô disse que ia olhar a imagem e, logo depois, passou ao responsável.",
+    "Conversa 6 (Adriano): o cliente disse que não entendeu o negócio. O robô só respondeu 'Qualquer dúvida é só chamar'.",
+    "Conversa 5 (sem nome): o robô respondeu a um aviso automático de canal informativo e entrou em troca de mensagens.",
+    "Conversas 1, 2 e 3: o robô chamou os clientes pelo nome (Ncell, Maicon, Rafael), contra a regra de dizer só mestre."
+   ],
+   "problemas": {
+    "respostas_repetidas": [
+     "Boa, mestre! aparece em várias respostas seguidas (Conversas 1, 6 e 18).",
+     "Qualquer dúvida é só chamar, mestre, foi mandado duas vezes em 2 minutos (Conversa 6).",
+     "Seu teste ainda está valendo foi dito duas vezes na mesma resposta (Conversa 20)."
+    ],
+    "perguntas_ja_respondidas": [
+     "Conversa 20: o robô perguntou o aparelho de novo depois que o cliente já tinha dito TV Box."
+    ],
+    "cliente_sumiu": [
+     {
+      "nome": "Maicon Fuzaro",
+      "depois_de": "Oi Maicon, conseguiu seguir o passo a passo para criar o painel?"
+     },
+     {
+      "nome": "Gercino Araujo",
+      "depois_de": "Pode criar seu painel por aqui e me avisa quando concluir: link do painel."
+     },
+     {
+      "nome": "Juntos Para Sempre",
+      "depois_de": "Se o Lotus não abriu na sua TV, me conta em qual passo você parou."
+     },
+     {
+      "nome": "Paulo César",
+      "depois_de": "Mestre, conseguiu abrir o painel pelo link ou ficou alguma dúvida?"
+     },
+     {
+      "nome": "Ramos",
+      "depois_de": "Mestre, quer que eu te ajude a criar o painel? É pós-pago e não tem taxa para abrir."
+     },
+     {
+      "nome": "Lindomar Souza",
+      "depois_de": "Mestre, passando para ver se ficou alguma dúvida sobre a revenda."
+     },
+     {
+      "nome": "Locutor Ricardo Lázaro",
+      "depois_de": "Passando para ver como ficou a configuração do painel, mestre."
+     },
+     {
+      "nome": "Mestre Dos Magos",
+      "depois_de": "Mestre, ficou alguma dúvida sobre como começar a revender?"
+     },
+     {
+      "nome": "NALDO SAT",
+      "depois_de": "Mestre, o acerto é só no dia 5, então dá para ver as condições com calma."
+     },
+     {
+      "nome": "Conversa 25 (nome com emoji)",
+      "depois_de": "Quer começar a revender, mestre? Se ficou alguma dúvida depois do áudio, é só me falar."
+     }
+    ],
+    "objecoes": [
+     "Ele não está fechando (Marcos, 17:08).",
+     "Ainda perde pra abrir conta (Conversa 1, 17:35).",
+     "Seu servidor não passaria Playsim (Renato, 17:24).",
+     "Não dá para gerar o m3u (Walace, 17:50)."
+    ],
+    "duvidas_nao_cobertas": [
+     "São gratuitos esses apps? (Conversa 18)",
+     "É possível adicionar a Record Campinas? (Conversa 20)",
+     "Dá para gerar lista m3u no teste? (Conversa 20)",
+     "O que é o UNI e o segundo aplicativo? (Conversa 3)",
+     "Servidor passa o canal Playsim? (Conversa 11)"
+    ]
+   },
+   "inconsistencias": [
+    {
+     "tipo": "contradicao",
+     "titulo": "Valor com 20 clientes",
+     "exemplo": "Cliente: Tenho uns 20 clientes. Robô: Com uns 20 clientes, você paga só o que usar, sem passar do mínimo de R$ 35.",
+     "causa": "O robô não fez a conta de 20 clientes, que é 20 créditos x R$ 3,50.",
+     "regra": "Ao falar valor com número de clientes, faça a conta como manda o base, sem dizer que fica no mínimo."
+    },
+    {
+     "tipo": "contradicao",
+     "titulo": "App errado para TV Box",
+     "exemplo": "Cliente: Testo no tv box via m3u. Robô: No TV Box, o jeito mais fácil é usar o Capy IboPlayer. Instale o app Downloader e digite o código 8925314.",
+     "causa": "O robô misturou o código do Fire Stick com o app de TV Box.",
+     "regra": "Para TV Box, indique o Ultramix na Google Play, código 66745044."
+    },
+    {
+     "tipo": "passou_sem_precisar",
+     "titulo": "Teste vencido passado ao responsável",
+     "exemplo": "Cliente: Testo no tv box via m3u. Robô: O teste que você recebeu no dia 04/11 já venceu. Vou passar para o responsável gerar um novo acesso.",
+     "causa": "O robô não seguiu a regra de teste vencido, que manda gerar outro teste.",
+     "regra": "Teste vencido: coloque teste true e gere outro, sem passar ao responsável."
+    },
+    {
+     "tipo": "contradicao",
+     "titulo": "Prometeu ver imagem e passou",
+     "exemplo": "Cliente: Vou mandar a imagem. Robô: Pode mandar a imagem, mestre. Assim que chegar eu olho e te digo o próximo passo. Depois: Certo, já vou passar para o responsável.",
+     "causa": "O robô não consegue analisar imagem e prometeu mesmo assim.",
+     "regra": "Ao receber imagem, não prometa analisar; diga que o responsável vai ver."
+    },
+    {
+     "tipo": "contradicao",
+     "titulo": "Nome do cliente usado",
+     "exemplo": "Robô: Entendi, Ncell. Robô: Oi Maicon, conseguiu seguir o passo a passo? Robô: Boa, Rafael!",
+     "causa": "O robô usou o nome do WhatsApp, em vez de mestre.",
+     "regra": "Nunca chame a pessoa pelo nome; use só mestre."
+    },
+    {
+     "tipo": "repeticao",
+     "titulo": "Mesma orientação duas vezes",
+     "exemplo": "Ncell, 17:06: Guarde seu e-mail e sua senha em um lugar seguro. Ncell, 17:10: Boa, mestre! Guarde seu e-mail e sua senha em um lugar seguro.",
+     "causa": "O robô repetiu o mesmo aviso em poucos minutos.",
+     "regra": "Não repita uma orientação que já foi dita na conversa."
+    },
+    {
+     "tipo": "pergunta_mal_entendida",
+     "titulo": "Não explicou o negócio",
+     "exemplo": "Cliente (Adriano): Me expliquei como é o negócio dessa topeirinha aí, mas quando eu entendi não. Robô: Qualquer dúvida é só chamar, mestre.",
+     "causa": "O robô não percebeu que a pessoa pediu uma explicação.",
+     "regra": "Se a pessoa disser que não entendeu, explique em uma frase simples antes de encerrar."
+    },
+    {
+     "tipo": "repeticao",
+     "titulo": "Aparelho perguntado de novo",
+     "exemplo": "Cliente (Walace): Testo no tv box via m3u. Depois, Robô: Mestre, você está usando o IBO Player no celular ou no TV Box?",
+     "causa": "O robô não lembrou que o cliente já tinha dito TV Box.",
+     "regra": "Se o aparelho já foi dito na conversa, não pergunte de novo."
+    }
+   ],
+   "perguntas_nao_cobertas": [
+    {
+     "pergunta": "São gratuitos esses apps?",
+     "resposta_sugerida": "Essa informação eu não tenho aqui. Vou confirmar com o responsável e te aviso.",
+     "precisa_aprovacao": true
+    },
+    {
+     "pergunta": "É possível adicionar a Record Campinas?",
+     "resposta_sugerida": "Vou verificar com o responsável se esse canal entra na lista.",
+     "precisa_aprovacao": false
+    },
+    {
+     "pergunta": "Dá para gerar lista m3u no teste?",
+     "resposta_sugerida": "Não sei dizer agora. Vou passar para o responsável ver esse acesso.",
+     "precisa_aprovacao": false
+    },
+    {
+     "pergunta": "O que é o UNI e o segundo aplicativo?",
+     "resposta_sugerida": "Os apps que eu conheço são Lotus, Ultramix e IBO Player Pro. Em qual aparelho você vai usar?",
+     "precisa_aprovacao": false
+    },
+    {
+     "pergunta": "Servidor passa o canal Playsim?",
+     "resposta_sugerida": "Vou verificar esse canal com o responsável e te respondo.",
+     "precisa_aprovacao": false
+    }
+   ],
+   "regras_novas": [
+    {
+     "regra": "Nunca chame a pessoa pelo nome; use só mestre.",
+     "status": "descartada"
+    },
+    {
+     "regra": "Se a pessoa já disse o aparelho, não pergunte de novo.",
+     "status": "aprovada"
+    },
+    {
+     "regra": "Ao receber imagem, não prometa olhar; diga que o responsável vai ver.",
+     "status": "aprovada"
+    },
+    {
+     "regra": "Não responda avisos automáticos de canal informativo; não entre em troca de mensagens.",
+     "status": "aprovada"
+    },
+    {
+     "regra": "Teste vencido: coloque teste true e gere outro, sem passar ao responsável.",
+     "status": "sugestao"
+    },
+    {
+     "regra": "Ao falar valor com número de clientes, faça a conta como manda o base, sem dizer que fica no mínimo.",
+     "status": "sugestao"
+    },
+    {
+     "regra": "Para TV Box, indique o Ultramix na Google Play, código 66745044.",
+     "status": "aprovada"
+    },
+    {
+     "regra": "Teste vencido: coloque teste true e gere outro, sem passar ao responsável.",
+     "status": "sugestao"
+    },
+    {
+     "regra": "Ao receber imagem, não prometa analisar; diga que o responsável vai ver.",
+     "status": "descartada"
+    },
+    {
+     "regra": "Nunca chame a pessoa pelo nome; use só mestre.",
+     "status": "aprovada"
+    },
+    {
+     "regra": "Não repita uma orientação que já foi dita na conversa.",
+     "status": "descartada"
+    },
+    {
+     "regra": "Se a pessoa disser que não entendeu, explique em uma frase simples antes de encerrar.",
+     "status": "descartada"
+    },
+    {
+     "regra": "Se o aparelho já foi dito na conversa, não pergunte de novo.",
+     "status": "descartada"
+    }
+   ],
+   "sugestoes_para_o_senhor": [
+    "Confirme se os apps Lotus, Ultramix e IBO Player Pro são gratuitos e o que o robô deve dizer sobre isso.",
+    "Defina se a lista m3u pode sair no teste grátis, porque hoje o teste não gera m3u.",
+    "Defina se os canais Record Campinas e Playsim entram na lista.",
+    "Confira a contagem de follow-ups: os números dizem 8, mas as conversas mostram mais de 10 sem resposta.",
+    "Conversa 4 tem mensagens de relatório de conversas sem resposta. Veja se chegaram por engano.",
+    "Decida se o robô deve ignorar avisos automáticos de canal informativo.",
+    "Pergunta sem resposta no base.md: \"São gratuitos esses apps?\" Sugestão (envolve preço, prazo ou política, só com a aprovação do senhor): Essa informação eu não tenho aqui. Vou confirmar com o responsável e te aviso.",
+    "Pergunta sem resposta no base.md: \"É possível adicionar a Record Campinas?\" Sugestão: Vou verificar com o responsável se esse canal entra na lista.",
+    "Pergunta sem resposta no base.md: \"Dá para gerar lista m3u no teste?\" Sugestão: Não sei dizer agora. Vou passar para o responsável ver esse acesso.",
+    "Pergunta sem resposta no base.md: \"O que é o UNI e o segundo aplicativo?\" Sugestão: Os apps que eu conheço são Lotus, Ultramix e IBO Player Pro. Em qual aparelho você vai usar?",
+    "Pergunta sem resposta no base.md: \"Servidor passa o canal Playsim?\" Sugestão: Vou verificar esse canal com o responsável e te respondo.",
+    "Teste vencido: coloque teste true e gere outro, sem passar ao responsável.",
+    "Ao falar valor com número de clientes, faça a conta como manda o base, sem dizer que fica no mínimo."
+   ]
+  },
+  {
+   "id": "2026-11-08T23:21:08.493Z",
+   "gerado_em": "2026-11-08T23:21:08.493Z",
+   "janela": {
+    "inicio": "2026-11-08T21:21:08.493Z",
+    "fim": "2026-11-08T23:21:08.493Z"
+   },
+   "metricas": {
+    "mensagens_cliente": 65,
+    "respostas_robo": 163,
+    "followups": 17,
+    "followups_respondidos": 5,
+    "testes": 4,
+    "paineis_fechados": 4,
+    "passados_ao_senhor": 6,
+    "repeticoes_bloqueadas": 0,
+    "erros": 0
+   },
+   "resumo": "30 conversas no período (18:21 às 20:21), com 65 mensagens de clientes e 163 respostas do robô.\nPediram principalmente: revender, condições, teste grátis, apps para Smart TV e celular, e link M3U.\n4 painéis foram fechados e 4 testes foram gerados. 6 conversas passaram ao responsável.\nTravou em pedidos de link M3U e servidor, em link para entrar no painel e em banners de filme e série.\nPonto principal: o robô passou ao responsável pedidos que já tinha como resolver pela base (M3U e servidor).",
+   "funcionou": [
+    "Kelvin: com o exemplo de 20 clientes (R$ 70), ele disse 'Perfeito' e criou o painel.",
+    "Juliana vidal: o teste saiu logo e o app Lotus com o vídeo foi indicado na hora.",
+    "Carlos: depois do erro, o robô corrigiu e mandou o link de entrar no painel, e a pessoa respondeu 'Não está indo não' sem sumir na hora."
+   ],
+   "deu_errado": [
+    "Carlos: 'Link pra entra no painel' recebeu o link de criar o painel. Só depois de reclamar ele recebeu o link de entrar.",
+    "Juliana vidal: 'Eu preciso do link M3U' foi passada ao responsável, sem mandar os dois endereços da regra.",
+    "Pedro Italo: 'Qual servidor ?' foi passado ao responsável, mesmo a base tendo os endereços.",
+    "Adriano: 'Não encontrei lá não' foi passado ao responsável sem o link do grupo ser enviado de novo.",
+    "Pablo: depois de 'Celular', o robô deu instruções Android e só depois perguntou se era Android ou iPhone.",
+    "Star tech: três follow-ups sobre o modelo da TV e a pessoa não respondeu.",
+    "+55 44 9873-1769: o follow-up começou com 'Sim, mestre' sem nenhuma pergunta antes.",
+    "Guilherme dos Santos: 'Aqui não consigo ouvir áudio' e depois passou ao responsável. A frase é estranha para o cliente."
+   ],
+   "problemas": {
+    "respostas_repetidas": [
+     "Juliana vidal: follow-up sobre o IBO Pro três vezes.",
+     "Pablo: instruções do Ultramix repetidas logo após a pergunta de aparelho.",
+     "Star tech: três follow-ups seguidos sobre o modelo da TV."
+    ],
+    "perguntas_ja_respondidas": [
+     "Pablo: o robô perguntou Android ou iPhone depois de já ter dado as instruções de Android."
+    ],
+    "cliente_sumiu": [
+     {
+      "nome": "Carlos",
+      "depois_de": "Entre com o usuário e a senha que você criou. Me conta se abriu."
+     },
+     {
+      "nome": "Juliana vidal",
+      "depois_de": "Certo, mestre, já vou passar para o responsável. Ele te responde em instantes."
+     },
+     {
+      "nome": "Star tech",
+      "depois_de": "Me manda o modelo da TV, que fica na etiqueta atrás dela. Com ele eu mando o passo a passo certo."
+     },
+     {
+      "nome": "Pablo",
+      "depois_de": "Entre com o usuário e a senha do teste, usando o servidor http://capyplay.space. Se der erro, me avisa."
+     },
+     {
+      "nome": "Guilherme dos Santos",
+      "depois_de": "Certo, já vou passar para o responsável. Ele te responde em instantes."
+     },
+     {
+      "nome": "luizcoinaski",
+      "depois_de": "Pode testar agora, mestre. O teste dura 6 horas."
+     },
+     {
+      "nome": "Tryon Celulares",
+      "depois_de": "Pode criar seu painel por aqui e me avisa quando concluir: (link de criar o painel)"
+     },
+     {
+      "nome": "marielsonpinheiro27",
+      "depois_de": "Pode criar seu painel por aqui e me avisa quando concluir: (link de criar o painel)"
+     }
+    ],
+    "objecoes": [
+     "Ramos: 'Vou deixar pra segunda', adiou a conversa.",
+     "Guilherme dos Santos: quer passar os clientes de outro painel para o painel da CapyPlay."
+    ],
+    "duvidas_nao_cobertas": [
+     "Tem banner de filme ou série?",
+     "Posso passar meus clientes de outro painel para o da CapyPlay?",
+     "Vocês são donos do servidor ou só revenda? (Alex quer programar DRM)"
+    ]
+   },
+   "inconsistencias": [
+    {
+     "tipo": "contradicao",
+     "titulo": "Link de criar painel para quem já criou",
+     "exemplo": "Carlos: 'Link pra entra no painel'. Robô: 'o link do painel é o mesmo que te mandei antes', mas era o link de criar.",
+     "causa": "Regra de entrar no painel não foi aplicada.",
+     "regra": "Se a pessoa já criou o painel e pede o link ou não consegue entrar, mande só o link de entrar."
+    },
+    {
+     "tipo": "passou_sem_precisar",
+     "titulo": "Link M3U passado ao responsável",
+     "exemplo": "Juliana vidal: 'Eu preciso do link M3U'. Robô: 'já vou passar para o responsável'.",
+     "causa": "A base manda os dois endereços para M3U, lista ou servidor, e o robô não usou.",
+     "regra": "Para M3U, lista, servidor ou DNS, mande os dois endereços da regra, sem passar ao responsável."
+    },
+    {
+     "tipo": "passou_sem_precisar",
+     "titulo": "Servidor passado ao responsável",
+     "exemplo": "Pedro Italo: 'Qual servidor ?'. Robô: 'o servidor eu vou confirmar com o responsável' e depois passou.",
+     "causa": "A regra de servidor não foi usada.",
+     "regra": "Pergunta de servidor: responda com os endereços da regra de M3U, sem passar ao responsável."
+    },
+    {
+     "tipo": "passou_sem_precisar",
+     "titulo": "Banner sem link do grupo",
+     "exemplo": "Adriano: 'Não encontrei lá não'. Robô: 'Os de jogos estão no grupo que te passei', mas o grupo não tinha sido passado nesta conversa, e depois passou ao responsável.",
+     "causa": "Robô não mandou o link do grupo nesta conversa.",
+     "regra": "Para banner ou vídeo de divulgação, mande o link do grupo do Telegram antes de passar ao responsável."
+    },
+    {
+     "tipo": "fora_de_hora",
+     "titulo": "Pergunta de aparelho depois da instrução",
+     "exemplo": "Pablo: 'Celular'. Robô deu instruções do Android e só depois perguntou 'Seu celular é Android ou iPhone?'.",
+     "causa": "Instrução do app veio antes da pergunta.",
+     "regra": "Se a pessoa disser celular, pergunte Android ou iPhone antes de indicar o app."
+    },
+    {
+     "tipo": "repeticao",
+     "titulo": "Instrução de app repetida",
+     "exemplo": "Pablo: o robô mandou 'instale o Ultramix... servidor http://capyplay.space' e depois repetiu quase igual após 'Android'.",
+     "causa": "O robô repetiu o passo sem avançar.",
+     "regra": "Não repita instruções já enviadas nesta conversa; pergunte só o que travou."
+    },
+    {
+     "tipo": "repeticao",
+     "titulo": "Follow-up repetido sem resposta",
+     "exemplo": "Juliana vidal: 'Você conseguiu abrir o app IBO Pro?' foi mandado três vezes (19:09, 19:23 e 20:00).",
+     "causa": "Follow-up repete a mesma pergunta sem limite.",
+     "regra": "Faça no máximo uma cobrança de follow-up por assunto."
+    },
+    {
+     "tipo": "repeticao",
+     "titulo": "Mesma ideia dita duas vezes",
+     "exemplo": "Robô: 'Cada aparelho usa um app e um servidor diferentes' e logo depois 'Cada aparelho usa um app diferente'.",
+     "causa": "O robô repetiu a introdução.",
+     "regra": "Diga a ideia uma vez e vá direto para a lista do aparelho."
+    },
+    {
+     "tipo": "contradicao",
+     "titulo": "Correção de servidor sem envio anterior",
+     "exemplo": "luizcoinaski: robô disse 'Corrigindo o servidor que passei antes', mas nenhum servidor tinha sido passado nesta conversa.",
+     "causa": "Mensagem de outra conversa ou sem base.",
+     "regra": "Só corrija ou cite algo que foi enviado nesta conversa."
+    }
+   ],
+   "perguntas_nao_cobertas": [
+    {
+     "pergunta": "Tem banner de filme ou série?",
+     "resposta_sugerida": "Por enquanto os banners que tenho são de jogos, mestre. Vou pedir para o responsável te mandar os de filme e série.",
+     "precisa_aprovacao": false
+    },
+    {
+     "pergunta": "Posso passar meus clientes de outro painel para o painel da CapyPlay?",
+     "resposta_sugerida": "Isso eu vou confirmar com o responsável, mestre. Ele te responde em instantes.",
+     "precisa_aprovacao": true
+    },
+    {
+     "pergunta": "Vocês são donos do servidor ou só revenda? Eu programo DRM e fonte de canais.",
+     "resposta_sugerida": "Somos revenda CapyPlay, mestre. Para parceria com servidor, vou passar para o responsável.",
+     "precisa_aprovacao": true
+    }
+   ],
+   "regras_novas": [
+    {
+     "regra": "Se a pessoa disser celular, pergunte Android ou iPhone antes de indicar o app.",
+     "status": "descartada"
+    },
+    {
+     "regra": "Não repita instruções de app já enviadas nesta conversa; avance ou pergunte só o que travou.",
+     "status": "aprovada"
+    },
+    {
+     "regra": "Faça no máximo uma cobrança de follow-up por assunto, sem repetir a mesma pergunta.",
+     "status": "sugestao"
+    },
+    {
+     "regra": "Só corrija ou cite algo que foi enviado nesta conversa.",
+     "status": "descartada"
+    },
+    {
+     "regra": "Para banner ou vídeo de divulgação, mande o link do grupo antes de passar ao responsável.",
+     "status": "aprovada"
+    },
+    {
+     "regra": "Se a pessoa já criou o painel e pede o link ou não consegue entrar, mande só o link de entrar.",
+     "status": "aprovada"
+    },
+    {
+     "regra": "Para M3U, lista, servidor ou DNS, mande os dois endereços da regra, sem passar ao responsável.",
+     "status": "descartada"
+    },
+    {
+     "regra": "Pergunta de servidor: responda com os endereços da regra de M3U, sem passar ao responsável.",
+     "status": "descartada"
+    },
+    {
+     "regra": "Para banner ou vídeo de divulgação, mande o link do grupo do Telegram antes de passar ao responsável.",
+     "status": "descartada"
+    },
+    {
+     "regra": "Se a pessoa disser celular, pergunte Android ou iPhone antes de indicar o app.",
+     "status": "aprovada"
+    },
+    {
+     "regra": "Não repita instruções já enviadas nesta conversa; pergunte só o que travou.",
+     "status": "descartada"
+    },
+    {
+     "regra": "Faça no máximo uma cobrança de follow-up por assunto.",
+     "status": "sugestao"
+    },
+    {
+     "regra": "Diga a ideia uma vez e vá direto para a lista do aparelho.",
+     "status": "descartada"
+    },
+    {
+     "regra": "Só corrija ou cite algo que foi enviado nesta conversa.",
+     "status": "aprovada"
+    }
+   ],
+   "sugestoes_para_o_senhor": [
+    "Decidir se pode haver migração de clientes de outro painel para o painel da CapyPlay, e como responder.",
+    "Definir se haverá banners de filme e série e quando saem.",
+    "Decidir se a CapyPlay aceita parceria com dono de servidor (caso do Alex).",
+    "Confirmar que M3U e servidor sempre saem com os dois endereços, sem passar ao responsável.",
+    "Definir um limite de follow-up por conversa.",
+    "Pergunta sem resposta no base.md: \"Tem banner de filme ou série?\" Sugestão: Por enquanto os banners que tenho são de jogos, mestre. Vou pedir para o responsável te mandar os de filme e série.",
+    "Pergunta sem resposta no base.md: \"Posso passar meus clientes de outro painel para o painel da CapyPlay?\" Sugestão (envolve preço, prazo ou política, só com a aprovação do senhor): Isso eu vou confirmar com o responsável, mestre. Ele te responde em instantes.",
+    "Pergunta sem resposta no base.md: \"Vocês são donos do servidor ou só revenda? Eu programo DRM e fonte de canais.\" Sugestão (envolve preço, prazo ou política, só com a aprovação do senhor): Somos revenda CapyPlay, mestre. Para parceria com servidor, vou passar para o responsável.",
+    "Faça no máximo uma cobrança de follow-up por assunto, sem repetir a mesma pergunta.",
+    "Faça no máximo uma cobrança de follow-up por assunto."
+   ]
+  },
+  {
+   "id": "2026-11-08T23:34:22.579Z",
+   "gerado_em": "2026-11-08T23:34:22.579Z",
+   "janela": {
+    "inicio": "2026-11-08T21:34:22.579Z",
+    "fim": "2026-11-08T23:34:22.579Z"
+   },
+   "metricas": {
+    "mensagens_cliente": 86,
+    "respostas_robo": 195,
+    "followups": 20,
+    "followups_respondidos": 8,
+    "testes": 4,
+    "paineis_fechados": 5,
+    "passados_ao_senhor": 8,
+    "repeticoes_bloqueadas": 0,
+    "erros": 0
+   },
+   "resumo": "18 pessoas falaram com o robô na janela de 2 horas, com 86 mensagens delas.\nPediram principalmente: revender, teste grátis, app para TV e link M3U.\n5 painéis foram criados e 4 testes foram gerados.\nTravou em pedidos de servidor, M3U e link de entrar; 8 conversas foram ao senhor.\nPonto principal: o robô passou ao responsável pedidos que a base já responde e repetiu instruções.",
+   "funcionou": [
+    "Marielson: fluxo completo em uma conversa curta, com painel, manual, pagamento e app Ultramix.",
+    "Kelvin: criou o painel e recebeu o manual e o link de pagamento sem erro.",
+    "luizcoinaski: teste gerado e Lotus instalado na Samsung; o cliente respondeu que estava funcionando."
+   ],
+   "deu_errado": [
+    "Carlos: pediu link para entrar no painel e recebeu o link de criar, com a frase 'é o mesmo que te mandei antes'.",
+    "Juliana: pediu o link M3U e o robô passou ao responsável em vez de mandar os dois endereços.",
+    "Pedro: perguntou qual servidor e o robô disse que ia confirmar com o responsável.",
+    "Mauro: respondeu 'Tv e celular' e recebeu preço e link, sem nenhum app indicado.",
+    "Felipe Felix: o robô citou 'problema do Globo' e 'o Zé', que não estavam na conversa.",
+    "Ramos: o robô combinou 'na segunda a gente conversa', um prazo que ele não pode garantir.",
+    "luizcoinaski: o robô disse 'corrigindo o servidor que passei antes' sem ter passado servidor antes.",
+    "Star tech: com a marca Samsung e LG já informada, o robô pediu o modelo da TV em três mensagens."
+   ],
+   "problemas": {
+    "respostas_repetidas": [
+     "Pablo: instrução do Ultramix e do servidor dada em 20:07 e de novo em 20:10.",
+     "Juliana: follow-up sobre o IBO Pro na Smart TV enviado três vezes (19:09, 19:23, 20:00).",
+     "Star tech: pedido do modelo da TV enviado em três follow-ups seguidos."
+    ],
+    "perguntas_ja_respondidas": [
+     "Star tech: pediu o modelo da TV mesmo com a marca Samsung e LG já informada.",
+     "Pablo: perguntou Android ou iPhone depois de já ter dado o Ultramix."
+    ],
+    "cliente_sumiu": [
+     {
+      "nome": "Star tech",
+      "depois_de": "Me manda o modelo da TV, que fica na etiqueta atrás dela. Com ele eu mando o passo a passo certo."
+     },
+     {
+      "nome": "Tryon Celulares",
+      "depois_de": "Pode criar seu painel por aqui e me avisa quando concluir: (link do painel)"
+     },
+     {
+      "nome": "Mauro J.(FGF)",
+      "depois_de": "Mestre, conseguiu dar uma olhada no link do painel?"
+     }
+    ],
+    "objecoes": [
+     "Alex: perguntou se a CapyPlay é dona do servidor e se aceita parceria com fonte de canais (DRM).",
+     "Ramos: adiou a conversa para segunda, sem data definida."
+    ],
+    "duvidas_nao_cobertas": [
+     "Tem banner de filme e série?",
+     "A CapyPlay é dona do servidor?",
+     "Aceita parceria com quem tem fonte de canais (DRM)?"
+    ]
+   },
+   "inconsistencias": [
+    {
+     "tipo": "contradicao",
+     "titulo": "Link de criar mandado para quem queria entrar",
+     "exemplo": "Cliente: 'Link pra entra no painel'. Robô: 'o link do painel é o mesmo que te mandei antes'. Depois: 'Desculpa, o link que te mandei era o de criar painel'.",
+     "causa": "O robô não diferenciou o link de criar do link de entrar.",
+     "regra": "Quem já criou o painel ou pede para entrar recebe só o link de entrar, nunca o de criar."
+    },
+    {
+     "tipo": "passou_sem_precisar",
+     "titulo": "Pedido de M3U passado ao responsável",
+     "exemplo": "Cliente: 'Eu preciso do link M3U'. Robô: 'já vou passar para o responsável'.",
+     "causa": "A regra do M3U não foi aplicada.",
+     "regra": "Pedido de M3U, lista, servidor ou URL: mande http://capyplay.space e http://capyplay.fun, cada um em uma mensagem."
+    },
+    {
+     "tipo": "passou_sem_precisar",
+     "titulo": "Pergunta de servidor passada ao responsável",
+     "exemplo": "Cliente: 'Qual servidor ?'. Robô: 'o servidor eu vou confirmar com o responsável'.",
+     "causa": "O robô não usou o servidor que já consta no base.md.",
+     "regra": "Pergunta de servidor: responda com o endereço do aparelho do cliente, sem passar ao responsável."
+    },
+    {
+     "tipo": "fora_de_hora",
+     "titulo": "Pergunta do aparelho feita depois da instrução",
+     "exemplo": "Robô deu o Ultramix e o servidor e só depois perguntou: 'Seu celular é Android ou iPhone?'.",
+     "causa": "O robô deu o app antes de confirmar o aparelho.",
+     "regra": "Confirme o sistema do aparelho antes de indicar o app."
+    },
+    {
+     "tipo": "repeticao",
+     "titulo": "Mesma instrução do Ultramix repetida",
+     "exemplo": "Às 20:07 e às 20:10 o robô repetiu 'instale o Ultramix' e 'entre com o usuário e a senha do teste'.",
+     "causa": "Mensagem de follow-up e resposta se sobrepuseram.",
+     "regra": "Não repita a instrução de instalação se ela já foi dada na conversa."
+    },
+    {
+     "tipo": "contradicao",
+     "titulo": "Modelo da TV pedido com a marca já informada",
+     "exemplo": "Cliente: 'Entre sansung e LG'. Robô pediu o modelo três vezes, sem enviar o guia.",
+     "causa": "O robô não usou a lista de guias quando a marca já era conhecida.",
+     "regra": "Com marca de TV sem loja de app, escolha o guia pela marca e pergunte o modelo só se não der para escolher."
+    },
+    {
+     "tipo": "pergunta_mal_entendida",
+     "titulo": "Aparelho respondido sem app indicado",
+     "exemplo": "Cliente: 'Tv e celular'. Robô respondeu com preço, prazo e link do painel.",
+     "causa": "O robô seguiu o roteiro e ignorou a resposta sobre o aparelho.",
+     "regra": "Quando a pessoa informar o aparelho, indique o app dele antes de qualquer outro passo."
+    },
+    {
+     "tipo": "contradicao",
+     "titulo": "Correção de servidor que não existia",
+     "exemplo": "Robô: 'Corrigindo o servidor que passei antes: o certo é http://capyplay.space'. Antes, nenhum servidor tinha sido passado nesta conversa.",
+     "causa": "O robô inventou uma correção sem base no histórico.",
+     "regra": "Só corrija informação que de fato foi dita antes na mesma conversa."
+    }
+   ],
+   "perguntas_nao_cobertas": [
+    {
+     "pergunta": "Tem banner de filme e série?",
+     "resposta_sugerida": "Banner de filme e série ainda não temos aqui. Os de jogos estão no grupo do Telegram.",
+     "precisa_aprovacao": false
+    },
+    {
+     "pergunta": "A CapyPlay é dona do servidor?",
+     "resposta_sugerida": "Essa informação eu não tenho aqui. Vou passar para o responsável.",
+     "precisa_aprovacao": false
+    },
+    {
+     "pergunta": "Aceita parceria com quem tem fonte de canais (DRM)?",
+     "resposta_sugerida": "Essa parte é com o responsável. Vou passar para ele te responder.",
+     "precisa_aprovacao": true
+    }
+   ],
+   "regras_novas": [
+    {
+     "regra": "Pedido de M3U, lista ou servidor: mande os dois endereços em mensagens separadas, sem passar ao responsável.",
+     "status": "aprovada"
+    },
+    {
+     "regra": "Se a pessoa já criou o painel ou pede para entrar, mande só o link de entrar, nunca o de criar.",
+     "status": "aprovada"
+    },
+    {
+     "regra": "Depois que a pessoa informar o aparelho, indique só o app dele; não pergunte de novo nem repita a instrução.",
+     "status": "aprovada"
+    },
+    {
+     "regra": "Com marca de TV sem loja de app, escolha o guia pela marca; pergunte o modelo só se não der para escolher.",
+     "status": "aprovada"
+    },
+    {
+     "regra": "Não cite servidor, nome, problema ou correção que não esteja na conversa.",
+     "status": "aprovada"
+    },
+    {
+     "regra": "Quem já criou o painel ou pede para entrar recebe só o link de entrar, nunca o de criar.",
+     "status": "descartada"
+    },
+    {
+     "regra": "Pedido de M3U, lista, servidor ou URL: mande http://capyplay.space e http://capyplay.fun, cada um em uma mensagem.",
+     "status": "sugestao"
+    },
+    {
+     "regra": "Pergunta de servidor: responda com o endereço do aparelho do cliente, sem passar ao responsável.",
+     "status": "descartada"
+    },
+    {
+     "regra": "Confirme o sistema do aparelho antes de indicar o app.",
+     "status": "descartada"
+    },
+    {
+     "regra": "Não repita a instrução de instalação se ela já foi dada na conversa.",
+     "status": "descartada"
+    },
+    {
+     "regra": "Com marca de TV sem loja de app, escolha o guia pela marca e pergunte o modelo só se não der para escolher.",
+     "status": "descartada"
+    },
+    {
+     "regra": "Quando a pessoa informar o aparelho, indique o app dele antes de qualquer outro passo.",
+     "status": "descartada"
+    },
+    {
+     "regra": "Só corrija informação que de fato foi dita antes na mesma conversa.",
+     "status": "descartada"
+    }
+   ],
+   "sugestoes_para_o_senhor": [
+    "Definir se o robô pode dizer se a CapyPlay é dona do servidor ou se passa sempre ao responsável.",
+    "Decidir se parceria com fonte de canais (DRM) entra no roteiro e com qual resposta.",
+    "Definir o que responder sobre banner de filme e série, já que não há material no grupo.",
+    "Definir o que fazer quando alguém pede para falar só na segunda, como o Ramos.",
+    "Pergunta sem resposta no base.md: \"Tem banner de filme e série?\" Sugestão: Banner de filme e série ainda não temos aqui. Os de jogos estão no grupo do Telegram.",
+    "Pergunta sem resposta no base.md: \"A CapyPlay é dona do servidor?\" Sugestão: Essa informação eu não tenho aqui. Vou passar para o responsável.",
+    "Pergunta sem resposta no base.md: \"Aceita parceria com quem tem fonte de canais (DRM)?\" Sugestão (envolve preço, prazo ou política, só com a aprovação do senhor): Essa parte é com o responsável. Vou passar para ele te responder.",
+    "Pedido de M3U, lista, servidor ou URL: mande http://capyplay.space e http://capyplay.fun, cada um em uma mensagem."
+   ]
+  },
+  {
+   "id": "2026-11-09T01:37:27.620Z",
+   "gerado_em": "2026-11-09T01:37:27.620Z",
+   "janela": {
+    "inicio": "2026-11-08T23:37:27.620Z",
+    "fim": "2026-11-09T01:37:27.620Z"
+   },
+   "metricas": {
+    "mensagens_cliente": 47,
+    "respostas_robo": 95,
+    "followups": 3,
+    "followups_respondidos": 2,
+    "testes": 1,
+    "paineis_fechados": 3,
+    "passados_ao_senhor": 7,
+    "repeticoes_bloqueadas": 0,
+    "erros": 0
+   },
+   "resumo": "16 conversas de clientes no período, com 47 mensagens deles e 95 respostas do robô.\nPediram para entender como funciona para revender e os apps para TV Box e Smart TV.\nForam 3 painéis fechados e 1 teste gerado.\nTravou em pré-pago, no Telegram que não abriu e no preço que o revendedor cobra do cliente final.\nPonto principal: o robô passou 7 conversas ao responsável, uma delas que ele podia resolver, e errou o prazo ao dizer fim do mês.",
+   "funcionou": [
+    "Quem disse que já tinha painel recebeu na hora o link de entrar (Marcão: 'Painel já criei | Quero saber pra ter acesso').",
+    "Kleber recebeu logo o app certo para TV Box e Smart TV, com o código de cada um.",
+    "Victor e Fênix Play receberam as condições e o link para criar o painel em uma resposta só.",
+    "Quando o cliente pediu desculpas por perguntar muito, o robô respondeu curto e acolhedor."
+   ],
+   "deu_errado": [
+    "Tiago Barros mandou 'Deu boa!' e o robô respondeu 'Recebi o vídeo, mestre', mas não havia vídeo na conversa. Depois passou ao responsável.",
+    "JHERE perguntou 'Trabalha com pre pago?' e o robô passou ao responsável. O base manda responder sozinho.",
+    "Alex representante ouviu 'Você paga no fim do mês'. A regra é o acerto no dia 5 do mês seguinte.",
+    "Marcão disse 'Amigo no Telegram não tou conseguindo abrir | Não tem outra opção' e o robô passou ao responsável sem dar o suporte (22) 99920-2241.",
+    "Marcão perguntou quanto o cliente dele vai pagar e o robô disse 'cobra do seu cliente o valor que achar justo'. Isso não está no base.md."
+   ],
+   "problemas": {
+    "respostas_repetidas": [
+     "Marcão: 'Quando criar o painel, me avisa por aqui' foi dito duas vezes.",
+     "Marcão: 'Qualquer dúvida é só chamar aqui' foi dito duas vezes."
+    ],
+    "perguntas_ja_respondidas": [
+     "Alex representante: a pergunta sobre o painel veio de novo depois de ele já ter respondido."
+    ],
+    "cliente_sumiu": [
+     {
+      "nome": "Pablo",
+      "depois_de": "Quando chegar em casa, é só entrar no Lotus com o mesmo usuário e senha."
+     },
+     {
+      "nome": "kleber schaefer",
+      "depois_de": "Mestre, conseguiu instalar o Ultramix no TV Box e o Lotus na Smart TV?"
+     },
+     {
+      "nome": "Fênix Play",
+      "depois_de": "Pode criar seu painel por aqui e me avisa quando concluir: https://painel.capyplay.site/#/rs/RvWGlK01e3/bQELo6e1gr"
+     }
+    ],
+    "objecoes": [
+     "Marcão: 'Amigo no Telegram não tou conseguindo abrir | Não tem outra opção'.",
+     "Mauro: 'Tô no trampo, já já faço o cadastro lá' (adiou a criação do painel)."
+    ],
+    "duvidas_nao_cobertas": [
+     "Quanto o revendedor pode cobrar do cliente final.",
+     "O que fazer quando o Telegram não abre.",
+     "Não está aceitando para fazer uma nova (sem contexto suficiente na conversa)."
+    ]
+   },
+   "inconsistencias": [
+    {
+     "tipo": "contradicao",
+     "titulo": "Prazo do acerto dito errado",
+     "exemplo": "Alex representante: 'Você paga no fim do mês, só pelo que usou.' O base diz que o acerto é no dia 5 do mês seguinte.",
+     "causa": "O robô resumiu o prazo com palavras próprias e perdeu a data.",
+     "regra": "Sempre diga que o acerto é dia 5 do mês seguinte. Nunca diga fim do mês."
+    },
+    {
+     "tipo": "passou_sem_precisar",
+     "titulo": "Pré-pago passado ao responsável",
+     "exemplo": "JHERE: 'Trabalha com pre pago?' Robô: 'Certo, mestre, já vou passar para o responsável.'",
+     "causa": "A regra de pré-pago do base.md não foi seguida.",
+     "regra": "Se perguntarem sobre pré-pago, responda sozinho com as vantagens do pós-pago. Não passe ao responsável."
+    },
+    {
+     "tipo": "pergunta_mal_entendida",
+     "titulo": "Vídeo que não existia",
+     "exemplo": "Tiago Barros: 'Deu boa!' Robô: 'Recebi o vídeo, mestre.'",
+     "causa": "O robô inventou o recebimento de um vídeo e tratou o agradecimento como pedido.",
+     "regra": "Não diga que recebeu vídeo ou arquivo se ele não aparece na conversa. Agradecimento curto recebe resposta curta."
+    },
+    {
+     "tipo": "passou_sem_precisar",
+     "titulo": "Suporte não dado no passo 4",
+     "exemplo": "Marcão: 'Amigo no Telegram não tou conseguindo abrir'. Robô passou ao responsável sem dar o suporte (22) 99920-2241.",
+     "causa": "O passo 4 do roteiro manda o suporte junto com o Manual, mas a mensagem saiu sem ele.",
+     "regra": "No passo 4, inclua sempre o suporte (22) 99920-2241 junto com o Manual do Revenda."
+    },
+    {
+     "tipo": "fora_de_hora",
+     "titulo": "Explicação antes da pergunta inicial",
+     "exemplo": "Marcão: 'Quero começar a revender. Como funciona?' Robô explicou o pós-pago na hora, sem perguntar se já trabalha com revenda.",
+     "causa": "O robô pulou o passo 1 do roteiro e foi direto ao passo 2.",
+     "regra": "Se perguntarem como funciona e não disserem se já revendem, pergunte isso antes de explicar."
+    },
+    {
+     "tipo": "repeticao",
+     "titulo": "Painel perguntado duas vezes",
+     "exemplo": "Alex representante: 'Conseguiu criar o painel?' e, logo depois, 'Já conseguiu criar o painel, mestre?'",
+     "causa": "O robô perguntou de novo sem registrar a resposta anterior.",
+     "regra": "Não repita a pergunta sobre o painel depois que a pessoa já respondeu sobre ele."
+    }
+   ],
+   "perguntas_nao_cobertas": [
+    {
+     "pergunta": "Se um cliente querer, ele vai pagar quanto?",
+     "resposta_sugerida": "Quem define o preço do seu cliente é você. Não temos um valor sugerido para o cliente final.",
+     "precisa_aprovacao": true
+    },
+    {
+     "pergunta": "Amigo no Telegram não tou conseguindo abrir",
+     "resposta_sugerida": "Tente abrir pelo navegador. Se não der, fale com o suporte (22) 99920-2241.",
+     "precisa_aprovacao": false
+    },
+    {
+     "pergunta": "Não tá aceitando pra fazer uma nova",
+     "resposta_sugerida": "Me conta o que apareceu na tela, mestre, que eu passo para o responsável.",
+     "precisa_aprovacao": false
+    }
+   ],
+   "regras_novas": [
+    {
+     "regra": "Se perguntarem como funciona e não disserem se já revendem, pergunte isso antes de explicar.",
+     "status": "descartada"
+    },
+    {
+     "regra": "Não diga que recebeu vídeo ou arquivo se ele não aparece na conversa. Agradecimento curto recebe resposta curta.",
+     "status": "descartada"
+    },
+    {
+     "regra": "Não repita a pergunta sobre o painel depois que a pessoa já respondeu sobre ele.",
+     "status": "descartada"
+    },
+    {
+     "regra": "Se perguntarem quanto o cliente final paga, não invente valor: avise o responsável.",
+     "status": "sugestao"
+    },
+    {
+     "regra": "Sempre diga que o acerto é dia 5 do mês seguinte. Nunca diga fim do mês.",
+     "status": "sugestao"
+    },
+    {
+     "regra": "Se perguntarem sobre pré-pago, responda sozinho com as vantagens do pós-pago. Não passe ao responsável.",
+     "status": "sugestao"
+    },
+    {
+     "regra": "Não diga que recebeu vídeo ou arquivo se ele não aparece na conversa. Agradecimento curto recebe resposta curta.",
+     "status": "aprovada"
+    },
+    {
+     "regra": "No passo 4, inclua sempre o suporte (22) 99920-2241 junto com o Manual do Revenda.",
+     "status": "aprovada"
+    },
+    {
+     "regra": "Se perguntarem como funciona e não disserem se já revendem, pergunte isso antes de explicar.",
+     "status": "aprovada"
+    },
+    {
+     "regra": "Não repita a pergunta sobre o painel depois que a pessoa já respondeu sobre ele.",
+     "status": "aprovada"
+    }
+   ],
+   "sugestoes_para_o_senhor": [
+    "Definir se o robô pode dizer quanto o revendedor cobra do cliente final, e qual valor sugerir.",
+    "Definir o que responder quando o Telegram não abre (link alternativo ou só suporte).",
+    "Confirmar se 'Deu boa!' e outros agradecimentos devem ficar sem passar ao responsável.",
+    "Pergunta sem resposta no base.md: \"Se um cliente querer, ele vai pagar quanto?\" Sugestão (envolve preço, prazo ou política, só com a aprovação do senhor): Quem define o preço do seu cliente é você. Não temos um valor sugerido para o cliente final.",
+    "Pergunta sem resposta no base.md: \"Amigo no Telegram não tou conseguindo abrir\" Sugestão: Tente abrir pelo navegador. Se não der, fale com o suporte (22) 99920-2241.",
+    "Pergunta sem resposta no base.md: \"Não tá aceitando pra fazer uma nova\" Sugestão: Me conta o que apareceu na tela, mestre, que eu passo para o responsável.",
+    "Se perguntarem quanto o cliente final paga, não invente valor: avise o responsável.",
+    "Sempre diga que o acerto é dia 5 do mês seguinte. Nunca diga fim do mês.",
+    "Se perguntarem sobre pré-pago, responda sozinho com as vantagens do pós-pago. Não passe ao responsável."
+   ]
+  },
+  {
+   "id": "2026-11-09T03:40:21.670Z",
+   "gerado_em": "2026-11-09T03:40:21.670Z",
+   "janela": {
+    "inicio": "2026-11-09T01:40:21.670Z",
+    "fim": "2026-11-09T03:40:21.670Z"
+   },
+   "metricas": {
+    "mensagens_cliente": 20,
+    "respostas_robo": 32,
+    "followups": 0,
+    "followups_respondidos": 0,
+    "testes": 0,
+    "paineis_fechados": 0,
+    "passados_ao_senhor": 4,
+    "repeticoes_bloqueadas": 0,
+    "erros": 9
+   },
+   "resumo": "Período de 22:40 a 00:40: 20 mensagens de clientes e 32 respostas do robô, em 5 conversas.\nOs pedidos foram: começar a revender, saber as condições, IPTV que só abre canais ao vivo e painel que dá como não existe.\nNenhum painel foi fechado e nenhum teste foi gerado no período. Quatro conversas foram passadas ao responsável.\nTravou em filmes e séries que não abrem (IPTV) e em painel criado que dá como não existe (Pablo).\nPonto principal: o robô passou ao responsável sem tentar o passo do DNS e misturou a ordem do roteiro (Escola antes do painel).",
+   "funcionou": [
+    "Wesley: respondeu direto sobre pós-pago, R$ 3,50 por crédito e acerto dia 05/12, e fechou com o link do painel.",
+    "Conversa IPTV: explicou a conta (20 clientes = R$ 70) e o mínimo de 10 créditos sem repetir.",
+    "IPTV às 00:12: o passo do modem veio em mensagens curtas e a pergunta sobre o aparelho foi a certa."
+   ],
+   "deu_errado": [
+    "Jonas Paz perguntou 'Quero começar a revender. Como funciona?' e o robô respondeu 'Pode ser sim.' e pediu para ele dizer se já revende. Ele sumiu.",
+    "Cliente do IPTV disse 'não tá funcionando séries nem filmes só ao vivo' e o robô passou ao responsável sem tentar o passo do DNS.",
+    "Pablo disse 'Eu criei o painel mas está dando agora como não existe' e o robô passou ao responsável sem perguntar o que aparece na tela.",
+    "Às 23:47 o robô disse que o responsável vai conferir o acesso no Max Player. Esse app não está no base.md."
+   ],
+   "problemas": {
+    "respostas_repetidas": [
+     "Pergunta sobre o aparelho feita em 00:12 e de novo em 00:39, na mesma conversa do IPTV."
+    ],
+    "perguntas_ja_respondidas": [],
+    "cliente_sumiu": [
+     {
+      "nome": "Jonas Paz",
+      "depois_de": "Você já trabalha com revenda ou está começando agora?"
+     },
+     {
+      "nome": "Wesley",
+      "depois_de": "Mensagem com o link para criar o painel"
+     }
+    ],
+    "objecoes": [
+     "Meu usuário não tá bombando (falta de clientes)",
+     "Eu criei o painel mas está dando como não existe"
+    ],
+    "duvidas_nao_cobertas": [
+     "O que fazer se o painel dá como não existe depois de criado: o base.md não diz antes de passar ao responsável."
+    ]
+   },
+   "inconsistencias": [
+    {
+     "tipo": "pergunta_mal_entendida",
+     "titulo": "Como funciona virou sim",
+     "exemplo": "Cliente: 'Quero começar a revender. Como funciona?' Robô: 'Pode ser sim.' e depois 'Você já trabalha com revenda ou está começando agora?'",
+     "causa": "O robô não respondeu à pergunta e foi direto para o passo 1 do roteiro.",
+     "regra": "Se perguntarem como funciona, explique em 1 ou 2 frases antes de perguntar se já revende."
+    },
+    {
+     "tipo": "passou_sem_precisar",
+     "titulo": "Filme não abre passou sem DNS",
+     "exemplo": "Cliente do IPTV: 'não tá funcionando séries nem filmes só ao vivo'. Robô: 'Já vou passar para o responsável.' Depois, às 00:12, o robô mandou o passo do modem e do DNS.",
+     "causa": "O robô tratou o caso como problema técnico e não seguiu o roteiro de filmes que não abrem.",
+     "regra": "Se disserem que filme ou série não abre, siga o passo do modem e do DNS antes de passar ao responsável."
+    },
+    {
+     "tipo": "passou_sem_precisar",
+     "titulo": "Painel que não existe passou direto",
+     "exemplo": "Pablo: 'Eu criei o painel mas está dando agora como não existe'. Robô: 'Já vou passar para o responsável, que vai ver a tela.'",
+     "causa": "O robô não perguntou o que aparece e não verificou se a pessoa entrou pelo link certo.",
+     "regra": "Se a pessoa disser que criou o painel e ele não abre, pergunte o que aparece antes de passar ao responsável."
+    },
+    {
+     "tipo": "fora_de_hora",
+     "titulo": "Escola junto com o link de criar",
+     "exemplo": "Robô: 'https://painel.capyplay.site/#/rs/RvWGlK01e3/bQELo6e1gr' e logo depois 'Na Escola do Revendedor tem aulas... https://escola.capyapp.net' antes de a pessoa criar o painel.",
+     "causa": "O robô pulou o passo 4 do roteiro e mandou a Escola ao mesmo tempo que o link de criar.",
+     "regra": "Mande o link da Escola só depois que o painel estiver criado, nunca junto com o link de criar."
+    },
+    {
+     "tipo": "repeticao",
+     "titulo": "Aparelho perguntado duas vezes",
+     "exemplo": "Robô às 00:12: 'Em qual aparelho você assiste? TV de qual marca...'. Robô às 00:39: 'Me conta em qual aparelho você assiste: TV de qual marca...'.",
+     "causa": "A primeira pergunta ficou sem resposta e o robô repetiu a mesma pergunta quando a cliente disse só 'Opa mestre'.",
+     "regra": "Não pergunte o mesmo dado duas vezes. Se a pessoa não respondeu, peça só o que falta, em uma frase."
+    },
+    {
+     "tipo": "contradicao",
+     "titulo": "Max Player fora do base.md",
+     "exemplo": "Robô às 23:47: 'O responsável já tem o caso e vai conferir o acesso no Max Player.'",
+     "causa": "O robô citou um app que não está nas regras e sugeriu uma ação que o responsável ainda não confirmou.",
+     "regra": "Não cite apps ou sistemas que não estão no base.md. Diga só que o responsável vai olhar o caso."
+    },
+    {
+     "tipo": "cliente_sumiu",
+     "titulo": "Jonas parou na pergunta de revenda",
+     "exemplo": "Robô: 'Você já trabalha com revenda ou está começando agora?' Cliente não respondeu mais.",
+     "causa": "A resposta anterior não explicou o básico e o cliente não entendeu o que fazer.",
+     "regra": "Se perguntarem como funciona, explique em 1 ou 2 frases antes de perguntar se já revende."
+    },
+    {
+     "tipo": "cliente_sumiu",
+     "titulo": "Wesley parou após o link",
+     "exemplo": "Robô mandou o link para criar o painel e a conversa parou, sem resposta do cliente.",
+     "causa": "Pode ser só o fim da janela de 2 horas, mas o cliente não voltou a escrever.",
+     "regra": "Depois do link de criar o painel, espere a resposta e não repita o link sem o cliente pedir."
+    }
+   ],
+   "perguntas_nao_cobertas": [
+    {
+     "pergunta": "Eu criei o painel mas está dando agora como não existe",
+     "resposta_sugerida": "Pergunte o que aparece na tela e se a pessoa entrou pelo link de criar ou pelo link de entrar. Se não resolver, passe ao responsável.",
+     "precisa_aprovacao": false
+    }
+   ],
+   "regras_novas": [
+    {
+     "regra": "Se disserem que filme ou série não abre, siga o passo do modem e do DNS antes de passar ao responsável.",
+     "status": "descartada"
+    },
+    {
+     "regra": "Se perguntarem como funciona, explique em 1 ou 2 frases antes de perguntar se já revende.",
+     "status": "descartada"
+    },
+    {
+     "regra": "Não pergunte o mesmo dado duas vezes. Se a pessoa não respondeu, peça só o que falta, em uma frase.",
+     "status": "descartada"
+    },
+    {
+     "regra": "Mande o link da Escola só depois que o painel estiver criado, nunca junto com o link de criar o painel.",
+     "status": "aprovada"
+    },
+    {
+     "regra": "Não cite apps ou sistemas que não estão no base.md, como Max Player. Diga só que o responsável vai olhar o caso.",
+     "status": "aprovada"
+    },
+    {
+     "regra": "Se perguntarem como funciona, explique em 1 ou 2 frases antes de perguntar se já revende.",
+     "status": "descartada"
+    },
+    {
+     "regra": "Se disserem que filme ou série não abre, siga o passo do modem e do DNS antes de passar ao responsável.",
+     "status": "aprovada"
+    },
+    {
+     "regra": "Se a pessoa disser que criou o painel e ele não abre, pergunte o que aparece antes de passar ao responsável.",
+     "status": "descartada"
+    },
+    {
+     "regra": "Mande o link da Escola só depois que o painel estiver criado, nunca junto com o link de criar.",
+     "status": "descartada"
+    },
+    {
+     "regra": "Não pergunte o mesmo dado duas vezes. Se a pessoa não respondeu, peça só o que falta, em uma frase.",
+     "status": "aprovada"
+    },
+    {
+     "regra": "Não cite apps ou sistemas que não estão no base.md. Diga só que o responsável vai olhar o caso.",
+     "status": "descartada"
+    },
+    {
+     "regra": "Se perguntarem como funciona, explique em 1 ou 2 frases antes de perguntar se já revende.",
+     "status": "aprovada"
+    },
+    {
+     "regra": "Depois do link de criar o painel, espere a resposta e não repita o link sem o cliente pedir.",
+     "status": "descartada"
+    }
+   ],
+   "sugestoes_para_o_senhor": [
+    "A conversa 4 diz 67 conversas e 6 passados ao senhor, mas os números do período dizem 20 mensagens e 4 passados. Confira qual está certo.",
+    "A conversa 6 mostra erro na voz (fetch failed) e o período teve 9 erros. Veja a causa antes de confiar nos envios.",
+    "Defina se o robô pode citar o Max Player, que não está no base.md, ou se essa frase deve sair.",
+    "Defina o que o robô faz quando o painel dá como não existe depois de criado: passar direto ou perguntar antes.",
+    "Pergunta sem resposta no base.md: \"Eu criei o painel mas está dando agora como não existe\" Sugestão: Pergunte o que aparece na tela e se a pessoa entrou pelo link de criar ou pelo link de entrar. Se não resolver, passe ao responsável."
+   ]
+  },
+  {
+   "id": "2026-11-09T11:22:23.488Z",
+   "gerado_em": "2026-11-09T11:22:23.488Z",
+   "janela": {
+    "inicio": "2026-11-09T09:22:23.488Z",
+    "fim": "2026-11-09T11:22:23.488Z"
+   },
+   "metricas": {
+    "mensagens_cliente": 8,
+    "respostas_robo": 14,
+    "followups": 2,
+    "followups_respondidos": 1,
+    "testes": 0,
+    "paineis_fechados": 0,
+    "passados_ao_senhor": 4,
+    "repeticoes_bloqueadas": 0,
+    "erros": 3
+   },
+   "resumo": "Foram 6 conversas no período: 5 com cliente e 1 (Cris) só com mensagens do senhor.\nPediram acesso ao painel, ajuda com painel que venceu e uma explicação para começar a revender.\nNenhum painel foi fechado. Uma cliente conseguiu entrar no painel com o link enviado.\nTravou em 4 avisos ao responsável. Dois deles foram na mesma conversa interna da equipe.\nPonto principal: o robô repetiu o aviso ao responsável e pulou a pergunta inicial com Jonas.",
+   "funcionou": [
+    "Na conversa com o cliente que não entrava no painel, o link de entrada resolveu e ele respondeu 'Consegui sim muito obrigado'.",
+    "Com Jonas, a explicação saiu em 3 mensagens curtas e o link de criar o painel veio por último, como manda o roteiro."
+   ],
+   "deu_errado": [
+    "Ramirez Campari: o robô avisou o responsável duas vezes ('já vou passar' e depois 'já passei') na mesma conversa.",
+    "'.': o robô mandou o link de entrada e, na mesma resposta, disse que ia passar ao responsável, mesmo sem precisar.",
+    "Jonas Paz: o robô explicou preço e prazo logo na primeira resposta, sem antes perguntar 'Você já trabalha com revenda?'.",
+    "Fernando Dias: o robô perguntou se ainda tem interesse em revender e a pessoa não respondeu."
+   ],
+   "problemas": {
+    "respostas_repetidas": [
+     "Conversa Ramirez Campari: 'já vou passar para o responsável' foi dito duas vezes."
+    ],
+    "perguntas_ja_respondidas": [],
+    "cliente_sumiu": [
+     {
+      "nome": "Fernando Dias",
+      "depois_de": "Quando quiser, a gente volta com o teste. Você ainda está com interesse em revender?"
+     }
+    ],
+    "objecoes": [],
+    "duvidas_nao_cobertas": []
+   },
+   "inconsistencias": [
+    {
+     "tipo": "repeticao",
+     "titulo": "Aviso ao responsável repetido",
+     "exemplo": "Cliente (equipe): 'Vamos se acordar, bora reunião, entrando na ilha.' Robô: 'Certo, já vou passar para o responsável.' Depois, cliente: 'Porra é essa'. Robô: 'Mestre, já passei para o responsável.'",
+     "causa": "O robô não registra que já avisou o responsável nesta conversa e repete o mesmo aviso.",
+     "regra": "Se já avisou o responsável nesta conversa, não avise de novo; responda só se a pessoa pedir algo."
+    },
+    {
+     "tipo": "passou_sem_precisar",
+     "titulo": "Passou ao responsável depois de resolver",
+     "exemplo": "Cliente: 'Bom Dia | [image] | Não consigo entra no painel'. Robô mandou o link de entrar e, na mesma resposta, disse 'Já vou passar para o responsável'. Depois a cliente disse 'Consegui sim'.",
+     "causa": "O robô deu duas ações ao mesmo tempo: o link de entrada e o aviso ao responsável.",
+     "regra": "Ao mandar o link de entrar no painel, espere a resposta da pessoa antes de passar ao responsável."
+    },
+    {
+     "tipo": "fora_de_hora",
+     "titulo": "Explicação antes de perguntar sobre revenda",
+     "exemplo": "Cliente: 'Bom dia garoto, começando agora'. Robô: 'Boa, mestre! Então vamos começar do jeito certo.' e logo depois explicou pós-pago, crédito e prazo, sem perguntar se já trabalha com revenda.",
+     "causa": "O robô pulou o primeiro passo do roteiro e foi direto para a explicação.",
+     "regra": "Antes de explicar o negócio, pergunte em uma mensagem curta se a pessoa já trabalha com revenda."
+    }
+   ],
+   "perguntas_nao_cobertas": [],
+   "regras_novas": [
+    {
+     "regra": "Se já avisou o responsável nesta conversa, não repita o aviso; responda só se a pessoa pedir algo.",
+     "status": "aprovada"
+    },
+    {
+     "regra": "Ao mandar o link de entrar no painel, espere a resposta antes de passar ao responsável.",
+     "status": "aprovada"
+    },
+    {
+     "regra": "Antes de explicar o negócio, pergunte se a pessoa já trabalha com revenda, como manda o passo 1 do roteiro.",
+     "status": "aprovada"
+    },
+    {
+     "regra": "Se já avisou o responsável nesta conversa, não avise de novo; responda só se a pessoa pedir algo.",
+     "status": "aprovada"
+    },
+    {
+     "regra": "Ao mandar o link de entrar no painel, espere a resposta da pessoa antes de passar ao responsável.",
+     "status": "aprovada"
+    },
+    {
+     "regra": "Antes de explicar o negócio, pergunte em uma mensagem curta se a pessoa já trabalha com revenda.",
+     "status": "descartada"
+    }
+   ],
+   "sugestoes_para_o_senhor": [
+    "Confirmar se mensagens internas da equipe (ex.: 'entrando na ilha') devem ser ignoradas pelo robô em vez de geradas como aviso ao responsável.",
+    "Decidir se o robô deve fazer follow-up com quem não respondeu a pergunta sobre revenda, como Fernando Dias."
+   ]
+  },
+  {
+   "id": "2026-11-09T11:39:26.659Z",
+   "gerado_em": "2026-11-09T11:39:26.659Z",
+   "janela": {
+    "inicio": "2026-11-09T09:39:26.659Z",
+    "fim": "2026-11-09T11:39:26.659Z"
+   },
+   "metricas": {
+    "mensagens_cliente": 23,
+    "respostas_robo": 43,
+    "followups": 6,
+    "followups_respondidos": 3,
+    "testes": 0,
+    "paineis_fechados": 1,
+    "passados_ao_senhor": 6,
+    "repeticoes_bloqueadas": 0,
+    "erros": 9
+   },
+   "resumo": "10 conversas no período, com 23 mensagens de cliente e 43 respostas do robô.\nPediram para começar a revender (Renato, Jonas, Suporte Meta TV), entrar no painel e ajuda com o Lotus na TV.\n1 painel criado (Jonas Paz). Nenhum teste gerado no período.\nTravou em 6 conversas passadas ao responsável, duas delas sem necessidade, e na TV que não acha o Lotus.\nPonto principal: o robô repetiu perguntas e avisos, e 3 clientes sumiram depois de follow-up sem resposta.",
+   "funcionou": [
+    "Conversa sem nome: o link de entrar no painel resolveu, e o cliente respondeu 'Consegui sim'.",
+    "Renato Barbosa: explicação em duas mensagens, com o prazo de 05/12 e o link do painel.",
+    "Jonas Paz: criou o painel e recebeu o Lotus com código e vídeo."
+   ],
+   "deu_errado": [
+    "Conversa sem nome: mandou o link de entrar e, na mesma resposta, passou ao responsável por causa de uma imagem.",
+    "Ramirez Campari: 'já passei para o responsável' foi dito duas vezes (08:13 e 08:18).",
+    "Renato Barbosa: 'você já trabalha com revenda?' foi repetida (08:26 e 08:31) mesmo depois de ele dizer 'Quero começar'.",
+    "Fernando Dias: o robô prometeu ensinar a achar os filmes no Lotus, assunto que o base.md não cobre.",
+    "Jonas Paz: depois do painel, mandou manual e Escola, mas não mandou o link de pagar nem o grupo do Telegram do passo 4.",
+    "Conversas 7 e 10: mensagens técnicas ('No LID for user' e 'voz indisponível') entraram como se fossem do cliente."
+   ],
+   "problemas": {
+    "respostas_repetidas": [
+     "Aviso 'já passei para o responsável' repetido na conversa de Ramirez Campari.",
+     "Pergunta 'você já trabalha com revenda?' repetida na conversa de Renato Barbosa."
+    ],
+    "perguntas_ja_respondidas": [
+     "Renato Barbosa: 'já trabalha com revenda?' repetida mesmo com 'Quero começar' já dito.",
+     "Suporte Meta TV: a mesma pergunta voltou no follow-up."
+    ],
+    "cliente_sumiu": [
+     {
+      "nome": "Fernando Dias",
+      "depois_de": "Mestre, conseguiu abrir o Lotus aí na loja? (follow-up 08:33)"
+     },
+     {
+      "nome": "Renato Barbosa",
+      "depois_de": "Mestre, conseguiu seguir pelo link do painel? (follow-up 08:34)"
+     },
+     {
+      "nome": "Suporte Meta TV",
+      "depois_de": "Mestre, você já trabalha com revenda ou está começando agora? (follow-up 08:36)"
+     }
+    ],
+    "objecoes": [],
+    "duvidas_nao_cobertas": []
+   },
+   "inconsistencias": [
+    {
+     "tipo": "passou_sem_precisar",
+     "titulo": "Link e escalada na mesma resposta",
+     "exemplo": "Cliente: 'Não consigo entra no painel' e uma imagem. Robô mandou o link de entrar e, no mesmo turno, disse 'Não consegui ver a imagem. Já vou passar para o responsável'. Depois o cliente disse 'Consegui sim'.",
+     "causa": "A regra de imagem disparou junto com a resposta do link.",
+     "regra": "Se mandar o link de entrar, não passe ao responsável no mesmo turno; espere a resposta do cliente."
+    },
+    {
+     "tipo": "repeticao",
+     "titulo": "Aviso ao responsável repetido",
+     "exemplo": "Cliente (Ramirez Campari): 'Porra é essa'. Robô: 'Mestre, já passei para o responsável' (08:18), depois de já ter dito 'Certo, já vou passar' (08:13).",
+     "causa": "O robô não considera que já avisou antes na mesma conversa.",
+     "regra": "Depois de avisar o responsável, não repita o aviso; só fale de novo se o cliente disser algo novo."
+    },
+    {
+     "tipo": "repeticao",
+     "titulo": "Pergunta repetida depois de resposta",
+     "exemplo": "Robô (08:26): 'Você já trabalha com revenda ou quer começar agora?'. Cliente (08:31): 'Bom dia'. Robô repete a mesma pergunta. Cliente: 'Quero começar, como funciona'.",
+     "causa": "O robô repetiu a pergunta sem considerar a resposta anterior do cliente.",
+     "regra": "Repita uma pergunta só uma vez; se o cliente responder outra coisa, siga com o que ele disse."
+    },
+    {
+     "tipo": "fora_de_hora",
+     "titulo": "Passo 4 incompleto junto com outra pergunta",
+     "exemplo": "Robô perguntou o aparelho e, na mesma resposta à 'como faço pra vender', mandou Manual, suporte e Escola. O link de pagar e o grupo do Telegram não saíram.",
+     "causa": "A orientação pós-painel saiu antes de o aparelho ser respondido.",
+     "regra": "Depois do painel criado, mande o passo 4 completo numa resposta, sem misturar com a pergunta do aparelho."
+    }
+   ],
+   "perguntas_nao_cobertas": [],
+   "regras_novas": [
+    {
+     "regra": "Se o cliente não responder, faça um único follow-up e não repita a pergunta na mesma hora.",
+     "status": "aprovada"
+    },
+    {
+     "regra": "Depois de avisar o responsável, não repita o aviso na mesma conversa; só fale de novo se o cliente disser algo novo.",
+     "status": "aprovada"
+    },
+    {
+     "regra": "Se mandou o link de entrar no painel, não passe ao responsável na mesma resposta; espere o cliente responder.",
+     "status": "aprovada"
+    },
+    {
+     "regra": "Se o cliente responder outra coisa à pergunta, responda o que ele disse antes de repetir a pergunta.",
+     "status": "aprovada"
+    },
+    {
+     "regra": "Se mandar o link de entrar, não passe ao responsável no mesmo turno; espere a resposta do cliente.",
+     "status": "aprovada"
+    },
+    {
+     "regra": "Depois de avisar o responsável, não repita o aviso; só fale de novo se o cliente disser algo novo.",
+     "status": "descartada"
+    },
+    {
+     "regra": "Repita uma pergunta só uma vez; se o cliente responder outra coisa, siga com o que ele disse.",
+     "status": "descartada"
+    },
+    {
+     "regra": "Depois do painel criado, mande o passo 4 completo numa resposta, sem misturar com a pergunta do aparelho.",
+     "status": "descartada"
+    }
+   ],
+   "sugestoes_para_o_senhor": [
+    "Painel venceu (conversa de Kelvin): o senhor resolve, ou o robô pode mandar o link de pagar?",
+    "Conversa Suporte Meta TV: é cliente ou da equipe? O robô tratou como cliente.",
+    "Pasta de filmes no Lotus: o robô prometeu ajudar, mas o base.md não tem esse passo. Defina o passo ou tire a promessa.",
+    "Erros de sistema (No LID e voz indisponível): verificar por que entraram como mensagem do cliente."
+   ]
+  },
+  {
+   "id": "2026-11-09T13:46:38.581Z",
+   "gerado_em": "2026-11-09T13:46:38.581Z",
+   "janela": {
+    "inicio": "2026-11-09T11:46:38.581Z",
+    "fim": "2026-11-09T13:46:38.581Z"
+   },
+   "metricas": {
+    "mensagens_cliente": 9,
+    "respostas_robo": 18,
+    "followups": 3,
+    "followups_respondidos": 1,
+    "testes": 0,
+    "paineis_fechados": 1,
+    "passados_ao_senhor": 1,
+    "repeticoes_bloqueadas": 0,
+    "erros": 25
+   },
+   "resumo": "15 conversas no período (08:46 às 10:46): 9 mensagens de clientes e 18 respostas do robô.\nOs clientes pediram ajuda para conseguir logar, material de divulgação, migrar clientes e redefinir senha pelo e-mail do cadastro.\n1 painel foi fechado e 1 caso foi passado ao responsável; 3 dos 9 follow-ups tiveram resposta.\nTravou em 3 pontos: link antigo do Manual para o Renato, texto interno vazado para o Guilherme e e-mail do Pablo sem explicação.\nPonto principal: o robô mandou link antigo e texto interno para clientes, e a regra de um assunto por resposta não foi seguida.",
+   "funcionou": [
+    "Pablo: a pergunta sobre material de divulgação foi respondida com o link certo do grupo (https://t.me/capyplayoficial).",
+    "Cris: 'Ok' recebeu resposta curta e sem repetição, e a conversa ficou tranquila."
+   ],
+   "deu_errado": [
+    "Renato: o robô mandou o link antigo https://t.me/manual_do_revenda, que a regra manda trocar pela Escola do Revendedor.",
+    "Renato: em uma resposta, mandou suporte, pagamento, banners e escola de uma vez, contra a regra de um assunto por resposta.",
+    "Guilherme: foram 4 mensagens com a etiqueta '[retorno da lacuna L7]' e texto cortado ('para o....').",
+    "Pablo: ao mandar só 'Ola', o robô disse que o caso já estava com o responsável.",
+    "Pablo: ao mandar o e-mail, o robô disse 'Recebi o email' sem dizer que ia redefinir a senha."
+   ],
+   "problemas": {
+    "respostas_repetidas": [
+     "Renato: suporte, pagamento, banners e escola num só bloco.",
+     "Guilherme: a mesma etiqueta interna repetida em 4 mensagens."
+    ],
+    "perguntas_ja_respondidas": [],
+    "cliente_sumiu": [
+     {
+      "nome": "Suporte Meta TV",
+      "depois_de": "Mestre, você só paga R$ 3,50 por cliente, e o primeiro acerto é dia 05/12. Vende primeiro e paga depois."
+     },
+     {
+      "nome": "Marcos Gomes",
+      "depois_de": "Mestre, vi que ficou uma parte sem resposta sobre as condições. Quer que eu explique o que faltou?"
+     },
+     {
+      "nome": "Robson",
+      "depois_de": "Mestre, conseguiu abrir o painel pelo link? Se quiser, eu te ajudo a criar agora mesmo."
+     },
+     {
+      "nome": "Allan Caetano",
+      "depois_de": "Mestre, tudo certo com o teste? Conseguiu rodar no aparelho ou quer ajuda com o app da sua TV ou celular?"
+     },
+     {
+      "nome": "William",
+      "depois_de": "Mestre, e aí, deu para ver a lista no teste? Se travou no app do seu aparelho, me fala qual é que eu te ajudo."
+     },
+     {
+      "nome": "Francivaldo Almeida",
+      "depois_de": "Mestre, se preferir, posso te ajudar a criar o painel passo a passo. Ele é pós-pago e não tem taxa para abrir, então dá para ver com calma."
+     },
+     {
+      "nome": "Conversa 13 (nome com emoji)",
+      "depois_de": "Mestre, o painel já sai com 500 créditos e não tem taxa para abrir, você só paga no acerto do dia 5. Quer ajuda para criar o seu?"
+     },
+     {
+      "nome": "Patricia Ferreira",
+      "depois_de": "Mestre, você chegou a criar o painel? Se quiser, posso te ajudar no passo a passo. Lembrando que é pós-pago, sem taxa para abrir o painel."
+     },
+     {
+      "nome": "Hoesley Sousa",
+      "depois_de": "Mestre, você chegou a criar o painel? Se quiser, eu te ajudo no passo a passo. É pós-pago, sem taxa para abrir, e o painel já vem com 500 créditos."
+     }
+    ],
+    "objecoes": [],
+    "duvidas_nao_cobertas": [
+     "Se o revendedor pode migrar clientes de outro usuário de teste para o painel (Guilherme).",
+     "Quais são as 'condições' que ficaram sem resposta (Marcos Gomes); a conversa não diz o assunto."
+    ]
+   },
+   "inconsistencias": [
+    {
+     "tipo": "contradicao",
+     "titulo": "link antigo do Manual",
+     "exemplo": "Cliente (Renato): 'Conseguir logar'. Robô: 'Esse é o Manual do Revenda... https://t.me/manual_do_revenda'",
+     "causa": "resposta usa o roteiro antigo; a base manda a Escola do Revendedor",
+     "regra": "Nunca mande o link antigo do Manual do Revenda; para vídeos e aulas use escola.capyapp.net."
+    },
+    {
+     "tipo": "contradicao",
+     "titulo": "texto interno vazou para o cliente",
+     "exemplo": "Robô (Guilherme): '[retorno da lacuna L7] Mestre, voltei com a resposta da sua dúvida: cliente avisa que vai criar usuário de teste e depois migrar os clientes para o....'",
+     "causa": "a resposta da lacuna foi enviada crua, com etiqueta interna e texto cortado",
+     "regra": "Nunca envie etiqueta interna nem texto de lacuna; escreva frase limpa e completa para o cliente."
+    },
+    {
+     "tipo": "pergunta_mal_entendida",
+     "titulo": "e-mail sem explicar a redefinição de senha",
+     "exemplo": "Cliente (Pablo): '[e-mail]'. Robô: 'Recebi o email, mestre. Vou passar para o responsável verificar.'",
+     "causa": "o robô não entendeu que o e-mail era do cadastro em uso e não disse que ia redefinir a senha",
+     "regra": "Ao receber e-mail do cadastro, diga que vai redefinir a senha e passe ao responsável com o motivo."
+    },
+    {
+     "tipo": "passou_sem_precisar",
+     "titulo": "passou ao responsável sem motivo",
+     "exemplo": "Cliente (Pablo): 'Ola'. Robô: 'Seu caso já está com o responsável, ele vai te responder.'",
+     "causa": "ficha antiga marcada como avisar; a mensagem era só um oi",
+     "regra": "Se a pessoa só cumprimentar, responda o cumprimento e pergunte em que pode ajudar."
+    },
+    {
+     "tipo": "repeticao",
+     "titulo": "quatro assuntos em uma resposta",
+     "exemplo": "Robô (Renato), após 'Conseguir logar': suporte, pagamento, banners e Escola do Revendedor em 4 mensagens seguidas",
+     "causa": "o bloco final do roteiro foi mandado inteiro de uma vez",
+     "regra": "Um assunto por resposta: mande primeiro o link de entrar e espere a pessoa responder."
+    }
+   ],
+   "perguntas_nao_cobertas": [
+    {
+     "pergunta": "Posso migrar meus clientes do usuário de teste para o meu painel?",
+     "resposta_sugerida": "Vou confirmar isso com o responsável e já te aviso, mestre.",
+     "precisa_aprovacao": true
+    },
+    {
+     "pergunta": "Quais são as condições? (ficou sem resposta na conversa do Marcos Gomes)",
+     "resposta_sugerida": "Me diz qual condição você quer saber, mestre, que eu te explico.",
+     "precisa_aprovacao": true
+    }
+   ],
+   "regras_novas": [
+    {
+     "regra": "Nunca mande etiqueta interna nem texto de lacuna ao cliente; escreva frase limpa e completa.",
+     "status": "aprovada"
+    },
+    {
+     "regra": "Ao receber e-mail do cadastro, diga que vai redefinir a senha e passe ao responsável com o motivo.",
+     "status": "descartada"
+    },
+    {
+     "regra": "Se a pessoa só cumprimentar, responda o oi e pergunte em que pode ajudar; não passe ao responsável.",
+     "status": "aprovada"
+    },
+    {
+     "regra": "Um assunto por resposta: no fechamento, mande primeiro o link de entrar e espere a resposta antes do resto.",
+     "status": "aprovada"
+    },
+    {
+     "regra": "Nunca mande o link antigo do Manual do Revenda; use a Escola do Revendedor para vídeos e aulas.",
+     "status": "sugestao"
+    },
+    {
+     "regra": "Nunca mande o link antigo do Manual do Revenda; para vídeos e aulas use escola.capyapp.net.",
+     "status": "sugestao"
+    },
+    {
+     "regra": "Nunca envie etiqueta interna nem texto de lacuna; escreva frase limpa e completa para o cliente.",
+     "status": "aprovada"
+    },
+    {
+     "regra": "Ao receber e-mail do cadastro, diga que vai redefinir a senha e passe ao responsável com o motivo.",
+     "status": "aprovada"
+    },
+    {
+     "regra": "Se a pessoa só cumprimentar, responda o cumprimento e pergunte em que pode ajudar.",
+     "status": "descartada"
+    },
+    {
+     "regra": "Um assunto por resposta: mande primeiro o link de entrar e espere a pessoa responder.",
+     "status": "descartada"
+    }
+   ],
+   "sugestoes_para_o_senhor": [
+    "Definir o que responder quando o revendedor pergunta se pode migrar clientes de outro usuário de teste.",
+    "Dizer qual é o assunto das 'condições' que ficaram sem resposta na conversa do Marcos Gomes.",
+    "Ver por que o link antigo do Manual do Revenda saiu para o Renato, já que a base manda a Escola.",
+    "Conferir o contador: os números dizem 3 follow-ups, mas as conversas mostram 11.",
+    "Verificar o caso do Pablo: o e-mail foi passado ao responsável sem o motivo claro (redefinir senha).",
+    "Pergunta sem resposta no base.md: \"Posso migrar meus clientes do usuário de teste para o meu painel?\" Sugestão (envolve preço, prazo ou política, só com a aprovação do senhor): Vou confirmar isso com o responsável e já te aviso, mestre.",
+    "Pergunta sem resposta no base.md: \"Quais são as condições? (ficou sem resposta na conversa do Marcos Gomes)\" Sugestão (envolve preço, prazo ou política, só com a aprovação do senhor): Me diz qual condição você quer saber, mestre, que eu te explico.",
+    "Nunca mande o link antigo do Manual do Revenda; use a Escola do Revendedor para vídeos e aulas.",
+    "Nunca mande o link antigo do Manual do Revenda; para vídeos e aulas use escola.capyapp.net."
+   ]
+  },
+  {
+   "id": "2026-11-09T15:52:17.134Z",
+   "gerado_em": "2026-11-09T15:52:17.134Z",
+   "janela": {
+    "inicio": "2026-11-09T13:52:17.134Z",
+    "fim": "2026-11-09T15:52:17.134Z"
+   },
+   "metricas": {
+    "mensagens_cliente": 57,
+    "respostas_robo": 89,
+    "followups": 5,
+    "followups_respondidos": 3,
+    "testes": 0,
+    "paineis_fechados": 3,
+    "passados_ao_senhor": 1,
+    "repeticoes_bloqueadas": 0,
+    "erros": 17
+   },
+   "resumo": "Cerca de 23 contatos reais no período; 3 conversas são registros internos (releitura e funil).\nA maioria perguntou como começar a revender, o preço e os apps; 1 pediu teste no iPhone.\nPainéis confirmados pelas conversas: 2 (Suporte Meta TV e PR José Sérgio). Os números dizem 3.\nTravou: 9 reaquecimentos sem resposta, teste com servidor errado e link de criar enviado a quem já tinha painel.\nPonto principal: o robô ainda manda o link de criar sem checar se a pessoa já tem painel, e usou um endereço fora do base.md.",
+   "funcionou": [
+    "Explicação do pós-pago em mensagens curtas: Marcus ✌🏻 respondeu 'Nunca trabalhei' e o robô seguiu o roteiro.",
+    "Quando perguntaram se era robô, respondeu direto: 'Sou o Jarvis, o assistente automático da CapyPlay' (Ramirez Campari).",
+    "Suporte Meta TV entrou no painel e recebeu o link de entrar, o suporte e a forma de pagar na mesma conversa.",
+    "Teste do iPhone foi enviado com usuário e senha, e o robô orientou o app IBO Player Pro (D)."
+   ],
+   "deu_errado": [
+    "Ramirez Campari: o robô entrou na conversa sobre maconha ('Mas eu não fumo nada') e chamou o cliente de 'parceirinho' em vez de mestre.",
+    "D: o robô mandou 'use o servidor http://spar.lat', endereço que não está no base.md. No iPhone o certo é http://capyplay.space.",
+    "PR José Sérgio: o robô mandou o link de criar painel, e logo depois o cliente enviou a URL do painel que já tinha.",
+    "Marcus e PR José Sérgio (reaquecimento): 'você só paga o que usar', sem citar o mínimo de R$ 35 para quem usa menos de 10 créditos.",
+    "Flavio Oliveira: o robô disse 'Combinado, mestre' duas vezes seguidas.",
+    "Suporte Meta TV: na despedida o robô disse 'Qualquer coisa, me chama' três vezes e não mandou o grupo do Telegram (passo 4).",
+    "Relatório interno diz 4 passados ao senhor e 'robô responde 2', mas os números do período dizem 1 e 'testes: 0', embora D tenha recebido teste."
+   ],
+   "problemas": {
+    "respostas_repetidas": [
+     "Ramirez Campari: 'Ice ou prensado' respondido duas vezes quase igual (11:22 e 12:36).",
+     "Suporte Meta TV: 'Qualquer coisa, me chama' três vezes no mesmo fechamento.",
+     "Flavio Oliveira: 'Combinado, mestre' duas vezes na mesma resposta."
+    ],
+    "perguntas_ja_respondidas": [],
+    "cliente_sumiu": [
+     {
+      "nome": "D",
+      "depois_de": "[envio manual] Se o app pedir servidor ou URL, use: http://spar.lat"
+     },
+     {
+      "nome": "Samuel Andrade",
+      "depois_de": "Mestre, você conseguiu dar uma olhada nas condições? Se quiser, eu te ajudo a criar o painel, é pós-pago e sem taxa para abrir."
+     },
+     {
+      "nome": "Bruno",
+      "depois_de": "Mestre, ainda ficou com dúvida sobre o mínimo de 10 créditos ou sobre como começar a revender?"
+     },
+     {
+      "nome": "Edson",
+      "depois_de": "Mestre, qual aparelho seus clientes usam? Eu te indico o app certo para cada um."
+     },
+     {
+      "nome": "Fernando",
+      "depois_de": "[cadência reaquecer A] Mestre, ainda quer ajuda para começar a revender?"
+     },
+     {
+      "nome": "Vanessa6",
+      "depois_de": "[cadência reaquecer A] Mestre, ficou alguma dúvida do começo? Quer que eu te ajude a dar o primeiro passo para revender?"
+     },
+     {
+      "nome": "Eduardo moura",
+      "depois_de": "[cadência reaquecer B] Só lembrando, mestre: aqui é pós-pago, você não paga nada para começar e o painel já vai com 500 créditos. Quer que eu te ajude a dar o primeiro passo?"
+     },
+     {
+      "nome": "+55 31 8397-0945",
+      "depois_de": "[cadência reaquecer A] Mestre, você ainda quer começar a revender com a gente?"
+     }
+    ],
+    "objecoes": [
+     "Flavio Oliveira: adiou a conversa para depois do trabalho ('A tarde depois do trabalho eu te chamo').",
+     "NALDO SAT: respondeu 'Nao' sem dar motivo."
+    ],
+    "duvidas_nao_cobertas": [
+     "Tem canal de F1 (Fórmula 1)? (Ramirez Campari, perguntou só 'F1?' e não recebeu resposta útil)."
+    ]
+   },
+   "inconsistencias": [
+    {
+     "tipo": "contradicao",
+     "titulo": "Servidor fora do base no iPhone",
+     "exemplo": "Cliente D: robô disse 'use o servidor http://capyplay.space'; depois, envio manual: 'Se o app pedir servidor ou URL, use: http://spar.lat'.",
+     "causa": "Envio manual com endereço que não está no base.md.",
+     "regra": "Para servidor ou URL, use só http://capyplay.space ou http://capyplay.fun, nunca outro endereço."
+    },
+    {
+     "tipo": "contradicao",
+     "titulo": "Link de criar para quem já tinha painel",
+     "exemplo": "PR José Sérgio: robô 'Cria seu painel por aqui' e depois o cliente mandou 'URL do Painel: https://painel.capyplay.site'. D disse 'Já faço revenda' e recebeu o link de criar sem pergunta.",
+     "causa": "O robô não checou se a pessoa já tinha painel antes de mandar o link.",
+     "regra": "Antes do link de criar, pergunte: 'Você já criou o seu painel?'. Quem já tem painel recebe só o link de entrar."
+    },
+    {
+     "tipo": "contradicao",
+     "titulo": "Reaquecimento sem o mínimo",
+     "exemplo": "Marcus (cadência B): 'você só paga o que usar'. PR José Sérgio: 'você só paga o que usar, no dia 5'. O base diz que quem usa menos de 10 créditos paga R$ 35.",
+     "causa": "Texto de cadência sem a regra do mínimo.",
+     "regra": "Ao falar de cobrança, diga sempre o mínimo de 10 créditos (R$ 35) junto com o uso."
+    },
+    {
+     "tipo": "repeticao",
+     "titulo": "Mesma resposta duas vezes",
+     "exemplo": "Ramirez Campari: 'A pergunta é uma só | Ice ou prensado?' respondida às 11:22 e às 12:36 quase com as mesmas palavras. Suporte Meta TV: 'Qualquer coisa, me chama' três vezes.",
+     "causa": "Sem checar o que já foi dito na conversa.",
+     "regra": "Se já respondeu ou já se despediu, não repita a mesma frase; diga algo novo ou encerre."
+    },
+    {
+     "tipo": "cliente_sumiu",
+     "titulo": "Cliente sumiu depois do teste",
+     "exemplo": "D: depois de 'use o servidor http://spar.lat' (12:06) não respondeu; os follow-ups de 12:13 e 12:26 ficaram sem resposta.",
+     "causa": "Dúvida no endereço do servidor ou o teste não abriu no app.",
+     "regra": "Se o teste não abrir, pergunte em qual passo travou, usando só os endereços do base.md."
+    },
+    {
+     "tipo": "fora_de_hora",
+     "titulo": "Servidor dado antes do teste",
+     "exemplo": "D: 12:03 'Entre com o usuário e a senha do teste e use o servidor http://capyplay.space', e o teste só chegou às 12:05.",
+     "causa": "Passo do app dado antes de o teste existir.",
+     "regra": "Mande o passo do app depois que o usuário e a senha forem enviados."
+    }
+   ],
+   "perguntas_nao_cobertas": [
+    {
+     "pergunta": "Tem canal de F1 (Fórmula 1)?",
+     "resposta_sugerida": "Não tenho essa informação aqui, mestre. Vou passar para o responsável.",
+     "precisa_aprovacao": false
+    }
+   ],
+   "regras_novas": [
+    {
+     "regra": "Antes de mandar o link de criar o painel, pergunte se a pessoa já tem painel. Quem já tem recebe só o link de entrar.",
+     "status": "aprovada"
+    },
+    {
+     "regra": "Se a conversa fugir para gíria ou brincadeira, volte para a CapyPlay em uma frase e não entre no assunto.",
+     "status": "aprovada"
+    },
+    {
+     "regra": "Chame sempre de mestre, nunca de parceirinho, amigo ou outro apelido.",
+     "status": "aprovada"
+    },
+    {
+     "regra": "Não repita a mesma despedida ou a mesma resposta na mesma conversa. Se já disse, encerre.",
+     "status": "aprovada"
+    },
+    {
+     "regra": "Ao falar de cobrança para quem usa pouco, diga o mínimo de 10 créditos (R$ 35) junto com o uso.",
+     "status": "sugestao"
+    },
+    {
+     "regra": "Para servidor ou URL, use só http://capyplay.space ou http://capyplay.fun, nunca outro endereço.",
+     "status": "sugestao"
+    },
+    {
+     "regra": "Antes do link de criar, pergunte: 'Você já criou o seu painel?'. Quem já tem painel recebe só o link de entrar.",
+     "status": "aprovada"
+    },
+    {
+     "regra": "Ao falar de cobrança, diga sempre o mínimo de 10 créditos (R$ 35) junto com o uso.",
+     "status": "sugestao"
+    },
+    {
+     "regra": "Se já respondeu ou já se despediu, não repita a mesma frase; diga algo novo ou encerre.",
+     "status": "descartada"
+    },
+    {
+     "regra": "Se o teste não abrir, pergunte em qual passo travou, usando só os endereços do base.md.",
+     "status": "sugestao"
+    },
+    {
+     "regra": "Mande o passo do app depois que o usuário e a senha forem enviados.",
+     "status": "descartada"
+    }
+   ],
+   "sugestoes_para_o_senhor": [
+    "Confirmar se o endereço http://spar.lat é válido ou se foi erro; ele não está no base.md e foi mandado ao cliente D.",
+    "Revisar a cadência de reaquecimento: 9 mensagens sem resposta, e algumas sem o mínimo de R$ 35.",
+    "Decidir se o envio manual pode mandar endereço ou link fora do base.md.",
+    "Confirmar se os painéis do Suporte Meta TV e do PR José Sérgio já existiam (os números dizem 3 painéis, as conversas mostram 2).",
+    "Definir se o robô deve falar de canais esportivos como F1, já que hoje não temos essa informação.",
+    "Definir o que fazer com o contato 'Sonnet com pesquisa', que mandou 13 mensagens iguais sem resposta do robô.",
+    "Pergunta sem resposta no base.md: \"Tem canal de F1 (Fórmula 1)?\" Sugestão: Não tenho essa informação aqui, mestre. Vou passar para o responsável.",
+    "Ao falar de cobrança para quem usa pouco, diga o mínimo de 10 créditos (R$ 35) junto com o uso.",
+    "Para servidor ou URL, use só http://capyplay.space ou http://capyplay.fun, nunca outro endereço.",
+    "Ao falar de cobrança, diga sempre o mínimo de 10 créditos (R$ 35) junto com o uso.",
+    "Se o teste não abrir, pergunte em qual passo travou, usando só os endereços do base.md."
+   ]
+  },
+  {
+   "id": "2026-11-09T17:59:38.196Z",
+   "gerado_em": "2026-11-09T17:59:38.196Z",
+   "janela": {
+    "inicio": "2026-11-09T15:59:38.196Z",
+    "fim": "2026-11-09T17:59:38.196Z"
+   },
+   "metricas": {
+    "mensagens_cliente": 42,
+    "respostas_robo": 45,
+    "followups": 1,
+    "followups_respondidos": 0,
+    "testes": 0,
+    "paineis_fechados": 3,
+    "passados_ao_senhor": 1,
+    "repeticoes_bloqueadas": 0,
+    "erros": 22
+   },
+   "resumo": "36 conversas no período: 42 mensagens de clientes e 45 respostas do robô.\nPediram: criar o painel, entender o pós-pago, pagar o acerto por pix, ajuda com o app e como vender com anúncios.\n3 painéis fechados (HD DIGITAL, F e Fs construção), nenhum teste gerado e 1 passado ao responsável (Ricardo).\nTravou em: perguntas repetidas, guia de TV fora de hora, explicação repetida e uma mensagem cortada no meio.\nPonto principal: a maioria dos follow-ups ficou sem resposta, e um follow-up falou de subrevenda sem o cliente pedir.",
+   "funcionou": [
+    "Fs construção: depois de dizer Concluído, o cliente recebeu na hora o link de entrar no painel.",
+    "Barbearia du Bispão: a explicação veio em 3 mensagens curtas e o link de criar o painel veio no fim, sem repetir.",
+    "Ivan Silva: o robô perguntou se o primeiro cliente foi cadastrado e respondeu curto quando ele disse que estava dando certo."
+   ],
+   "deu_errado": [
+    "F: o cliente disse 'Já criei' e 'Ja', mas o robô perguntou de novo se ele já tinha criado o painel, quatro vezes.",
+    "Ricardo: pediu a chave pix; o robô mandou o link de renovação e depois um guia de 6 cards sem relação com o pedido.",
+    "evandro castro: a primeira mensagem tinha três frases, passou do limite e saiu cortada em 'Pode '.",
+    "Solagratia: o follow-up mandou o link https://painel.capyplay.site/#/, que não está no base.md, e ofereceu criar o painel sem o cliente pedir.",
+    "Henrique e nataly: o follow-up falou de subrevenda sem a pessoa perguntar.",
+    "Fs construção: a explicação das 14:42 foi repetida quase igual às 14:43.",
+    "Fs construção: depois de Concluído, o robô mandou só o link de entrar e não passou suporte, pagamento, Telegram nem Escola.",
+    "reanálise pedida no relatório: mensagem interna sobre conversas sem resposta, sem resposta do robô e sem aviso ao responsável.",
+    "Números do período: dizem 1 follow-up e 0 respondidos, mas as conversas têm cerca de 24 follow-ups e pelo menos 3 respostas."
+   ],
+   "problemas": {
+    "respostas_repetidas": [
+     "Fs construção: explicação de 14:42 repetida quase igual em 14:43.",
+     "F: 'Não precisa mandar usuário' dito duas vezes e 'Que bom que já criou' dito duas vezes.",
+     "Ivan Silva: 'Que bom, mestre!' em 14:51 e 14:52."
+    ],
+    "perguntas_ja_respondidas": [
+     "F: 'Você já criou o seu painel?' perguntado de novo depois de o cliente responder 'Já criei' e 'Ja'."
+    ],
+    "cliente_sumiu": [
+     {
+      "nome": "Robson Carlos",
+      "depois_de": "Mestre, tudo bem? Se ficou alguma dúvida sobre os valores ou sobre criar o painel, me fala que eu te ajudo."
+     },
+     {
+      "nome": "Streaming",
+      "depois_de": "Mestre, conseguiu criar o seu painel? Se travou em alguma parte, me conta que eu te ajudo."
+     },
+     {
+      "nome": "🏞️🌅🌄",
+      "depois_de": "Ficou alguma dúvida sobre o acerto, mestre? Posso explicar de novo ou te mandar o caminho para abrir o painel."
+     },
+     {
+      "nome": "Cleytin",
+      "depois_de": "Mestre, sobre as condições da revenda, ficou alguma dúvida que eu possa tirar?"
+     },
+     {
+      "nome": "Armando Pinto",
+      "depois_de": "mestre, faz um tempo que a gente não se fala. Ficou alguma dúvida sobre as condições da CapyPlay?"
+     },
+     {
+      "nome": "D",
+      "depois_de": "Mestre, você conseguiu abrir o IBO Player com o usuário do teste?"
+     },
+     {
+      "nome": "Itv",
+      "depois_de": "Se ainda estiver pensando em criar o painel, mestre, posso tirar qualquer dúvida sobre o pagamento ou o cadastro dos clientes."
+     },
+     {
+      "nome": "juniormiguell",
+      "depois_de": "Mestre, o painel já vem com 500 créditos e você só paga o que usar, a R$ 3,50 por cliente. Quer uma ajuda para começar a revender?"
+     },
+     {
+      "nome": "play",
+      "depois_de": "Só lembrando, o painel já vem com 500 créditos e você paga só o que usar, no dia 5. Ainda quer ajuda para começar, mestre?"
+     },
+     {
+      "nome": "⛪️",
+      "depois_de": "Mestre, travou em algum passo do cadastro do painel? Se travou, me fala que eu te ajudo."
+     }
+    ],
+    "objecoes": [
+     "Sema: 'No momento não amigo, estou com 3 servidores'. Já tem fornecedor e não quer começar agora."
+    ],
+    "duvidas_nao_cobertas": [
+     "Qual é a chave pix para pagar o painel (Ricardo)."
+    ]
+   },
+   "inconsistencias": [
+    {
+     "tipo": "contradicao",
+     "titulo": "Subrevenda puxada sem pedido",
+     "exemplo": "Henrique e nataly, follow-up 13:32: 'Mestre, falando das suas revendas: dá para criar subrevendas... Posso explicar'. Ninguém tinha perguntado.",
+     "causa": "Follow-up genérico com texto fixo que fala de subrevenda.",
+     "regra": "Nunca fale de subrevenda ou do preço sugerido sem a pessoa perguntar, inclusive em follow-up."
+    },
+    {
+     "tipo": "contradicao",
+     "titulo": "Link fora da lista no follow-up",
+     "exemplo": "Solagratia, follow-up 13:19: o robô mandou https://painel.capyplay.site/#/, que não está no base.md, sem o cliente pedir.",
+     "causa": "Texto de follow-up escrito à mão, com link diferente do oficial.",
+     "regra": "Use só os links exatos do base.md e mande link de painel só quando a pessoa pedir ou já tiver concluído a etapa."
+    },
+    {
+     "tipo": "pergunta_mal_entendida",
+     "titulo": "Confirmou frase que não entendeu",
+     "exemplo": "F, 13:44, cliente: 'assim cresce o painel que avisasse você'. Robô: 'Isso mesmo, mestre. Quando criar o painel, me avisa por aqui.'",
+     "causa": "O robô confirmou sem entender a frase do cliente.",
+     "regra": "Se a frase do cliente não estiver clara, peça para repetir antes de confirmar."
+    },
+    {
+     "tipo": "repeticao",
+     "titulo": "Explicação repetida em um minuto",
+     "exemplo": "Fs construção, 14:42: explicação completa. 14:43: resumo quase igual, com pós-pago, 500 créditos, R$ 3,50 e mínimo de R$ 35.",
+     "causa": "O robô fez resumo sem o cliente pedir.",
+     "regra": "Não repita a explicação logo depois de dá-la; só resuma se a pessoa pedir."
+    },
+    {
+     "tipo": "repeticao",
+     "titulo": "Pergunta já respondida repetida",
+     "exemplo": "F: cliente disse 'Já criei' e 'Ja'. Robô perguntou 'Você já criou o seu painel?' em 13:38, 13:43, 13:44, 13:44 e 13:45.",
+     "causa": "O robô não considerou a última resposta antes de perguntar de novo.",
+     "regra": "Se a pessoa já respondeu, não repita a pergunta; siga para o próximo passo."
+    },
+    {
+     "tipo": "fora_de_hora",
+     "titulo": "Guia de TV no meio de pagamento",
+     "exemplo": "Ricardo, 13:41: pediu a chave pix e o robô mandou o link de renovação e depois o guia outras, com 6 cards.",
+     "causa": "Envio automático de guia junto com resposta de pagamento.",
+     "regra": "Não mande guia de app ou TV em conversa sobre pagamento."
+    },
+    {
+     "tipo": "contradicao",
+     "titulo": "Mensagem longa e cortada",
+     "exemplo": "evandro castro, 14:25: a primeira mensagem tem três frases, passa de 120 caracteres e termina em 'Pode '.",
+     "causa": "Mensagem montada com várias frases numa só.",
+     "regra": "Cada mensagem tem uma frase curta, de até 120 caracteres, e sempre completa."
+    }
+   ],
+   "perguntas_nao_cobertas": [
+    {
+     "pergunta": "Qual é a chave pix para pagar o painel? (Ricardo)",
+     "resposta_sugerida": "Mestre, a chave pix eu vou pedir para o responsável te mandar. Enquanto isso, pelo painel você gera o QR Code.",
+     "precisa_aprovacao": true
+    }
+   ],
+   "regras_novas": [
+    {
+     "regra": "Nunca fale de subrevenda ou preço sugerido em follow-up; só responda quando a pessoa perguntar.",
+     "status": "sugestao"
+    },
+    {
+     "regra": "Se a pessoa já respondeu se criou o painel, não pergunte de novo; siga para o próximo passo.",
+     "status": "aprovada"
+    },
+    {
+     "regra": "Se a frase do cliente não estiver clara, peça para repetir antes de confirmar qualquer coisa.",
+     "status": "aprovada"
+    },
+    {
+     "regra": "Não repita a explicação logo depois de dá-la; só resuma se a pessoa pedir.",
+     "status": "descartada"
+    },
+    {
+     "regra": "Em conversa sobre pagamento, não mande guia de app ou TV; responda o pagamento primeiro.",
+     "status": "sugestao"
+    },
+    {
+     "regra": "Nunca fale de subrevenda ou do preço sugerido sem a pessoa perguntar, inclusive em follow-up.",
+     "status": "sugestao"
+    },
+    {
+     "regra": "Use só os links exatos do base.md e mande link de painel só quando a pessoa pedir ou já tiver concluído a etapa.",
+     "status": "aprovada"
+    },
+    {
+     "regra": "Se a frase do cliente não estiver clara, peça para repetir antes de confirmar.",
+     "status": "aprovada"
+    },
+    {
+     "regra": "Não repita a explicação logo depois de dá-la; só resuma se a pessoa pedir.",
+     "status": "aprovada"
+    },
+    {
+     "regra": "Se a pessoa já respondeu, não repita a pergunta; siga para o próximo passo.",
+     "status": "descartada"
+    },
+    {
+     "regra": "Não mande guia de app ou TV em conversa sobre pagamento.",
+     "status": "sugestao"
+    },
+    {
+     "regra": "Cada mensagem tem uma frase curta, de até 120 caracteres, e sempre completa.",
+     "status": "descartada"
+    }
+   ],
+   "sugestoes_para_o_senhor": [
+    "Defina se a chave pix sai pelo robô ou só pelo responsável, porque hoje o robô não tem a chave.",
+    "Revise os follow-ups: a maioria ficou sem resposta. Diga se continuam, com que frequência e para quem.",
+    "Confirme o número de follow-ups do relatório (1), porque não bate com as conversas (cerca de 24).",
+    "Pergunta sem resposta no base.md: \"Qual é a chave pix para pagar o painel? (Ricardo)\" Sugestão (envolve preço, prazo ou política, só com a aprovação do senhor): Mestre, a chave pix eu vou pedir para o responsável te mandar. Enquanto isso, pelo painel você gera o QR Code.",
+    "Nunca fale de subrevenda ou preço sugerido em follow-up; só responda quando a pessoa perguntar.",
+    "Em conversa sobre pagamento, não mande guia de app ou TV; responda o pagamento primeiro.",
+    "Nunca fale de subrevenda ou do preço sugerido sem a pessoa perguntar, inclusive em follow-up.",
+    "Não mande guia de app ou TV em conversa sobre pagamento."
+   ]
+  },
+  {
+   "id": "2026-11-09T18:35:06.738Z",
+   "gerado_em": "2026-11-09T18:35:06.738Z",
+   "janela": {
+    "inicio": "2026-11-09T16:35:06.738Z",
+    "fim": "2026-11-09T18:35:06.738Z"
+   },
+   "metricas": {
+    "mensagens_cliente": 34,
+    "respostas_robo": 27,
+    "followups": 0,
+    "followups_respondidos": 0,
+    "testes": 0,
+    "paineis_fechados": 2,
+    "passados_ao_senhor": 1,
+    "repeticoes_bloqueadas": 0,
+    "erros": 0
+   },
+   "resumo": "Houve 34 mensagens de clientes e 26 conversas no período (13:35 às 15:35), com 27 respostas do robô.\nPediram criar o painel, entender como funciona a revenda, pagar o painel por PIX, anúncios e explicação de novo.\nDois painéis foram fechados (conversas F e Fs construção) e um pagamento foi passado ao responsável (Ricardo).\nTravou: o robô repetiu perguntas e explicações, e não houve resposta aos follow-ups enviados.\nPonto principal: o robô repetiu perguntas e explicações e respondeu fora do assunto em uma conversa, e falta a chave PIX para pagamento.",
+   "funcionou": [
+    "Conversa Fs construção: após 'Concluído', o robô mandou na hora o link de entrar no painel.",
+    "Conversa Marcus: a pergunta sobre anúncios foi respondida com o link da Escola do Revendedor, sem passar ao responsável.",
+    "Conversa Ricardo: o pedido de pagamento foi passado ao responsável, e o robô não inventou chave PIX.",
+    "Conversa F: o robô deixou claro que o cliente cria o próprio painel e não precisa mandar usuário."
+   ],
+   "deu_errado": [
+    "Ricardo: pediu a chave PIX para pagar; o robô passou ao responsável, mas também mandou um guia de 6 cards sem relação com pagamento.",
+    "F: disse 'Nome de gilliard' e 'pelo link se manda aqui um tainos'; o robô não entendeu e pediu de novo.",
+    "Ramirez Campari: perguntou 'Ice ou prensado?'; o robô respondeu com 4 mensagens fora do assunto, se disse assistente e chamou de parceirinho.",
+    "evandro castro: pediu para entender como funciona a revenda; o robô mandou o link antes de perguntar se a pessoa já revende."
+   ],
+   "problemas": {
+    "respostas_repetidas": [
+     "Conversa F: 'Você já criou o seu painel?' perguntado cinco vezes.",
+     "Conversa Fs construção: explicação do pós-pago e do mínimo repetida em duas mensagens seguidas.",
+     "Conversa Ivan Silva: 'Que bom, mestre!' enviado duas vezes seguidas."
+    ],
+    "perguntas_ja_respondidas": [
+     "Conversa F: depois de 'Ja', o robô perguntou de novo se a pessoa já tinha criado o painel."
+    ],
+    "cliente_sumiu": [
+     {
+      "nome": "Demitres",
+      "depois_de": "Mestre, deu certo a criação da conta? Se travou em algum campo, me conta onde que eu te ajudo."
+     },
+     {
+      "nome": "ALAN - PERSONAL TRAINER",
+      "depois_de": "mestre, deu tempo de criar o painel pelo link? Se travou em alguma parte, me conta onde."
+     },
+     {
+      "nome": "filho de Deus",
+      "depois_de": "Conseguiu dar uma olhada no teste de 6 horas, mestre? Se precisar de ajuda com o app no seu aparelho, é só falar comigo."
+     },
+     {
+      "nome": "online",
+      "depois_de": "Pensou em alguma coisa do painel ou do acerto, mestre? Posso te ajudar com isso."
+     },
+     {
+      "nome": "Léo",
+      "depois_de": "Mestre, deu para ver as condições da CapyPlay? Se quiser, eu explico alguma parte ou ajudo a criar seu painel."
+     },
+     {
+      "nome": "Rodrigo Aldrovani",
+      "depois_de": "Mestre, a gente pode seguir de onde parou: você já conseguiu criar o painel ou ficou alguma dúvida sobre as condições?"
+     },
+     {
+      "nome": "TOP SAT. ALEXANDRE TÉCNIc",
+      "depois_de": "Mestre, o último ponto que vimos foi como funciona o acerto e a criação do painel. Se quiser, posso tirar alguma dúvida sobre isso."
+     },
+     {
+      "nome": "Pedro Barbosa",
+      "depois_de": "Mestre, ainda dá para te ajudar com as condições da CapyPlay para revenda. Quer que eu te explique com calma?"
+     },
+     {
+      "nome": "pereira gois 042",
+      "depois_de": "Faz um tempo, mestre, e o painel ainda não ficou pronto. Quer que eu te ajude a criar passo a passo?"
+     },
+     {
+      "nome": "Solagratia",
+      "depois_de": "Quer que eu continue explicando a revenda ou prefere criar o painel agora?"
+     }
+    ],
+    "objecoes": [
+     "Conversa F: 'Abrir tem que mandar usuário pra vc'. O cliente achou que precisava mandar o usuário para alguém."
+    ],
+    "duvidas_nao_cobertas": [
+     "Qual a chave PIX para pagar o painel?",
+     "Perguntas fora do assunto, como 'Ice ou prensado?'."
+    ]
+   },
+   "inconsistencias": [
+    {
+     "tipo": "contradicao",
+     "titulo": "Robô disse que é assistente sem ser perguntado",
+     "exemplo": "Cliente: 'Ice ou prensado? ?'. Robô: 'Sou assistente, não uso nada disso' e 'nenhum dos dois, parceirinho'.",
+     "causa": "O robô respondeu uma pergunta fora do assunto com tom livre.",
+     "regra": "Não diga que é robô sem ser perguntado. Chame sempre de mestre e recuse assuntos fora da CapyPlay em uma frase."
+    },
+    {
+     "tipo": "contradicao",
+     "titulo": "Guia de TV enviado para pergunta de pagamento",
+     "exemplo": "Cliente: 'Gostaria de fazer o pagamento do painel'. Robô: mandou o guia 'outras', com 6 cards.",
+     "causa": "O robô usou guia de TV fora do caso de app que não aparece na TV.",
+     "regra": "Guia de TV só quando o app não aparece na TV. Pergunta de pagamento não leva guia."
+    },
+    {
+     "tipo": "repeticao",
+     "titulo": "Pergunta sobre o painel repetida",
+     "exemplo": "Cliente: 'Ja', 'Já criei'. Robô perguntou 'Você já criou o seu painel?' cinco vezes na mesma conversa.",
+     "causa": "O robô não registrou a resposta da pessoa.",
+     "regra": "Quando a pessoa disser que já fez a etapa, confirme uma vez e avance. Não pergunte de novo."
+    },
+    {
+     "tipo": "repeticao",
+     "titulo": "Explicação repetida em mensagens seguidas",
+     "exemplo": "Cliente: 'Explica de novo'. Robô (14:42) explicou pós-pago, créditos e mínimo. Robô (14:43) repetiu quase o mesmo texto com 'Vou resumir'.",
+     "causa": "O robô mandou o bloco inteiro de novo em vez de resumir.",
+     "regra": "Ao repetir uma explicação, diga em uma frase só o que muda. Não repita o bloco inteiro."
+    },
+    {
+     "tipo": "fora_de_hora",
+     "titulo": "Link do painel antes de saber se a pessoa já revende",
+     "exemplo": "Cliente: 'Quero começar a revender. Como funciona?'. Robô explicou preço, mínimo e acerto e mandou o link de criar na mesma resposta, sem perguntar se ela já revende.",
+     "causa": "O robô pulou o primeiro passo do roteiro.",
+     "regra": "Na primeira resposta, pergunte se a pessoa já trabalha com revenda antes de falar de preço ou mandar o link."
+    },
+    {
+     "tipo": "pergunta_mal_entendida",
+     "titulo": "Explicação citada sem ter sido dada",
+     "exemplo": "Cliente: 'boa tarde amigo'. Robô: 'Quer que eu continue explicando a revenda ou prefere criar o painel agora?'. Não havia explicação antes.",
+     "causa": "O robô presumiu um contexto que não existia na conversa.",
+     "regra": "Sem histórico na conversa, cumprimente e pergunte em que pode ajudar. Não cite explicação anterior."
+    }
+   ],
+   "perguntas_nao_cobertas": [
+    {
+     "pergunta": "Qual a chave PIX para pagar o painel?",
+     "resposta_sugerida": "Vou passar para o responsável te mandar a chave.",
+     "precisa_aprovacao": true
+    },
+    {
+     "pergunta": "Ice ou prensado?",
+     "resposta_sugerida": "Não sei responder isso, mestre. Posso te ajudar com a revenda ou com o painel.",
+     "precisa_aprovacao": false
+    }
+   ],
+   "regras_novas": [
+    {
+     "regra": "Quando a pessoa disser que já fez uma etapa, confirme uma vez e avance. Não pergunte de novo.",
+     "status": "aprovada"
+    },
+    {
+     "regra": "Ao pedirem para explicar de novo, responda em 2 frases curtas. Não repita o bloco inteiro.",
+     "status": "aprovada"
+    },
+    {
+     "regra": "Na primeira resposta sobre revenda, pergunte se a pessoa já trabalha com revenda antes de explicar preço.",
+     "status": "sugestao"
+    },
+    {
+     "regra": "Guia de TV só quando o app não aparece na TV. Pergunta de pagamento ou assunto fora do roteiro não leva guia.",
+     "status": "sugestao"
+    },
+    {
+     "regra": "Não diga que é robô sem ser perguntado. Chame sempre de mestre e recuse assunto fora da CapyPlay em uma frase.",
+     "status": "aprovada"
+    },
+    {
+     "regra": "Não diga que é robô sem ser perguntado. Chame sempre de mestre e recuse assuntos fora da CapyPlay em uma frase.",
+     "status": "aprovada"
+    },
+    {
+     "regra": "Guia de TV só quando o app não aparece na TV. Pergunta de pagamento não leva guia.",
+     "status": "sugestao"
+    },
+    {
+     "regra": "Quando a pessoa disser que já fez a etapa, confirme uma vez e avance. Não pergunte de novo.",
+     "status": "aprovada"
+    },
+    {
+     "regra": "Ao repetir uma explicação, diga em uma frase só o que muda. Não repita o bloco inteiro.",
+     "status": "descartada"
+    },
+    {
+     "regra": "Na primeira resposta, pergunte se a pessoa já trabalha com revenda antes de falar de preço ou mandar o link.",
+     "status": "sugestao"
+    },
+    {
+     "regra": "Sem histórico na conversa, cumprimente e pergunte em que pode ajudar. Não cite explicação anterior.",
+     "status": "descartada"
+    }
+   ],
+   "sugestoes_para_o_senhor": [
+    "Definir a chave PIX para pagamento, ou confirmar que todo pagamento segue pelo responsável.",
+    "Conferir o contador: diz 0 follow-ups, mas o log mostra cerca de 13 follow-ups enviados.",
+    "Decidir se os follow-ups de criação de painel continuam, já que nenhum foi respondido nesta janela.",
+    "Decidir se o robô deve responder assuntos fora da CapyPlay ou sempre passar ao responsável.",
+    "Pergunta sem resposta no base.md: \"Qual a chave PIX para pagar o painel?\" Sugestão (envolve preço, prazo ou política, só com a aprovação do senhor): Vou passar para o responsável te mandar a chave.",
+    "Pergunta sem resposta no base.md: \"Ice ou prensado?\" Sugestão: Não sei responder isso, mestre. Posso te ajudar com a revenda ou com o painel.",
+    "Na primeira resposta sobre revenda, pergunte se a pessoa já trabalha com revenda antes de explicar preço.",
+    "Guia de TV só quando o app não aparece na TV. Pergunta de pagamento ou assunto fora do roteiro não leva guia.",
+    "Guia de TV só quando o app não aparece na TV. Pergunta de pagamento não leva guia.",
+    "Na primeira resposta, pergunte se a pessoa já trabalha com revenda antes de falar de preço ou mandar o link."
+   ]
+  }
+ ],
+ "regras_ativas": [
+  {
+   "regra": "Quando a pessoa disser que já fez a etapa, confirme uma vez e avance. Não pergunte de novo.",
+   "desde": "2026-11-09T18:35:06.738Z"
+  },
+  {
+   "regra": "Não diga que é robô sem ser perguntado. Chame sempre de mestre e recuse assuntos fora da CapyPlay em uma frase.",
+   "desde": "2026-11-09T18:35:06.738Z"
+  },
+  {
+   "regra": "Ao pedirem para explicar de novo, responda em 2 frases curtas. Não repita o bloco inteiro.",
+   "desde": "2026-11-09T18:35:06.738Z"
+  },
+  {
+   "regra": "Use só os endereços e códigos que estão na base; nunca invente ou copie servidor de outra fonte.",
+   "desde": "2026-11-09T18:35:54.865Z",
+   "origem": "jogadas"
+  },
+  {
+   "regra": "Se a pessoa já criou o painel, mande só o link de entrar, nunca o de criar de novo.",
+   "desde": "2026-11-09T18:35:54.865Z",
+   "origem": "jogadas"
+  },
+  {
+   "regra": "Se a pessoa já disse que trabalha com revenda, não pergunte de novo: vá direto ao básico e ao link de criar.",
+   "desde": "2026-11-09T18:35:54.865Z",
+   "origem": "jogadas"
+  },
+  {
+   "regra": "[lacuna 5] Se perguntarem \"Qual servidor usar no painel?\", responda: Usamos servidor próprio, no painel Sigma.",
+   "desde": "2026-11-09T13:41:21.115Z",
+   "origem": "lacuna",
+   "lacuna": "L5"
+  },
+  {
+   "regra": "[lacuna 4] Se perguntarem \"Cliente diz que não achou banner de filmes e séries no grupo\", responda: Os banners de filmes e séries são postados com frequência no grupo e no Instagram https://www.instagram.com/capyplay.app/ , é só acompanhar. Se faltar algum, deixe o pedi…",
+   "desde": "2026-11-09T13:41:20.960Z",
+   "origem": "lacuna",
+   "lacuna": "L4"
+  },
+  {
+   "regra": "[lacuna 3] Se perguntarem \"Tem banner de filmes e séries ou só de jogos?\", responda: Tem sim, banners de filmes e séries. Saem no Telegram oficial https://t.me/capyplayoficial e no Instagram https://www.instagram.com/capyplay.app/ .",
+   "desde": "2026-11-09T13:41:20.808Z",
+   "origem": "lacuna",
+   "lacuna": "L3"
+  },
+  {
+   "regra": "[lacuna 2] Se perguntarem \"A CapyPlay é dona do servidor ou só revenda?\", responda: A CapyPlay é dona do servidor, não é só revenda. Usamos servidor próprio, no painel Sigma.",
+   "desde": "2026-11-09T13:41:20.710Z",
+   "origem": "lacuna",
+   "lacuna": "L2"
+  },
+  {
+   "regra": "[lacuna 1] Se perguntarem \"Funciona com pré-pago? Só trabalho com pré-pago.\", responda: Aqui é só pós-pago, não trabalhamos com pré-pago. Você não paga nada para começar e o painel já vai com 500 créditos. Só paga o que usou, R$ 3,50 por cliente, no dia 5.",
+   "desde": "2026-11-09T13:41:20.547Z",
+   "origem": "lacuna",
+   "lacuna": "L1"
+  },
+  {
+   "regra": "[lacuna 7] Se o cliente avisar que vai testar e depois passar os clientes para o painel, responda curto e simpático, deseje sucesso e diga que pode chamar se precisar, sem passar ao responsável.",
+   "desde": "2026-11-09T00:01:40.492Z",
+   "origem": "lacuna",
+   "lacuna": "L7"
+  },
+  {
+   "regra": "[lacuna 8] Se a pessoa mandar só risada (kkkkk) ou mensagem sem pergunta, responda uma frase curta e simpática, sem passar ao responsável e sem repetir o assunto anterior.",
+   "desde": "2026-11-09T00:00:45.942Z",
+   "origem": "lacuna",
+   "lacuna": "L8"
+  },
+  {
+   "regra": "Se a frase do cliente não estiver clara, peça para repetir antes de confirmar.",
+   "desde": "2026-11-09T17:59:38.196Z"
+  },
+  {
+   "regra": "Use só os links exatos do base.md e mande link de painel só quando a pessoa pedir ou já tiver concluído a etapa.",
+   "desde": "2026-11-09T17:59:38.196Z"
+  },
+  {
+   "regra": "Não repita a explicação logo depois de dá-la; só resuma se a pessoa pedir.",
+   "desde": "2026-11-09T17:59:38.196Z"
+  },
+  {
+   "regra": "Se a pessoa já respondeu se criou o painel, não pergunte de novo; siga para o próximo passo.",
+   "desde": "2026-11-09T17:59:38.196Z"
+  },
+  {
+   "regra": "Antes do link de criar, pergunte: 'Você já criou o seu painel?'. Quem já tem painel recebe só o link de entrar.",
+   "desde": "2026-11-09T15:52:17.134Z"
+  },
+  {
+   "regra": "Não repita a mesma despedida ou a mesma resposta na mesma conversa. Se já disse, encerre.",
+   "desde": "2026-11-09T15:52:17.134Z"
+  },
+  {
+   "regra": "Chame sempre de mestre, nunca de parceirinho, amigo ou outro apelido.",
+   "desde": "2026-11-09T15:52:17.134Z"
+  },
+  {
+   "regra": "Se a conversa fugir para gíria ou brincadeira, volte para a CapyPlay em uma frase e não entre no assunto.",
+   "desde": "2026-11-09T15:52:17.134Z"
+  },
+  {
+   "regra": "Nunca envie etiqueta interna nem texto de lacuna; escreva frase limpa e completa para o cliente.",
+   "desde": "2026-11-09T13:46:38.581Z"
+  },
+  {
+   "regra": "Um assunto por resposta: no fechamento, mande primeiro o link de entrar e espere a resposta antes do resto.",
+   "desde": "2026-11-09T13:46:38.581Z"
+  },
+  {
+   "regra": "Se a pessoa só cumprimentar, responda o oi e pergunte em que pode ajudar; não passe ao responsável.",
+   "desde": "2026-11-09T13:46:38.581Z"
+  },
+  {
+   "regra": "Ao receber e-mail do cadastro, diga que vai redefinir a senha e passe ao responsável com o motivo.",
+   "desde": "2026-11-09T13:46:38.581Z"
+  }
+ ]
+}

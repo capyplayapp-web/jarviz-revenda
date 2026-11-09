@@ -1,0 +1,88 @@
+{
+  "atual": "1.4.3",
+  "versoes": [
+    {
+      "versao": "1.4.3",
+      "data": "2026-11-09",
+      "titulo": "Voz do Jarvis no dashboard",
+      "mudancas": [
+        "Área Voz no topo do dashboard: Desligada, 1ª resposta (A/B) ou Todas as respostas em áudio",
+        "Enquanto a voz está ligada, o dashboard mede o uso e a temperatura do processador e a placa de vídeo, com gráfico de 10 min",
+        "Cada áudio gerado fica registrado com o tempo que levou (evento voz_gerada)",
+        "Voz trocada de Jucanalha para pretchia (VoiceStudio 07c54faf), pedido do senhor"
+      ],
+      "arquivos": [
+        "bot.js",
+        "relatorios/server.mjs",
+        "relatorios/voz-lib.mjs",
+        "relatorios/web/index.html",
+        "relatorios/web/voz.css",
+        "relatorios/web/voz.js"
+      ]
+    },
+    {
+      "versao": "1.4.2",
+      "data": "2026-11-09",
+      "titulo": "Parceirinhos no Sonnet",
+      "mudancas": [
+        "Ramirez Campari (2 números) e Espinhaço (Felipe Felix) são chamados de parceirinho",
+        "Respondidos pelo Sonnet, que lê todas as dúvidas, analisa e pode pesquisar na internet",
+        "Sem saudação de lead, sem áudio A/B e sem follow-up automático para eles"
+      ],
+      "arquivos": [
+        "bot.js"
+      ]
+    },
+    {
+      "versao": "1.4.1",
+      "data": "2026-11-09",
+      "titulo": "Lacunas L1 a L5 respondidas",
+      "mudancas": [
+        "Pré-pago: só pós-pago (resposta aprovada)",
+        "Servidor: a CapyPlay é dona do servidor; servidor próprio no painel Sigma; separado do servidor/DNS que vai no app",
+        "Banners de filme e série: postados com frequência no Telegram e no Instagram; se faltar, sugestão de melhoria no painel",
+        "Retornos de L3 e L4 juntados numa mensagem só para a mesma cliente",
+        "Acentos quebrados das respostas aprovadas corrigidos"
+      ],
+      "arquivos": [
+        "base.md",
+        "lacunas/estado.json",
+        "lacunas/regras-lacunas.json",
+        "lacunas/respostas-pendentes.json",
+        "relatorios/aprendizados.md"
+      ]
+    },
+    {
+      "versao": "1.4.0",
+      "data": "2026-11-09",
+      "titulo": "Decisões do senhor de 09/11",
+      "mudancas": [
+        "Apps gratuitos: Lotus e Ultramix grátis; IBO Player com 7 dias grátis e licença própria",
+        "Preço do cliente final: o revendedor define; recomendado R$ 35; tabela de lucro em imagem (guia tabela_lucro)",
+        "Subrevenda só quando perguntarem; tabela R$ 5, R$ 6 e R$ 7 em imagem (guia tabela_subrevenda)",
+        "Links separados: criar painel x entrar no painel (login em #/dashboard)",
+        "Manual do Revenda trocado pela Escola do Revendedor (escola.capyapp.net), também no funil",
+        "Banners e artes de filmes e séries: Telegram oficial e Instagram capyplay.app",
+        "E-mail já em uso ou painel com outro número: pede o e-mail e passa ao responsável para redefinir a senha"
+      ],
+      "arquivos": [
+        "base.md",
+        "funil/motor.js",
+        "D:/CAPY/Guias TV/guias.json",
+        "D:/CAPY/Guias TV/tabela_lucro/01.png",
+        "D:/CAPY/Guias TV/tabela_subrevenda/01.png"
+      ],
+      "revisao": {
+        "por": "ranger-revisor-codigo",
+        "data": "2026-11-09",
+        "veredito": "pode subir",
+        "correcoes": [
+          "base.md (passo 2 do roteiro): tirado 'ou na resposta seguinte' da regra da subrevenda, que contradizia 'nunca puxe o assunto sozinho'",
+          "relatorios/aprendizados.md e regras_ativas de relatorios/aprendizados.json: regra aprendida 'suporte junto com o Manual do Revenda' trocada por 'junto com a Escola do Revendedor' (ia no prompt do Haiku)",
+          "funil/testar-funil.mjs: teste da jornada passou a esperar o link novo #/dashboard (estava falhando com o link antigo sign-in)",
+          "cópias de segurança: *.antes-revisao"
+        ]
+      }
+    }
+  ]
+}

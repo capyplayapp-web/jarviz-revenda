@@ -1,0 +1,35 @@
+{
+ "gerado_em": "2026-11-08T18:06:30.048Z",
+ "periodo": {
+  "inicio": "2026-11-08T08:06:30.048Z",
+  "fim": "2026-11-08T18:06:30.048Z"
+ },
+ "kpis": {
+  "conversas_novas": 0,
+  "mensagens_recebidas": 0,
+  "respostas_robo": 0,
+  "paineis_fechados": 0,
+  "testes_gerados": 0,
+  "passados_ao_senhor": 0,
+  "followups_enviados": 0,
+  "followups_respondidos": 0,
+  "taxa_resposta_followup": null,
+  "tempo_medio_primeira_resposta_s": null
+ },
+ "followups": {
+  "por_etapa": [],
+  "recentes": []
+ },
+ "funil": [],
+ "paineis": [],
+ "conversas_ativas": [],
+ "ultimas_2h": null,
+ "horas": [],
+ "saude": {
+  "robo_ligado": false,
+  "processos_bot": 0,
+  "ultimo_evento": null,
+  "repeticoes_bloqueadas": null,
+  "erros": null
+ }
+}

@@ -1,0 +1,347 @@
+{
+ "gerado_em": "2026-11-08T18:06:30.048Z",
+ "periodo": {
+  "inicio": "2026-11-01T18:06:30.048Z",
+  "fim": "2026-11-08T18:06:30.048Z"
+ },
+ "kpis": {
+  "conversas_novas": 161,
+  "mensagens_recebidas": 1484,
+  "respostas_robo": 1316,
+  "paineis_fechados": 9,
+  "testes_gerados": 49,
+  "passados_ao_senhor": 6,
+  "followups_enviados": 301,
+  "followups_respondidos": 98,
+  "taxa_resposta_followup": 0.33,
+  "tempo_medio_primeira_resposta_s": 14
+ },
+ "followups": {
+  "por_etapa": [
+   {
+    "n": 1,
+    "minutos": 7,
+    "enviados": 126,
+    "respondidos": 49,
+    "taxa": 0.39,
+    "paineis_depois": 14
+   },
+   {
+    "n": 2,
+    "minutos": 20,
+    "enviados": 84,
+    "respondidos": 28,
+    "taxa": 0.33,
+    "paineis_depois": 7
+   },
+   {
+    "n": 3,
+    "minutos": 60,
+    "enviados": 56,
+    "respondidos": 14,
+    "taxa": 0.25,
+    "paineis_depois": 3
+   },
+   {
+    "n": 4,
+    "minutos": 180,
+    "enviados": 35,
+    "respondidos": 7,
+    "taxa": 0.2,
+    "paineis_depois": 0
+   }
+  ],
+  "recentes": [
+   {
+    "quando": "2026-11-08T18:00:30.048Z",
+    "nome": "Rafael Teixeira",
+    "n": 1,
+    "texto": "Oi! Conseguiu dar uma olhada no painel? Se ficou alguma dúvida no caminho, pode me falar.",
+    "respondeu": true,
+    "minutos_ate_resposta": 4
+   },
+   {
+    "quando": "2026-11-08T17:43:30.048Z",
+    "nome": "Camila Duarte",
+    "n": 1,
+    "texto": "Passando para ver se deu certo a criação do painel. Qualquer coisa me chama por aqui.",
+    "respondeu": false,
+    "minutos_ate_resposta": null
+   },
+   {
+    "quando": "2026-11-08T17:26:30.048Z",
+    "nome": "Bruno Albuquerque",
+    "n": 2,
+    "texto": "Ainda posso te ajudar a deixar o painel pronto hoje. Quer que eu explique o passo a passo de novo?",
+    "respondeu": true,
+    "minutos_ate_resposta": 12
+   },
+   {
+    "quando": "2026-11-08T17:09:30.048Z",
+    "nome": "Sandra Moreira",
+    "n": 1,
+    "texto": "Só para não deixar você sem resposta: o teste do painel continua disponível se quiser ver funcionando.",
+    "respondeu": false,
+    "minutos_ate_resposta": null
+   },
+   {
+    "quando": "2026-11-08T16:52:30.048Z",
+    "nome": "Tiago Brandão",
+    "n": 3,
+    "texto": "Oi! Conseguiu dar uma olhada no painel? Se ficou alguma dúvida no caminho, pode me falar.",
+    "respondeu": false,
+    "minutos_ate_resposta": null
+   },
+   {
+    "quando": "2026-11-08T16:35:30.048Z",
+    "nome": "Patrícia Lemos",
+    "n": 2,
+    "texto": "Passando para ver se deu certo a criação do painel. Qualquer coisa me chama por aqui.",
+    "respondeu": true,
+    "minutos_ate_resposta": 1
+   },
+   {
+    "quando": "2026-11-08T16:18:30.048Z",
+    "nome": "Éverton Sá",
+    "n": 4,
+    "texto": "Ainda posso te ajudar a deixar o painel pronto hoje. Quer que eu explique o passo a passo de novo?",
+    "respondeu": false,
+    "minutos_ate_resposta": null
+   },
+   {
+    "quando": "2026-11-08T16:01:30.048Z",
+    "nome": "Joana Pires",
+    "n": 1,
+    "texto": "Só para não deixar você sem resposta: o teste do painel continua disponível se quiser ver funcionando.",
+    "respondeu": true,
+    "minutos_ate_resposta": 31
+   },
+   {
+    "quando": "2026-11-08T15:44:30.048Z",
+    "nome": "Marcelo Nunes",
+    "n": 2,
+    "texto": "Oi! Conseguiu dar uma olhada no painel? Se ficou alguma dúvida no caminho, pode me falar.",
+    "respondeu": false,
+    "minutos_ate_resposta": null
+   }
+  ]
+ },
+ "funil": [
+  {
+   "etapa": "Entrou em contato",
+   "qtd": 161
+  },
+  {
+   "etapa": "Soube como funciona",
+   "qtd": 119
+  },
+  {
+   "etapa": "Recebeu o link do painel",
+   "qtd": 77
+  },
+  {
+   "etapa": "Criou o painel",
+   "qtd": 9
+  }
+ ],
+ "paineis": [
+  {
+   "quando": "2026-11-08T17:28:30.048Z",
+   "nome": "Rafael Teixeira",
+   "telefone": "5511970137913",
+   "usuario_painel": "rafael.teixeira.demo@exemplo.com",
+   "painel_id": "48213",
+   "origem": "robo"
+  },
+  {
+   "quando": "2026-11-08T16:05:30.048Z",
+   "nome": "Camila Duarte",
+   "telefone": "5511970275826",
+   "usuario_painel": "camila.duarte.demo@exemplo.com",
+   "painel_id": null,
+   "origem": "robo"
+  },
+  {
+   "quando": "2026-11-08T14:56:30.048Z",
+   "nome": "Bruno Albuquerque",
+   "telefone": "5511970413739",
+   "usuario_painel": "bruno.demo@exemplo.com",
+   "painel_id": "48177",
+   "origem": "senhor"
+  },
+  {
+   "quando": "2026-11-07T16:06:30.048Z",
+   "nome": "Sandra Moreira",
+   "telefone": "5511970551652",
+   "usuario_painel": null,
+   "painel_id": null,
+   "origem": "historico"
+  }
+ ],
+ "conversas_ativas": [
+  {
+   "nome": "Tiago Brandão",
+   "telefone": "5511970689565",
+   "etapa": "Recebeu o link do painel",
+   "ultimo_contato": "2026-11-08T18:02:30.048Z",
+   "followups_enviados": 1,
+   "quieto_ate": null,
+   "precisa_do_senhor": false
+  },
+  {
+   "nome": "Patrícia Lemos",
+   "telefone": "5511970827478",
+   "etapa": "Soube como funciona",
+   "ultimo_contato": "2026-11-08T17:44:30.048Z",
+   "followups_enviados": 2,
+   "quieto_ate": null,
+   "precisa_do_senhor": false
+  },
+  {
+   "nome": "Éverton Sá",
+   "telefone": "5511970965391",
+   "etapa": "Perguntou de suporte",
+   "ultimo_contato": "2026-11-08T17:57:30.048Z",
+   "followups_enviados": 0,
+   "quieto_ate": "2026-11-08T19:26:30.048Z",
+   "precisa_do_senhor": true
+  },
+  {
+   "nome": "Joana Pires",
+   "telefone": "5511971103304",
+   "etapa": "Entrou em contato",
+   "ultimo_contato": "2026-11-08T17:11:30.048Z",
+   "followups_enviados": 3,
+   "quieto_ate": null,
+   "precisa_do_senhor": false
+  },
+  {
+   "nome": "Marcelo Nunes",
+   "telefone": "5511971241217",
+   "etapa": "Recebeu o link do painel",
+   "ultimo_contato": "2026-11-08T15:56:30.048Z",
+   "followups_enviados": 1,
+   "quieto_ate": null,
+   "precisa_do_senhor": false
+  },
+  {
+   "nome": "Larissa Cunha",
+   "telefone": "5511971379130",
+   "etapa": "Soube como funciona",
+   "ultimo_contato": "2026-11-08T15:16:30.048Z",
+   "followups_enviados": 4,
+   "quieto_ate": null,
+   "precisa_do_senhor": false
+  }
+ ],
+ "ultimas_2h": {
+  "gerado_em": "2026-11-08T17:19:30.048Z",
+  "resumo": "Duas horas calmas, com a maior parte dos contatos vindo de anúncio. O robô respondeu rápido e levou três pessoas até o link do painel; uma criou na hora.",
+  "funcionou": [
+   "Explicar o acerto no dia 5 antes de mandar o link fez menos gente travar na dúvida do pagamento.",
+   "O primeiro follow-up em 7 minutos trouxe resposta de quase 4 em cada 10 pessoas.",
+   "Mandar o vídeo curto do painel junto do link reduziu perguntas de “como entro?”."
+  ],
+  "deu_errado": [
+   "Duas pessoas receberam o follow-up logo depois de dizer que voltavam à noite.",
+   "Um contato mandou áudio longo e a resposta ficou genérica."
+  ],
+  "regras_novas": [
+   "Se a pessoa avisa que volta mais tarde, esperar até o horário combinado antes do follow-up.",
+   "Em áudio longo, resumir o que entendeu antes de responder."
+  ],
+  "sugestoes_para_o_senhor": [
+   "Liberar um segundo vídeo (instalação na TV) para mandar quando perguntarem de aparelho?",
+   "Passar para o senhor quem pedir suporte técnico logo na primeira mensagem?"
+  ]
+ },
+ "horas": [
+  {
+   "hora": "06h",
+   "mensagens": 14,
+   "respostas": 11
+  },
+  {
+   "hora": "07h",
+   "mensagens": 42,
+   "respostas": 34
+  },
+  {
+   "hora": "08h",
+   "mensagens": 98,
+   "respostas": 78
+  },
+  {
+   "hora": "09h",
+   "mensagens": 182,
+   "respostas": 146
+  },
+  {
+   "hora": "10h",
+   "mensagens": 238,
+   "respostas": 190
+  },
+  {
+   "hora": "11h",
+   "mensagens": 203,
+   "respostas": 162
+  },
+  {
+   "hora": "12h",
+   "mensagens": 126,
+   "respostas": 101
+  },
+  {
+   "hora": "13h",
+   "mensagens": 217,
+   "respostas": 174
+  },
+  {
+   "hora": "14h",
+   "mensagens": 266,
+   "respostas": 213
+  },
+  {
+   "hora": "15h",
+   "mensagens": 231,
+   "respostas": 185
+  },
+  {
+   "hora": "16h",
+   "mensagens": 154,
+   "respostas": 123
+  },
+  {
+   "hora": "17h",
+   "mensagens": 119,
+   "respostas": 95
+  },
+  {
+   "hora": "18h",
+   "mensagens": 84,
+   "respostas": 67
+  },
+  {
+   "hora": "19h",
+   "mensagens": 63,
+   "respostas": 50
+  },
+  {
+   "hora": "20h",
+   "mensagens": 42,
+   "respostas": 34
+  },
+  {
+   "hora": "21h",
+   "mensagens": 21,
+   "respostas": 17
+  }
+ ],
+ "saude": {
+  "robo_ligado": true,
+  "processos_bot": 1,
+  "ultimo_evento": "2026-11-08T18:05:30.048Z",
+  "repeticoes_bloqueadas": 3,
+  "erros": 0
+ }
+}
