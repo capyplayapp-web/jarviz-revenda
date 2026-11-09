@@ -327,6 +327,7 @@ export default {
     if (url.protocol === 'http:') { url.protocol = 'https:'; return new Response(null, { status: 301, headers: { Location: url.toString(), 'X-Robots-Tag': 'noindex, nofollow' } }); }
     if (!env.SENHA || !env.SESSAO_SEGREDO || !env.SYNC_TOKEN) return json({ erro: 'não configurado' }, 503);
 
+    if (rota === '/favicon.ico') return seguranca(new Response(null, { status: 204 }), { cache: 'public, max-age=604800' });   // login não declara ícone: sem 404 no console
     if (rota === '/robots.txt') return seguranca(new Response('User-agent: *\nDisallow: /\n', { headers: { 'Content-Type': 'text/plain; charset=utf-8' } }));
     if (rota.startsWith('/sync/')) return sync(req, env, rota);
     if (rota === '/login') {
