@@ -223,10 +223,10 @@ window.funilKit = { h, ic, giro, trocar, num, int, lista, txt, pctTxt, plural, m
    ===================================================================== */
 const segFj = document.getElementById('seletor-fj');
 function irFj(v, { rolar = true } = {}) {
-  v = v === 'jornada' || v === 'trafego' ? v : 'funil';   /* Tráfego: terceira opção da aba (trafego.js) */
+  v = ['jornada', 'trafego', 'campanha'].includes(v) ? v : 'funil';   /* Tráfego (trafego.js) e Campanha (campanha.js): 3ª e 4ª opções da aba */
   appEl.dataset.fj = v;
   if (segFj) {
-    segFj.dataset.pos = v === 'jornada' ? '1' : v === 'trafego' ? '2' : '0';
+    segFj.dataset.pos = String(['funil', 'jornada', 'trafego', 'campanha'].indexOf(v));
     segFj.querySelectorAll('button').forEach(b => { const on = b.dataset.fj === v; b.setAttribute('aria-checked', String(on)); b.tabIndex = on ? 0 : -1; });
   }
   if (rolar) scrollTo(0, 0);
@@ -235,8 +235,8 @@ if (segFj) {
   segFj.addEventListener('click', ev => { const b = ev.target.closest('button[data-fj]'); if (b) irFj(b.dataset.fj); });
   segFj.addEventListener('keydown', ev => {
     if (!['ArrowRight', 'ArrowLeft', 'ArrowDown', 'ArrowUp'].includes(ev.key)) return;
-    ev.preventDefault(); const ordem = ['funil', 'jornada', 'trafego'], passo = ev.key === 'ArrowRight' || ev.key === 'ArrowDown' ? 1 : -1;
-    irFj(ordem[(ordem.indexOf(appEl.dataset.fj || 'funil') + passo + 3) % 3]); segFj.querySelector('[aria-checked="true"]').focus();
+    ev.preventDefault(); const ordem = ['funil', 'jornada', 'trafego', 'campanha'], passo = ev.key === 'ArrowRight' || ev.key === 'ArrowDown' ? 1 : -1;
+    irFj(ordem[(ordem.indexOf(appEl.dataset.fj || 'funil') + passo + 4) % 4]); segFj.querySelector('[aria-checked="true"]').focus();
   });
 }
 irFj(appEl.dataset.fj || 'funil', { rolar: false });
@@ -719,7 +719,7 @@ btLer.addEventListener('click', async ev => {
 });
 
 /* ---------- Visibilidade: só busca quando a tela está à mostra ---------- */
-function ver() { return MOVEL.matches ? appEl.dataset.aba === 'funil' && appEl.dataset.fj !== 'jornada' && appEl.dataset.fj !== 'trafego' : appEl.dataset.vista === 'funil'; }
+function ver() { return MOVEL.matches ? appEl.dataset.aba === 'funil' && appEl.dataset.fj !== 'jornada' && appEl.dataset.fj !== 'trafego' && appEl.dataset.fj !== 'campanha' : appEl.dataset.vista === 'funil'; }
 function replay() { raiz.classList.remove('fk-ok'); cFunil.el.classList.remove('pronto'); void raiz.offsetWidth; requestAnimationFrame(() => { raiz.classList.add('fk-ok'); cFunil.el.classList.add('pronto'); }); }
 function checar() {
   const v = ver();

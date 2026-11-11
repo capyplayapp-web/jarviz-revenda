@@ -13,7 +13,7 @@ const erros = [], achados = [];
 (async () => {
   await new Promise(ok => srv.listen(0, '127.0.0.1', ok));
   const base = process.argv[2] || `http://127.0.0.1:${srv.address().port}/`;
-  const b = await puppeteer.launch({ executablePath: 'C:/Program Files/Google/Chrome/Application/chrome.exe', headless: 'new' });
+  const b = await puppeteer.launch({ executablePath: 'C:/Program Files (x86)/Microsoft/Edge/Application/msedge.exe', headless: 'new' });
   const abrir = async (nome, w, hgt, query, { reduzido } = {}) => {
     const p = await b.newPage();
     await p.setViewport({ width: w, height: hgt, deviceScaleFactor: 2, isMobile: true, hasTouch: true });

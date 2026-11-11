@@ -42,7 +42,12 @@ const CAT_ELEGIVEIS = ['testando', 'interessado_sem_painel', 'duvida_aberta', 's
 const ETAPAS = ['primeiro_contato', 'explicando', 'duvidas', 'criando_painel', 'painel_criado', 'testando', 'cliente_ativo', 'parado'];
 const ETAPAS_BLOQ = ['painel_criado', 'encerrado', 'fechado'];
 const PALAVRAS_COMUNS = new Set(['mestre', 'painel', 'iptv', 'box', 'revenda', 'capyplay', 'capy', 'oficial', 'suporte', 'teste', 'lead', 'dos', 'das', 'the', 'and', 'tvs', 'cliente', 'clientes', 'loja', 'store', 'whatsapp', 'app', 'apps']);
-const ENCERRA = /^\s*(ok|okay|blz|beleza|valeu|vlw|obrigad[oa]?|brigad[oa]?|show|certo|top|tmj|entendi|combinado|fechou|perfeito|isso|de nada|tudo bem|tranquilo|bom dia|boa tarde|boa noite|👍|🙏)[\s.!,👍🙏😊]*$/i;  // igual ao relatorios\lib.mjs
+const ENCERRA_RX = /^\s*(ok|okay|blz|beleza|valeu|vlw|obrigad[oa]?|brigad[oa]?|show|certo|top|tmj|entendi|combinado|fechou|perfeito|isso|de nada|tudo bem|tranquilo|bom dia|boa tarde|boa noite|👍|🙏)[\s.!,👍🙏😊]*$/i;
+// 10/11/2026 (pedido do senhor): cliente que só concorda, agradece ou promete ("fecho mano", "vou tentar", "tranquilo", "vo fazer") NÃO recebe resposta nem cobrança logo depois.
+const FECHA_FRASE = /\b(ok|okay|blz|beleza|valeu|vlw|obrigad[oa]?|brigad[oa]?|show|certo|top|tmj|entendi|combinado|fechou|fecho|perfeito|tranquilo|rlx|relaxa|jazin|j[aá]zin|vou (fazer|tentar|ver|olhar|verificar|testar|criar|cadastrar|resolver|ligar|ajeitar)|vo fazer|depois (eu )?(te )?(falo|chamo|aviso|retorno|volto)|j[aá] (te )?(aviso|chamo|falo|volto)|te (aviso|chamo|falo)|s[oó] terminar|na loja)\b/i;
+const FECHA_PROBLEMA = /\b(n[aã]o|erro|problema|travou|d[uú]vida|como|quanto|quando|onde|qual|quais|preciso|quero|pre[cç]o|pix|pagar|pagamento|link|senha|ajuda|cancel\w*)\b/i;
+const OCUPADO = /(no servi[cç]o|trabalhando|sem tempo|ocupad[oa]|mais tarde|depois eu|no monitoramento|no trabalho|estou na loja|na loja|no plant[aã]o|dirigindo|em reuni[aã]o|agora n[aã]o|outra hora|amanh[aã] eu)/i;
+const ENCERRA = { test(s) { s = String(s || '').trim(); if (!s) return false; if (ENCERRA_RX.test(s)) return true; if (!s.includes('?') && s.split(/\s+/).length <= 14 && OCUPADO.test(s)) return true; if (s.includes('?') || FECHA_PROBLEMA.test(s)) return false; return s.split(/\s+/).length <= 9 && FECHA_FRASE.test(s); } };
 const NOSSO_NOME =/\s·\s(painel(\s\d+)?|lead|teste|suporte)$/;
 
 // ---------- utilidades ----------

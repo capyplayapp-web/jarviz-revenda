@@ -318,6 +318,249 @@
     "Pergunta nova: \"Como migrar os clientes de outro servidor para cá?\" Sugestão: Para migrar, comece pela Escola do Revendedor. Se travar em alguma etapa, me conta qual.",
     "Pergunta nova: \"Tem desconto para quem usa muitas telas?\" Sugestão (envolve preço, prazo ou política: só com a aprovação do senhor): Vou passar para o responsável ver essa condição para você."
    ]
+  },
+  {
+   "gerado_em": "2026-11-10T00:02:08.483Z",
+   "modelo": "haiku",
+   "custo_usd": 0.0122,
+   "custo_medido": true,
+   "conversas": 55,
+   "criaram": 16,
+   "resumo": "Dos 55 atendimentos de hoje, 16 criaram o painel, e quem criou foi quem recebeu uma explicação curta e o link de criar sem muita volta. Quem esfriou ficou com dúvidas de pagamento, migração, subrevenda e acesso, que o robô passou ao responsável sem resposta rápida.",
+   "padroes_que_fecharam": [
+    "Quem chega com 'quero começar' e recebe um resumo curto (pós-pago, painel com créditos, valor por cliente, acerto no dia 5) costuma criar o painel.",
+    "Quem já revende e pede as condições também cria quando recebe o resumo seguido do link de criar.",
+    "Quem pediu teste, recebeu o acesso e depois criou o painel mostra que o teste ajuda a converter.",
+    "Quem disse que não conseguia entrar no painel voltou a acessar quando recebeu o link de entrar.",
+    "Filme não abre e canal abre: reiniciar o modem e trocar o DNS resolveu em dois casos.",
+    "Depois de criar, o link de entrar, o suporte e o pagamento pelo painel fecharam bem as conversas."
+   ],
+   "padroes_que_esfriaram": [
+    "Quem recebe o link de criar e some: follow-ups seguidos sem resposta não trazem a pessoa de volta.",
+    "Dúvidas simples (pré-pago, migração, subrevenda) indo direto ao responsável fazem a conversa parar.",
+    "Quem quer pagar antes e pede chave pix esfria, porque o robô não tem essa informação.",
+    "Quem não acha o app na TV Samsung e não recebe o passo a passo certo desiste.",
+    "Quem tem erro de painel (não existe, venceu, e-mail em uso) e espera o responsável costuma sumir.",
+    "Mensagens com várias ideias de uma vez, ou com 'irmão', 'amigo' e desculpas, deixam o atendimento frio."
+   ],
+   "objecoes": [
+    {
+     "objecao": "Quanto sai o ativo, quanto custa por cliente?",
+     "melhor_resposta": "Cada cliente, ou seja cada tela, custa R$ 3,50 por mês. Quem usa menos de 10 paga o mínimo de R$ 35.",
+     "vezes": 3
+    },
+    {
+     "objecao": "O mínimo é 10 créditos ou dá para começar com menos?",
+     "melhor_resposta": "Mínimo de 10 créditos no pós-pago. Só paga dia 05/12.",
+     "vezes": 2
+    },
+    {
+     "objecao": "Preciso fazer recarga antes de começar?",
+     "melhor_resposta": "Não precisa recarregar agora. O painel já vem com 500 créditos e você paga só o que usar no dia 5 do mês seguinte.",
+     "vezes": 1
+    },
+    {
+     "objecao": "Trabalha com pré-pago?",
+     "melhor_resposta": "Não trabalhamos com pré-pago. Aqui é pós-pago: você não paga nada para começar e o painel já vai com 500 créditos.",
+     "vezes": 1
+    },
+    {
+     "objecao": "Quero abrir painel para meus revendedores (subrevenda).",
+     "melhor_resposta": "Dá sim: você cria subrevendas e vende conexões. O preço sugerido é de pelo menos R$ 5,00 por conexão, e cada um define o seu.",
+     "vezes": 1
+    },
+    {
+     "objecao": "Migração de clientes é gratuita? Com quem falo sobre valores?",
+     "melhor_resposta": "Essa parte é com o responsável. Já vou passar para ele te responder.",
+     "vezes": 1
+    },
+    {
+     "objecao": "Tem material de divulgação, banner ou arte de filme?",
+     "melhor_resposta": "Tem sim. Banners e vídeos saem todo dia no Telegram oficial e no Instagram da CapyPlay, e você pode baixar para divulgar.",
+     "vezes": 3
+    },
+    {
+     "objecao": "Como faço anúncio para vender?",
+     "melhor_resposta": "A Escola do Revendedor tem as aulas, e quem termina ganha uma campanha de anúncios feita por nós.",
+     "vezes": 1
+    }
+   ],
+   "perguntas_novas": [
+    {
+     "pergunta": "A migração de clientes de outro servidor para o painel é grátis?",
+     "resposta_sugerida": "Essa parte é com o responsável. Já vou passar para ele te responder.",
+     "precisa_aprovacao": true
+    },
+    {
+     "pergunta": "Qual é a chave pix para pagar o painel?",
+     "resposta_sugerida": "Pelo painel, na renovação, sai o QR Code para pagar. Pode pagar antes do dia 5.",
+     "precisa_aprovacao": true
+    },
+    {
+     "pergunta": "O painel venceu ou não existe, o que eu faço?",
+     "resposta_sugerida": "Me passa o e-mail usado no cadastro e já passo para o responsável resolver.",
+     "precisa_aprovacao": true
+    },
+    {
+     "pergunta": "Onde acho o app Zuxoplay?",
+     "resposta_sugerida": "Esse app não está na minha lista. Já vou passar para o responsável te ajudar.",
+     "precisa_aprovacao": false
+    }
+   ],
+   "regras_aprovadas": [
+    "Chame a pessoa sempre de mestre; nunca use irmão, amigo ou garoto.",
+    "Responda primeiro a pergunta feita, em frases curtas, e só depois volte ao passo do roteiro.",
+    "Mande o link do painel sozinho, na última mensagem da resposta.",
+    "Antes de mandar link de criar, confirme se a pessoa já tem painel.",
+    "Não mande follow-ups em sequência para quem não respondeu; um lembrete basta."
+   ],
+   "sugestoes_para_o_senhor": [
+    "Definir se a migração de clientes de outro servidor é grátis e qual o valor; duas conversas perguntaram e o robô passou.",
+    "Criar um texto oficial de subrevenda com o passo a passo; pessoas pedem e ficam paradas.",
+    "O robô mandou um link de entrar com sign-in que não está na base para quem não conseguia acessar; confirmar se esse link é válido e entrar na lista oficial.",
+    "O teste de hoje saiu com o servidor spar.lat por engano e depois foi corrigido; tirar esse endereço dos modelos de teste.",
+    "Pessoa pediu o app Zuxoplay e ele não está na base; avaliar incluir ou não.",
+    "Definir se o robô pode informar forma de pagamento além do QR Code, porque hoje não há chave pix na base.",
+    "Muitos receberam o link e sumiram; avaliar se vale um lembrete no dia seguinte (decisão de política).",
+    "Painéis que aparecem como não existe ou venceu voltaram hoje; vale checar o problema no sistema do painel.",
+    "Pergunta sobre pré-pago: responda você mesmo, sem passar ao responsável.",
+    "Pergunta nova: \"A migração de clientes de outro servidor para o painel é grátis?\" Sugestão (envolve preço, prazo ou política: só com a aprovação do senhor): Essa parte é com o responsável. Já vou passar para ele te responder.",
+    "Pergunta nova: \"Qual é a chave pix para pagar o painel?\" Sugestão (envolve preço, prazo ou política: só com a aprovação do senhor): Pelo painel, na renovação, sai o QR Code para pagar. Pode pagar antes do dia 5.",
+    "Pergunta nova: \"O painel venceu ou não existe, o que eu faço?\" Sugestão (envolve preço, prazo ou política: só com a aprovação do senhor): Me passa o e-mail usado no cadastro e já passo para o responsável resolver."
+   ]
+  },
+  {
+   "gerado_em": "2026-11-11T00:01:52.519Z",
+   "modelo": "haiku",
+   "custo_usd": 0.0124,
+   "custo_medido": true,
+   "conversas": 32,
+   "criaram": 12,
+   "resumo": "O dia teve 32 conversas e 12 criaram painel. Quem fechou perguntou como funciona, recebeu explicação curta com o link de criar e avançou quando recebeu o app certo para o aparelho dele; quem esfriou sumiu depois do link ou pediu app, migração e assuntos fora da base.",
+   "padroes_que_fecharam": [
+    "Quem pergunta como funciona e recebe resposta curta com o link de criar na mesma mensagem tende a criar o painel.",
+    "Quem diz o aparelho (Samsung, Roku, Android, TV Box) e recebe o app certo com código e vídeo segue para o teste.",
+    "Quem recebe o guia com imagens da marca da TV volta e confirma que abriu.",
+    "Quem volta depois de um lembrete e diz que já criou fecha rápido com o link de entrar e o suporte.",
+    "Canais que abriam mas filmes não: a troca de DNS resolveu para quem seguiu o passo a passo.",
+    "Depois de criar o painel, perguntas sobre o app foram respondidas na mesma conversa quando estavam na base."
+   ],
+   "padroes_que_esfriaram": [
+    "Pessoa some depois do link de criar; vários lembretes seguidos do tipo 'ainda está por aí?' não trouxeram resposta.",
+    "Quem disse que estava no serviço, na loja ou na rua e que faria depois não voltou no mesmo dia.",
+    "Pedido de app que não está na base (Smarters, Cloud, Zuxo, IBO Player na TV) foi passado ao responsável e a conversa esfriou.",
+    "Migração de muitos clientes de outro painel pediu volume e prazo fora do roteiro e ficou parada esperando o responsável.",
+    "Recebeu teste mas não conseguiu instalar o app e parou em 'não consigo baixar'.",
+    "Muitos áudios seguidos sem texto travaram a conversa, porque o robô não entende áudio.",
+    "Revendedor sem permissão para criar acesso ou com e-mail já em uso ficou dias esperando retorno.",
+    "Tela branca sem print enviado: a pessoa desistiu antes de mostrar a tela."
+   ],
+   "objecoes": [
+    {
+     "objecao": "Quero revender, como funciona? Quanto custa?",
+     "melhor_resposta": "Aqui é pós-pago: sem taxa para abrir o painel e com 500 créditos. Cada crédito é R$ 3,50 e vale uma tela. Pode criar seu painel pelo link e me avisa.",
+     "vezes": 6
+    },
+    {
+     "objecao": "Tem mínimo? Dá para começar com menos?",
+     "melhor_resposta": "Mínimo de 10 créditos no pós-pago, R$ 35. Só paga no dia 05 do mês seguinte, e o primeiro é 05/12.",
+     "vezes": 4
+    },
+    {
+     "objecao": "Quero trazer meus clientes de outro painel para cá",
+     "melhor_resposta": "Vou passar para o responsável, ele te explica a migração e te responde por aqui.",
+     "vezes": 3
+    },
+    {
+     "objecao": "Qual app uso na minha TV ou aparelho?",
+     "melhor_resposta": "Em qual aparelho você vai usar: TV, TV Box, celular ou computador? Te mando o app certo com o código.",
+     "vezes": 5
+    },
+    {
+     "objecao": "Só pega canal, filme não abre ou fica carregando",
+     "melhor_resposta": "Isso costuma ser o DNS da internet da casa. Vou te mandar um passo a passo com imagens para trocar o DNS.",
+     "vezes": 3
+    },
+    {
+     "objecao": "Não entra, fica tela branca",
+     "melhor_resposta": "Me manda um print da tela para eu ver o que está acontecendo?",
+     "vezes": 2
+    },
+    {
+     "objecao": "Estou no serviço ou sem tempo agora",
+     "melhor_resposta": "Tranquilo, mestre. Quando puder, me avisa.",
+     "vezes": 3
+    },
+    {
+     "objecao": "Já tenho outros servidores e não quero agora",
+     "melhor_resposta": "Tranquilo, mestre. Se mudar de ideia, é só me chamar.",
+     "vezes": 1
+    }
+   ],
+   "perguntas_novas": [
+    {
+     "pergunta": "O servidor aceita listas ou clientes de outro painel?",
+     "resposta_sugerida": "Certo, mestre. Vou passar para o responsável, ele te responde por aqui.",
+     "precisa_aprovacao": true
+    },
+    {
+     "pergunta": "Pode migrar 300 ou mais clientes de uma vez?",
+     "resposta_sugerida": "Vou passar para o responsável, que cuida da migração e te responde em instantes.",
+     "precisa_aprovacao": true
+    },
+    {
+     "pergunta": "Posso pagar o acerto no dia 10?",
+     "resposta_sugerida": "O acerto é sempre dia 5, mas pode pagar antes pela renovação do painel.",
+     "precisa_aprovacao": true
+    },
+    {
+     "pergunta": "O app IBO Player funciona na Smart TV?",
+     "resposta_sugerida": "O IBO Player é para iPhone e iPad. Para a TV, vou passar para o responsável.",
+     "precisa_aprovacao": false
+    },
+    {
+     "pergunta": "O app IPTV Smarters Pro funciona com o servidor?",
+     "resposta_sugerida": "Certo, mestre. Vou passar para o responsável, ele te responde em instantes.",
+     "precisa_aprovacao": false
+    },
+    {
+     "pergunta": "O app Cloud funciona com as listas?",
+     "resposta_sugerida": "Essa informação eu não tenho aqui, mestre. Vou passar para o responsável.",
+     "precisa_aprovacao": false
+    },
+    {
+     "pergunta": "Vocês têm parceria com a Zuxo?",
+     "resposta_sugerida": "Essa parte eu não tenho aqui, mestre. Vou passar para o responsável.",
+     "precisa_aprovacao": true
+    },
+    {
+     "pergunta": "Tem o UniTV para instalar?",
+     "resposta_sugerida": "Tem sim, mestre. No Downloader, use o código 7028925 para UniTV Capy.",
+     "precisa_aprovacao": false
+    }
+   ],
+   "regras_aprovadas": [
+    "Quando a pessoa perguntar como funciona, responda curto e mande o link de criar na mesma resposta, sem esperar outra mensagem.",
+    "Antes de mandar guia ou app, pergunte o aparelho em uma frase curta.",
+    "Quando a pessoa disser que está sem tempo, responda com uma frase de compreensão e não faça nova pergunta.",
+    "Depois do link de criar, mande no máximo um lembrete curto e espere a resposta.",
+    "Não use 'ainda está por aí?' nem outros lembretes genéricos; pergunte só sobre o passo em que a pessoa parou.",
+    "Varie a abertura das mensagens e não repita 'Boa, mestre!' em toda resposta."
+   ],
+   "sugestoes_para_o_senhor": [
+    "Os testes de 3 conversas enviaram o servidor http://spar.lat, que não está no base.md (a base manda capyplay.space e capyplay.fun). Confirme se spar.lat é válido ou troque.",
+    "Migração de 300 ou mais clientes apareceu em uma conversa e o cliente pediu acerto no dia 10. Defina a regra de volume, de prazo e do passo a passo de migração (o robô mandou 'até 100 por vez').",
+    "Pedidos de app fora da base (Smarters Pro, Cloud, IBO Player na TV, Zuxo) foram passados ao responsável. Decida se entram na base e defina o que responder.",
+    "O robô disse 'com R$ 20 por cliente, cada um ainda sobra' numa conversa. O base.md não tem esse valor de referência; confirme se pode ficar.",
+    "Revendedor disse que não tinha permissão para criar acesso de cliente, e outro ficou dias esperando a redefinição de senha. Verifique as permissões da conta e dê um prazo de retorno ao responsável.",
+    "Uma mensagem de cliente tinha texto que parece instrução interna ('Toda vez que uma pessoa chegar com uma dúvida...') e várias conversas têm 'o senhor escreveu' sem resposta. Veja se alguém da equipe está usando um número de cliente.",
+    "Um menu automático de outra loja IPTV (Cine Play) entrou no atendimento. Vale uma lista de números a ignorar.",
+    "Conversas com 10 ou mais áudios seguidos sem texto travaram. Vale definir uma resposta padrão pedindo texto.",
+    "Pergunta nova: \"O servidor aceita listas ou clientes de outro painel?\" Sugestão (envolve preço, prazo ou política: só com a aprovação do senhor): Certo, mestre. Vou passar para o responsável, ele te responde por aqui.",
+    "Pergunta nova: \"Pode migrar 300 ou mais clientes de uma vez?\" Sugestão (envolve preço, prazo ou política: só com a aprovação do senhor): Vou passar para o responsável, que cuida da migração e te responde em instantes.",
+    "Pergunta nova: \"Posso pagar o acerto no dia 10?\" Sugestão (envolve preço, prazo ou política: só com a aprovação do senhor): O acerto é sempre dia 5, mas pode pagar antes pela renovação do painel.",
+    "Pergunta nova: \"O app IBO Player funciona na Smart TV?\" Sugestão: O IBO Player é para iPhone e iPad. Para a TV, vou passar para o responsável."
+   ]
   }
  ]
 }

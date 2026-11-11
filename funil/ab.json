@@ -1,144 +1,144 @@
 {
- "atualizado_em": "2026-11-09T18:47:27.678Z",
+ "atualizado_em": "2026-11-11T05:34:15.637Z",
  "decisoes": {
   "cad_ajuda": {
    "A": {
-    "n": 2,
-    "k": 2,
-    "p": 0,
-    "pendentes": 4,
-    "taxa": 1,
+    "n": 8,
+    "k": 5,
+    "p": 3,
+    "pendentes": 6,
+    "taxa": 0.625,
     "ic": [
-     0.3423719528896193,
-     1
+     0.3057378545838018,
+     0.863158240538479
     ]
    },
    "B": {
-    "n": 3,
-    "k": 3,
-    "p": 1,
-    "pendentes": 4,
-    "taxa": 1,
+    "n": 9,
+    "k": 8,
+    "p": 3,
+    "pendentes": 8,
+    "taxa": 0.8888888888888888,
     "ic": [
-     0.4384939195509822,
-     1
+     0.5649937852319398,
+     0.9801096286728695
     ]
    },
    "amostra_minima": 30,
    "decisao": "amostra_pequena",
-   "texto": "Amostra pequena (A 2, B 3; mínimo 30 cada). Sem vencedor.",
+   "texto": "Amostra pequena (A 8, B 9; mínimo 30 cada). Sem vencedor.",
    "paineis": {
-    "A": 0,
-    "B": 1
+    "A": 3,
+    "B": 3
    },
    "pendentes": {
-    "A": 4,
-    "B": 4
+    "A": 6,
+    "B": 8
    }
   },
   "vivo1": {
    "A": {
-    "n": 10,
-    "k": 10,
-    "p": 7,
+    "n": 34,
+    "k": 32,
+    "p": 19,
     "pendentes": 4,
-    "taxa": 1,
+    "taxa": 0.9411764705882353,
     "ic": [
-     0.7224598312333834,
-     1
+     0.8090606311053629,
+     0.9837176869361575
     ]
    },
    "B": {
-    "n": 11,
-    "k": 11,
-    "p": 6,
-    "pendentes": 5,
-    "taxa": 1,
+    "n": 26,
+    "k": 24,
+    "p": 12,
+    "pendentes": 6,
+    "taxa": 0.9230769230769231,
     "ic": [
-     0.7411599827511859,
-     1
+     0.7585805251948495,
+     0.9786453608166245
     ]
    },
    "amostra_minima": 30,
    "decisao": "amostra_pequena",
-   "texto": "Amostra pequena (A 10, B 11; mínimo 30 cada). Sem vencedor.",
+   "texto": "Amostra pequena (A 34, B 26; mínimo 30 cada). Sem vencedor.",
    "paineis": {
-    "A": 7,
-    "B": 6
+    "A": 19,
+    "B": 12
    },
    "pendentes": {
     "A": 4,
-    "B": 5
+    "B": 6
    }
   },
   "vivo2": {
    "A": {
-    "n": 0,
-    "k": 0,
-    "p": 0,
+    "n": 6,
+    "k": 5,
+    "p": 4,
     "pendentes": 3,
-    "taxa": 0,
+    "taxa": 0.8333333333333334,
     "ic": [
-     0,
-     0
+     0.4364905634363539,
+     0.9699474141282696
     ]
    },
    "B": {
-    "n": 1,
-    "k": 1,
-    "p": 1,
-    "pendentes": 3,
-    "taxa": 1,
+    "n": 7,
+    "k": 6,
+    "p": 4,
+    "pendentes": 2,
+    "taxa": 0.8571428571428571,
     "ic": [
-     0.20654329147389294,
-     1
+     0.4868654966809702,
+     0.9743210440510253
     ]
    },
    "amostra_minima": 30,
    "decisao": "amostra_pequena",
-   "texto": "Amostra pequena (A 0, B 1; mínimo 30 cada). Sem vencedor.",
+   "texto": "Amostra pequena (A 6, B 7; mínimo 30 cada). Sem vencedor.",
    "paineis": {
-    "A": 0,
-    "B": 1
+    "A": 4,
+    "B": 4
    },
    "pendentes": {
     "A": 3,
-    "B": 3
+    "B": 2
    }
   },
   "vivo3": {
    "A": {
-    "n": 0,
-    "k": 0,
-    "p": 0,
-    "pendentes": 3,
-    "taxa": 0,
-    "ic": [
-     0,
-     0
-    ]
-   },
-   "B": {
-    "n": 0,
+    "n": 2,
     "k": 0,
     "p": 0,
     "pendentes": 1,
     "taxa": 0,
     "ic": [
      0,
-     0
+     0.6576280471103807
+    ]
+   },
+   "B": {
+    "n": 5,
+    "k": 5,
+    "p": 3,
+    "pendentes": 2,
+    "taxa": 1,
+    "ic": [
+     0.565508505247919,
+     1
     ]
    },
    "amostra_minima": 30,
    "decisao": "amostra_pequena",
-   "texto": "Amostra pequena (A 0, B 0; mínimo 30 cada). Sem vencedor.",
+   "texto": "Amostra pequena (A 2, B 5; mínimo 30 cada). Sem vencedor.",
    "paineis": {
     "A": 0,
-    "B": 0
+    "B": 3
    },
    "pendentes": {
-    "A": 3,
-    "B": 1
+    "A": 1,
+    "B": 2
    }
   },
   "cad_reaquecer": {
@@ -181,7 +181,7 @@
     "n": 0,
     "k": 0,
     "p": 0,
-    "pendentes": 0,
+    "pendentes": 4,
     "taxa": 0,
     "ic": [
      0,
@@ -189,10 +189,45 @@
     ]
    },
    "B": {
+    "n": 4,
+    "k": 4,
+    "p": 0,
+    "pendentes": 8,
+    "taxa": 1,
+    "ic": [
+     0.5100999795960008,
+     1
+    ]
+   },
+   "amostra_minima": 30,
+   "decisao": "amostra_pequena",
+   "texto": "Amostra pequena (A 0, B 4; mínimo 30 cada). Sem vencedor.",
+   "paineis": {
+    "A": 0,
+    "B": 0
+   },
+   "pendentes": {
+    "A": 4,
+    "B": 8
+   }
+  },
+  "cad_prova": {
+   "A": {
+    "n": 3,
+    "k": 3,
+    "p": 1,
+    "pendentes": 5,
+    "taxa": 1,
+    "ic": [
+     0.4384939195509822,
+     1
+    ]
+   },
+   "B": {
     "n": 1,
     "k": 1,
     "p": 0,
-    "pendentes": 3,
+    "pendentes": 7,
     "taxa": 1,
     "ic": [
      0.20654329147389294,
@@ -201,14 +236,14 @@
    },
    "amostra_minima": 30,
    "decisao": "amostra_pequena",
-   "texto": "Amostra pequena (A 0, B 1; mínimo 30 cada). Sem vencedor.",
+   "texto": "Amostra pequena (A 3, B 1; mínimo 30 cada). Sem vencedor.",
    "paineis": {
-    "A": 0,
+    "A": 1,
     "B": 0
    },
    "pendentes": {
-    "A": 0,
-    "B": 3
+    "A": 5,
+    "B": 7
    }
   }
  }

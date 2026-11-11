@@ -9,6 +9,7 @@ const fs = require('fs');
 const path = require('path');
 const N = require('./nucleo.js');
 const R = require('./releitura.js');   // 08/11: botão "Rodar releitura" (lê o WhatsApp, acha dúvida sem resposta e age)
+const CAN = require('./cancelados.js');   // 09/11: painéis cancelados (lê o WhatsApp dos desativados e o Haiku diz o motivo)
 
 const DIR = process.env.FUNIL_DIR || __dirname;                       // FUNIL_DIR/FUNIL_PASTA só nos testes
 const PASTA = process.env.FUNIL_PASTA || path.resolve(__dirname, '..');
@@ -306,13 +307,14 @@ async function vigia(ctx) {
 const ANGULO_TXT = {
   ajuda: {
     preco: 'AJUDA PRÁTICA sobre o valor: ele falou de preço. Faça a conta com ele usando SÓ os exemplos do base.md (20 clientes = R$ 70; menos de 10 clientes = mínimo de R$ 35) e diga que é pós-pago.',
-    sumiu_depois_do_link: 'AJUDA PRÁTICA para criar o painel: ele recebeu o link e não criou. Pergunte se travou em algum passo do cadastro e ofereça ajuda. Não mande o link de novo.',
+    sumiu_depois_do_link: 'AJUDA PRÁTICA para criar o painel: ele recebeu o link e não criou. Lembre, em uma frase, que abrir não custa nada (é pós-pago e o painel já vem com 500 créditos) e que o link continua logo acima na conversa. Pergunte em qual tela ele parou e diga que pode mandar um print que você ajuda. Não mande o link de novo e não cobre.',
     testando: 'AJUDA PRÁTICA sobre o teste: pergunte como foi o teste e se conseguiu abrir no aparelho.',
     sem_aparelho: 'AJUDA PRÁTICA: pergunte em qual aparelho os clientes dele assistem (TV, TV Box, celular ou computador) para indicar o app certo.',
     pergunta_aberta: 'RESPONDA a última pergunta dele que ficou sem resposta, usando só o base.md, e ofereça ajuda.',
     geral: 'AJUDA PRÁTICA: retome o ponto em que a conversa parou e ofereça ajuda para o próximo passo.',
   },
-  prova: 'PROVA COM CONTA: mostre com UM exemplo de conta do base.md como é simples começar (pós-pago, painel com 500 créditos, sem taxa para abrir; com 20 clientes paga R$ 70 só no dia 5). Use SÓ fatos do base.md: não invente números, casos, depoimentos, quantos revendedores existem nem resultados de outras pessoas.',
+  // 10/11/2026: a conta (20 clientes = R$ 70) só entra se ele falou de preço; senão a prova é a simplicidade (pós-pago, sem taxa, 500 créditos).
+  prova: 'PROVA DE SIMPLICIDADE: mostre como é fácil começar com UM fato do base.md (pós-pago, sem taxa para abrir, painel já vem com 500 créditos, só acerta no dia 5). Só dê exemplo de conta em reais (20 clientes = R$ 70) se a conversa mostrar que ele perguntou de preço ou valor. Use SÓ fatos do base.md: não invente números, casos, depoimentos, quantos revendedores existem nem resultados de outras pessoas.',
   beneficio: 'BENEFÍCIO: conte UM benefício concreto do base.md: no canal https://t.me/capyplayoficial saem banners e vídeos prontos para divulgar, e a Escola do Revendedor (https://escola.capyapp.net) dá uma campanha de anúncios de R$ 50 feita por nós para quem termina. No máximo um link.',
   porta: 'PORTA ABERTA (último toque): mensagem leve dizendo que não vai mais insistir e que, quando ele quiser começar, é só chamar aqui. Sem pressão e sem pergunta insistente.',
   reativacao: 'REATIVAÇÃO (um mês depois): pergunte, leve, se ele ainda pensa em revender.',
@@ -320,11 +322,11 @@ const ANGULO_TXT = {
 };
 const ESTILO = { A: 'Estilo A: UMA frase curta que termina com uma pergunta simples de sim ou não.', B: 'Estilo B: duas frases curtas: um fato útil do base.md e um convite aberto para ele responder.' };
 const JORNADA_TXT = {
-  checkin_d1: 'O revendedor criou o painel ontem. Pergunte se conseguiu cadastrar o primeiro cliente ou se ficou alguma dúvida.',
-  checkin_d3: 'Check-in amigo: pergunte se está tudo certo com o painel e como está indo.',
-  checkin_d7: 'Check-in de uma semana: pergunte como estão indo as vendas e se precisa de alguma ajuda.',
-  checkin: 'Check-in de rotina, leve: "tudo certo? como está indo?" com palavras suas.',
-  ajuda_sem_uso: 'O painel dele ainda não tem cliente cadastrado (dado do painel). Ofereça ajuda específica para cadastrar o primeiro cliente e indique a aula de cadastrar clientes da Escola do Revendedor (https://escola.capyapp.net). Não diga números.',
+  checkin_d1: 'O revendedor criou o painel ontem e ainda não vendeu. Dê UM passo para o primeiro cliente: criar no painel um teste para alguém de casa ou um amigo e deixar essa pessoa assistir na TV dela. Pergunte se ele já pensou em quem vai ser esse primeiro. Se a conversa ou o dado do painel mostrar que ele já cadastrou cliente, em vez disso sugira pegar um banner pronto no canal https://t.me/capyplayoficial para divulgar.',
+  checkin_d3: 'Três dias de painel. Dê UM passo para a primeira venda: pegar um banner ou vídeo pronto no canal https://t.me/capyplayoficial e mandar para 5 contatos no WhatsApp ou postar no status. Pergunte se ele já sabe para quem vai mandar. Use só esse link. Se a conversa mostrar que ele já divulgou, pergunte se alguém respondeu e ofereça ajuda para fechar.',
+  checkin_d7: 'Uma semana de painel. Pergunte, leve, se ele já fez a primeira venda. Se não fez, indique o caminho mais curto: as aulas da Escola do Revendedor (https://escola.capyapp.net), que ensinam do painel até a primeira venda, e conte que quem termina ganha uma campanha de anúncios feita por nós. Se o dado do painel mostrar cliente cadastrado, não fale da Escola: pergunte se esse cliente já pagou e se ele quer ajuda para achar o próximo.',
+  checkin: 'Check-in de rotina, leve. Se ele ainda não vendeu, sugira UM passo que ainda não apareceu na conversa, nesta ordem: teste no painel para alguém de casa; banner ou vídeo pronto do canal https://t.me/capyplayoficial para 5 contatos; aulas da Escola do Revendedor (https://escola.capyapp.net). Se ele já vende, pergunte se precisa de ajuda com algum cliente. No máximo um link.',
+  ajuda_sem_uso: 'O painel dele ainda não tem cliente cadastrado (dado do painel). Diga que o primeiro cliente pode ser alguém de casa: criar um teste no painel e ver funcionando na TV da pessoa. Indique a aula de cadastrar clientes da Escola do Revendedor (https://escola.capyapp.net) e pergunte em qual passo ele travou: entrar no painel, cadastrar o cliente ou instalar o app. Não diga números.',
   reconhecimento: 'O painel mostra que ele já está cadastrando clientes. Dê um reconhecimento curto (sem números) e pergunte como estão as vendas.',
   fechamento_vendas: 'Está chegando o fim do mês. Pergunte se ele conseguiu fazer vendas este mês. Não fale de valores nem de pagamento.',
   fechamento_pagamento: 'O acerto é no dia 5. Pergunte se ficou alguma dúvida sobre o pagamento e diga só que no dia 5 chega o link de pagamento com o valor dos créditos usados no mês. NÃO mande link de pagamento.',
@@ -350,7 +352,7 @@ function pedidoToque(item, ms, ficha) {
     'Responda no formato JSON pedido, com "mensagens" contendo só essa mensagem e os demais campos vazios ou falsos (sem teste, sem guia, sem vídeos, sem avisar).';
 }
 async function gerarTexto(ctx, item, ms, ficha, anteriores, aberturas) {
-  const baseMd = (() => { try { return fs.readFileSync(A.base, 'utf8'); } catch { return ''; } })();
+  const baseMd = (() => { try { const d = new Date(); const p = new Date(d.getFullYear(), d.getMonth() + 1, 5); return fs.readFileSync(A.base, 'utf8').replace(/05\/12/g, '05/' + String(p.getMonth() + 1).padStart(2, '0')); } catch { return ''; } })();
   const nomes = [item.nome, ficha.nome].filter(Boolean);
   let motivo = 'sem resposta do Haiku';
   const custo = E(ctx).custo || (E(ctx).custo = { dia: '', chamadas: 0 });
@@ -576,6 +578,7 @@ async function comandos(ctx) {
       if (falta) { const r = await tentarCriarEtiqueta(ctx, falta.nome, N.ETIQUETAS.indexOf(falta)); const i2 = lerJson(A.etiquetas, {}); i2.teste_criacao = { etiqueta: falta.nome, em: iso(Date.now()), ...r }; gravar(A.etiquetas, i2); logar(ctx, 'funil teste de criar etiqueta ' + falta.nome + ' - ' + JSON.stringify(r)); E(ctx).etiquetasIds = null; }
     } else if (c.acao === 'vigia') E(ctx).vigiaEm = 0;
     else if (c.acao === 'releitura') R.pedir(ctx, c);
+    else if (c.acao === 'cancelados') CAN.pedir(ctx, c);
   }
 }
 
@@ -583,6 +586,7 @@ async function comandos(ctx) {
 async function tick(ctx) {
   const est = E(ctx), agora = agoraDe(ctx), cfg = cfgDe();
   await comandos(ctx);
+  CAN.tick(ctx).catch(() => {});   // leitura dos painéis cancelados (uma por vez)
   R.tick(ctx).catch(() => {});   // ações da releitura, uma por vez (não segura o resto do motor)
   if (est.ocupado) return;
   est.ocupado = true;

@@ -14,7 +14,7 @@ const svg = (n) => `<svg xmlns="http://www.w3.org/2000/svg" width="${n}" height=
   <path stroke-width="24" d="M206 272V244M256 272V216M306 272V188"/>
 </g></svg>`;
 (async () => {
-  const b = await puppeteer.launch({ executablePath: 'C:/Program Files/Google/Chrome/Application/chrome.exe', headless: 'new' });
+  const b = await puppeteer.launch({ executablePath: 'C:/Program Files (x86)/Microsoft/Edge/Application/msedge.exe', headless: 'new' });
   for (const n of [180, 192, 512]) {
     const p = await b.newPage(); await p.setViewport({ width: n, height: n, deviceScaleFactor: 1 });
     await p.setContent(`<body style="margin:0;background:#121214">${svg(n)}</body>`);

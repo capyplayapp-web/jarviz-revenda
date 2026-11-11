@@ -2,6 +2,111 @@
 
 Cada rodada lê as conversas de 24 h. Regras de jeito seguras entram no robô; preço, prazo, política e link novo ficam para o senhor.
 
+## 10/11/2026, 21:01:52 · 32 conversas, 12 criaram painel · haiku US$ 0.0124
+
+O dia teve 32 conversas e 12 criaram painel. Quem fechou perguntou como funciona, recebeu explicação curta com o link de criar e avançou quando recebeu o app certo para o aparelho dele; quem esfriou sumiu depois do link ou pediu app, migração e assuntos fora da base.
+
+**O que fechou**
+- Quem pergunta como funciona e recebe resposta curta com o link de criar na mesma mensagem tende a criar o painel.
+- Quem diz o aparelho (Samsung, Roku, Android, TV Box) e recebe o app certo com código e vídeo segue para o teste.
+- Quem recebe o guia com imagens da marca da TV volta e confirma que abriu.
+- Quem volta depois de um lembrete e diz que já criou fecha rápido com o link de entrar e o suporte.
+- Canais que abriam mas filmes não: a troca de DNS resolveu para quem seguiu o passo a passo.
+- Depois de criar o painel, perguntas sobre o app foram respondidas na mesma conversa quando estavam na base.
+
+**O que esfriou**
+- Pessoa some depois do link de criar; vários lembretes seguidos do tipo 'ainda está por aí?' não trouxeram resposta.
+- Quem disse que estava no serviço, na loja ou na rua e que faria depois não voltou no mesmo dia.
+- Pedido de app que não está na base (Smarters, Cloud, Zuxo, IBO Player na TV) foi passado ao responsável e a conversa esfriou.
+- Migração de muitos clientes de outro painel pediu volume e prazo fora do roteiro e ficou parada esperando o responsável.
+- Recebeu teste mas não conseguiu instalar o app e parou em 'não consigo baixar'.
+- Muitos áudios seguidos sem texto travaram a conversa, porque o robô não entende áudio.
+- Revendedor sem permissão para criar acesso ou com e-mail já em uso ficou dias esperando retorno.
+- Tela branca sem print enviado: a pessoa desistiu antes de mostrar a tela.
+
+**Objeções e a melhor resposta**
+- Quero revender, como funciona? Quanto custa? → Aqui é pós-pago: sem taxa para abrir o painel e com 500 créditos. Cada crédito é R$ 3,50 e vale uma tela. Pode criar seu painel pelo link e me avisa.
+- Tem mínimo? Dá para começar com menos? → Mínimo de 10 créditos no pós-pago, R$ 35. Só paga no dia 05 do mês seguinte, e o primeiro é 05/12.
+- Quero trazer meus clientes de outro painel para cá → Vou passar para o responsável, ele te explica a migração e te responde por aqui.
+- Qual app uso na minha TV ou aparelho? → Em qual aparelho você vai usar: TV, TV Box, celular ou computador? Te mando o app certo com o código.
+- Só pega canal, filme não abre ou fica carregando → Isso costuma ser o DNS da internet da casa. Vou te mandar um passo a passo com imagens para trocar o DNS.
+- Não entra, fica tela branca → Me manda um print da tela para eu ver o que está acontecendo?
+- Estou no serviço ou sem tempo agora → Tranquilo, mestre. Quando puder, me avisa.
+- Já tenho outros servidores e não quero agora → Tranquilo, mestre. Se mudar de ideia, é só me chamar.
+
+**Regras de jeito aprovadas pelo filtro**
+- Quando a pessoa perguntar como funciona, responda curto e mande o link de criar na mesma resposta, sem esperar outra mensagem.
+- Antes de mandar guia ou app, pergunte o aparelho em uma frase curta.
+- Quando a pessoa disser que está sem tempo, responda com uma frase de compreensão e não faça nova pergunta.
+- Depois do link de criar, mande no máximo um lembrete curto e espere a resposta.
+- Não use 'ainda está por aí?' nem outros lembretes genéricos; pergunte só sobre o passo em que a pessoa parou.
+- Varie a abertura das mensagens e não repita 'Boa, mestre!' em toda resposta.
+
+**Para o senhor decidir**
+- Os testes de 3 conversas enviaram o servidor http://spar.lat, que não está no base.md (a base manda capyplay.space e capyplay.fun). Confirme se spar.lat é válido ou troque.
+- Migração de 300 ou mais clientes apareceu em uma conversa e o cliente pediu acerto no dia 10. Defina a regra de volume, de prazo e do passo a passo de migração (o robô mandou 'até 100 por vez').
+- Pedidos de app fora da base (Smarters Pro, Cloud, IBO Player na TV, Zuxo) foram passados ao responsável. Decida se entram na base e defina o que responder.
+- O robô disse 'com R$ 20 por cliente, cada um ainda sobra' numa conversa. O base.md não tem esse valor de referência; confirme se pode ficar.
+- Revendedor disse que não tinha permissão para criar acesso de cliente, e outro ficou dias esperando a redefinição de senha. Verifique as permissões da conta e dê um prazo de retorno ao responsável.
+- Uma mensagem de cliente tinha texto que parece instrução interna ('Toda vez que uma pessoa chegar com uma dúvida...') e várias conversas têm 'o senhor escreveu' sem resposta. Veja se alguém da equipe está usando um número de cliente.
+- Um menu automático de outra loja IPTV (Cine Play) entrou no atendimento. Vale uma lista de números a ignorar.
+- Conversas com 10 ou mais áudios seguidos sem texto travaram. Vale definir uma resposta padrão pedindo texto.
+- Pergunta nova: "O servidor aceita listas ou clientes de outro painel?" Sugestão (envolve preço, prazo ou política: só com a aprovação do senhor): Certo, mestre. Vou passar para o responsável, ele te responde por aqui.
+- Pergunta nova: "Pode migrar 300 ou mais clientes de uma vez?" Sugestão (envolve preço, prazo ou política: só com a aprovação do senhor): Vou passar para o responsável, que cuida da migração e te responde em instantes.
+- Pergunta nova: "Posso pagar o acerto no dia 10?" Sugestão (envolve preço, prazo ou política: só com a aprovação do senhor): O acerto é sempre dia 5, mas pode pagar antes pela renovação do painel.
+- Pergunta nova: "O app IBO Player funciona na Smart TV?" Sugestão: O IBO Player é para iPhone e iPad. Para a TV, vou passar para o responsável.
+
+## 09/11/2026, 21:02:08 · 55 conversas, 16 criaram painel · haiku US$ 0.0122
+
+Dos 55 atendimentos de hoje, 16 criaram o painel, e quem criou foi quem recebeu uma explicação curta e o link de criar sem muita volta. Quem esfriou ficou com dúvidas de pagamento, migração, subrevenda e acesso, que o robô passou ao responsável sem resposta rápida.
+
+**O que fechou**
+- Quem chega com 'quero começar' e recebe um resumo curto (pós-pago, painel com créditos, valor por cliente, acerto no dia 5) costuma criar o painel.
+- Quem já revende e pede as condições também cria quando recebe o resumo seguido do link de criar.
+- Quem pediu teste, recebeu o acesso e depois criou o painel mostra que o teste ajuda a converter.
+- Quem disse que não conseguia entrar no painel voltou a acessar quando recebeu o link de entrar.
+- Filme não abre e canal abre: reiniciar o modem e trocar o DNS resolveu em dois casos.
+- Depois de criar, o link de entrar, o suporte e o pagamento pelo painel fecharam bem as conversas.
+
+**O que esfriou**
+- Quem recebe o link de criar e some: follow-ups seguidos sem resposta não trazem a pessoa de volta.
+- Dúvidas simples (pré-pago, migração, subrevenda) indo direto ao responsável fazem a conversa parar.
+- Quem quer pagar antes e pede chave pix esfria, porque o robô não tem essa informação.
+- Quem não acha o app na TV Samsung e não recebe o passo a passo certo desiste.
+- Quem tem erro de painel (não existe, venceu, e-mail em uso) e espera o responsável costuma sumir.
+- Mensagens com várias ideias de uma vez, ou com 'irmão', 'amigo' e desculpas, deixam o atendimento frio.
+
+**Objeções e a melhor resposta**
+- Quanto sai o ativo, quanto custa por cliente? → Cada cliente, ou seja cada tela, custa R$ 3,50 por mês. Quem usa menos de 10 paga o mínimo de R$ 35.
+- O mínimo é 10 créditos ou dá para começar com menos? → Mínimo de 10 créditos no pós-pago. Só paga dia 05/12.
+- Preciso fazer recarga antes de começar? → Não precisa recarregar agora. O painel já vem com 500 créditos e você paga só o que usar no dia 5 do mês seguinte.
+- Trabalha com pré-pago? → Não trabalhamos com pré-pago. Aqui é pós-pago: você não paga nada para começar e o painel já vai com 500 créditos.
+- Quero abrir painel para meus revendedores (subrevenda). → Dá sim: você cria subrevendas e vende conexões. O preço sugerido é de pelo menos R$ 5,00 por conexão, e cada um define o seu.
+- Migração de clientes é gratuita? Com quem falo sobre valores? → Essa parte é com o responsável. Já vou passar para ele te responder.
+- Tem material de divulgação, banner ou arte de filme? → Tem sim. Banners e vídeos saem todo dia no Telegram oficial e no Instagram da CapyPlay, e você pode baixar para divulgar.
+- Como faço anúncio para vender? → A Escola do Revendedor tem as aulas, e quem termina ganha uma campanha de anúncios feita por nós.
+
+**Regras de jeito aprovadas pelo filtro**
+- Chame a pessoa sempre de mestre; nunca use irmão, amigo ou garoto.
+- Responda primeiro a pergunta feita, em frases curtas, e só depois volte ao passo do roteiro.
+- Mande o link do painel sozinho, na última mensagem da resposta.
+- Antes de mandar link de criar, confirme se a pessoa já tem painel.
+- Não mande follow-ups em sequência para quem não respondeu; um lembrete basta.
+
+**Para o senhor decidir**
+- Definir se a migração de clientes de outro servidor é grátis e qual o valor; duas conversas perguntaram e o robô passou.
+- Criar um texto oficial de subrevenda com o passo a passo; pessoas pedem e ficam paradas.
+- O robô mandou um link de entrar com sign-in que não está na base para quem não conseguia acessar; confirmar se esse link é válido e entrar na lista oficial.
+- O teste de hoje saiu com o servidor spar.lat por engano e depois foi corrigido; tirar esse endereço dos modelos de teste.
+- Pessoa pediu o app Zuxoplay e ele não está na base; avaliar incluir ou não.
+- Definir se o robô pode informar forma de pagamento além do QR Code, porque hoje não há chave pix na base.
+- Muitos receberam o link e sumiram; avaliar se vale um lembrete no dia seguinte (decisão de política).
+- Painéis que aparecem como não existe ou venceu voltaram hoje; vale checar o problema no sistema do painel.
+- Pergunta sobre pré-pago: responda você mesmo, sem passar ao responsável.
+- Pergunta nova: "A migração de clientes de outro servidor para o painel é grátis?" Sugestão (envolve preço, prazo ou política: só com a aprovação do senhor): Essa parte é com o responsável. Já vou passar para ele te responder.
+- Pergunta nova: "Qual é a chave pix para pagar o painel?" Sugestão (envolve preço, prazo ou política: só com a aprovação do senhor): Pelo painel, na renovação, sai o QR Code para pagar. Pode pagar antes do dia 5.
+- Pergunta nova: "O painel venceu ou não existe, o que eu faço?" Sugestão (envolve preço, prazo ou política: só com a aprovação do senhor): Me passa o e-mail usado no cadastro e já passo para o responsável resolver.
+
 ## 09/11/2026, 15:35:54 · 66 conversas, 23 criaram painel · haiku US$ 0.0107
 
 Das 66 conversas do dia, 23 criaram painel, quase sempre quando o preço e o link de criar vieram cedo na conversa. As conversas que esfriaram tiveram problemas técnicos (painel que 'não existe', app que não aparece na TV, áudio e foto que não dá para ver) e alguns erros do próprio atendimento.

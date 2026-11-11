@@ -30,7 +30,7 @@ const path = require('path');
 const puppeteer = require('puppeteer');
 
 const PAINEL = 'https://painel.capyplay.site/';
-const CHROME = process.env.CHROME_PATH || 'C:/Program Files/Google/Chrome/Application/chrome.exe';
+const CHROME = process.env.CHROME_PATH || 'C:/Program Files (x86)/Microsoft/Edge/Application/msedge.exe';
 const PERFIL = path.join(__dirname, 'perfil-painel');
 const REGISTRO = path.join(__dirname, 'testes-gerados.json');
 const OPCAO = process.env.TESTE_OPCAO || 'TESTE COMPLETO SEM ADULTO';

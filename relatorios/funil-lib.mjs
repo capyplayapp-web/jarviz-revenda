@@ -4,7 +4,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { spawn } from 'node:child_process';
-import { PASTA, lerJson, lerEventos, lerRevendedoresLista } from './lib.mjs';
+import { PASTA, lerJson, lerEventos, lerRevendedoresLista, chatsComPainelAntes } from './lib.mjs';
 
 const DIR = path.join(PASTA, 'funil');
 const F = {
@@ -21,11 +21,15 @@ const r3 = (n) => Math.round(n * 1000) / 1000;
 const inicioPeriodo = (dias) => { const d = new Date(); d.setHours(0, 0, 0, 0); d.setDate(d.getDate() - (dias - 1)); return d.getTime(); };
 
 function conversao(evs, paineis, ini) {
-  const ev = evs.filter((e) => Date.parse(e.t) >= ini);
+  // Só leads: quem já tinha painel antes do período fica fora (10/11/2026).
+  const jaTinha = chatsComPainelAntes(ini, evs, paineis);
+  const ev = evs.filter((e) => Date.parse(e.t) >= ini && !jaTinha.has(e.chat));
   const contato = new Set(ev.filter((e) => e.tipo === 'mensagem_cliente' && e.chat).map((e) => e.chat));
-  const roboCom = (rx) => new Set(ev.filter((e) => (e.tipo === 'resposta_robo' || e.tipo in PROATIVOS) && rx.test(e.texto || '')).map((e) => e.chat));
-  const soube = roboCom(/cr[eé]dito|p[oó]s-?pago|R\$ ?3,50/i), link = roboCom(/painel\.capyplay\.site\/#\/rs\//i);
-  const criou = new Set(paineis.filter((p) => Date.parse(p.quando) >= ini).map((p) => p.contato_id));
+  // Cada etapa é subconjunto de quem falou no período; explicação e link valem mesmo se vieram antes (lead de ontem que criou hoje).
+  const ate = Date.now() + 60000;
+  const roboCom = (rx) => new Set(evs.filter((e) => contato.has(e.chat) && Date.parse(e.t) <= ate && (e.tipo === 'resposta_robo' || e.tipo in PROATIVOS) && rx.test(e.texto || '')).map((e) => e.chat));
+  const soube = roboCom(/p[oó]s-?pago|R\$ ?3,50/i), link = roboCom(/painel\.capyplay\.site\/#\/rs\//i);
+  const criou = new Set(paineis.filter((p) => Date.parse(p.quando) >= ini && (contato.has(p.contato_id) || contato.has(p.contato_lid))).map((p) => p.contato_id));
   const etapas = [['Entrou em contato', contato.size], ['Soube como funciona', soube.size], ['Recebeu o link', link.size], ['Criou o painel', criou.size]];
   return etapas.map(([etapa, qtd], i) => ({ etapa, qtd, taxa_da_anterior: i && etapas[i - 1][1] ? r3(qtd / etapas[i - 1][1]) : null }));
 }

@@ -113,6 +113,14 @@ const r1 = (n) => Math.round(n * 10) / 10;
 const iso = (d) => new Date(d).toISOString();
 const hora2 = (h) => String(h).padStart(2, '0') + 'h';
 
+// 10/11/2026: conversas que já tinham painel antes de `ini` (revendedor tirando dúvida não é lead e distorcia o funil).
+export function chatsComPainelAntes(ini, evs, paineis) {
+  const s = new Set();
+  for (const p of paineis) if (Date.parse(p.quando) < ini) { s.add(p.contato_id); if (p.contato_lid) s.add(p.contato_lid); }
+  for (const e of evs) if (e.tipo === 'painel_fechado' && e.chat && Date.parse(e.t) < ini) s.add(e.chat);
+  return s;
+}
+
 export function lerRevendedoresLista() {
   const rev = lerJson(ARQ.revendedores, {});
   const fichas = lerJson(ARQ.clientes, {});
@@ -122,6 +130,7 @@ export function lerRevendedoresLista() {
       quando: fechou, nome: r.nome || fichas[id]?.nome || '', telefone: r.telefone || fichas[id]?.telefone_real || '',
       usuario_painel: r.usuario_painel || '', painel_id: r.painel_id ?? null, painel_numero: r.painel_numero ?? null,
       origem: r.origem || 'robo', fonte: r.fonte || 'usuario_senha', contato_salvo: r.contato_salvo || null, contato_id: id,
+      contato_lid: r.telefone_lid ? String(r.telefone_lid) + '@lid' : null,
     };
   }).filter((x) => x.quando);
   return lista.sort((a, b) => Date.parse(b.quando) - Date.parse(a.quando));
@@ -196,10 +205,12 @@ export async function resumo({ dias = 1 } = {}) {
   };
 
   // Funil (conversas distintas no período)
-  const chatsContato = new Set(por('mensagem_cliente').map((e) => e.chat).filter(Boolean));
-  const roboTxt = (re) => new Set(por('resposta_robo').filter((e) => re.test(e.texto || '')).map((e) => e.chat));
-  const soube = roboTxt(/cr[eé]dito|p[oó]s-?pago|R\$ ?3,50/i), link = roboTxt(/painel\.capyplay\.site\/#\/rs\//i);
-  const criou = new Set(paineis.map((p) => p.contato_id));
+  // Só leads: quem já tinha painel antes do período fica fora (10/11/2026).
+  const jaTinha = chatsComPainelAntes(ini, todos, paineisTodos);
+  const chatsContato = new Set(por('mensagem_cliente').map((e) => e.chat).filter((c) => c && !jaTinha.has(c)));
+  const roboTxt = (re) => new Set(todos.filter((e) => e.tipo === 'resposta_robo' && chatsContato.has(e.chat) && Date.parse(e.t) <= agora.getTime() + 60000 && re.test(e.texto || '')).map((e) => e.chat));
+  const soube = roboTxt(/p[oó]s-?pago|R\$ ?3,50/i), link = roboTxt(/painel\.capyplay\.site\/#\/rs\//i);
+  const criou = new Set(paineis.filter((p) => chatsContato.has(p.contato_id) || chatsContato.has(p.contato_lid)).map((p) => p.contato_id));
   const funil = [
     { etapa: 'Entrou em contato', qtd: chatsContato.size },
     { etapa: 'Soube como funciona', qtd: soube.size },

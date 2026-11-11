@@ -14,12 +14,12 @@ const CMD_EXPIRA_MS = 10 * 60 * 1000;          // pendente há mais que isso apa
 // 09/11/2026: todas as abas do PC. Chaves aceitas no snapshot e botões que viram pedido na fila (mesma lista em sync-nuvem.mjs).
 const CHAVES = ['resumo1', 'resumo7', 'pendentes', 'revendedores', 'grafo1', 'grafo7', 'trafego1', 'trafego7', 'trafego30',
   'escritorio1', 'escritorio7', 'funil1', 'funil7', 'jornada', 'etiquetas', 'followups1', 'followups7', 'backlog',
-  'uso1', 'uso7', 'lacunas', 'releitura', 'versoes', 'voz'];
+  'uso1', 'uso7', 'lacunas', 'releitura', 'versoes', 'voz', 'campanha'];
 const ACOES = ['/api/funil/pausar', '/api/funil/retomar', '/api/funil/reaquecer', '/api/funil/jogadas',
   '/api/jornada/pausar', '/api/jornada/retomar', '/api/jornada/tocar', '/api/releitura', '/api/voz',
-  '/api/backlog/mapear', '/api/backlog/pausar', '/api/backlog/retomar'];
+  '/api/backlog/mapear', '/api/backlog/pausar', '/api/backlog/retomar', '/api/campanha'];
 const UM_OU_SETE = { '/api/escritorio': 'escritorio', '/api/funil': 'funil', '/api/followups': 'followups', '/api/uso': 'uso' };
-const DIRETOS = { '/api/jornada': 'jornada', '/api/etiquetas': 'etiquetas', '/api/backlog': 'backlog', '/api/lacunas': 'lacunas', '/api/releitura': 'releitura', '/api/versoes': 'versoes', '/api/voz': 'voz' };
+const DIRETOS = { '/api/jornada': 'jornada', '/api/etiquetas': 'etiquetas', '/api/backlog': 'backlog', '/api/lacunas': 'lacunas', '/api/releitura': 'releitura', '/api/versoes': 'versoes', '/api/voz': 'voz', '/api/campanha': 'campanha' };
 const PUBLICOS_PREFIXOS =['/fontes/', '/icones/', '/icons/'];
 const PUBLICOS_EXATOS = ['/manifest.webmanifest', '/manifest.json', '/sw.js', '/favicon.ico', '/apple-touch-icon.png'];
 

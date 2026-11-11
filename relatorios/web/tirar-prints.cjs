@@ -11,7 +11,7 @@ const srv = http.createServer((q, r) => {
 (async () => {
   await new Promise(ok => srv.listen(0, '127.0.0.1', ok));
   const base = externa || `http://127.0.0.1:${srv.address().port}/`;
-  const b = await puppeteer.launch({ executablePath: 'C:/Program Files/Google/Chrome/Application/chrome.exe', headless: 'new' });
+  const b = await puppeteer.launch({ executablePath: 'C:/Program Files (x86)/Microsoft/Edge/Application/msedge.exe', headless: 'new' });
   const tamanhos = [['3440x1440', 3440, 1440, 1], ['1920x1080', 1920, 1080, 1], ['390x844', 390, 844, 2], ['820x1180', 820, 1180, 1]];
   const erros = [];
   for (const [nome, w, hgt, dpr] of tamanhos) {

@@ -77,3 +77,22 @@ backlog-pausado
 *.antes_*
 ${nome}
 .aprendendo
+sigma-cache.json
+
+# painéis cancelados: conversas e motivos dos clientes (09/11/2026)
+cancelados/*
+!cancelados/*.md
+
+hub-token.txt
+midia-cache/
+
+# dados reais de clientes/revendedores e estado do dia (11/11/2026)
+historico/
+diretriz-link/*.json
+diretriz-link/*.txt
+lista-estado.json
+lista-negra.json
+escalados.json
+status-estado.json
+ultimo-vivo.json
+tutorial-migracao/*.png

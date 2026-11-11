@@ -139,7 +139,7 @@ async function testarTela() {
   });
   await new Promise((ok) => srv.listen(0, '127.0.0.1', ok));
   const base = `http://127.0.0.1:${srv.address().port}/mapa-teste.html`;
-  const b = await puppeteer.launch({ executablePath: 'C:/Program Files/Google/Chrome/Application/chrome.exe', headless: 'new' });
+  const b = await puppeteer.launch({ executablePath: 'C:/Program Files (x86)/Microsoft/Edge/Application/msedge.exe', headless: 'new' });
   const erros = [];
   const dir = path.join(WEB, 'prints'); fs.mkdirSync(dir, { recursive: true });
   const tamanhos = [['3440x1440', 3440, 1440, 1], ['1920x1080', 1920, 1080, 1], ['390x844', 390, 844, 2]];

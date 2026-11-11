@@ -867,7 +867,13 @@ function irParaSub(nova) {
 $('#seletor-mapa').addEventListener('click', ev => { const b = ev.target.closest('button[data-sub]'); if (b) irParaSub(b.dataset.sub); });
 
 /* PC: alternar entre o painel e o mapa, sem rolar a página */
-const VISTAS = ['escritorio', 'painel', 'followups', 'mapa', 'funil', 'jornada', 'trafego'];   /* Escritório do Jarvis = tela inicial (escritorio.js) */
+const VISTAS = ['escritorio', 'painel', 'followups', 'mapa', 'funil', 'jornada', 'trafego', 'campanha', 'sigma'];
+/* Na nuvem (jarviz.copythief.men) o Sigma não existe: os dados dele ficam só no PC. Some o botão e a lista fica com oito. */
+if (!/^(127\.0\.0\.1|localhost)$/.test(location.hostname) && location.protocol !== 'file:') {
+  VISTAS.splice(VISTAS.indexOf('sigma'), 1);
+  const bS = document.querySelector('#vista button[data-vista="sigma"]'); if (bS) bS.remove();
+  document.getElementById('vista')?.classList.remove('nove');
+}   /* Campanha: contador e projeção (campanha.js, 10/11/2026) */   /* Sigma: painel.capyplay.site numa tela (sigma.js, 09/11/2026) */   /* Escritório do Jarvis = tela inicial (escritorio.js) */
 function irParaVista(nova) {
   if (MOVEL.matches) { delete appEl.dataset.vista; return; }
   if (!VISTAS.includes(nova)) nova = 'escritorio';
@@ -909,9 +915,10 @@ montarEscada(); pintarSeletor();
   if (pedido === 'leitura') { irParaSub('leitura'); irParaAba('mapa', { inicial: true }); }
   else if (pedido === 'jornada') { appEl.dataset.fj = 'jornada'; irParaAba('funil', { inicial: true }); }
   else if (pedido === 'trafego') { appEl.dataset.fj = 'trafego'; irParaAba('funil', { inicial: true }); }
+  else if (pedido === 'campanha') { appEl.dataset.fj = 'campanha'; irParaAba('funil', { inicial: true }); }
   else if (ABAS.includes(pedido)) { irParaAba(pedido, { inicial: true }); }
   if (MOVEL.matches) delete appEl.dataset.vista;   /* celular: o HTML nasce com a vista Escritório, que é só do PC (08/11/2026) */
-  else irParaVista(['painel', 'mapa', 'followups', 'funil', 'jornada', 'trafego'].includes(params.get('vista')) ? params.get('vista') : 'escritorio');
+  else irParaVista(['painel', 'mapa', 'followups', 'funil', 'jornada', 'trafego', 'campanha', 'sigma'].includes(params.get('vista')) ? params.get('vista') : 'escritorio');
 }
 window.relatorios = { aviso, dias: () => dias };   /* gancho para a área Follow-ups (followups.js) */
 atualizar();

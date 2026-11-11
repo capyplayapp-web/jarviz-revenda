@@ -97,3 +97,36 @@
   .app[data-vista="escritorio"] .esc, .esc-placa.alerta, .esc-hud .num.alerta, .esc-led.digitando, .esc-log li.novo, .esc-hud .num.ganhou { animation: none; }
   .esc-fala, .esc-fala.mostra { transition: none; }
 }
+
+/* ---------- Tela vertical e janelas estreitas (10/11/2026) ----------
+   1) Abas do topo: em janela abaixo de 1800 px o seletor ganha uma linha só dele, na largura toda (antes ficava
+      espremido em ~260 px e os nomes se sobrepunham).
+   2) Escritório: em 821 a 1279 px o app deixava a altura automática e a cena colapsava; no Escritório o app
+      volta a ter a altura da janela.
+   3) A cena mantém proporção de sala (largura / altura ≥ 1,8); o que sobra de altura vira a lista de acontecimentos.
+   4) Rótulos dos números quebram em duas linhas em vez de virar "CON…". */
+@media (min-width: 821px) and (max-width: 1799px) {
+  .topo { row-gap: .6rem; }
+  .acoes-topo { flex-wrap: wrap; justify-content: flex-end; row-gap: .6rem; width: auto; }
+  #vista.seletor { order: -1; flex: 1 1 100%; min-width: 0; }
+  #vista.seletor button { padding: 0 .4rem; font-size: .95rem; text-overflow: ellipsis; overflow: hidden; }
+}
+@media (min-width: 821px) and (max-width: 1279px) {
+  .app[data-vista="escritorio"] { height: 100dvh; min-height: 0; overflow: hidden; }
+  .app[data-vista="escritorio"] .quadro { flex: 1; min-height: 0; grid-template-columns: minmax(0, 1fr); grid-template-rows: minmax(0, 1fr); align-items: stretch; }
+}
+@media (max-width: 1599px) {
+  .esc-hud .num h2 { white-space: normal; overflow: visible; text-overflow: clip; line-height: 1.02; letter-spacing: .04em; text-wrap: balance; }
+  .esc-hud .num { column-gap: .4rem; padding: .3rem .5rem .35rem; }
+  .esc-hud .esc-ic, .esc-hud .num.heroi .esc-ic { width: calc(var(--px) * 6); height: calc(var(--px) * 6); }
+}
+/* Sobrou altura (janela vertical): o mundo fica no topo na proporção certa e a lista de acontecimentos ocupa o resto */
+.esc.alto { justify-content: flex-start; }
+.esc.alto .esc-barra { flex: 1; min-height: 0; flex-direction: column; align-items: stretch; gap: .6rem; padding: .7rem .9rem; clip-path: none; border-radius: 14px; box-shadow: inset 0 0 0 2px var(--hud-borda); font-size: 1rem; }
+.esc.alto .esc-log { flex: 1; min-height: 0; flex-direction: column; gap: .5rem; overflow-y: auto; mask-image: none; scrollbar-width: thin; scrollbar-color: var(--hud-borda) transparent; }
+.esc.alto .esc-log li { white-space: normal; gap: .7rem; font-size: 1.05rem; line-height: 1.3; padding-bottom: .5rem; border-bottom: 1px solid rgba(46, 53, 96, .6); }
+.esc.alto .esc-log li:last-child { border-bottom: 0; }
+/* Ajustes do crítico (10/11/2026) */
+@media (min-width: 821px) and (max-width: 1279px) { #vista.seletor button { min-height: 40px; } }
+.esc-hud .num .valor { line-height: 1.05; }
+.esc-log time { color: rgba(235, 235, 245, .66); }

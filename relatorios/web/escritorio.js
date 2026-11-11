@@ -675,8 +675,8 @@ function aplicar(d) {
   S.barras = barras;
   // 4. acontecimentos novos
   const evs = (d.eventos || []).filter((e) => S.ultimoT == null || e.t > S.ultimoT);
-  if (S.ultimoT == null) { S.log = resumirLog(d.eventos || []).slice(-6); S.ultimoT = (d.eventos || []).length ? d.eventos[d.eventos.length - 1].t : d.gerado_em; }
-  else if (evs.length) { S.ultimoT = evs[evs.length - 1].t; S.filaEv.push(...evs); S.log = S.log.concat(resumirLog(evs)).slice(-6); }
+  if (S.ultimoT == null) { S.log = resumirLog(d.eventos || []).slice(-20); S.ultimoT = (d.eventos || []).length ? d.eventos[d.eventos.length - 1].t : d.gerado_em; }
+  else if (evs.length) { S.ultimoT = evs[evs.length - 1].t; S.filaEv.push(...evs); S.log = S.log.concat(resumirLog(evs)).slice(-20); }
   if (d.jarvis && d.jarvis.digitando) S.jarvis.digitandoAte = Math.max(S.jarvis.digitandoAte, S.agora + 2500);
   pintarRotulos(); pintarLog(); pintarListaLeitor();
 }
@@ -870,8 +870,13 @@ function montar() {
 function medir() {
   const esc = $('#esc'); if (!esc || !esc.offsetParent) return;
   const barraH = $('.esc-barra', esc).offsetHeight, dpr = devicePixelRatio || 1;
-  const aw = esc.clientWidth, ah = esc.clientHeight - barraH - 6;
-  if (aw < 200 || ah < 150) return;
+  const aw = esc.clientWidth, ahTotal = esc.clientHeight - (esc.classList.contains('alto') ? 36 : barraH) - 6;
+  if (aw < 200 || ahTotal < 150) return;
+  // proporção de sala: nunca mais alta que largura/1,8; o resto da altura fica para a lista de acontecimentos
+  const ah = Math.min(ahTotal, Math.round(aw / 1.8));
+  const eraAlto = esc.classList.contains('alto'), ficaAlto = ahTotal - ah > 170;
+  esc.classList.toggle('alto', ficaAlto);
+  if (eraAlto !== ficaAlto && typeof pintarLog === 'function') setTimeout(pintarLog, 0);
   // cada pixel do mundo = 2x2 pixels de alta definição; cada um deles ocupa P pixels do aparelho
   const P = Math.max(1, Math.floor((ah * dpr) / 392)), esc0 = P * 2;
   const W = Math.floor((aw * dpr) / esc0), H = Math.floor((ah * dpr) / esc0);
@@ -962,7 +967,7 @@ function mostrarDica() {
 }
 function pintarLog() {
   if (!logEl) return;
-  const itens = S.log.slice(-4).reverse();
+  const itens = S.log.slice(document.getElementById("esc")?.classList.contains("alto") ? -20 : -4).reverse();
   logEl.replaceChildren(...(itens.length ? itens.map((l, i) => h('li', { class: 'tipo-' + l.tipo + (i === 0 ? ' novo' : '') }, h('time', { text: hora(l.t) }), h('span', { text: l.txt })))
     : [h('li', {}, h('span', { text: 'Sala vazia por enquanto. Quem chamar no WhatsApp entra pela porta.' }))]));
   const j = S.dados && S.dados.jarvis, com = S.jarvis.com && S.pessoas.get(S.jarvis.com);

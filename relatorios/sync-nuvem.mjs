@@ -8,6 +8,7 @@ import path from 'node:path';
 import crypto from 'node:crypto';
 import { AQUI, PASTA, lerJson, resumo, lerRevendedoresLista } from './lib.mjs';
 import { resumoTrafego } from './trafego-lib.mjs';
+import { resumoCampanha } from './campanha-lib.mjs';   // aba Campanha (10/11/2026)
 
 const CONFIG = path.join(AQUI, 'nuvem.local.json');
 const LOCAL = 'http://127.0.0.1:' + Number(process.env.RELATORIOS_PORTA || 8811);
@@ -23,7 +24,7 @@ export const EXTRAS = {
 // Botões que a nuvem pode pedir ao PC (o PC repete o POST na API local). Mesma lista no worker.
 export const ACOES = ['/api/funil/pausar', '/api/funil/retomar', '/api/funil/reaquecer', '/api/funil/jogadas',
   '/api/jornada/pausar', '/api/jornada/retomar', '/api/jornada/tocar', '/api/releitura', '/api/voz',
-  '/api/backlog/mapear', '/api/backlog/pausar', '/api/backlog/retomar'];
+  '/api/backlog/mapear', '/api/backlog/pausar', '/api/backlog/retomar', '/api/campanha'];
 async function local(rota, metodo = 'GET', corpo) {
   const r = await fetch(LOCAL + rota, { method: metodo, headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
     body: corpo === undefined ? undefined : JSON.stringify(corpo), signal: AbortSignal.timeout(metodo === 'GET' ? 30000 : 280000) });
@@ -49,6 +50,7 @@ function normalizar(d) {
     for (const p of g.evolucao || []) if (p && p.quando === agoraG) delete p.quando;
   }
   for (const k of ['trafego1', 'trafego7', 'trafego30']) if (c[k]) { limpa(c[k], ['gerado_em']); delete c[k].periodo; }
+  if (c.campanha) { limpa(c.campanha, ['gerado_em']); if (c.campanha.sigma) delete c.campanha.sigma.lendo; }
   for (const k of Object.keys(EXTRAS)) if (c[k] && typeof c[k] === 'object') limpa(c[k], ['gerado_em']);
   if (c.voz) limpa(c.voz, ['agora', 'historico']);                // CPU e temperatura mudam a cada leitura
   // o vigia carimba a hora dele a cada 2 min: para o hash, conta só de 10 em 10 min (a tela ainda vê o horário real)
@@ -95,6 +97,7 @@ export function iniciarSync({ reanalisar, aprender, carregarGrafo }) {
     // se uma aba falhar nesta volta, vai a última boa (a nuvem grava o snapshot inteiro, sem juntar com o antigo)
     await Promise.all(Object.entries(EXTRAS).map(async ([k, rota]) => { try { d[k] = await local(rota); estado.ultimos[k] = d[k]; } catch (e) { falhou(e); if (estado.ultimos[k] !== undefined) d[k] = estado.ultimos[k]; } }));
     try { d.trafego1 = resumoTrafego({ dias: 1 }); d.trafego7 = resumoTrafego({ dias: 7 }); d.trafego30 = resumoTrafego({ dias: 30 }); } catch (e) { falhou(e); }   // aba Tráfego
+    try { d.campanha = resumoCampanha({ lerSigma: 'hora' }); estado.ultimos.campanha = d.campanha; } catch (e) { falhou(e); if (estado.ultimos.campanha) d.campanha = estado.ultimos.campanha; }   // aba Campanha (Sigma relido no máximo 1x/h)
     try {                                                          // grafo é opcional: só entra se relatorios/grafo.mjs existir e funcionar
       const g = carregarGrafo ? await carregarGrafo() : null;
       if (g) { d.grafo1 = await g({ dias: 1 }); d.grafo7 = await g({ dias: 7 }); estado.ultimos.grafo1 = d.grafo1; estado.ultimos.grafo7 = d.grafo7; }

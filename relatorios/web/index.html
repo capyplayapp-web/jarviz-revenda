@@ -27,6 +27,9 @@
 <link rel="stylesheet" href="uso.css">
 <link rel="stylesheet" href="versoes.css">
 <link rel="stylesheet" href="voz.css">
+<link rel="stylesheet" href="sigma.css">
+<link rel="stylesheet" href="cancelados.css">
+<link rel="stylesheet" href="campanha.css">
 <script src="app.js" defer></script>
 <script src="followups.js" defer></script>
 <script src="funil.js" defer></script>
@@ -37,6 +40,9 @@
 <script src="trafego.js" defer></script>
 <script src="versoes.js" defer></script>
 <script src="voz.js" defer></script>
+<script src="sigma.js" defer></script>
+<script src="cancelados.js" defer></script>
+<script src="campanha.js" defer></script>
 </head>
 <body>
 <main class="app" id="app" aria-busy="true" data-aba="resumo" data-sub="mapa" data-vista="escritorio">
@@ -50,7 +56,7 @@
       <p class="estado" id="estado" aria-live="polite"><span class="ponto" id="ponto"></span><span id="estado-txt">Conferindo o robô…</span><span class="aviso-rede" id="aviso-rede" hidden>Sem conexão com o servidor. Tentando de novo.</span></p>
     </div>
     <div class="acoes-topo">
-      <div class="seletor so-pc sete" id="vista" role="radiogroup" aria-label="Vista" data-pos="0">
+      <div class="seletor so-pc sete oito nove" id="vista" role="radiogroup" aria-label="Vista" data-pos="0">
         <span class="pilula" aria-hidden="true"></span>
         <button type="button" role="radio" aria-checked="true" data-vista="escritorio">Escritório</button>
         <button type="button" role="radio" aria-checked="false" data-vista="painel" tabindex="-1">Painel</button>
@@ -59,6 +65,8 @@
         <button type="button" role="radio" aria-checked="false" data-vista="funil" tabindex="-1">Funil</button>
         <button type="button" role="radio" aria-checked="false" data-vista="jornada" tabindex="-1">Jornada</button>
         <button type="button" role="radio" aria-checked="false" data-vista="trafego" tabindex="-1">Tráfego</button>
+        <button type="button" role="radio" aria-checked="false" data-vista="campanha" tabindex="-1">Campanha</button>
+        <button type="button" role="radio" aria-checked="false" data-vista="sigma" tabindex="-1">Sigma</button>
       </div>
       <div class="seletor" id="seletor" role="radiogroup" aria-label="Período" data-pos="0">
         <span class="pilula" aria-hidden="true"></span>
@@ -170,10 +178,13 @@
       <button type="button" role="radio" aria-checked="true" data-fj="funil">Funil</button>
       <button type="button" role="radio" aria-checked="false" data-fj="jornada" tabindex="-1">Jornada</button>
       <button type="button" role="radio" aria-checked="false" data-fj="trafego" tabindex="-1">Tráfego</button>
+      <button type="button" role="radio" aria-checked="false" data-fj="campanha" tabindex="-1">Campanha</button>
     </div>
     <section class="fn" id="fn" data-aba="funil" aria-label="Funil de leads"></section>
     <section class="jr" id="jr" data-aba="funil" aria-label="Jornada dos revendedores"></section>
     <section class="tf" id="tf" data-aba="funil" aria-label="Tráfego: do lead ao painel fechado"></section>
+    <section class="sg" id="sg" aria-label="Painel Sigma resumido"></section>
+    <section class="cp" id="cp" aria-label="Campanha: contador e projeção de painéis"></section>
 
   </div>
 

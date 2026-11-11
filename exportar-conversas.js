@@ -22,7 +22,7 @@ fixosRobo.forEach((t) => doRobo.add(t));
 
 const client = new Client({
   authStrategy: new LocalAuth({ clientId: 'revenda', dataPath: path.join(PASTA, 'sessao') }),
-  puppeteer: { headless: true, executablePath: 'C:/Program Files/Google/Chrome/Application/chrome.exe', args: ['--no-sandbox'] },
+  puppeteer: { headless: true, executablePath: 'C:/Program Files (x86)/Microsoft/Edge/Application/msedge.exe', args: ['--no-sandbox'] },
 });
 
 client.on('ready', async () => {

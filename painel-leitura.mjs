@@ -18,7 +18,7 @@ export const PASTA_LAC = path.join(AQUI, 'lacunas');
 export const PERFIL_COPIA = path.join(PASTA_LAC, 'perfil-copia');
 const TRAVA = path.join(PASTA_LAC, '.painel.trava');
 const PAINEL = 'https://painel.capyplay.site/';
-const CHROME = process.env.CHROME_PATH || 'C:/Program Files/Google/Chrome/Application/chrome.exe';
+const CHROME = process.env.CHROME_PATH || 'C:/Program Files (x86)/Microsoft/Edge/Application/msedge.exe';
 const espera = (ms) => new Promise((r) => setTimeout(r, ms));
 
 // ---------- limpeza: nada de senha, token, telefone, e-mail ----------

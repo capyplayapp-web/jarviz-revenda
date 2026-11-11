@@ -1,0 +1,384 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#121214">
+<title>Tráfego · CapyPlay</title>
+<link rel="preload" href="fontes/inter.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+@font-face { font-family: "Inter"; font-style: normal; font-weight: 100 900; font-display: swap; src: url("fontes/inter.woff2") format("woff2"); }
+:root {
+  color-scheme: dark;
+  --font: "Inter", -apple-system, "Segoe UI Variable Text", "Segoe UI", sans-serif;
+  --l1: #fff; --l2: rgba(235,235,245,.66); --l3: rgba(235,235,245,.48);
+  --fill: rgba(118,118,128,.18); --fill2: rgba(118,118,128,.28); --sep: rgba(84,84,88,.55);
+  --ciano: #5be7ff; --ciano2: #00c7ff; --ok: #30d158; --warn: #ffb340; --roxo: #bf8cff;
+  --tinta: #121214; --mod: rgba(255,255,255,.045);
+  --vidro: inset 0 0 0 .5px rgba(255,255,255,.13), inset 0 1px 0 rgba(255,255,255,.07);
+  --focus: 0 0 0 3px rgba(91,231,255,.45);
+  --ease: cubic-bezier(.23,1,.32,1);
+  --g: 12px; --r: 18px;
+}
+* { box-sizing: border-box; margin: 0; }
+html { font-size: 13px; background: var(--tinta); -webkit-text-size-adjust: 100%; }
+@media (min-width: 2400px) and (min-height: 1200px) { html { font-size: 17px; } }
+body { min-height: 100dvh; color: var(--l1); background: var(--tinta); font: 400 1rem/1.4 var(--font); -webkit-font-smoothing: antialiased; }
+button, input { font: inherit; color: inherit; }
+button { background: none; border: 0; cursor: pointer; }
+:focus-visible { outline: none; box-shadow: var(--focus); border-radius: 10px; }
+.num { font-variant-numeric: tabular-nums; }
+.so-leitor { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+
+.app { height: 100dvh; display: grid; gap: var(--g); padding: 1.1rem 1.4rem 1.1rem;
+  grid-template-rows: auto auto minmax(0,1.15fr) minmax(0,1fr);
+  background: radial-gradient(80% 40% at 50% 0%, rgba(91,231,255,.07), transparent 70%), var(--tinta); }
+
+/* topo */
+.topo { display: flex; align-items: center; gap: 1rem; flex-wrap: wrap; }
+.topo h1 { font-size: 1.85rem; font-weight: 700; letter-spacing: -.02em; line-height: 1.15; }
+.estado { display: flex; align-items: center; gap: .5rem; color: var(--l2); font-size: .92rem; margin-top: .1rem; }
+.ponto { width: .55rem; height: .55rem; border-radius: 50%; background: var(--ok); }
+.ponto.off { background: var(--warn); }
+.seletor { margin-left: auto; position: relative; display: grid; grid-template-columns: repeat(3,1fr); padding: 2px; border-radius: 12px; background: var(--fill); box-shadow: var(--vidro); }
+.seletor button { position: relative; z-index: 1; height: 2.3rem; min-width: 5.4rem; padding: 0 1rem; border-radius: 10px; font-weight: 500; color: var(--l2); transition: color .15s; }
+.seletor button[aria-pressed="true"] { color: var(--l1); }
+.pilula { position: absolute; top: 2px; bottom: 2px; left: 2px; width: calc((100% - 4px)/3); border-radius: 10px; background: var(--fill2); box-shadow: var(--vidro); transition: transform .32s var(--ease); }
+
+/* cartões */
+.card { background: var(--mod); box-shadow: var(--vidro); border-radius: var(--r); padding: 1rem 1.15rem; min-height: 0; min-width: 0; display: flex; flex-direction: column; }
+.card h2 { font-size: .8rem; font-weight: 600; color: var(--l2); text-transform: uppercase; letter-spacing: .06em; display: flex; align-items: center; gap: .5rem; }
+.card h2 .dir { margin-left: auto; text-transform: none; letter-spacing: 0; font-weight: 500; color: var(--l3); }
+
+.kpis { display: grid; grid-template-columns: 1.35fr 1fr 1fr 1fr; gap: var(--g); }
+.kpi .v { font-size: 2.6rem; font-weight: 700; letter-spacing: -.03em; line-height: 1.1; margin-top: .45rem; }
+.kpi .s { color: var(--l2); font-size: .92rem; margin-top: .25rem; }
+.kpi.hero { background: linear-gradient(135deg, rgba(91,231,255,.14), rgba(0,199,255,.04)); }
+.kpi.hero .v { font-size: 3.4rem; color: var(--ciano); }
+.kpi .vazio { color: var(--l3); font-size: 1.6rem; font-weight: 600; }
+.btn { display: inline-flex; align-items: center; gap: .4rem; height: 2.1rem; padding: 0 .9rem; border-radius: 10px; background: var(--fill2); box-shadow: var(--vidro); font-weight: 500; font-size: .92rem; margin-top: .6rem; align-self: flex-start; transition: background .15s, transform .15s var(--ease); }
+.btn:hover { background: rgba(118,118,128,.38); }
+.btn:active { transform: scale(.97); }
+.btn.prim { background: linear-gradient(180deg, var(--ciano), var(--ciano2)); color: #04161c; box-shadow: none; }
+
+.meio { display: grid; grid-template-columns: 2fr 1fr; gap: var(--g); min-height: 0; }
+.baixo { display: grid; grid-template-columns: 2fr 1fr; gap: var(--g); min-height: 0; }
+
+/* gráfico por dia */
+.grafico { flex: 1; min-height: 0; margin-top: .6rem; position: relative; }
+.grafico svg { width: 100%; height: 100%; display: block; overflow: visible; }
+.legenda { display: flex; gap: 1rem; color: var(--l2); font-size: .85rem; font-weight: 500; text-transform: none; letter-spacing: 0; }
+.legenda i { display: inline-block; width: .6rem; height: .6rem; border-radius: 3px; margin-right: .35rem; vertical-align: -.05rem; }
+
+/* funil */
+.funil { flex: 1; display: flex; flex-direction: column; justify-content: center; gap: .9rem; margin-top: .6rem; }
+.degrau .linha { display: flex; justify-content: space-between; align-items: baseline; font-size: .95rem; color: var(--l2); }
+.degrau .linha b { color: var(--l1); font-size: 1.35rem; font-weight: 700; }
+.barra { height: .75rem; border-radius: 99px; background: var(--fill); margin-top: .35rem; overflow: hidden; }
+.barra span { display: block; height: 100%; border-radius: inherit; background: linear-gradient(90deg, var(--ciano2), var(--ciano)); transform-origin: left; transition: transform .6s var(--ease); }
+.degrau .tx { font-size: .82rem; color: var(--l3); margin-top: .2rem; }
+
+/* anúncios */
+.tabela { margin-top: .5rem; flex: 1; min-height: 0; overflow: auto; }
+.tabela table { width: 100%; border-collapse: collapse; }
+.tabela th { text-align: left; font-size: .78rem; font-weight: 500; color: var(--l3); padding: .35rem .5rem; border-bottom: .5px solid var(--sep); position: sticky; top: 0; background: #17171a; }
+.tabela td { padding: .6rem .5rem; border-bottom: .5px solid rgba(84,84,88,.3); font-size: .98rem; vertical-align: middle; }
+.tabela td.n, .tabela th.n { text-align: right; }
+.ad-nome { font-weight: 600; }
+.ad-sub { font-size: .8rem; color: var(--l3); }
+.medalha { display: inline-grid; place-items: center; width: 1.6rem; height: 1.6rem; border-radius: 50%; background: rgba(91,231,255,.16); color: var(--ciano); font-weight: 700; font-size: .85rem; margin-right: .55rem; }
+.medalha.cinza { background: var(--fill); color: var(--l3); }
+.taxa-ok { color: var(--ok); font-weight: 600; }
+.taxa-med { color: var(--warn); font-weight: 600; }
+.rede { display: flex; height: .45rem; width: 5rem; border-radius: 99px; overflow: hidden; background: var(--fill); margin-left: auto; }
+.rede .fb { background: #4c8dff; } .rede .ig { background: var(--roxo); }
+
+/* horário */
+.horas { flex: 1; display: grid; grid-template-columns: repeat(24, 1fr); align-items: end; gap: 3px; margin-top: .6rem; min-height: 3rem; }
+.horas div { background: var(--ciano); border-radius: 3px 3px 1px 1px; min-height: 2px; opacity: .35; transition: opacity .2s; }
+.horas div.pico { opacity: 1; }
+.horas-rot { display: flex; justify-content: space-between; font-size: .75rem; color: var(--l3); margin-top: .3rem; }
+.dica { margin-top: .6rem; font-size: .92rem; color: var(--l2); }
+.dica b { color: var(--l1); }
+.redes { display: flex; gap: 1rem; margin-top: .5rem; font-size: .9rem; color: var(--l2); }
+.redes b { color: var(--l1); }
+
+/* popover de gasto */
+dialog { border: 0; padding: 0; background: transparent; color: inherit; max-width: none; max-height: none; }
+dialog::backdrop { background: rgba(0,0,0,.45); backdrop-filter: blur(6px); }
+.folha { width: min(26rem, calc(100vw - 32px)); max-height: min(80dvh, 40rem); display: flex; flex-direction: column; background: rgba(36,36,40,.92); backdrop-filter: blur(30px) saturate(1.6); box-shadow: var(--vidro), 0 24px 60px rgba(0,0,0,.5); border-radius: 22px; padding: 1.2rem; }
+dialog[open] .folha { animation: surgir .32s var(--ease); }
+@keyframes surgir { from { opacity: 0; transform: translateY(8px) scale(.97); } }
+.folha h3 { font-size: 1.25rem; font-weight: 700; }
+.folha p { color: var(--l2); font-size: .92rem; margin-top: .25rem; }
+.dias { margin-top: .9rem; overflow: auto; display: grid; gap: .35rem; }
+.dia { display: flex; align-items: center; gap: .75rem; padding: .4rem .6rem; border-radius: 12px; background: var(--fill); }
+.dia label { flex: 1; color: var(--l2); }
+.dia label b { color: var(--l1); font-weight: 600; }
+.dia .campo { display: flex; align-items: center; gap: .3rem; color: var(--l3); }
+.dia input { width: 6.5rem; height: 2.2rem; padding: 0 .6rem; border-radius: 9px; border: 0; background: rgba(0,0,0,.35); box-shadow: var(--vidro); text-align: right; font-variant-numeric: tabular-nums; }
+.dia input:focus-visible { box-shadow: var(--focus); }
+.dia .salvo { width: 1rem; color: var(--ok); opacity: 0; transition: opacity .2s; }
+.dia .salvo.on { opacity: 1; }
+.folha .rodape { display: flex; justify-content: flex-end; margin-top: .9rem; }
+
+.limites { font-size: .78rem; color: var(--l3); }
+
+@media (max-width: 900px) {
+  .app { height: auto; grid-template-rows: none; padding: 1rem 16px 2rem; }
+  .kpis { grid-template-columns: 1fr 1fr; }
+  .kpi.hero { grid-column: 1 / -1; }
+  .meio, .baixo { grid-template-columns: 1fr; }
+  .grafico { height: 14rem; flex: none; }
+  .tabela { overflow: visible; }
+  .seletor { margin-left: 0; width: 100%; }
+  .kpi .v { font-size: 2rem; } .kpi.hero .v { font-size: 2.8rem; }
+  .esconde-cel { display: none; }
+}
+@media (prefers-reduced-motion: reduce) { *, *::before, *::after { transition: none !important; animation: none !important; } }
+</style>
+</head>
+<body>
+<main class="app" id="app">
+  <header class="topo">
+    <div>
+      <h1>Tráfego</h1>
+      <div class="estado"><span class="ponto" id="ponto"></span><span id="estado">Carregando…</span></div>
+    </div>
+    <div class="seletor" role="group" aria-label="Período">
+      <span class="pilula" id="pilula"></span>
+      <button type="button" data-dias="1" aria-pressed="false">Hoje</button>
+      <button type="button" data-dias="7" aria-pressed="true">7 dias</button>
+      <button type="button" data-dias="30" aria-pressed="false">30 dias</button>
+    </div>
+  </header>
+
+  <section class="kpis" aria-label="Números do período">
+    <article class="card kpi hero">
+      <h2>Custo por painel</h2>
+      <div class="v num" id="k-cpp">—</div>
+      <div class="s" id="k-cpp-s">Lance o gasto para calcular</div>
+    </article>
+    <article class="card kpi">
+      <h2>Gasto em anúncio</h2>
+      <div class="v num" id="k-gasto">—</div>
+      <button class="btn prim" type="button" id="abrir-gasto">Lançar gasto</button>
+    </article>
+    <article class="card kpi">
+      <h2>Leads</h2>
+      <div class="v num" id="k-leads">—</div>
+      <div class="s" id="k-leads-s"></div>
+    </article>
+    <article class="card kpi">
+      <h2>Painéis fechados</h2>
+      <div class="v num" id="k-pain">—</div>
+      <div class="s" id="k-pain-s"></div>
+    </article>
+  </section>
+
+  <section class="meio">
+    <article class="card">
+      <h2>Por dia <span class="dir legenda"><span><i style="background:rgba(91,231,255,.35)"></i>Leads</span><span><i style="background:var(--ciano)"></i>Painéis</span><span><i style="background:var(--warn);border-radius:50%"></i>Gasto</span></span></h2>
+      <div class="grafico" id="grafico" role="img" aria-label="Leads, painéis e gasto por dia"></div>
+    </article>
+    <article class="card">
+      <h2>Funil do lead</h2>
+      <div class="funil" id="funil"></div>
+    </article>
+  </section>
+
+  <section class="baixo">
+    <article class="card">
+      <h2>Anúncios que trazem painel <span class="dir" id="ads-dir"></span></h2>
+      <div class="tabela">
+        <table>
+          <thead><tr><th>Anúncio</th><th class="n">Leads</th><th class="n">Painéis</th><th class="n">Fecha</th><th class="n esconde-cel">Custo/painel</th><th class="n esconde-cel">Face · Insta</th></tr></thead>
+          <tbody id="ads"></tbody>
+        </table>
+      </div>
+    </article>
+    <article class="card">
+      <h2>Quando o lead chega</h2>
+      <div class="horas" id="horas" role="img" aria-label="Leads por hora do dia"></div>
+      <div class="horas-rot"><span>0h</span><span>6h</span><span>12h</span><span>18h</span><span>23h</span></div>
+      <div class="dica" id="dica"></div>
+      <div class="redes" id="redes"></div>
+    </article>
+  </section>
+</main>
+
+<dialog id="dlg-gasto" aria-labelledby="dlg-t">
+  <form class="folha" method="dialog">
+    <h3 id="dlg-t">Gasto em anúncio</h3>
+    <p>Digite quanto saiu por dia no Gerenciador da Meta. Salva sozinho ao sair do campo.</p>
+    <div class="dias" id="dias"></div>
+    <div class="rodape"><button class="btn prim" value="ok">Pronto</button></div>
+  </form>
+</dialog>
+
+<script>
+(() => {
+  const $ = (s) => document.querySelector(s);
+  const brl = (v) => v == null ? '—' : 'R$ ' + v.toLocaleString('pt-BR', { minimumFractionDigits: v < 100 ? 2 : 0, maximumFractionDigits: 2 });
+  const pct = (v) => v == null ? '—' : Math.round(v * 100) + '%';
+  const nomeDia = (k, curto) => { const [a, m, d] = k.split('-').map(Number); const dt = new Date(a, m - 1, d); return curto ? dt.toLocaleDateString('pt-BR', { weekday: 'short' }).replace('.', '') + ' ' + d : dt.toLocaleDateString('pt-BR', { weekday: 'long', day: 'numeric', month: 'short' }); };
+  const el = (tag, cls, txt) => { const e = document.createElement(tag); if (cls) e.className = cls; if (txt != null) e.textContent = txt; return e; };
+  let dias = 7, dados = null;
+  try { const d = Number(localStorage.getItem('trafego-dias')); if ([1, 7, 30].includes(d)) dias = d; } catch {}
+
+  const botoes = [...document.querySelectorAll('.seletor button')];
+  function marcarSeletor() {
+    botoes.forEach((b, i) => { const on = Number(b.dataset.dias) === dias; b.setAttribute('aria-pressed', on); if (on) $('#pilula').style.transform = `translateX(${i * 100}%)`; });
+  }
+  botoes.forEach((b) => b.addEventListener('click', () => { dias = Number(b.dataset.dias); try { localStorage.setItem('trafego-dias', dias); } catch {} marcarSeletor(); carregar(); }));
+
+  async function carregar() {
+    try {
+      const [t, a, c] = await Promise.all([
+        fetch('/api/trafego?dias=' + dias).then((r) => r.json()),
+        fetch('/api/anuncios?dias=' + dias).then((r) => r.json()),
+        fetch('/api/campanha').then((r) => r.json()).catch(() => null),
+      ]);
+      dados = { t, a, c };
+      desenhar();
+      $('#ponto').className = 'ponto';
+      $('#estado').textContent = 'Atualizado às ' + new Date().toLocaleTimeString('pt-BR', { hour: '2-digit', minute: '2-digit' }) + ' · robô da revenda';
+    } catch (e) {
+      $('#ponto').className = 'ponto off';
+      $('#estado').textContent = 'Sem conexão com o robô. Tentando de novo…';
+    }
+  }
+
+  function desenhar() {
+    const { t, a, c } = dados;
+    const gastoDia = Object.fromEntries(a.gasto.por_dia.map((d) => [d.dia, d.valor]));
+    const porDia = t.por_dia.map((d) => ({ ...d, gasto: gastoDia[d.dia] ?? null }));
+    // custo: só nos dias em que o gasto foi informado (honesto)
+    const comGasto = porDia.filter((d) => d.gasto != null && d.medido);
+    const g = a.gasto.total, leadsG = comGasto.reduce((s, d) => s + (d.leads || 0), 0), painG = comGasto.reduce((s, d) => s + (d.paineis || 0), 0);
+    const cpp = g != null && painG ? g / painG : null, cpl = g != null && leadsG ? g / leadsG : null;
+
+    $('#k-cpp').textContent = cpp == null ? '—' : brl(cpp);
+    $('#k-cpp-s').textContent = cpp == null ? (g == null ? 'Lance o gasto para calcular' : 'Sem painel nos dias com gasto') : `Custo por lead ${brl(cpl)} · base: ${comGasto.length} ${comGasto.length === 1 ? 'dia' : 'dias'} com gasto`;
+    $('#k-gasto').textContent = g == null ? '—' : brl(g);
+    $('#abrir-gasto').textContent = g == null ? 'Lançar gasto' : 'Editar gasto';
+    $('#k-leads').textContent = t.leads;
+    $('#k-leads-s').textContent = `${pct(t.funil[1]?.taxa_da_anterior)} responderam ao robô`;
+    $('#k-pain').textContent = t.paineis_no_periodo;
+    let ps = `${t.paineis_dos_leads} vieram de leads novos · ${pct(t.funil[2]?.taxa_do_total)} dos leads`;
+    if (c && c.meta) ps = `${c.total}/${c.meta.alvo} na campanha · projeção ${c.projecao?.provavel ?? '—'} até ${c.projecao?.data?.slice(8, 10)}/${c.projecao?.data?.slice(5, 7)}`;
+    $('#k-pain-s').textContent = ps;
+
+    grafico(porDia);
+    funil(t.funil);
+    anuncios(a.anuncios, cpp);
+    horas(t.por_hora, t.por_origem);
+  }
+
+  function grafico(pd) {
+    const box = $('#grafico'), W = box.clientWidth || 600, H = box.clientHeight || 220, pb = 22, pt = 18;
+    const lista = pd.length > 14 ? pd.slice(-30) : pd, n = lista.length;
+    const max = Math.max(1, ...lista.map((d) => d.leads || 0), ...lista.map((d) => d.paineis || 0));
+    const maxG = Math.max(1, ...lista.map((d) => d.gasto || 0));
+    const col = W / n, bw = Math.min(28, col * 0.32), y = (v) => pt + (H - pt - pb) * (1 - v / max), yg = (v) => pt + (H - pt - pb) * (1 - v / maxG);
+    let s = `<svg viewBox="0 0 ${W} ${H}" preserveAspectRatio="none">`;
+    for (let i = 0; i <= 3; i++) { const yy = pt + (H - pt - pb) * i / 3; s += `<line x1="0" x2="${W}" y1="${yy}" y2="${yy}" stroke="rgba(84,84,88,.35)" stroke-width=".5"/>`; }
+    const pontos = [];
+    lista.forEach((d, i) => {
+      const cx = col * i + col / 2;
+      if (!d.medido) { s += `<text x="${cx}" y="${H - pt - pb + pt - 4}" text-anchor="middle" fill="rgba(235,235,245,.3)" font-size="10">sem registro</text>`; }
+      else {
+        s += `<rect x="${cx - bw - 1}" y="${y(d.leads)}" width="${bw}" height="${H - pb - y(d.leads)}" rx="4" fill="rgba(91,231,255,.35)"><title>${d.leads} leads</title></rect>`;
+        s += `<rect x="${cx + 1}" y="${y(d.paineis)}" width="${bw}" height="${H - pb - y(d.paineis)}" rx="4" fill="#5be7ff"><title>${d.paineis} painéis</title></rect>`;
+        if (n <= 14) { s += `<text x="${cx - bw / 2 - 1}" y="${y(d.leads) - 5}" text-anchor="middle" fill="rgba(235,235,245,.66)" font-size="11" font-weight="600">${d.leads}</text><text x="${cx + bw / 2 + 1}" y="${y(d.paineis) - 5}" text-anchor="middle" fill="#5be7ff" font-size="11" font-weight="700">${d.paineis}</text>`; }
+      }
+      if (d.gasto != null) pontos.push([cx, yg(d.gasto), d.gasto]);
+      if (n <= 14 || i % 3 === 0) s += `<text x="${cx}" y="${H - 5}" text-anchor="middle" fill="rgba(235,235,245,.48)" font-size="11">${nomeDia(d.dia, true)}</text>`;
+    });
+    if (pontos.length > 1) s += `<polyline points="${pontos.map((p) => p[0] + ',' + p[1]).join(' ')}" fill="none" stroke="#ffb340" stroke-width="1.5" stroke-dasharray="4 4"/>`;
+    pontos.forEach((p) => { s += `<circle cx="${p[0]}" cy="${p[1]}" r="4" fill="#ffb340"><title>Gasto R$ ${p[2]}</title></circle>`; });
+    box.innerHTML = s + '</svg>';
+  }
+
+  function funil(f) {
+    const box = $('#funil'); box.replaceChildren();
+    const topo = f[0]?.qtd || 0;
+    f.forEach((d, i) => {
+      const dv = el('div', 'degrau'), ln = el('div', 'linha');
+      ln.append(el('span', null, d.etapa), el('b', 'num', d.qtd));
+      const br = el('div', 'barra'), sp = el('span'); sp.style.transform = `scaleX(${topo ? d.qtd / topo : 0})`; br.append(sp);
+      dv.append(ln, br);
+      if (i) dv.append(el('div', 'tx', `${pct(d.taxa_da_anterior)} da etapa anterior`));
+      box.append(dv);
+    });
+  }
+
+  function anuncios(lista, cppGeral) {
+    const tb = $('#ads'); tb.replaceChildren();
+    const ids = lista.filter((x) => x.tipo === 'anuncio');
+    $('#ads-dir').textContent = ids.length ? `${ids.length} ${ids.length === 1 ? 'anúncio identificado' : 'anúncios identificados'}` : '';
+    let pos = 0;
+    lista.forEach((x) => {
+      const tr = el('tr'), td = el('td'), wrap = el('div'); wrap.style.display = 'flex'; wrap.style.alignItems = 'center';
+      const sem = x.tipo !== 'anuncio';
+      const med = el('span', 'medalha' + (sem ? ' cinza' : ''), sem ? '–' : String(++pos));
+      const txt = el('div');
+      txt.append(el('div', 'ad-nome', sem ? (x.tipo === 'sem_origem' ? 'Sem origem registrada' : 'Anúncio sem número') : (x.titulo || 'Anúncio')),
+        el('div', 'ad-sub', sem ? (x.tipo === 'sem_origem' ? 'Chegaram antes do registro (09/11) ou por fora do anúncio' : 'Rede identificada, número não veio') : `nº ${x.id} · fecha em ~${x.mediana_h == null ? '—' : x.mediana_h < 1 ? Math.max(1, Math.round(x.mediana_h * 60)) + ' min' : Math.round(x.mediana_h) + ' h'}`));
+      wrap.append(med, txt); td.append(wrap);
+      const tx = el('td', 'n num ' + (x.taxa >= .55 ? 'taxa-ok' : x.taxa >= .35 ? 'taxa-med' : ''), pct(x.taxa));
+      const cp = el('td', 'n num esconde-cel', !sem && cppGeral != null ? '≈ ' + brl(cppGeral) : '—');
+      const rd = el('td', 'n esconde-cel');
+      if (x.facebook + x.instagram) { const r = el('div', 'rede'), fb = el('span', 'fb'), ig = el('span', 'ig'); fb.style.width = (x.facebook / (x.facebook + x.instagram) * 100) + '%'; ig.style.width = (x.instagram / (x.facebook + x.instagram) * 100) + '%'; r.title = `${x.facebook} Facebook · ${x.instagram} Instagram`; r.append(fb, ig); rd.append(r); } else rd.textContent = '—';
+      tr.append(td, el('td', 'n num', x.leads), el('td', 'n num', x.paineis), tx, cp, rd);
+      tb.append(tr);
+    });
+    if (!lista.length) { const tr = el('tr'), td = el('td', null, 'Nenhum lead no período.'); td.colSpan = 6; td.style.color = 'var(--l3)'; tr.append(td); tb.append(tr); }
+  }
+
+  function horas(ph, origem) {
+    const box = $('#horas'); box.replaceChildren();
+    const max = Math.max(1, ...ph.map((h) => h.leads));
+    const top3 = [...ph].sort((a, b) => b.leads - a.leads).slice(0, 3).filter((h) => h.leads).map((h) => h.hora);
+    ph.forEach((h) => { const b = el('div', top3.includes(h.hora) ? 'pico' : ''); b.style.height = (h.leads / max * 100) + '%'; b.title = `${h.hora}h: ${h.leads} leads`; box.append(b); });
+    const d = $('#dica'); d.replaceChildren();
+    if (top3.length) { const ord = [...top3].sort((a, b) => a - b); d.append('Pico às ', el('b', null, ord.map((h) => h + 'h').join(', ')), '. Deixe o orçamento forte nesse horário.'); }
+    const r = $('#redes'); r.replaceChildren();
+    (origem || []).filter((o) => o.origem === 'facebook' || o.origem === 'instagram').forEach((o) => {
+      const s = el('span'); s.append(el('b', null, o.origem === 'facebook' ? 'Facebook ' : 'Instagram '), `${o.paineis}/${o.leads} · ${pct(o.taxa)}`); r.append(s);
+    });
+  }
+
+  // gasto por dia
+  const dlg = $('#dlg-gasto');
+  $('#abrir-gasto').addEventListener('click', () => {
+    const box = $('#dias'); box.replaceChildren();
+    [...dados.a.gasto.por_dia].reverse().forEach((d) => {
+      const lin = el('div', 'dia'), id = 'g-' + d.dia, lb = el('label');
+      lb.htmlFor = id; lb.append(el('b', null, nomeDia(d.dia)));
+      const campo = el('span', 'campo', 'R$ '), inp = el('input'); inp.id = id; inp.inputMode = 'decimal'; inp.autocomplete = 'off'; inp.placeholder = '0,00';
+      inp.value = d.valor == null ? '' : String(d.valor).replace('.', ',');
+      const ok = el('span', 'salvo', '✓'); ok.setAttribute('aria-hidden', 'true');
+      inp.addEventListener('change', async () => {
+        const v = inp.value.trim();
+        try {
+          const r = await fetch('/api/gasto?dias=' + dias, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ dia: d.dia, valor: v === '' ? null : v }) });
+          if (!r.ok) throw 0;
+          dados.a = await r.json(); desenhar(); ok.classList.add('on'); setTimeout(() => ok.classList.remove('on'), 1400);
+        } catch { inp.setCustomValidity('Valor inválido'); inp.reportValidity(); setTimeout(() => inp.setCustomValidity(''), 1500); }
+      });
+      inp.addEventListener('keydown', (e) => { if (e.key === 'Enter') { e.preventDefault(); inp.blur(); } });
+      campo.append(inp); lin.append(lb, campo, ok); box.append(lin);
+    });
+    dlg.showModal();
+    box.querySelector('input')?.focus();
+  });
+  dlg.addEventListener('click', (e) => { if (e.target === dlg) dlg.close(); });
+
+  let rt; addEventListener('resize', () => { clearTimeout(rt); rt = setTimeout(() => dados && grafico(dados.t.por_dia.map((d) => ({ ...d, gasto: (dados.a.gasto.por_dia.find((x) => x.dia === d.dia) || {}).valor ?? null }))), 120); });
+  marcarSeletor(); carregar();
+  setInterval(() => { if (!document.hidden && !dlg.open) carregar(); }, 60000);
+})();
+</script>
+</body>
+</html>

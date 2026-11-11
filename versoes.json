@@ -1,6 +1,130 @@
 {
-  "atual": "1.4.3",
+  "atual": "1.8.1",
   "versoes": [
+    {
+      "versao": "1.8.1",
+      "data": "2026-11-10",
+      "titulo": "Campanha também na nuvem (jarviz.copythief.men)",
+      "mudancas": [
+        "Aba Campanha publicada na nuvem: no celular é a 4ª opção do alto da aba Funil (Funil | Jornada | Tráfego | Campanha); no PC da nuvem, botão Campanha no topo",
+        "O PC manda a campanha no snapshot (chave campanha); a projeção anda em degraus de meia hora para não gastar gravações do KV (1 mudança por hora em vez de 119)",
+        "Para a nuvem, o Sigma é relido no máximo 1 vez por hora (e com 15 min entre tentativas); se o login do Sigma cair, a tela avisa também na nuvem",
+        "Meta pela nuvem vira pedido na fila do PC; o cartão mostra 'aguardando o PC' até gravar",
+        "Na nuvem o botão Sigma some (os dados do Sigma continuam só no PC)",
+        "Esqueleto com a mesma estrutura da tela pronta: pulo de layout (CLS) caiu de 0,295 para 0,03 no celular"
+      ],
+      "arquivos": [
+        "relatorios/campanha-lib.mjs",
+        "relatorios/server.mjs",
+        "relatorios/sync-nuvem.mjs",
+        "nuvem/worker.mjs",
+        "relatorios/web/campanha.js",
+        "relatorios/web/campanha.css",
+        "relatorios/web/index.html",
+        "relatorios/web/app.js",
+        "relatorios/web/funil.js",
+        "relatorios/web/funil.css"
+      ],
+      "revisao": "ranger-revisor-codigo: bloqueio do snapshot corrigido e medido (1 mudança/h); ranger-critico-ui: PC 8/10 aprovado, celular com o encaixe corrigido (margens 0/0 em 360 e 390 px)"
+    },
+    {
+      "versao": "1.8.0",
+      "data": "2026-11-10",
+      "titulo": "Vista Campanha: contador e projeção de painéis",
+      "mudancas": [
+        "Nova vista Campanha no dashboard do PC (8811/?vista=campanha), entre Tráfego e Sigma",
+        "Contador Dia N de 30 desde o início da campanha (06/11) com fita de 30 dias, fim do ciclo em 05/12 e marco do fim do mês (30/11)",
+        "Projeção provável de painéis até 05/12 e até 30/11 com faixa de 80% (ritmo com mais peso nos dias recentes + variação entre dias), mais 4 cenários: campanha inteira, ritmo recente, últimos 3 dias e melhor dia todo dia",
+        "Curva de painéis acumulados (real + projeção + faixa + meta), painéis por dia (robô x por fora) com leads novos, antes x durante (14 dias antes do início) e quanto já virou venda",
+        "Meta do ciclo definida pela própria tela (salva em campanha.json); mostra quanto falta, quanto precisa por dia e se cabe no ritmo",
+        "Fonte: criado_em de todos os painéis do Sigma (sigma-cache.json) + painéis do robô que o Sigma ainda não leu + leads do eventos.jsonl"
+      ],
+      "arquivos": [
+        "relatorios/campanha-lib.mjs",
+        "relatorios/server.mjs",
+        "relatorios/web/campanha.js",
+        "relatorios/web/campanha.css",
+        "relatorios/web/index.html",
+        "relatorios/web/app.js",
+        "campanha.json"
+      ]
+    },
+    {
+      "versao": "1.7.0",
+      "data": "2026-11-10",
+      "titulo": "Figurinhas da capivara no atendimento",
+      "mudancas": [
+        "Pacote CapyPlay Atendimento com 12 figurinhas da capivara feitas no Higgsfield (catálogo de expressões e poses): Oi mestre, Bom dia mestre, Aguardando, Verificando, Só um instante, Teste liberado, Comprovante recebido, Painel criado, Resolvido, Bora vender, Valeu mestre, Foi mal mestre (D:/CAPY/Figurinhas)",
+        "O sistema manda sozinho: Oi/Bom dia no primeiro contato, Teste liberado ao gerar teste, Painel criado ao fechar painel (só quem conversou em 48 h, 8h-22h), Comprovante recebido ou Verificando quando chega foto/arquivo, Só um instante ao passar ao responsável, Resolvido quando o alerta vermelho se resolve",
+        "O Haiku pode escolher uma figurinha no campo \"figurinha\" quando combinar (agradecimento, espera, conferência, desculpa, revendedor animado)",
+        "Travas: no máximo 5 por conversa por dia, 3 min entre as escolhidas pelo Haiku, a mesma não repete em 24 h, Painel criado só uma vez; desligar criando figurinhas.off",
+        "Fila manual aceita {\"id\":\"eu\",\"pacote_figurinhas\":true} para mandar o pacote ao próprio número e favoritar no celular"
+      ],
+      "arquivos": [
+        "figurinhas.js",
+        "bot.js",
+        "base.md"
+      ]
+    },
+    {
+      "versao": "1.6.0",
+      "data": "2026-11-09",
+      "titulo": "Painéis cancelados e Corrigir erro com o Opus",
+      "mudancas": [
+        "Aba Sigma ganhou o cartão Painéis cancelados: taxa de painéis desativados no Sigma (66 de 179, 36,9% em 09/11)",
+        "Modal com os motivos: o robô lê as últimas 40 mensagens de cada painel desativado no WhatsApp (só leitura) e o Haiku diz o motivo em 11 categorias, com a frase do próprio revendedor",
+        "Botão Corrigir erro: o Opus 5.5 lê as conversas daquele motivo e as diretrizes, diz onde o atendimento falhou e escreve de 2 a 5 regras de contorno; o que só a equipe resolve vai para \"Para o senhor resolver\"",
+        "As regras entram no base.md entre <!-- contornos:inicio/fim -->, antes do formato de saída; o Haiku (e o Sonnet do alerta vermelho) já atende com elas na próxima mensagem, sem reiniciar",
+        "Filtro barra regra com valor, link ou promessa (desconto, reembolso, bônus) que não está nas diretrizes; Desfazer tira só aquele motivo",
+        "Custo medido no teste: Haiku US$ 0,03 para ler os 66 (3 min); Opus US$ 0,24 e 25 s por correção"
+      ],
+      "arquivos": [
+        "funil/cancelados.js",
+        "funil/motor.js",
+        "relatorios/cancelados-lib.mjs",
+        "relatorios/server.mjs",
+        "relatorios/web/cancelados.js",
+        "relatorios/web/cancelados.css",
+        "relatorios/web/index.html",
+        ".gitignore"
+      ]
+    },
+    {
+      "versao": "1.5.1",
+      "data": "2026-11-09",
+      "titulo": "Varredura de partida e Sigma ao ligar o PC",
+      "mudancas": [
+        "Ao ligar, o robô mede quanto tempo ficou desligado (ultimo-vivo.json, gravado a cada minuto)",
+        "3 min depois de conectar, pede sozinho uma releitura do funil cobrindo esse período (mínimo 12 h, máximo 48 h): acha o que ficou sem resposta e responde, na janela 8h-21h",
+        "A aba Sigma abre sozinha no navegador quando o PC liga (abrir-sigma.ps1, atalho na pasta Inicializar)"
+      ],
+      "arquivos": [
+        "bot.js",
+        "abrir-sigma.ps1"
+      ]
+    },
+    {
+      "versao": "1.5.0",
+      "data": "2026-11-09",
+      "titulo": "Aba Sigma no dashboard",
+      "mudancas": [
+        "Nova vista Sigma: o painel painel.capyplay.site resumido numa tela só, sem scroll",
+        "Números do topo: revendedores, clientes ativos e testes rodando, clientes novos hoje, vencimentos em 7 dias e cadastros pelo link (com botão de copiar)",
+        "Precisa de mim: clientes vencendo, revendedor sem crédito, painel aberto sem cliente e quem sumiu do painel, com WhatsApp Web em um clique",
+        "Lista dos 179 revendedores com busca (nome, usuário, WhatsApp), ordenação e selo de quem veio pelo robô",
+        "Movimento do dia do Sigma com nomes no lugar dos e-mails e repetições agrupadas",
+        "Leitura só com GET, numa cópia do login do robô (não briga com o teste grátis); cache de 10 min em sigma-cache.json, fora da nuvem e do git"
+      ],
+      "arquivos": [
+        "relatorios/sigma-lib.mjs",
+        "relatorios/server.mjs",
+        "relatorios/web/sigma.js",
+        "relatorios/web/sigma.css",
+        "relatorios/web/index.html",
+        "relatorios/web/app.js",
+        ".gitignore"
+      ]
+    },
     {
       "versao": "1.4.3",
       "data": "2026-11-09",

@@ -326,7 +326,7 @@
 /* ---------- Celular: aba Funil, com Funil | Jornada no alto ---------- */
 .fn-ver { display: none; }
 @media (max-width: 820px), (max-height: 500px) and (pointer: coarse) {
-  .app[data-aba="funil"]:not([data-fj="jornada"]):not([data-fj="trafego"]) .fn { display: flex; }
+  .app[data-aba="funil"]:not([data-fj="jornada"]):not([data-fj="trafego"]):not([data-fj="campanha"]) .fn { display: flex; }
   .app[data-aba="funil"][data-fj="jornada"] .jr { display: flex; }
   .app[data-aba="funil"] .seletor.seg-fj { display: grid; grid-template-columns: repeat(3, 1fr); width: 100%; flex: none; }
   .seg-fj button { height: 44px; }

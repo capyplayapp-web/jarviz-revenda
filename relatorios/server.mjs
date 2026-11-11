@@ -13,11 +13,17 @@ import { tratarRotaBacklog } from './backlog-lib.mjs';
 import { tratarRotaFunil, resumoFunilCurto } from './funil-lib.mjs';
 import { resumoEscritorio } from './escritorio-lib.mjs';
 import { resumoTrafego } from './trafego-lib.mjs';   // aba Tráfego: leads até o painel fechado (09/11/2026)
+import { resumoCampanha, salvarMeta } from './campanha-lib.mjs';
+import { resumoAnuncios, salvarGasto } from './anuncios-lib.mjs';   // dash de Tráfego: por anúncio + gasto digitado (10/11/2026)
 import { resumoUso } from './uso-lib.mjs';
 import { estadoVoz, mudarModo } from './voz-lib.mjs';   // voz do Jarvis: modo + CPU/temperatura (09/11/2026)   // gasto de tokens do robô (08/11/2026)   // escritório do Jarvis, tela inicial (08/11/2026)
+import { resumoSigma, atualizarSigma } from './sigma-lib.mjs';   // aba Sigma: o painel painel.capyplay.site numa tela (09/11/2026)
+import { tratarRotaCancelados } from './cancelados-lib.mjs';   // painéis cancelados: taxa, motivo e Corrigir erro com o Opus (09/11/2026)
 import * as lac from '../lacunas.mjs';                                   // lacunas de conhecimento (LACUNAS.md)
 
 const PORTA = Number(process.env.RELATORIOS_PORTA || 8811);
+// A nota do cofre "Revendedores que fecharam painel" é só do robô da revenda; variantes (outros números) não escrevem nela.
+const SO_REVENDA_ESCREVE_NOTA = (() => { try { const v = JSON.parse(fs.readFileSync(new URL('../variante.json', import.meta.url), 'utf8')); return !v.id || v.id === 'revenda'; } catch { return true; } })();
 const WEB = path.join(AQUI, 'web');
 const TIPOS = { '.html': 'text/html; charset=utf-8', '.css': 'text/css; charset=utf-8', '.js': 'text/javascript; charset=utf-8', '.mjs': 'text/javascript; charset=utf-8', '.json': 'application/json; charset=utf-8', '.svg': 'image/svg+xml', '.png': 'image/png', '.jpg': 'image/jpeg', '.jpeg': 'image/jpeg', '.webp': 'image/webp', '.ico': 'image/x-icon', '.woff2': 'font/woff2', '.woff': 'font/woff', '.ttf': 'font/ttf', '.txt': 'text/plain; charset=utf-8', '.md': 'text/plain; charset=utf-8' };
 
@@ -99,6 +105,38 @@ const servidor = http.createServer(async (req, res) => {
       if (!/json/i.test(req.headers['content-type'] || '')) return json(res, 415, { erro: 'mande JSON' });
       let corpo = ''; for await (const c of req) { corpo += c; if (corpo.length > 2000) break; }
       try { const { modo } = JSON.parse(corpo || '{}'); mudarModo(modo); return json(res, 200, await estadoVoz()); }
+      catch (e) { return json(res, 400, { erro: e.message }); }
+    }
+    if (rota === '/api/cancelados' || rota.startsWith('/api/cancelados/')) {
+      let corpo = {};
+      if (req.method === 'POST') {
+        if (!/application\/json/i.test(String(req.headers['content-type'] || ''))) return json(res, 415, { erro: 'use Content-Type: application/json' });
+        const partes = []; let tam = 0;
+        for await (const p of req) { tam += p.length; if (tam > 4096) return json(res, 413, { erro: 'corpo grande demais' }); partes.push(p); }
+        try { corpo = JSON.parse(Buffer.concat(partes).toString('utf8') || '{}'); } catch { return json(res, 400, { erro: 'JSON inválido' }); }
+      }
+      const r = await tratarRotaCancelados({ metodo: req.method, rota, corpo, origem: req.headers.origin });
+      if (r) return json(res, r.codigo, r.corpo);
+    }
+    if (rota === '/api/sigma' && req.method === 'GET') return json(res, 200, resumoSigma());
+    if (rota === '/api/sigma/atualizar' && req.method === 'POST') {
+      if (!/^http:\/\/(127\.0\.0\.1|localhost):\d+$/.test(String(req.headers.origin || ''))) return json(res, 403, { erro: 'só pelo dashboard do PC' });
+      atualizarSigma(); return json(res, 202, resumoSigma());
+    }
+    if (rota === '/api/campanha' && req.method === 'GET') return json(res, 200, resumoCampanha());
+    if (rota === '/api/campanha' && req.method === 'POST') {   // muda a meta (vista Campanha, 10/11/2026); sem Origin = repetição do pedido da nuvem pelo sync
+      if (req.headers.origin && !/^http:\/\/(127\.0\.0\.1|localhost):\d+$/.test(String(req.headers.origin))) return json(res, 403, { erro: 'só pelo dashboard do PC' });
+      if (!/json/i.test(req.headers['content-type'] || '')) return json(res, 415, { erro: 'mande JSON' });
+      let corpo = ''; for await (const c of req) { corpo += c; if (corpo.length > 500) return json(res, 413, { erro: 'corpo grande demais' }); }
+      try { const { meta } = JSON.parse(corpo || '{}'); salvarMeta(meta); return json(res, 200, resumoCampanha()); }
+      catch (e) { return json(res, 400, { erro: e.message }); }
+    }
+    if (rota === '/api/anuncios' && req.method === 'GET') return json(res, 200, resumoAnuncios({ dias: url.searchParams.get('dias') || 7 }));
+    if (rota === '/api/gasto' && req.method === 'POST') {   // gasto do dia digitado no dash de Tráfego (só pelo PC)
+      if (!/^http:\/\/(127\.0\.0\.1|localhost):\d+$/.test(String(req.headers.origin || ''))) return json(res, 403, { erro: 'só pelo dashboard do PC' });
+      if (!/json/i.test(req.headers['content-type'] || '')) return json(res, 415, { erro: 'mande JSON' });
+      let corpo = ''; for await (const c of req) { corpo += c; if (corpo.length > 300) return json(res, 413, { erro: 'corpo grande demais' }); }
+      try { salvarGasto(JSON.parse(corpo || '{}')); return json(res, 200, resumoAnuncios({ dias: url.searchParams.get('dias') || 7 })); }
       catch (e) { return json(res, 400, { erro: e.message }); }
     }
     if (rota === '/api/trafego' && req.method === 'GET') return json(res, 200, resumoTrafego({ dias: url.searchParams.get('dias') || 1 }));
@@ -192,7 +230,7 @@ let marca = '';
 function conferirNota() {
   try {
     const m = String(fs.statSync(ARQ.revendedores).mtimeMs);
-    if (m !== marca) { marca = m; const r = escreverNota(); if (r.escrita) console.log('nota do cofre atualizada (' + r.total + ')'); }
+    if (m !== marca && SO_REVENDA_ESCREVE_NOTA) { marca = m; const r = escreverNota(); if (r.escrita) console.log('nota do cofre atualizada (' + r.total + ')'); }
   } catch {}
 }
 conferirNota();
